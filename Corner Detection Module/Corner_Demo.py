@@ -4,10 +4,10 @@ from time import time
 import cv2
 import numpy as np
 
-from corner.ShiTomasi import ShiTomasi
+from ShiTomasi import ShiTomasi
 
 
-def getFeaturesMine(img,xmin,ymin):
+def getFeaturesMine(img,xmin =0,ymin =0):
 
     shiTomasi = ShiTomasi()
     corners = shiTomasi.getCorners(img)
@@ -16,7 +16,7 @@ def getFeaturesMine(img,xmin,ymin):
 
     return corners[:,1],corners[:,0]
 
-def getFeaturesOpencv(img,xmin,ymin):
+def getFeaturesOpencv(img,xmin = 0,ymin = 0):
     maxCorners = 6
     qualityLevel = 0.17
     minDistance = 10
