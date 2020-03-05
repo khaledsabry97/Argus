@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fcbda44-9a28-4130-864e-4301a6e05752" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/VIF/1234.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VIF/1235.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VIF/1236.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VIF/1237.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VIF/HornSchunck.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VIF/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VIF/vif.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Corner Detection Module/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Corner Detection Module/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VIF/HornSchunck.py" beforeDir="false" afterPath="$PROJECT_DIR$/VIF/HornSchunck.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +18,18 @@
             <state>
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Corner Detection Module/Corner_Demo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="39" selection-start-line="39" selection-end-line="43" selection-end-column="33" />
+              <folding>
+                <element signature="e#1#22#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VIF/HornSchunck.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="82" column="39" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
+            <state relative-caret-position="340">
+              <caret line="89" selection-start-line="89" selection-end-line="89" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -128,10 +133,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="y" value="540" />
-    <option name="width" value="974" />
-    <option name="height" value="547" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -144,17 +149,6 @@
             <path>
               <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
               <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
-              <item name="car-crash" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
-              <item name="car-crash" type="462c0819:PsiDirectoryNode" />
-              <item name="dataset" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
@@ -174,8 +168,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/VIF" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -240,19 +235,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583392230155</updated>
-      <workItem from="1583392233439" duration="10297000" />
+      <workItem from="1583392233439" duration="10830000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10297000" />
+    <option name="totallyTimeSpent" value="10830000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0858209" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0858209" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -262,7 +257,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3800623" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3800623" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997923" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -305,14 +300,14 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/VIF/HornSchunck.py</url>
-          <line>96</line>
+          <line>100</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$HornSchunck.coverage" NAME="HornSchunck Coverage Results" MODIFIED="1583406567792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VIF" />
+    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$HornSchunck.coverage" NAME="HornSchunck Coverage Results" MODIFIED="1583407049885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VIF" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/VIF/vif.py">
@@ -346,12 +341,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Corner Detection Module/Corner_Demo.py">
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1993870068/cv2/cv2/VideoWriter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="39" selection-start-line="39" selection-end-line="43" selection-end-column="33" />
+        <state relative-caret-position="241">
+          <caret line="123" column="8" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VIF/HornSchunck.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
           <folding>
-            <element signature="e#1#22#0" expanded="true" />
+            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -365,19 +367,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1993870068/cv2/cv2/VideoWriter.py">
+    <entry file="file://$PROJECT_DIR$/Corner Detection Module/Corner_Demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="123" column="8" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VIF/HornSchunck.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="82" column="39" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
+        <state relative-caret-position="52">
+          <caret line="39" selection-start-line="39" selection-end-line="43" selection-end-column="33" />
           <folding>
-            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#1#22#0" expanded="true" />
           </folding>
         </state>
       </provider>

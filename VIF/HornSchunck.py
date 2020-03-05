@@ -1,11 +1,11 @@
-from time import sleep
+from time import sleep, time
 
 from scipy.ndimage.filters import convolve as filter2, gaussian_filter
 import numpy as np
 import cv2
 #
 windowAvg =np.array([[1 / 12, 1 / 6, 1 / 12],
-                     [1/6,    -1, 1/6],
+                     [1/6,    0, 1/6],
                      [1/12, 1/6, 1/12]], float)
 
 windowX = np.array([[-1, 1],
@@ -26,7 +26,7 @@ windowY = np.array([[-1, -1],
 windowT = np.ones((2, 2)) * .25
 
 
-def HornSchunck(frame1, frame2, alpha=1, NumOfIter=8):
+def HornSchunck(frame1, frame2, alpha=1, NumOfIter=2):
     """
     frame1: frame at t=0
     frame2: frame at t=1
@@ -82,14 +82,18 @@ def derivatives(frame1, frame2):
 
 def draw_vectors_hs(im1, im2, step = 10):
     print("drawing vectors")
+    t = time()
     im1_gray = cv2.cvtColor(im1, cv2.COLOR_BGR2GRAY)
     im2_gray = cv2.cvtColor(im2, cv2.COLOR_BGR2GRAY)
-    im1_gray = gaussian_filter(im1_gray, 5)
-    im2_gray = gaussian_filter(im2_gray, 5)
+    # im1_gray = gaussian_filter(im1_gray, 3)
+    # im2_gray = gaussian_filter(im2_gray, 3)
+
+    print(time() - t)
     U, V, M = HornSchunck(im1_gray, im2_gray)
 
+
     rows, cols = im2_gray.shape
-    print(rows, cols, range(0, rows, step))
+    # print(rows, cols, range(0, rows, step))
     for i in range(0, rows, step):
         for j in range(0, cols, step):
             x = int(U[i, j]*2)
