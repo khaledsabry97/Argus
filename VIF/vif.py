@@ -11,6 +11,8 @@ from VIF.HornSchunck import HornSchunck
 class VIF:
     def __init__(self):
         self.subSampling = 3
+        self.rows = 100
+        self.cols = 134
         self.hs = HornSchunck()
 
     def createBlockHist(self, flow, N, M):
@@ -42,28 +44,30 @@ class VIF:
             #cv2.imshow("win", img)
             #cv2.waitKey(30)
         #cv2.destroyAllWindows()
-
-        flow = np.zeros([100, 134]) #rows cols
+        flow = np.zeros([self.rows, self.cols]) #row, cols
         index = 0
         N = 4
         M = 4
+        shape = (self.cols,self.rows)
 
         for i in range(0, len(frames) - self.subSampling - 5, self.subSampling * 2):
 
             index += 1
+            # print(i + self.subSampling)
+            # print(i + self.subSampling * 2)
+            # print(i + self.subSampling * 3)
+            prevFrame = frames[i + self.subSampling]
+            currFrame = frames[i + self.subSampling * 2]
+            nextFrame = frames[i + self.subSampling * 3]
 
-            prev_f = frames[i + self.subSampling]
-            curr_f = frames[i + self.subSampling * 2]
-            next_f = frames[i + self.subSampling * 3]
+            prevFrame = cv2.resize(prevFrame, shape)
+            currFrame = cv2.resize(currFrame, shape)
+            nextFrame = cv2.resize(nextFrame, shape)
 
-            prev_f = cv2.resize(prev_f, (134, 100)) #width height
-            curr_f = cv2.resize(curr_f, (134, 100))
-            next_f = cv2.resize(next_f, (134, 100))
-
-            #process optic flow
+            #process opticl flow
             #print("shapes", prev_f.shape, curr_f.shape)
-            u1, v1, m1 = self.hs.HornSchunck(prev_f, curr_f)
-            u2, v2, m2 = self.hs.HornSchunck(curr_f, next_f)
+            u1, v1, m1 = self.hs.process(prevFrame, currFrame)
+            u2, v2, m2 = self.hs.process(currFrame, nextFrame)
 
             delta = abs(m1 - m2)
             flow = flow + (delta > np.mean(delta))
@@ -77,64 +81,3 @@ class VIF:
 
         return feature_vec
 
-
-'''
-# para obtener vif de algunos videos
-data = []
-for file in glob.glob("dataset/BD_no_choques/subvideos/*.avi"):
-    print(file)
-    cap = cv2.VideoCapture(file)
-    frames = []
-    max_num_frames = 60
-    count = 1
-    vif = ViF()
-
-    while True:
-        ret, frame = cap.read()
-
-        if ret:
-            gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-            frames.append(gray)
-
-        else:
-            break
-
-    obj = ViF()
-    feature_vec = obj.process(frames)
-    # print (feature_vec)
-    data.append(feature_vec)
-
-np.savetxt("data_no_choques.csv", data, delimiter=",")
-'''
-
-
-'''
-
-cap = cv2.VideoCapture('../video-test/brucelee_1.mp4')
-frames = []
-max_num_frames = 60
-count = 1
-vif = ViF()
-
-while True:
-    ret, frame = cap.read()
-
-    if ret:
-        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        frames.append(gray)
-
-        if count > max_num_frames:
-            vif.process(frames)
-            frames=[]
-            count = 1
-
-        count += 1
-
-    else:
-        break
-
-
-cap.release()
-cv2.destroyAllWindows()
-
-'''
