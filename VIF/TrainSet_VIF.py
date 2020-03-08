@@ -7,7 +7,7 @@ from VIF.vif import VIF
 
 
 
-def makeTrainSet(folderDir ="dataset/BD_no_choques/subvideos/*.avi", outputFileDir="data_no_choques.csv"):
+def makeTrainSet(folderDir ="E:\Projects\GP_Crash_Saviour\dataset\BD_no_choques\subvideos\*.avi", outputFileDir="data_no_accidents.csv"):
     trainSet = []
     dir = folderDir
     vids = glob.glob(dir)
@@ -31,7 +31,7 @@ def makeTrainSet(folderDir ="dataset/BD_no_choques/subvideos/*.avi", outputFileD
         featureVector = vif.process(frames)
         count+=1
         # print (feature_vec)
-        print(str(count)+" of "+str(size) + " =====> " + str(count*100/size)+"%")
+        print(str(count)+" of "+str(size) + " =====> " + str(int(count*100/size))+"%")
         trainSet.append(featureVector)
 
     np.savetxt(outputFileDir, trainSet, delimiter=",")
@@ -40,8 +40,11 @@ def makeTrainSet(folderDir ="dataset/BD_no_choques/subvideos/*.avi", outputFileD
 
 if __name__ == '__main__':
     # no Accident dataset
-    makeTrainSet(folderDir ="dataset/BD_no_choques/subvideos/*.avi", outputFileDir="data_no_choques.csv")
+    print("No Accidents Starting...")
+    makeTrainSet(folderDir ="..\dataset\\No_Accidents\subvideos\*.avi", outputFileDir="data_no_accidents.csv")
+    print("No Accidents Completed Successfully!")
 
     #Accident Dataset
-    makeTrainSet(folderDir ="dataset/BD_choques/subvideos/*.avi", outputFileDir="data_choques.csv")
-
+    print("Accidents Starting...")
+    makeTrainSet(folderDir ="..\dataset\Accidents\subvideos\\best\*.avi", outputFileDir="data_accidents.csv")
+    print("Accidents Completed Successfully!")

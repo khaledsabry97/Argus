@@ -140,7 +140,7 @@ def vif(trackers,  frame_width, frame_height, frame):
         else:
             #fourcc = cv2.VideoWriter_fourcc(*'XVID')
             print ("el video se guardara como", str(counter_sub_video), (box[2] - box[0], box[3] - box[1]))
-            #out = cv2.VideoWriter('dataset/BD_choques/subvideos/' + str(counter_sub_video) + '.avi', fourcc, 30,
+            #out = cv2.VideoWriter('dataset/Accidents/subvideos/' + str(counter_sub_video) + '.avi', fourcc, 30,
             #                      (box[2] - box[0], box[3] - box[1]))
 
             counter_sub_video += 1
@@ -468,7 +468,7 @@ start_process("choque10.mp4")
 
 
 
-#for file in glob.glob("dataset/BD_choques/*.mp4"):
+#for file in glob.glob("dataset/Accidents/*.mp4"):
 #    start_process(file, net, meta)
 
 #np.savetxt("data.csv", data, delimiter=",")

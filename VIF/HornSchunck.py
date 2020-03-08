@@ -31,7 +31,7 @@ windowT = np.ones((2, 2)) * .25
 class HornSchunck:
 
 
-    def process(self,frame1, frame2, alpha=0.101, NumOfIter=8):
+    def process(self,frame1, frame2, alpha=0.011, NumOfIter=8):
         """
         frame1: frame at t=0
         frame2: frame at t=1
@@ -93,11 +93,11 @@ class HornSchunck:
         t = time()
         im1_gray = cv2.cvtColor(im1, cv2.COLOR_BGR2GRAY)
         im2_gray = cv2.cvtColor(im2, cv2.COLOR_BGR2GRAY)
-        im1_gray = cv2.GaussianBlur(im1_gray,(5,5),0)
-        im2_gray = cv2.GaussianBlur(im2_gray,(5,5),0)
+        # im1_gray = cv2.GaussianBlur(im1_gray,(5,5),0)
+        # im2_gray = cv2.GaussianBlur(im2_gray,(5,5),0)
 
 
-        U, V, M = HornSchunck(im1_gray, im2_gray)
+        U, V, M = self.process(im1_gray, im2_gray)
 
         print(time() - t)
         rows, cols = im2_gray.shape
