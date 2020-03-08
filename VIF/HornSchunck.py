@@ -26,86 +26,91 @@ windowY = np.array([[-1, -1],
 windowT = np.ones((2, 2)) * .25
 
 
-def HornSchunck(frame1, frame2, alpha=0.101, NumOfIter=8):
-    """
-    frame1: frame at t=0
-    frame2: frame at t=1
-    alpha: regularization constant
-    NumOfIter: number of iteration
-    """
-    #if the frame is integers then we need to convert it to floats
-    frame1 = frame1.astype(np.float32)
-    frame2 = frame2.astype(np.float32)
-
-    # making the shape of horizontal and vertical change
-	# Set initial value for the flow vectors
-    H = np.zeros([frame1.shape[0], frame1.shape[1]])
-    V = np.zeros([frame1.shape[0], frame1.shape[1]])
-
-	# Estimate derivatives
-    [fx, fy, ft] = derivatives(frame1, frame2)
 
 
-	# Iteration to reduce error
-    for i in range(NumOfIter):
-        # avrageing the flow vectors
-        # hAvg = filter2(H, windowAvg)
-        # vAvg = filter2(V, windowAvg)
-        hAvg = cv2.filter2D(H, -1, windowAvg)
-        vAvg = cv2.filter2D(V, -1, windowAvg)
-        # common part of update step
-        top = fx*hAvg + fy*vAvg + ft
-        down = alpha**2 + fx**2 + fy**2
-        der = top/down
-
-        # iterative step
-        H = hAvg - fx * der
-        V = vAvg - fy * der
-
-    M = pow(pow(H, 2) + pow(V, 2), 0.5)
-
-    #for i in range(U.shape[0]):
-    #    for j in range(U.shape[1]):
-     #       M[i, j] = pow(pow(U[i, j], 2) + pow(V[i, j], 2), 0.5)
-
-    return H,V, M
+class HornSchunck:
 
 
-def derivatives(frame1, frame2):
-    t = time()
-    fx = filter2(frame1, windowX) + filter2(frame2, windowX)
-    # fx = cv2.filter2D(frame1, -1, windowX) + cv2.filter2D(frame2, -1, windowX)
-    fy = filter2(frame1, windowY) + filter2(frame2, windowY)
-    # fy = cv2.filter2D(frame1, -1, windowY) + cv2.filter2D(frame2, -1, windowY)
-   # ft = im2 - im1
-    ft = filter2(frame1, windowT) + filter2(frame2, -windowT)
-    # ft = cv2.filter2D(frame1, -1, windowT) - cv2.filter2D(frame2, -1, windowT)
-    # print(time() - t)
-    return fx,fy,ft
+    def process(self,frame1, frame2, alpha=0.101, NumOfIter=8):
+        """
+        frame1: frame at t=0
+        frame2: frame at t=1
+        alpha: regularization constant
+        NumOfIter: number of iteration
+        """
+        #if the frame is integers then we need to convert it to floats
+        frame1 = frame1.astype(np.float32)
+        frame2 = frame2.astype(np.float32)
 
-def draw_vectors_hs(im1, im2, step = 10):
-    print("drawing vectors")
-    t = time()
-    im1_gray = cv2.cvtColor(im1, cv2.COLOR_BGR2GRAY)
-    im2_gray = cv2.cvtColor(im2, cv2.COLOR_BGR2GRAY)
-    im1_gray = cv2.GaussianBlur(im1_gray,(5,5),0)
-    im2_gray = cv2.GaussianBlur(im2_gray,(5,5),0)
+        # making the shape of horizontal and vertical change
+        # Set initial value for the flow vectors
+        H = np.zeros([frame1.shape[0], frame1.shape[1]])
+        V = np.zeros([frame1.shape[0], frame1.shape[1]])
+
+        # Estimate derivatives
+        [fx, fy, ft] = self.derivatives(frame1, frame2)
 
 
-    U, V, M = HornSchunck(im1_gray, im2_gray)
+        # Iteration to reduce error
+        for i in range(NumOfIter):
+            # avrageing the flow vectors
+            # hAvg = filter2(H, windowAvg)
+            # vAvg = filter2(V, windowAvg)
+            hAvg = cv2.filter2D(H, -1, windowAvg)
+            vAvg = cv2.filter2D(V, -1, windowAvg)
+            # common part of update step
+            top = fx*hAvg + fy*vAvg + ft
+            down = alpha**2 + fx**2 + fy**2
+            der = top/down
 
-    print(time() - t)
-    rows, cols = im2_gray.shape
-    # print(rows, cols, range(0, rows, step))
-    for i in range(0, rows, step):
-        for j in range(0, cols, step):
-            x = int(U[i, j]*2)
-            y = int(V[i, j] *2)
-            # if pow(x**2+y**2,0.5) > 20 or pow(x**2+y**2,0.5) < 10:
-            #     continue
-            cv2.arrowedLine(im2, (j, i), (j + x, i + y), (255, 0, 0))
-            # cv2.circle(im2, (j, i), 1, (0, 0, 255), -1)
-    return im2
+            # iterative step
+            H = hAvg - fx * der
+            V = vAvg - fy * der
+
+        M = pow(pow(H, 2) + pow(V, 2), 0.5)
+
+        #for i in range(U.shape[0]):
+        #    for j in range(U.shape[1]):
+         #       M[i, j] = pow(pow(U[i, j], 2) + pow(V[i, j], 2), 0.5)
+
+        return H,V, M
+
+
+    def derivatives(self,frame1, frame2):
+        t = time()
+        fx = filter2(frame1, windowX) + filter2(frame2, windowX)
+        # fx = cv2.filter2D(frame1, -1, windowX) + cv2.filter2D(frame2, -1, windowX)
+        fy = filter2(frame1, windowY) + filter2(frame2, windowY)
+        # fy = cv2.filter2D(frame1, -1, windowY) + cv2.filter2D(frame2, -1, windowY)
+       # ft = im2 - im1
+        ft = filter2(frame1, windowT) + filter2(frame2, -windowT)
+        # ft = cv2.filter2D(frame1, -1, windowT) - cv2.filter2D(frame2, -1, windowT)
+        # print(time() - t)
+        return fx,fy,ft
+
+    def draw_vectors_hs(self,im1, im2, step = 10):
+        print("drawing vectors")
+        t = time()
+        im1_gray = cv2.cvtColor(im1, cv2.COLOR_BGR2GRAY)
+        im2_gray = cv2.cvtColor(im2, cv2.COLOR_BGR2GRAY)
+        im1_gray = cv2.GaussianBlur(im1_gray,(5,5),0)
+        im2_gray = cv2.GaussianBlur(im2_gray,(5,5),0)
+
+
+        U, V, M = HornSchunck(im1_gray, im2_gray)
+
+        print(time() - t)
+        rows, cols = im2_gray.shape
+        # print(rows, cols, range(0, rows, step))
+        for i in range(0, rows, step):
+            for j in range(0, cols, step):
+                x = int(U[i, j]*2)
+                y = int(V[i, j] *2)
+                # if pow(x**2+y**2,0.5) > 20 or pow(x**2+y**2,0.5) < 10:
+                #     continue
+                cv2.arrowedLine(im2, (j, i), (j + x, i + y), (255, 0, 0))
+                # cv2.circle(im2, (j, i), 1, (0, 0, 255), -1)
+        return im2
 
 
 
@@ -116,6 +121,7 @@ if __name__ == "__main__":
         ret, frame = cap.read()  # get first frame
         i+=1
     ret,old = cap.read()
+    hs = HornSchunck()
     while(True):
         ret, new = cap.read()
         ret, new = cap.read()
@@ -125,7 +131,7 @@ if __name__ == "__main__":
 
         # kernel = np.ones((3, 3), np.float32) / 9
         # new  = cv2.filter2D(new, -1, kernel)
-        ret = draw_vectors_hs(old,new)
+        ret = hs.draw_vectors_hs(old,new)
         old = new
         cv2.imshow("frame", ret)
         cv2.waitKey(1)
