@@ -2,467 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fcbda44-9a28-4130-864e-4301a6e05752" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/VIF/SVM_Train.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VIF/HornSchunck.py" beforeDir="false" afterPath="$PROJECT_DIR$/VIF/HornSchunck.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VIF/TrainSet_VIF.py" beforeDir="false" afterPath="$PROJECT_DIR$/VIF/TrainSet_VIF.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VIF/vif.py" beforeDir="false" afterPath="$PROJECT_DIR$/VIF/vif.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/car-detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/car-crash/car-detection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/_choque41.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/_choque41.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/_choque45.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/_choque45.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/_choque46.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/_choque46.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque1.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque1.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque10.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque10.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque11.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque11.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque12.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque12.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque13.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque13.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque14.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque14.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque15.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque15.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque16.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque16.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque17.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque17.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque18.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque18.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque19.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque19.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque2.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque2.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque20.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque20.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque21.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque21.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque22.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque22.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque23.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque23.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque24.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque24.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque25.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque25.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque26.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque26.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque27.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque27.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque28.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque28.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque29.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque29.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque3.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque3.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque30.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque30.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque31.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque31.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque32.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque32.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque33.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque33.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque34.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque34.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque35.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque35.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque36.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque36.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque37.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque37.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque38.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque38.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque39.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque39.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque4.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque4.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque40.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque40.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque41.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque41.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque42.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque42.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque43.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque43.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque44.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque44.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque45.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque45.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque46.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque46.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque47.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque47.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque48.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque48.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque49.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque49.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque5.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque5.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque50.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque50.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque51.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque51.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque52.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque52.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque53.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque53.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque54.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque54.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque55.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque55.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque56.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque56.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque57.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque57.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque58.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque58.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque59.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque59.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque6.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque6.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque60.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque60.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque61.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque61.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque7.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque7.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque8.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque8.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque9.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque9.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque_noche1.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque_noche1.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque_noche2.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque_noche2.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/choque_noche3.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/choque_noche3.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/1.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/1.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/10.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/10.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/100.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/100.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/101.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/101.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/102.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/102.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/103.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/103.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/104.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/104.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/105.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/105.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/106.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/106.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/107.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/107.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/108.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/108.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/109.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/109.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/11.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/11.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/110.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/110.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/111.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/111.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/112.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/112.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/113.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/113.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/114.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/114.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/115.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/115.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/116.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/116.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/117.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/117.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/118.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/118.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/119.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/119.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/12.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/12.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/120.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/120.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/121.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/121.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/122.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/122.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/123.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/123.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/124.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/124.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/125.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/125.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/126.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/126.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/127.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/127.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/128.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/128.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/129.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/129.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/13.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/13.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/130.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/130.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/131.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/131.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/132.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/132.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/133.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/133.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/134.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/134.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/135.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/135.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/136.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/136.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/137.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/137.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/138.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/138.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/139.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/139.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/14.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/14.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/140.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/140.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/141.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/141.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/142.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/142.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/143.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/143.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/144.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/144.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/145.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/145.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/146.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/146.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/147.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/147.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/148.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/148.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/149.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/149.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/15.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/15.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/150.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/150.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/151.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/151.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/152.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/152.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/153.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/153.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/16.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/16.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/17.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/17.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/18.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/18.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/19.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/19.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/2.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/2.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/20.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/20.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/21.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/21.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/22.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/22.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/23.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/23.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/24.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/24.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/25.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/25.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/26.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/26.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/27.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/27.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/28.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/28.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/29.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/29.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/3.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/3.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/30.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/30.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/31.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/31.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/32.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/32.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/33.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/33.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/34.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/34.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/35.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/35.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/36.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/36.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/37.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/37.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/38.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/38.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/39.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/39.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/4.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/4.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/40.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/40.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/41.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/41.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/42.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/42.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/43.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/43.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/44.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/44.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/45.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/45.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/46.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/46.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/47.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/47.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/48.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/48.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/49.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/49.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/5.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/5.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/50.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/50.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/51.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/51.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/52.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/52.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/53.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/53.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/54.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/54.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/55.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/55.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/56.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/56.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/57.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/57.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/58.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/58.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/59.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/59.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/6.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/6.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/60.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/60.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/61.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/61.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/62.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/62.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/63.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/63.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/64.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/64.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/65.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/65.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/66.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/66.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/67.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/67.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/68.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/68.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/69.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/69.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/7.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/7.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/70.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/70.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/71.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/71.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/72.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/72.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/73.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/73.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/74.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/74.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/75.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/75.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/76.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/76.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/77.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/77.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/78.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/78.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/79.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/79.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/8.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/8.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/80.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/80.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/81.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/81.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/82.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/82.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/83.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/83.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/84.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/84.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/85.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/85.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/86.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/86.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/87.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/87.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/88.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/88.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/89.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/89.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/9.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/9.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/90.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/90.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/91.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/91.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/92.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/92.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/93.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/93.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/94.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/94.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/95.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/95.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/96.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/96.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/97.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/97.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/98.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/98.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/99.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/99.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/10.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/10.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/100.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/100.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/101.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/101.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/104.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/104.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/107.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/107.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/11.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/11.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/110.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/110.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/113.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/113.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/122.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/122.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/124.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/124.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/126.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/126.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/127.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/127.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/134.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/134.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/142.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/142.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/144.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/144.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/148.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/148.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/15.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/15.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/151.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/151.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/152.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/152.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/18.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/18.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/24.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/24.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/25.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/25.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/26.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/26.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/27.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/27.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/29.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/29.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/30.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/30.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/31.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/31.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/35.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/35.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/36.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/36.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/37.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/37.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/43.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/43.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/50.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/50.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/52.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/52.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/53.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/53.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/57.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/57.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/58.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/58.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/59.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/59.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/6.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/6.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/62.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/62.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/65.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/65.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/71.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/71.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/72.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/72.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/73.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/73.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/77.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/77.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/78.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/78.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/8.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/8.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/82.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/82.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/83.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/83.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/84.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/84.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/86.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/86.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/89.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/89.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/9.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/9.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/93.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/93.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/94.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/94.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/95.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/95.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/96.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/96.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/dataset/BD_choques/subvideos/best/97.avi" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/Accidents/subvideos/best/97.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/models/model-svm1.sav" beforeDir="false" afterPath="$PROJECT_DIR$/car-crash/models/model-svm1.sav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/car-crash/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car-crash/train_SVM.py" beforeDir="false" afterPath="$PROJECT_DIR$/car-crash/train_SVM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque1.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque10.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque11.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque12.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque13.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque14.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque15.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque16.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque17.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque18.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque19.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque2.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque20.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque21.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque22.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque23.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque24.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque25.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque26.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque27.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque28.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque29.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque3.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque30.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque31.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque32.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque33.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque34.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque35.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque36.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque37.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque38.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque39.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque4.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque40.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque41.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque42.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque43.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque44.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque45.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque46.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque47.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque48.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque49.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque5.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque50.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque51.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque52.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque53.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque54.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque6.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque7.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque8.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/no-choque9.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/1.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/10.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/100.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/101.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/102.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/103.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/104.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/105.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/106.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/107.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/108.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/109.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/11.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/110.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/111.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/112.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/113.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/114.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/115.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/116.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/117.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/118.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/119.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/12.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/120.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/121.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/13.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/14.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/15.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/16.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/17.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/18.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/19.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/2.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/20.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/21.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/22.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/23.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/24.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/25.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/26.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/27.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/28.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/29.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/3.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/30.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/31.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/32.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/33.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/34.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/35.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/36.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/37.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/38.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/39.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/4.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/40.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/41.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/42.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/43.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/44.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/45.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/46.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/47.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/48.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/49.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/5.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/50.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/51.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/52.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/53.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/54.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/55.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/56.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/57.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/58.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/59.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/6.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/60.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/61.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/62.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/63.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/64.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/65.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/66.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/67.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/68.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/69.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/7.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/70.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/71.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/72.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/73.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/74.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/75.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/76.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/77.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/78.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/79.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/8.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/80.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/81.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/82.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/83.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/84.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/85.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/86.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/87.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/88.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/89.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/9.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/90.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/91.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/92.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/93.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/94.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/95.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/96.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/97.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/98.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/BD_no_choques/subvideos/99.avi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/Horn&amp;Schunck.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/Horn&amp;Schunck.docx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -475,7 +16,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VIF/HornSchunck.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="660">
               <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
             </state>
           </provider>
@@ -484,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/VIF/vif.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+            <state relative-caret-position="480">
+              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
               <folding>
                 <element signature="e#1#19#0" expanded="true" />
               </folding>
@@ -496,7 +37,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/car-crash/HornSchunck.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1380">
+            <state>
               <folding>
                 <element signature="e#0#53#0" expanded="true" />
               </folding>
@@ -507,7 +48,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VIF/SVM_Train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
+            <state relative-caret-position="180">
               <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="e#1#53#0" expanded="true" />
@@ -518,18 +59,16 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/car-crash/data.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="-667" />
-          </provider>
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
           </provider>
+          <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/car-crash/train_SVM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
+            <state relative-caret-position="60">
               <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="e#1#53#0" expanded="true" />
@@ -541,7 +80,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/car-crash/vif.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-60">
+            <state relative-caret-position="300">
               <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
             </state>
           </provider>
@@ -549,28 +88,24 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/car-crash/data_choques.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="-713" />
-          </provider>
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
           </provider>
+          <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/car-crash/data_no_choques.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="-1633" />
-          </provider>
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
           </provider>
+          <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VIF/TrainSet_VIF.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
+            <state relative-caret-position="500">
               <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -613,15 +148,14 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="width" value="976" />
+    <option name="height" value="556" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -632,23 +166,19 @@
             <path>
               <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
               <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
-              <item name="car-crash" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
               <item name="VIF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/VIF" />
+    <property name="last_opened_file_path" value="D:/Computer/Downloads/Lab1-20200312T182716Z-001/Lab1" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -813,16 +343,20 @@
       <workItem from="1583611068640" duration="605000" />
       <workItem from="1583691868525" duration="4487000" />
       <workItem from="1583700751990" duration="2564000" />
+      <workItem from="1583790826026" duration="543000" />
+      <workItem from="1583865400674" duration="92000" />
+      <workItem from="1583956380992" duration="2650000" />
+      <workItem from="1584038270203" duration="149000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20174000" />
+    <option name="totallyTimeSpent" value="23608000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24093817" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25159913" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -841,7 +375,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.32995737" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.55131006" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
@@ -947,12 +481,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VIF/data_no_choques.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/VIF/data_no_choques.csv" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/numpy/core/fromnumeric.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62780">
@@ -977,50 +506,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/car-crash/data_no_choques.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-1633" />
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/car-crash/data_choques.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-713" />
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/car-crash/data.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-667" />
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/car-crash/vif.py">
+    <entry file="file://$PROJECT_DIR$/VIF/HornSchunck.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60">
-          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+        <state relative-caret-position="660">
+          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/car-crash/train_SVM.py">
+    <entry file="file://$PROJECT_DIR$/car-crash/HornSchunck.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state>
           <folding>
-            <element signature="e#1#53#0" expanded="true" />
+            <element signature="e#0#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VIF/SVM_Train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
+        <state relative-caret-position="180">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="e#1#53#0" expanded="true" />
@@ -1028,25 +532,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VIF/HornSchunck.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/car-crash/data.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/car-crash/HornSchunck.py">
+    <entry file="file://$PROJECT_DIR$/car-crash/train_SVM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1380">
+        <state relative-caret-position="60">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
-            <element signature="e#0#53#0" expanded="true" />
+            <element signature="e#1#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/car-crash/vif.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/car-crash/data_choques.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/car-crash/data_no_choques.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/VIF/TrainSet_VIF.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
+        <state relative-caret-position="500">
           <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
@@ -1056,8 +579,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/VIF/vif.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        <state relative-caret-position="480">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
           <folding>
             <element signature="e#1#19#0" expanded="true" />
           </folding>
