@@ -7,7 +7,7 @@ class ShiTomasi:
 
     minDistance = 10
     numPeaks = 6
-    thresholdAbs = 0.2
+    thresholdAbs = 0.10
     excludeBorder = 2
 
 
@@ -119,10 +119,13 @@ class ShiTomasi:
         corners = np.int0(corners)
 
         x,y = [],[]
+        ind = []
         for i in corners:
             xx, yy = i.ravel()
             yy +=ymin
             xx +=xmin
             x.append(xx)
             y.append(yy)
+            # ind.append((xx,yy))
         return x,y
+        # return ind
