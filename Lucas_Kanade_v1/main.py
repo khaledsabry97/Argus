@@ -29,19 +29,17 @@ def main(rawVideo, draw_bb=False, play_realtime=False, save_to_file=False, useCV
             bboxs[0][i, :, :] = np.array(
                 [[xmin, ymin], [xmin + boxw, ymin], [xmin, ymin + boxh], [xmin + boxw, ymin + boxh]]).astype(float)
     else:
+        i = 0
         n_object = 1
         bboxs[0] = np.array([[[291, 187], [405, 187], [291, 267], [405, 267]]]).astype(float)
 
     if save_to_file:
-        out = cv2.VideoWriter('output.avi', 0, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), 20.0,
+        out = cv2.VideoWriter('Tracking_Demo.avi', 0, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), 20.0,
                               (frames[i].shape[1], frames[i].shape[0]))
 
     # Start from the first frame, do optical flow for every two consecutive frames.
-    if useCV:
-        startXs, startYs = getFeatures.run(cv2.cvtColor(frames[0], cv2.COLOR_RGB2GRAY), bboxs[0])
-    else:
-        #      KHALED
-        startXs, startYs = getFeatures.run(cv2.cvtColor(frames[0], cv2.COLOR_RGB2GRAY), bboxs[0], use_shi = False)
+
+    startXs, startYs = getFeatures.run(cv2.cvtColor(frames[0], cv2.COLOR_RGB2GRAY), bboxs[0], opencv = useCV)
 
     for i in range(1, n_frame):
         print('Processing Frame', i)
@@ -87,5 +85,5 @@ def main(rawVideo, draw_bb=False, play_realtime=False, save_to_file=False, useCV
 
 if __name__ == "__main__":
     cap = cv2.VideoCapture("Easy.mp4")
-    main(cap, draw_bb=True, play_realtime=True, save_to_file=True, useCV=True)
+    main(cap, draw_bb=True, play_realtime=True, save_to_file=True, useCV=False)
     cap.release()
