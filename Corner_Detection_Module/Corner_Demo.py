@@ -4,38 +4,9 @@ from time import time
 import cv2
 import numpy as np
 
-from ShiTomasi import ShiTomasi
+from Corner_Detection_Module.CornerDetection import ShiTomasi
 
 
-def getFeaturesMine(img,xmin =0,ymin =0):
-
-    shiTomasi = ShiTomasi()
-    corners = shiTomasi.getCorners(img)
-    corners[:,1] += xmin
-    corners[:,0] += ymin
-
-    return corners[:,1],corners[:,0]
-
-def getFeaturesOpencv(img,xmin = 0,ymin = 0):
-    maxCorners = 6
-    qualityLevel = 0.17
-    minDistance = 10
-    blockSize = 10
-
-    corners = cv2.goodFeaturesToTrack(img, mask=None, maxCorners=maxCorners,
-                          qualityLevel=qualityLevel,
-                          minDistance=minDistance,
-                          blockSize=blockSize)
-    corners = np.int0(corners)
-
-    x,y = [],[]
-    for i in corners:
-        xx, yy = i.ravel()
-        yy +=ymin
-        xx +=xmin
-        x.append(xx)
-        y.append(yy)
-    return x,y
 
 def show(image,x,y,windowName):
     for i in range(len(x)):
@@ -45,9 +16,9 @@ def show(image,x,y,windowName):
 
 
 if __name__ == "__main__":
-    cap = cv2.VideoCapture("2.mkv")
+    cap = cv2.VideoCapture("Easy.mp4")
     i =0
-    while(i < 330):
+    while(i < 1):
         ret, frame = cap.read()  # get first frame
         i+=1
 
@@ -57,13 +28,15 @@ if __name__ == "__main__":
     xmin,ymin = bbox[0],bbox[1]
     img = frame_gray[bbox[1]:bbox[1]+bbox[3] , bbox[0]:bbox[0] + bbox[2]]
 
+    shiTomasi = ShiTomasi()
+
     tMine = time()
-    x,y = getFeaturesMine(img,xmin,ymin)
+    x,y = shiTomasi.getFeatures(img,xmin,ymin,False)
     tMine = time() -tMine
     show(frame.copy(),x,y,"Mine")
 
     tOpencv = time()
-    x,y = getFeaturesOpencv(img,xmin,ymin)
+    x,y = shiTomasi.getFeatures(img,xmin,ymin,True)
     tOpencv = time() - tOpencv
     show(frame.copy(),x,y,"Opencv")
 

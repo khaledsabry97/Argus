@@ -90,3 +90,39 @@ class ShiTomasi:
 
         return coordinates
 
+
+    def getFeatures(self,img,xmin=0,ymin=0,opencv=False):
+        if opencv:
+            return self.getFeaturesOpencv(img,xmin,ymin)
+        else:
+            return self.getFeaturesMine(img,xmin,ymin)
+
+    def getFeaturesMine(self,img,xmin =0,ymin =0):
+
+        shiTomasi = ShiTomasi()
+        corners = shiTomasi.getCorners(img)
+        corners[:,1] += xmin
+        corners[:,0] += ymin
+
+        return corners[:,1],corners[:,0]
+
+    def getFeaturesOpencv(self,img,xmin = 0,ymin = 0):
+        maxCorners = 6
+        qualityLevel = 0.17
+        minDistance = 10
+        blockSize = 10
+
+        corners = cv2.goodFeaturesToTrack(img, mask=None, maxCorners=maxCorners,
+                              qualityLevel=qualityLevel,
+                              minDistance=minDistance,
+                              blockSize=blockSize)
+        corners = np.int0(corners)
+
+        x,y = [],[]
+        for i in corners:
+            xx, yy = i.ravel()
+            yy +=ymin
+            xx +=xmin
+            x.append(xx)
+            y.append(yy)
+        return x,y
