@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fcbda44-9a28-4130-864e-4301a6e05752" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Lucas_Kanade_Tracker/video.avi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mosse_Tracker/Easy.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mosse_Tracker/Mosse.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mosse_Tracker/Tracker.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mosse_Tracker/common.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mosse_Tracker/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lucas_Kanade_Tracker/Tracking_Demo.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Lucas_Kanade_Tracker/Tracking_Demo.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lucas_Kanade_Tracker/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lucas_Kanade_Tracker/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Papers/Mosse.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Papers/Mosse.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/Mosse.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/Mosse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/Tracker.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/opencvMosse.py" beforeDir="false" afterPath="$PROJECT_DIR$/mosse-object-tracking-master/opencvMosse.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="198" lean-forward="true" selection-start-line="198" selection-end-line="198" />
+            <state relative-caret-position="320">
+              <caret line="217" column="8" selection-start-line="217" selection-start-column="8" selection-end-line="217" selection-end-column="8" />
               <folding>
                 <element signature="e#571#608#0" expanded="true" />
               </folding>
@@ -35,10 +29,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Mosse_Tracker/Tracker.py">
+        <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1993870068/cv2/cv2/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+            <state relative-caret-position="193">
+              <caret line="9101" column="4" selection-start-line="9101" selection-start-column="4" selection-end-line="9101" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2520">
+              <caret line="126" column="11" lean-forward="true" selection-start-line="126" selection-start-column="11" selection-end-line="126" selection-end-column="11" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -47,12 +50,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1993870068/cv2/cv2/VideoWriter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="123" column="8" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mosse_Tracker/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+            <state relative-caret-position="55">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/car-crash/car-detection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="346">
+              <caret line="163" column="31" selection-start-line="163" selection-start-column="31" selection-end-line="163" selection-end-column="61" />
+              <folding>
+                <element signature="e#87#108#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,6 +98,9 @@
       <find>xrange</find>
       <find>PY3</find>
       <find>print</find>
+      <find>intersect_with</find>
+      <find>check_intersection</find>
+      <find>out</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -100,8 +127,11 @@
         <option value="$PROJECT_DIR$/Mosse_Tracker/utils.py" />
         <option value="$PROJECT_DIR$/Lucas_Kanade_Tracker/getFeatures.py" />
         <option value="$PROJECT_DIR$/Lucas_Kanade_Tracker/main.py" />
-        <option value="$PROJECT_DIR$/Mosse_Tracker/Mosse.py" />
         <option value="$PROJECT_DIR$/Mosse_Tracker/Tracker.py" />
+        <option value="$PROJECT_DIR$/Mosse_Tracker/App.py" />
+        <option value="$PROJECT_DIR$/Mosse_Tracker/Tracker_Demo.py" />
+        <option value="$PROJECT_DIR$/Mosse_Tracker/Mosse.py" />
+        <option value="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" />
       </list>
     </option>
   </component>
@@ -119,7 +149,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -130,12 +159,7 @@
             <path>
               <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
               <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
-              <item name="Lucas_Kanade_Tracker" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
-              <item name="mosse-object-tracking-master" type="462c0819:PsiDirectoryNode" />
+              <item name="car-crash" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
@@ -151,6 +175,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -248,7 +273,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Mosse_Tracker/Tracker.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" />
       <option name="PARAMETERS" value="--pause 3.mkv" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -343,16 +368,18 @@
       <workItem from="1584217114226" duration="552000" />
       <workItem from="1584217860157" duration="31000" />
       <workItem from="1584285898855" duration="16179000" />
+      <workItem from="1584350630556" duration="12628000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47823000" />
+    <option name="totallyTimeSpent" value="60451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13059701" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13166311" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -413,13 +440,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py</url>
-          <line>193</line>
+          <line>184</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py</url>
-          <line>127</line>
+          <line>128</line>
           <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py</url>
+          <line>107</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py</url>
+          <line>97</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -432,7 +469,7 @@
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$SVM_Train.coverage" NAME="SVM_Train Coverage Results" MODIFIED="1583702961916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VIF" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$SVM_Train__1_.coverage" NAME="SVM_Train (1) Coverage Results" MODIFIED="1583703301816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VIF" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$TrainSet_VIF.coverage" NAME="TrainSet_VIF Coverage Results" MODIFIED="1583703248602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VIF" />
-    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$Tracker.coverage" NAME="Tracker Coverage Results" MODIFIED="1584317173921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mosse_Tracker" />
+    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$Tracker.coverage" NAME="Tracker Coverage Results" MODIFIED="1584363280200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mosse_Tracker" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$HornSchunck.coverage" NAME="HornSchunck Coverage Results" MODIFIED="1583408091581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VIF" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$Corner_Demo.coverage" NAME="Corner_Demo Coverage Results" MODIFIED="1584100088447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Corner Detection Module" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$Corner_Demo__1_.coverage" NAME="Corner_Demo (1) Coverage Results" MODIFIED="1584105461289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Corner_Detection_Module" />
@@ -441,20 +478,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/LUCAS OPENCV.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/car-crash/car-detection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6820">
-          <caret line="351" column="35" selection-start-line="351" selection-start-column="30" selection-end-line="351" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1993870068/cv2/cv2/VideoWriter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="875">
-          <caret line="123" column="8" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/scipy/ndimage/filters.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -489,32 +512,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VIF/HornSchunck.py" />
-    <entry file="file://$PROJECT_DIR$/car-crash/HornSchunck.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/VIF/SVM_Train.py" />
-    <entry file="file://$PROJECT_DIR$/VIF/TrainSet_VIF.py" />
-    <entry file="file://$PROJECT_DIR$/VIF/vif.py" />
     <entry file="file://$PROJECT_DIR$/car-crash/data.csv">
       <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/car-crash/train_SVM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#1#53#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/car-crash/vif.py">
@@ -524,26 +526,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lucas_Kanade_v1/getFeatures.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lucas_Kanade_v1/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Lucas_Kanade_v1/getFeatures.py" />
+    <entry file="file://$PROJECT_DIR$/Lucas_Kanade_v1/main.py" />
     <entry file="file://$PROJECT_DIR$/Corner_Detection_Module/CornerDetection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -561,25 +545,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lucas_Kanade_v1/Estimate_trasnlation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lucas_Kanade_v1/Apply_geometric_transformation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Lucas_Kanade_v1/Estimate_trasnlation.py" />
+    <entry file="file://$PROJECT_DIR$/Lucas_Kanade_v1/Apply_geometric_transformation.py" />
     <entry file="file://$PROJECT_DIR$/Corner_Detection_Module/Corner_Demo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -587,13 +554,6 @@
           <folding>
             <element signature="e#1#22#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2065">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -651,13 +611,6 @@
         <state relative-caret-position="-660" />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1993870068/cv2/cv2/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="9101" column="4" selection-start-line="9101" selection-start-column="4" selection-end-line="9101" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lucas_Kanade_Tracker/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="463">
@@ -678,32 +631,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/VIF/vif.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VIF/TrainSet_VIF.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/car-crash/yolo.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/car-crash/train_SVM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#1#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/car-crash/HornSchunck.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="138" column="8" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/time.pyi">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1993870068/dlib/correlation_tracker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1993870068/cv2/cv2/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="9101" column="4" selection-start-line="9101" selection-start-column="4" selection-end-line="9101" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="217" column="8" selection-start-line="217" selection-start-column="8" selection-end-line="217" selection-end-column="8" />
+          <folding>
+            <element signature="e#571#608#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/car-crash/car-detection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="163" column="31" selection-start-line="163" selection-start-column="31" selection-end-line="163" selection-end-column="61" />
+          <folding>
+            <element signature="e#87#108#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Mosse_Tracker/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+        <state relative-caret-position="55">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/Tracker.py">
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1993870068/cv2/cv2/VideoWriter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="223">
+          <caret line="123" column="8" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py">
+    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="198" lean-forward="true" selection-start-line="198" selection-end-line="198" />
+        <state relative-caret-position="2520">
+          <caret line="126" column="11" lean-forward="true" selection-start-line="126" selection-start-column="11" selection-end-line="126" selection-end-column="11" />
           <folding>
-            <element signature="e#571#608#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>

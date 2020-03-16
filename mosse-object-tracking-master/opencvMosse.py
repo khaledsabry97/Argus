@@ -171,7 +171,7 @@ class App:
 
             vis = self.frame.copy()
             for tracker in self.trackers:
-                tracker.draw_state(vis)
+                tracker.showFrame(vis)
             if len(self.trackers) > 0:
                 cv2.imshow('tracker state', self.trackers[-1].state_vis)
             self.rect_sel.draw(vis)

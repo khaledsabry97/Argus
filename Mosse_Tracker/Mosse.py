@@ -63,30 +63,31 @@ def HFilter(Num, Den):
 eps = 1e-5
 
 class MOSSE:
-    def __init__(self, frame, cut_size,num_of_traning_imgs = 10,learning_rate = 0.225):
+    def __init__(self, frame, cut_size,num_of_traning_imgs = 10,learning_rate = 0.225,psrGoodness = 10):
         #get the xmin and .... for all the corners in the cut_Size
         xmin, ymin, xmax, ymax = cut_size
 
         # w, h = map(cv2.getOptimalDFTSize, [xmax - xmin, ymax - ymin])
         self.learning_rate = learning_rate
         self.num_of_traning_imgs = num_of_traning_imgs
+        self.psrGoodness = psrGoodness
         #get width and height of the cut_size
-        width = xmax - xmin
-        height = ymax - ymin
+        self.width = xmax - xmin
+        self.height = ymax - ymin
 
 
         # xmin, ymin = (xmin+xmax-width)//2, (ymin+ymax-height)//2
-        self.center = x, y = xmin + 0.5 * (width - 1), ymin + 0.5 * (height - 1)
-        self.size = width, height
+        self.center = x, y = xmin + 0.5 * (self.width - 1), ymin + 0.5 * (self.height - 1)
+        self.size = self.width, self.height
 
         #take a capture of the frame
-        img = cv2.getRectSubPix(frame, (width, height), (x, y))
+        img = cv2.getRectSubPix(frame, (self.width, self.height), (x, y))
 
         #creating window of the cut_size
-        self.win = cv2.createHanningWindow((width, height), cv2.CV_32F)
-        g = np.zeros((height, width), np.float32)
+        self.win = cv2.createHanningWindow((self.width, self.height), cv2.CV_32F)
+        g = np.zeros((self.height, self.width), np.float32)
 
-        g[int(height/2), int(width/2)] = 1
+        g[int(self.height/2), int(self.width/2)] = 1
         g = cv2.GaussianBlur(g, (-1, -1), 3.0) #2.0
         g = g / g.max()
 
@@ -118,7 +119,7 @@ class MOSSE:
 
         img = self.preprocess(img)
         self.psr, self.last_resp, (dx, dy) = self.correlateNewImg(img)
-        self.good = self.psr > 3.0
+        self.good = self.psr > self.psrGoodness
         if not self.good:
             return
             # self.prepareInitialTracking(frame,self.last_img)
@@ -152,17 +153,7 @@ class MOSSE:
         vis = np.hstack([self.last_img, kernel, resp])
         return vis
 
-    def draw_state(self, vis):
-        (x, y), (w, h) = self.center, self.size
-        x1, y1, x2, y2 = int(x-0.5*w), int(y-0.5*h), int(x+0.5*w), int(y+0.5*h)
-        cv2.rectangle(vis, (x1, y1), (x2, y2), (0, 0, 255))
-        if self.good:
-            cv2.circle(vis, (int(x), int(y)), 2, (0, 0, 255), -1)
-        else:
-            cv2.line(vis, (x1, y1), (x2, y2), (0, 0, 255))
-            cv2.line(vis, (x2, y1), (x1, y2), (0, 0, 255))
-        draw_str(vis, (x1, y2+16), 'PSR: %.2f' % self.psr)
-        draw_str(vis, (x1, y2+32), 'L_R: %.2f' % self.learning_rate)
+
 
 
 
@@ -209,3 +200,25 @@ class MOSSE:
         H1 = cv2.mulSpectrums(self.G, F, 0, conjB=True)
         H2 = cv2.mulSpectrums(F, F, 0, conjB=True)
         return H1,H2
+    def getCutFramePosition(self):
+        x = self.center[0]
+        y = self.center[1]
+        xmin = int(x - 0.5*(self.width-1))
+        ymin = int(y - 0.5*(self.height-1))
+        xmax = int(self.width+xmin)
+        ymax = int(self.height+ymin)
+        cut_size = [xmin,ymin,xmax,ymax]
+        return cut_size
+
+    def getSizeOfTracker(self):
+        return self.width,self.height
+
+    def getCenterOfTracker(self):
+        return self.center
+    def getLearningRate(self):
+        return self.learning_rate
+    def getPsr(self):
+        return self.psr
+    def isGood(self):
+        return self.good
+
