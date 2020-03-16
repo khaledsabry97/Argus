@@ -1,3 +1,5 @@
+from time import time
+
 import numpy as np
 import cv2
 import Estimate_trasnlation as eT
@@ -40,11 +42,11 @@ def main(rawVideo, draw_bb=False, play_realtime=False, save_to_file=False, useCV
     # Start from the first frame, do optical flow for every two consecutive frames.
 
     startXs, startYs = getFeatures.run(cv2.cvtColor(frames[0], cv2.COLOR_RGB2GRAY), bboxs[0], opencv = useCV)
-
+    t = time()
     for i in range(1, n_frame):
-        print('Processing Frame', i)
+        # print('Processing Frame', i)
         newXs, newYs = estimateTrans.estimateAllTranslation(startXs, startYs, frames[i - 1], frames[i])
-        print(startXs, startYs, newXs, newYs, bboxs[i - 1])
+        # print(startXs, startYs, newXs, newYs, bboxs[i - 1])
         Xs, Ys, bboxs[i] = applyGeometricTrans.run(startXs, startYs, newXs, newYs, bboxs[i - 1])
 
         # update coordinates
@@ -53,7 +55,7 @@ def main(rawVideo, draw_bb=False, play_realtime=False, save_to_file=False, useCV
 
         # update feature points as required
         n_features_left = np.sum(Xs != -1)
-        print('# of Features: %d' % n_features_left)
+        # print('# of Features: %d' % n_features_left)
         # if n_features_left < 15:
         #     print('Generate New Features')
         #     if useCV:
@@ -67,7 +69,7 @@ def main(rawVideo, draw_bb=False, play_realtime=False, save_to_file=False, useCV
         for j in range(n_object):
             (xmin, ymin, boxw, boxh) = cv2.boundingRect(bboxs[i][j, :, :].astype(int))
             frames_draw[i] = cv2.rectangle(frames_draw[i], (xmin, ymin), (xmin + boxw, ymin + boxh), (255, 0, 0), 2)
-            print(startXs.shape[0])
+            # print(startXs.shape[0])
             for k in range(startXs.shape[0]):
                 frames_draw[i] = cv2.circle(frames_draw[i], (int(startXs[k, j]), int(startYs[k, j])), 3, (0, 0, 255),
                                             thickness=2)
@@ -78,6 +80,8 @@ def main(rawVideo, draw_bb=False, play_realtime=False, save_to_file=False, useCV
             cv2.waitKey(10)
         if save_to_file:
             out.write(frames_draw[i])
+        if i == 90:
+            print(90/(time()-t))
 
     if save_to_file:
         out.release()

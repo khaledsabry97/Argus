@@ -167,7 +167,7 @@ class App:
                     break
                 frame_gray = cv2.cvtColor(self.frame, cv2.COLOR_BGR2GRAY)
                 for tracker in self.trackers:
-                    tracker.update(frame_gray)
+                    tracker.updateTracking(frame_gray)
 
             vis = self.frame.copy()
             for tracker in self.trackers:
