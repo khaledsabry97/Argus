@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fcbda44-9a28-4130-864e-4301a6e05752" name="Default Changelist" comment="" />
+    <list default="true" id="9fcbda44-9a28-4130-864e-4301a6e05752" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Corner_Detection_Module/CornerDetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Corner_Detection_Module/CornerDetection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Corner_Detection_Module/Corner_Demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Corner_Detection_Module/Corner_Demo.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +16,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
+            <state relative-caret-position="641">
               <caret line="217" column="8" selection-start-line="217" selection-start-column="8" selection-end-line="217" selection-end-column="8" />
               <folding>
                 <element signature="e#571#608#0" expanded="true" />
@@ -22,20 +25,44 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Corner_Detection_Module/Corner_Demo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+              <folding>
+                <element signature="e#1#22#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Corner_Detection_Module/CornerDetection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="772">
+              <caret line="130" column="20" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1993870068/cv2/cv2/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
+            <state relative-caret-position="181720">
               <caret line="9101" column="4" selection-start-line="9101" selection-start-column="4" selection-end-line="9101" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2520">
-              <caret line="126" column="11" lean-forward="true" selection-start-line="126" selection-start-column="11" selection-end-line="126" selection-end-column="11" />
+            <state relative-caret-position="-679">
+              <caret line="108" selection-start-line="108" selection-end-line="108" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -46,7 +73,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1993870068/cv2/cv2/VideoWriter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
+            <state relative-caret-position="2100">
               <caret line="123" column="8" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
             </state>
           </provider>
@@ -55,7 +82,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mosse_Tracker/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
+            <state relative-caret-position="40">
               <caret line="3" selection-start-line="3" selection-end-line="3" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -67,7 +94,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/car-crash/car-detection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
+            <state relative-caret-position="3060">
               <caret line="163" column="31" selection-start-line="163" selection-start-column="31" selection-end-line="163" selection-end-column="61" />
               <folding>
                 <element signature="e#87#108#0" expanded="true" />
@@ -112,8 +139,6 @@
         <option value="$PROJECT_DIR$/VIF/vif.py" />
         <option value="$PROJECT_DIR$/Corner Detection Module/ShiTomasi.py" />
         <option value="$PROJECT_DIR$/Corner Detection Module/Corner_Demo.py" />
-        <option value="$PROJECT_DIR$/Corner_Detection_Module/Corner_Demo.py" />
-        <option value="$PROJECT_DIR$/Corner_Detection_Module/CornerDetection.py" />
         <option value="$PROJECT_DIR$/Lucas_Kanade_v1/getFeatures.py" />
         <option value="$PROJECT_DIR$/Lucas_Kanade_v1/main.py" />
         <option value="$PROJECT_DIR$/Mosse_Tracker/opencvMosse.py" />
@@ -126,13 +151,15 @@
         <option value="$PROJECT_DIR$/Mosse_Tracker/Tracker_Demo.py" />
         <option value="$PROJECT_DIR$/Mosse_Tracker/Mosse.py" />
         <option value="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" />
+        <option value="$PROJECT_DIR$/Corner_Detection_Module/CornerDetection.py" />
+        <option value="$PROJECT_DIR$/Corner_Detection_Module/Corner_Demo.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="328" />
-    <option name="width" value="976" />
-    <option name="height" value="1096" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1087" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -142,6 +169,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,6 +185,11 @@
             <path>
               <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
               <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
+              <item name="Corner_Detection_Module" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
               <item name="Mosse_Tracker" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -168,7 +201,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -208,7 +240,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Tracker">
+  <component name="RunManager" selected="Python.Corner_Demo (1)">
     <configuration name="Corner_Demo (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="GP_Crash_Saviour" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -328,11 +360,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Corner_Demo (1)" />
         <item itemvalue="Python.Tracker" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.Mosse" />
-        <item itemvalue="Python.Corner_Demo (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -362,22 +394,23 @@
       <workItem from="1584217860157" duration="31000" />
       <workItem from="1584285898855" duration="16179000" />
       <workItem from="1584350630556" duration="12628000" />
+      <workItem from="1584467790620" duration="5319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60451000" />
+    <option name="totallyTimeSpent" value="65770000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="328" y="0" width="976" height="1096" extended-state="0" />
+    <frame x="-7" y="0" width="974" height="1087" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26965067" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.27461708" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34787124" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997923" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34696016" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39937106" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -426,11 +459,6 @@
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Corner_Detection_Module/CornerDetection.py</url>
-          <line>130</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py</url>
           <line>184</line>
           <option name="timeStamp" value="32" />
@@ -464,8 +492,17 @@
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$Tracker.coverage" NAME="Tracker Coverage Results" MODIFIED="1584363280200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mosse_Tracker" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$HornSchunck.coverage" NAME="HornSchunck Coverage Results" MODIFIED="1583408091581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VIF" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$Corner_Demo.coverage" NAME="Corner_Demo Coverage Results" MODIFIED="1584100088447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Corner Detection Module" />
-    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$Corner_Demo__1_.coverage" NAME="Corner_Demo (1) Coverage Results" MODIFIED="1584105461289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Corner_Detection_Module" />
+    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$Corner_Demo__1_.coverage" NAME="Corner_Demo (1) Coverage Results" MODIFIED="1584476282267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Corner_Detection_Module" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$main.coverage" NAME="main Coverage Results" MODIFIED="1584133390727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lucas_Kanade_v1" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>mask.ndim</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/LUCAS OPENCV.py">
@@ -520,16 +557,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Lucas_Kanade_v1/getFeatures.py" />
     <entry file="file://$PROJECT_DIR$/Lucas_Kanade_v1/main.py" />
-    <entry file="file://$PROJECT_DIR$/Corner_Detection_Module/CornerDetection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons/numpy/core/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="53100">
@@ -539,16 +566,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Lucas_Kanade_v1/Estimate_trasnlation.py" />
     <entry file="file://$PROJECT_DIR$/Lucas_Kanade_v1/Apply_geometric_transformation.py" />
-    <entry file="file://$PROJECT_DIR$/Corner_Detection_Module/Corner_Demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#1#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mosse-object-tracking-master/common.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -664,34 +681,21 @@
     </entry>
     <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1993870068/cv2/cv2/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
+        <state relative-caret-position="181720">
           <caret line="9101" column="4" selection-start-line="9101" selection-start-column="4" selection-end-line="9101" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py">
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1993870068/cv2/cv2/VideoWriter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="217" column="8" selection-start-line="217" selection-start-column="8" selection-end-line="217" selection-end-column="8" />
-          <folding>
-            <element signature="e#571#608#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/car-crash/car-detection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="163" column="31" selection-start-line="163" selection-start-column="31" selection-end-line="163" selection-end-column="61" />
-          <folding>
-            <element signature="e#87#108#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2100">
+          <caret line="123" column="8" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Mosse_Tracker/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
+        <state relative-caret-position="40">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -699,19 +703,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1993870068/cv2/cv2/VideoWriter.py">
+    <entry file="file://$PROJECT_DIR$/car-crash/car-detection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="123" column="8" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
+        <state relative-caret-position="3060">
+          <caret line="163" column="31" selection-start-line="163" selection-start-column="31" selection-end-line="163" selection-end-column="61" />
+          <folding>
+            <element signature="e#87#108#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2520">
-          <caret line="126" column="11" lean-forward="true" selection-start-line="126" selection-start-column="11" selection-end-line="126" selection-end-column="11" />
+        <state relative-caret-position="-679">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="641">
+          <caret line="217" column="8" selection-start-line="217" selection-start-column="8" selection-end-line="217" selection-end-column="8" />
+          <folding>
+            <element signature="e#571#608#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Corner_Detection_Module/CornerDetection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="772">
+          <caret line="130" column="20" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Corner_Detection_Module/Corner_Demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding>
+            <element signature="e#1#22#0" expanded="true" />
           </folding>
         </state>
       </provider>

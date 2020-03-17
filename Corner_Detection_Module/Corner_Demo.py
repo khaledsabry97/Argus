@@ -1,9 +1,5 @@
-
 from time import time
-
 import cv2
-import numpy as np
-
 from Corner_Detection_Module.CornerDetection import ShiTomasi
 
 
