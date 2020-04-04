@@ -1,34 +1,7 @@
-#!/usr/bin/env python
-
-'''
-MOSSE tracking sample
-
-This sample implements correlation-based tracking approach, described in [1].
-
-Usage:
-  mosse.py [--pause] [<video source>]
-
-  --pause  -  Start with playback paused at the first video frame.
-              Useful for tracking target selection.
-
-  Draw rectangles around objects with a mouse to track them.
-
-Keys:
-  SPACE    - pause video
-  c        - clear targets
-
-[1] David S. Bolme et al. "Visual Object Tracking using Adaptive Correlation Filters"
-    http://www.cs.colostate.edu/~draper/papers/bolme_cvpr10.pdf
-'''
-
-from __future__ import print_function
 
 
 import numpy as np
 import cv2
-
-from Mosse_Tracker.common import draw_str
-
 
 def randomRotation(cut_img):
     #get width and height of the img
@@ -72,8 +45,9 @@ class MOSSE:
         self.num_of_traning_imgs = num_of_traning_imgs
         self.psrGoodness = psrGoodness
         #get width and height of the cut_size
-        self.width = xmax - xmin
-        self.height = ymax - ymin
+        self.width, self.height = map(cv2.getOptimalDFTSize, [xmax - xmin, ymax - ymin])
+        # self.width = xmax - xmin
+        # self.height = ymax - ymin
 
 
         # xmin, ymin = (xmin+xmax-width)//2, (ymin+ymax-height)//2
@@ -92,8 +66,6 @@ class MOSSE:
         g = g / g.max()
 
         self.G = cv2.dft(g, flags=cv2.DFT_COMPLEX_OUTPUT)
-        # c = self.preprocess(rnd_warp(img))
-
 
         self.prepareInitialTracking(frame,img)
 
