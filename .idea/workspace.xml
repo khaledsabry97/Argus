@@ -2,67 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fcbda44-9a28-4130-864e-4301a6e05752" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DFT.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/b.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/w.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mosse_Tracker/Mosse.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/Mosse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 0.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 0.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 1.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 1.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 10.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 10.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 11.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 11.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 12.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 12.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 2.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 2.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 3.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 3.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 4.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 4.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 5.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 5.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 6.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 6.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 7.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 7.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 8.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 8.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 9.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 9.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 0.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 0.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 1.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 1.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 10.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 10.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 11.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 11.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 12.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 12.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 13.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 13.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 14.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 14.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 15.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 15.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 16.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 16.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 17.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 17.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 18.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 18.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 19.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 19.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 2.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 2.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 20.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 20.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 21.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 21.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 22.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 22.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 23.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 23.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 24.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 24.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 25.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 25.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 26.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 26.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 27.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 27.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 3.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 3.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 4.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 4.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 5.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 5.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 6.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 6.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 7.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 7.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 8.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 8.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 9.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 9.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 0.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 0.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 1.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 1.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 10.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 10.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 11.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 11.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 12.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 12.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 13.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 13.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 2.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 2.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 3.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 3.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 4.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 4.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 5.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 5.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 6.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 6.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 7.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 7.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 8.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 8.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 9.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 9.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Papers/Mosse.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/common.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1040">
-              <caret line="53" column="37" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
+            <state relative-caret-position="1905">
+              <caret line="177" column="23" selection-start-line="177" selection-start-column="23" selection-end-line="177" selection-end-column="23" />
               <folding>
                 <element signature="e#2#20#0" expanded="true" />
               </folding>
@@ -84,20 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DFT.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1993870068/numpy/core/_multiarray_umath.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207760">
-              <caret line="10388" column="8" selection-start-line="10388" selection-start-column="8" selection-end-line="10388" selection-end-column="8" />
+            <state relative-caret-position="200">
+              <caret line="12" selection-start-line="12" selection-end-line="15" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -137,13 +72,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3000">
-              <caret line="158" column="72" selection-start-line="158" selection-start-column="72" selection-end-line="158" selection-end-column="72" />
+            <state relative-caret-position="400">
+              <caret line="167" column="22" selection-start-line="167" selection-start-column="22" selection-end-line="167" selection-end-column="22" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -152,10 +87,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mosse_Tracker/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="240">
+              <caret line="46" column="90" selection-start-line="46" selection-start-column="90" selection-end-line="46" selection-end-column="90" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#58#1286#0" />
               </folding>
             </state>
           </provider>
@@ -212,25 +148,26 @@
         <option value="$PROJECT_DIR$/Lucas_Kanade_v1/getFeatures.py" />
         <option value="$PROJECT_DIR$/Lucas_Kanade_v1/main.py" />
         <option value="$PROJECT_DIR$/Mosse_Tracker/opencvMosse.py" />
-        <option value="$PROJECT_DIR$/Mosse_Tracker/common.py" />
-        <option value="$PROJECT_DIR$/Mosse_Tracker/utils.py" />
         <option value="$PROJECT_DIR$/Lucas_Kanade_Tracker/getFeatures.py" />
         <option value="$PROJECT_DIR$/Lucas_Kanade_Tracker/main.py" />
         <option value="$PROJECT_DIR$/Mosse_Tracker/Tracker.py" />
         <option value="$PROJECT_DIR$/Mosse_Tracker/App.py" />
         <option value="$PROJECT_DIR$/Mosse_Tracker/Tracker_Demo.py" />
-        <option value="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" />
         <option value="$PROJECT_DIR$/Corner_Detection_Module/CornerDetection.py" />
         <option value="$PROJECT_DIR$/Corner_Detection_Module/Corner_Demo.py" />
-        <option value="$PROJECT_DIR$/Mosse_Tracker/Mosse.py" />
         <option value="$PROJECT_DIR$/DFT.py" />
+        <option value="$PROJECT_DIR$/Mosse_Tracker/Mosse.py" />
+        <option value="$PROJECT_DIR$/Mosse_Tracker/common.py" />
+        <option value="$PROJECT_DIR$/Mosse_Tracker/utils.py" />
+        <option value="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
-    <option name="height" value="1087" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -240,7 +177,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -248,10 +184,16 @@
               <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
               <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
+              <item name="Mosse_Tracker" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -448,21 +390,22 @@
       <workItem from="1584467790620" duration="5319000" />
       <workItem from="1584638137959" duration="1600000" />
       <workItem from="1584649898501" duration="935000" />
+      <workItem from="1586176921001" duration="6428000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77089000" />
+    <option name="totallyTimeSpent" value="83517000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27771854" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14285715" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3468328" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34297964" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39875388" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -476,7 +419,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.3608742" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.5437637" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
@@ -513,22 +456,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py</url>
-          <line>156</line>
+          <line>130</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py</url>
-          <line>100</line>
+          <line>74</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py</url>
-          <line>107</line>
+          <line>109</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py</url>
-          <line>97</line>
+          <line>99</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -547,7 +490,7 @@
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$test.coverage" NAME="test Coverage Results" MODIFIED="1583700112830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/car-crash" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$train_SVM.coverage" NAME="train_SVM Coverage Results" MODIFIED="1583702463065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/car-crash" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$SVM_Train.coverage" NAME="SVM_Train Coverage Results" MODIFIED="1583702961916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VIF" />
-    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$Tracker.coverage" NAME="Tracker Coverage Results" MODIFIED="1584650207978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mosse_Tracker" />
+    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$Tracker.coverage" NAME="Tracker Coverage Results" MODIFIED="1586205963485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mosse_Tracker" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$HornSchunck.coverage" NAME="HornSchunck Coverage Results" MODIFIED="1583408091581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VIF" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1584308596704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lucas_Kanade_Tracker" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$SVM_Train__1_.coverage" NAME="SVM_Train (1) Coverage Results" MODIFIED="1583703301816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VIF" />
@@ -605,10 +548,10 @@
     <entry file="file://$PROJECT_DIR$/VIF/HornSchunck.py" />
     <entry file="file://$PROJECT_DIR$/VIF/SVM_Train.py" />
     <entry file="file://$PROJECT_DIR$/car-crash/data.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/car-crash/vif.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -632,27 +575,16 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/car-crash/data_choques.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/car-crash/data_no_choques.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="162" selection-start-line="162" selection-end-line="196" selection-end-column="41" />
-          <folding>
-            <element signature="e#124#161#0" expanded="true" />
-            <element signature="e#4510#5734#0" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1993870068/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -755,16 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
-          <caret line="53" column="37" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
-          <folding>
-            <element signature="e#2#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1993870068/numpy/core/_multiarray_umath.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207760">
@@ -799,26 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3000">
-          <caret line="158" column="72" selection-start-line="158" selection-start-column="72" selection-end-line="158" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/car-crash/car-detection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3060">
@@ -831,8 +733,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DFT.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        <state relative-caret-position="200">
+          <caret line="12" selection-start-line="12" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1905">
+          <caret line="177" column="23" selection-start-line="177" selection-start-column="23" selection-end-line="177" selection-end-column="23" />
+          <folding>
+            <element signature="e#2#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+          <folding>
+            <element signature="e#2132#2978#0" />
+            <element signature="e#3044#3135#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="46" column="90" selection-start-line="46" selection-start-column="90" selection-end-line="46" selection-end-column="90" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#58#1286#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="167" column="22" selection-start-line="167" selection-start-column="22" selection-end-line="167" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

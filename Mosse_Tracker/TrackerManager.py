@@ -1,9 +1,10 @@
+from threading import Thread
 from time import time
 
 import cv2
 
 from Mosse_Tracker.Mosse import MOSSE
-from Mosse_Tracker.common import draw_str
+from Mosse_Tracker.utils import draw_str
 from Mosse_Tracker.utils import RectSelector
 
 import sys, getopt
@@ -12,14 +13,15 @@ global id
 id = 0
 global frames
 frames = []
+
 class Tracker:
-    def __init__(self, frame,cut_size,frame_width,frame_height,id =0):
+    def __init__(self, frame, cut_size, frame_width, frame_height, tracker_id =0):
         self.history = []
         self.tracker = MOSSE(frame, cut_size,learning_rate=0.225,psrGoodness=5)
         self.addHistory(self.tracker.getCutFramePosition())
         self.frame_width =frame_width
         self.frame_height= frame_height
-        self.id =id
+        self.tracker_id =tracker_id
         self.index = 0
 
     #add current cut frame in history for later use
@@ -81,7 +83,7 @@ class Tracker:
             cv2.line(frame, (xmin, ymin), (xmax, ymax), (0, 0, 255))
             cv2.line(frame, (xmax, ymin), (xmin, ymax), (0, 0, 255))
 
-        draw_str(frame, (xmin, ymax + 16), 'Id: %i' % self.id)
+        draw_str(frame, (xmin, ymax + 16), 'Id: %i' % self.tracker_id)
         draw_str(frame, (xmin, ymax + 32), 'PSR: %.2f' % self.tracker.getPsr())
         draw_str(frame, (xmin, ymax + 48), 'L_R: %.2f' % self.tracker.getLearningRate())
 
@@ -96,14 +98,14 @@ class Tracker:
         xmin, ymin, xmax, ymax = self.getTrackedFramesBoxed(last_no_of_frames)
 
         width,height = xmax-xmin,ymax-ymin
-        out = cv2.VideoWriter('./track_videos/'+ str(self.id)+") "+str(self.index) + '.avi', cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), 30, (width, height))
+        out = cv2.VideoWriter('./track_videos/' + str(self.tracker_id) + ") " + str(self.index) + '.avi', cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), 30, (width, height))
 
 
         size = len(frames)
         for i in range(size-last_no_of_frames,size,1):
             frame = frames[i][ymin:ymax, xmin:xmax]
             out.write(frame)
-        print("tracker_id "+str(self.id)+" saved!")
+        print("tracker_id " + str(self.tracker_id) + " saved!")
         self.index+=1
         out.release()
 
@@ -132,7 +134,9 @@ class TrackerManager:
         # tracker = MOSSE(frame_gray, rect)
         self.trackers.append(tracker)
 
-
+    def saveTrackers(self,trackers):
+        for tracker in self.trackers:
+            tracker.saveTracking()
     def run(self):
         f = 1
         cum = 0
@@ -168,9 +172,9 @@ class TrackerManager:
             if ch == ord('c'):
                 self.trackers = []
             if f%30 == 0:
-                for tracker in self.trackers:
-                    tracker.saveTracking()
-                # print(f/cum)
+                thread = Thread(target=self.saveTrackers(self.trackers))
+                thread.start()
+                print(f/cum)
 
 
 if __name__ == '__main__':
