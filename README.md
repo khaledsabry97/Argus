@@ -3,4 +3,4 @@
 'https://drive.google.com/open?id=1ezKX-cEFl9t6fd2Me94UIkkyA5MEHmki'
 
 
-- Add 'yolo.h5' to '/Car_Detection_TF/model_data', there is no link avilable 
+- Add 'yolo.h5' to '/Car_Detection_TF/model_data', there is no link available 
