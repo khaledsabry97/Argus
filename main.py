@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 from Mosse_Tracker.TrackerManager import Tracker
 from PIL import Image
-from Car_Detection_TF.yolo import YOLO
-from Car_Detection.detect import Yolo_image
+#from Car_Detection_TF.yolo import YOLO
+#from Car_Detection.detect import Yolo_image
 from yoloFiles import loadFile
 import pickle
 from VIF.vif import VIF
@@ -80,7 +80,7 @@ data = []
 
 
 class MainFlow:
-    def __init__(self, yolo, fromFile=False, select=False):
+    def __init__(self, yolo, fromFile=True, select=False):
         self.yolo = yolo
         self.frameCount = 0
         self.readFile = fromFile
@@ -168,6 +168,7 @@ class MainFlow:
                 print("updating trackers, frame no. " + str(self.frameCount) + "...")
                 frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
+                print(len(trackers))
                 # updating trackers
                 for i, tracker in enumerate(trackers):
                     left, top, right, bottom = tracker.update(frame_gray)
@@ -183,5 +184,5 @@ class MainFlow:
 
 
 if __name__ == '__main__':
-    m = MainFlow(YOLO(), select=False)
+    m = MainFlow(None, select=False)
     m.run('videos/Easy.mp4')
