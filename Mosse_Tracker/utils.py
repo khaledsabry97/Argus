@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-# from main import subs
+
 
 
 class RectSelector:
@@ -11,7 +11,6 @@ class RectSelector:
         cv2.setMouseCallback(win, self.onmouse)
         self.drag_start = None
         self.drag_rect = None
-
     def onmouse(self, event, x, y, flags, param):
         x, y = np.int16([x, y]) # BUG
         if event == cv2.EVENT_LBUTTONDOWN:
@@ -31,14 +30,18 @@ class RectSelector:
                 self.drag_rect = None
                 if rect:
                     self.callback(rect)
-
     def draw(self, vis):
         if not self.drag_rect:
             return False
         x0, y0, x1, y1 = self.drag_rect
         cv2.rectangle(vis, (x0, y0), (x1, y1), (0, 255, 0), 2)
         return True
-
     @property
     def dragging(self):
         return self.drag_rect is not None
+
+
+def draw_str(dst, target, s):
+    x, y = target
+    cv2.putText(dst, s, (x+1, y+1), cv2.FONT_HERSHEY_PLAIN, 1.0, (0, 0, 0), thickness = 2, lineType=cv2.LINE_AA)
+    cv2.putText(dst, s, (x, y), cv2.FONT_HERSHEY_PLAIN, 1.0, (255, 255, 255), lineType=cv2.LINE_AA)
