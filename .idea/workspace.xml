@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fcbda44-9a28-4130-864e-4301a6e05752" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/VIF/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VIF/data_accidents.csv" beforeDir="false" afterPath="$PROJECT_DIR$/VIF/data_accidents.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VIF/data_no_accidents.csv" beforeDir="false" afterPath="$PROJECT_DIR$/VIF/data_no_accidents.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VIF/model-svm1.sav" beforeDir="false" afterPath="$PROJECT_DIR$/VIF/model-svm1.sav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VIF/vif.py" beforeDir="false" afterPath="$PROJECT_DIR$/VIF/vif.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/car-crash/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/car-crash/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,15 +21,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VIF/HornSchunck.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/car-crash/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            <state relative-caret-position="361">
+              <caret line="37" column="12" lean-forward="true" selection-start-line="37" selection-end-line="38" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -31,10 +33,44 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/sklearn/utils/deprecation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="436">
+              <caret line="143" selection-start-line="143" selection-end-line="143" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/sklearn/svm/_base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="584" selection-start-line="584" selection-end-line="584" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VIF/SVM_Train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-855" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VIF/TrainSet_VIF.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="507">
+              <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
-              <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+              <caret line="108" column="27" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="27" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -42,11 +78,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/car-crash/train_SVM.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-613">
-              <caret line="134" column="46" lean-forward="true" selection-start-line="134" selection-start-column="46" selection-end-line="134" selection-end-column="46" />
+            <state relative-caret-position="181">
+              <caret line="122" column="24" selection-start-line="122" selection-start-column="24" selection-end-line="122" selection-end-column="24" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -54,32 +99,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Car_Detection_TF/train.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/VIF/vif.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3027" />
+            <state relative-caret-position="109">
+              <caret line="94" column="28" selection-start-line="94" selection-start-column="28" selection-end-line="94" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Car_Detection_TF/train_bottleneck.py">
+        <entry file="file://$PROJECT_DIR$/VIF/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3634" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yoloFiles.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-139" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Car_Detection_TF/yolo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="76">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -112,12 +148,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/car-crash/car-detection.py" />
-        <option value="$PROJECT_DIR$/car-crash/test.py" />
         <option value="$PROJECT_DIR$/car-crash/train_SVM.py" />
         <option value="$PROJECT_DIR$/VIF/TrainSet_VIF.py" />
         <option value="$PROJECT_DIR$/VIF/SVM_Train.py" />
         <option value="$PROJECT_DIR$/VIF/HornSchunck.py" />
-        <option value="$PROJECT_DIR$/VIF/vif.py" />
         <option value="$PROJECT_DIR$/Corner Detection Module/ShiTomasi.py" />
         <option value="$PROJECT_DIR$/Corner Detection Module/Corner_Demo.py" />
         <option value="$PROJECT_DIR$/Lucas_Kanade_v1/getFeatures.py" />
@@ -134,8 +168,12 @@
         <option value="$PROJECT_DIR$/Mosse_Tracker/Mosse.py" />
         <option value="$PROJECT_DIR$/Mosse_Tracker/common.py" />
         <option value="$PROJECT_DIR$/Mosse_Tracker/utils.py" />
+        <option value="$PROJECT_DIR$/car-crash/test.py" />
+        <option value="$PROJECT_DIR$/VIF/test.pu.py" />
+        <option value="$PROJECT_DIR$/VIF/test.py" />
         <option value="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/VIF/vif.py" />
       </list>
     </option>
   </component>
@@ -169,12 +207,33 @@
             <path>
               <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
               <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
+              <item name="car-crash" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
+              <item name="car-crash" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
               <item name="Car_Detection_TF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
               <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
+              <item name="Mosse_Tracker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
               <item name="videos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
+              <item name="VIF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -219,8 +278,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main (2)">
-    <configuration name="Corner_Demo (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="SVM_Train" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="GP_Crash_Saviour" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -228,12 +287,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Corner_Detection_Module" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/VIF" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Corner_Detection_Module/Corner_Demo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/VIF/SVM_Train.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -242,7 +301,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="DFT" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="TrainSet_VIF" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="GP_Crash_Saviour" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -250,12 +309,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/VIF" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DFT.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/VIF/TrainSet_VIF.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -264,51 +323,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Tracker" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="GP_Crash_Saviour" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Mosse_Tracker" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" />
-      <option name="PARAMETERS" value="--pause 3.mkv" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="GP_Crash_Saviour" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lucas_Kanade_Tracker" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lucas_Kanade_Tracker/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="GP_Crash_Saviour" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -330,20 +345,64 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="GP_Crash_Saviour" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/VIF" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/VIF/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="GP_Crash_Saviour" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/car-crash" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/car-crash/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.Corner_Demo (1)" />
-      <item itemvalue="Python.Tracker" />
-      <item itemvalue="Python.main (1)" />
-      <item itemvalue="Python.DFT" />
-      <item itemvalue="Python.main (2)" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.SVM_Train" />
+      <item itemvalue="Python.TrainSet_VIF" />
+      <item itemvalue="Python.test (1)" />
+      <item itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main (2)" />
-        <item itemvalue="Python.Tracker" />
-        <item itemvalue="Python.DFT" />
-        <item itemvalue="Python.Corner_Demo (1)" />
-        <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.test (1)" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.TrainSet_VIF" />
+        <item itemvalue="Python.SVM_Train" />
       </list>
     </recent_temporary>
   </component>
@@ -378,23 +437,23 @@
       <workItem from="1584649898501" duration="935000" />
       <workItem from="1586176921001" duration="6428000" />
       <workItem from="1586254732904" duration="1808000" />
-      <workItem from="1588014624637" duration="5897000" />
+      <workItem from="1588014624637" duration="8540000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91222000" />
+    <option name="totallyTimeSpent" value="93865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14614561" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14614561" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946466" visible="true" weight="0.34245077" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946466" visible="true" weight="0.34245077" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39875388" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -408,7 +467,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.5437637" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.29925054" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
@@ -455,12 +514,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py</url>
-          <line>111</line>
+          <line>121</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py</url>
-          <line>101</line>
+          <line>98</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -476,19 +535,20 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$DFT.coverage" NAME="DFT Coverage Results" MODIFIED="1584642686102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$SVM_Train.coverage" NAME="SVM_Train Coverage Results" MODIFIED="1583702961916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VIF" />
+    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$SVM_Train.coverage" NAME="SVM_Train Coverage Results" MODIFIED="1588027371603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VIF" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$train_SVM.coverage" NAME="train_SVM Coverage Results" MODIFIED="1583702463065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/car-crash" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$HornSchunck.coverage" NAME="HornSchunck Coverage Results" MODIFIED="1583408091581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VIF" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1588025517876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$Mosse.coverage" NAME="Mosse Coverage Results" MODIFIED="1584293121382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mosse_Tracker" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1584308596704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lucas_Kanade_Tracker" />
-    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$TrainSet_VIF.coverage" NAME="TrainSet_VIF Coverage Results" MODIFIED="1583703248602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VIF" />
-    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$test.coverage" NAME="test Coverage Results" MODIFIED="1583700112830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/car-crash" />
+    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$TrainSet_VIF.coverage" NAME="TrainSet_VIF Coverage Results" MODIFIED="1588027395441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VIF" />
+    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1588027579516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VIF" />
+    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$test.coverage" NAME="test Coverage Results" MODIFIED="1588027451898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/car-crash" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$Corner_Demo.coverage" NAME="Corner_Demo Coverage Results" MODIFIED="1584100088447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Corner Detection Module" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$Corner_Demo__1_.coverage" NAME="Corner_Demo (1) Coverage Results" MODIFIED="1584476282267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Corner_Detection_Module" />
-    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$Tracker.coverage" NAME="Tracker Coverage Results" MODIFIED="1588014758827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mosse_Tracker" />
+    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$Tracker.coverage" NAME="Tracker Coverage Results" MODIFIED="1588027255568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mosse_Tracker" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$SVM_Train__1_.coverage" NAME="SVM_Train (1) Coverage Results" MODIFIED="1583703301816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VIF" />
-    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$main.coverage" NAME="main Coverage Results" MODIFIED="1584133390727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lucas_Kanade_v1" />
+    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$main.coverage" NAME="main Coverage Results" MODIFIED="1588028614588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
@@ -500,23 +560,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/scipy/ndimage/filters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="875">
-          <caret line="642" column="4" selection-start-line="642" selection-start-column="4" selection-end-line="642" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VIF/data_no_choques.csv" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/numpy/core/fromnumeric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62780">
-          <caret line="3153" column="4" selection-start-line="3153" selection-start-column="4" selection-end-line="3153" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/sklearn/svm/classes.py" />
-    <entry file="file://$PROJECT_DIR$/VIF/SVM_Train.py" />
     <entry file="file://$PROJECT_DIR$/car-crash/data.csv" />
     <entry file="file://$PROJECT_DIR$/car-crash/vif.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -577,24 +620,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VIF/vif.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VIF/TrainSet_VIF.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/car-crash/yolo.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/car-crash/train_SVM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#1#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/car-crash/HornSchunck.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -701,16 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/car-crash/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Car_Detection_TF/train_bottleneck.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3634" />
@@ -733,22 +750,89 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/sklearn/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="317" selection-start-line="317" selection-end-line="317" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/sklearn/utils/deprecation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="143" selection-start-line="143" selection-end-line="143" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/sklearn/svm/_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="584" selection-start-line="584" selection-end-line="584" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/car-crash/train_SVM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VIF/SVM_Train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-855" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VIF/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <caret line="108" column="27" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="27" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/car-crash/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="37" column="12" lean-forward="true" selection-start-line="37" selection-end-line="38" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VIF/TrainSet_VIF.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-613">
-          <caret line="134" column="46" lean-forward="true" selection-start-line="134" selection-start-column="46" selection-end-line="134" selection-end-column="46" />
+        <state relative-caret-position="181">
+          <caret line="122" column="24" selection-start-line="122" selection-start-column="24" selection-end-line="122" selection-end-column="24" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VIF/vif.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="94" column="28" selection-start-line="94" selection-start-column="28" selection-end-line="94" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>

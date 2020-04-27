@@ -79,6 +79,8 @@ data = []
 #             cv2.waitKey(0)
 
 
+
+
 class MainFlow:
     def __init__(self, yolo, fromFile=True, select=False):
         self.yolo = yolo
@@ -90,7 +92,9 @@ class MainFlow:
 
     def run(self, path):
         global total_frames
+        last_30_frames = []
         fileBoxes = []
+        new_frame = None
         if self.readFile:
             fileBoxes = loadFile(path)
 
@@ -113,9 +117,11 @@ class MainFlow:
                 break
 
             # run ViF
-            # if self.frameCount > 0 and (self.frameCount % fps == 0 or self.frameCount == fps - 1):
-            #     print("FRAME " + str(self.frameCount) + " VIF")
-            #     vif(trackers, frame_width, frame_height, frame)
+            if self.frameCount > 0 and (self.frameCount % fps == 0 or self.frameCount == fps - 1):
+                 print("FRAME " + str(self.frameCount) + " VIF")
+                 vif = VIF()
+                 vif.predict(last_30_frames,trackers)
+                 #vif(trackers, frame_width, frame_height, frame)
 
             # Call YOLO
             if self.frameCount % fps == 0 or self.frameCount == 0:
@@ -123,6 +129,7 @@ class MainFlow:
                 # clear earlier trackers
                 trackers = []
                 bboxes = []
+                last_30_frames = []
                 img = Image.fromarray(frame)
 
                 # detect vehicles
@@ -178,7 +185,7 @@ class MainFlow:
             cv2.namedWindow("result", cv2.WINDOW_NORMAL)
             cv2.imshow("result", frame)
             ch = cv2.waitKey(10)
-
+            last_30_frames.append(new_frame)
             # increment number of frames
             self.frameCount += 1
 

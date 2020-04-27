@@ -92,22 +92,32 @@ class Tracker:
 
     def saveTracking(self):
         global frames
-        if len(self.history) < 30:
+        new_frames,width,height = self.getFramesOfTracking(frames)
+        if new_frames == None:
             return
-        last_no_of_frames = 30
-        xmin, ymin, xmax, ymax = self.getTrackedFramesBoxed(last_no_of_frames)
-
-        width,height = xmax-xmin,ymax-ymin
         out = cv2.VideoWriter('./track_videos/' + str(self.tracker_id) + ") " + str(self.index) + '.avi', cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), 30, (width, height))
 
-
-        size = len(frames)
-        for i in range(size-last_no_of_frames,size,1):
-            frame = frames[i][ymin:ymax, xmin:xmax]
-            out.write(frame)
+        size = len(new_frames)
+        for i in range(size):
+            out.write(new_frames[i])
         print("tracker_id " + str(self.tracker_id) + " saved!")
         self.index+=1
         out.release()
+
+
+    #get frames of box to enter it to vif descriptor or save it
+    def getFramesOfTracking(self,frames,last_no_of_frames = 30):
+        if len(self.history) < last_no_of_frames:
+            return None,-1,-1
+        xmin, ymin, xmax, ymax = self.getTrackedFramesBoxed(last_no_of_frames)
+
+        width, height = xmax - xmin, ymax - ymin
+        new_frames = []
+
+        size = len(frames)
+        for i in range(size - last_no_of_frames, size, 1):
+            new_frames.append(frames[i][ymin:ymax, xmin:xmax])
+        return new_frames,width,height
 
 
 
