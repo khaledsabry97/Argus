@@ -2,24 +2,650 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fcbda44-9a28-4130-864e-4301a6e05752" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 0.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 0.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 1.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 1.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 2.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 2.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 3.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 3.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 4.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 4.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 5.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/0) 5.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 0.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 0.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 1.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 1.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 2.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 2.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 3.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 3.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 4.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 4.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 5.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/1) 5.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 0.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 0.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 1.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 1.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 2.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 2.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 3.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 3.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 4.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 4.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 5.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/track_videos/2) 5.avi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/GP_Crash_Saviour.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GP_Crash_Saviour.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/.idea/mosse-object-tracking-master.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/Easy.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/common.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4910.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4911.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4912.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4913.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4914.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4915.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4916.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4917.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4918.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4919.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4920.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4921.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4922.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4923.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4924.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4925.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4926.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4927.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4928.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4929.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4930.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4931.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4932.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4933.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4934.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4935.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4936.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4937.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4938.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4939.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4940.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4941.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4942.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4943.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4944.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4945.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4946.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4947.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4948.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4949.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4950.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4951.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4952.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4953.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4954.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4955.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4956.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4957.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4958.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4959.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4960.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4961.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4962.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4963.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4964.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4965.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4966.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4967.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4968.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4969.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4970.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4971.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4972.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4973.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4974.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4975.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4976.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4977.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4978.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4979.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4980.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4981.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4982.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4983.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4984.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4985.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4986.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4987.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4988.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4989.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4990.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4991.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4992.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4993.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4994.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4995.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4996.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4997.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4998.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/4999.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5000.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5003.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5004.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5005.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5006.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5009.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5010.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5011.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5012.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5013.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5014.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5015.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5016.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5017.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5018.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5019.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5020.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5021.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5022.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5023.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5024.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5025.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5026.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5027.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5028.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5029.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5030.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5031.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5032.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5033.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5034.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5035.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5036.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5037.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5038.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5039.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5040.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5041.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5042.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5043.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5044.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5045.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5046.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5047.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5048.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5049.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5050.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5051.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5052.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5053.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5054.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5055.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5056.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5057.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5058.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5059.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5060.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5061.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5062.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5063.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5064.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5065.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5066.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5067.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5068.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5069.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5070.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5071.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5072.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5073.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5074.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5075.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5076.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5077.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5078.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5079.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5080.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5081.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5082.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5083.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5084.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5085.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5086.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5087.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5088.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5089.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5090.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5091.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5092.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5093.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5094.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5095.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5096.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5097.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5098.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5099.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5100.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5101.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5102.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5103.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5104.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5105.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5106.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5107.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5108.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5109.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5110.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5111.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5112.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5113.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5114.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5115.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5116.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5117.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5118.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5119.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5120.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5121.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5122.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5123.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5124.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5125.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5126.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5127.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5128.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5129.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5130.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5131.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5132.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5133.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5134.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5135.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5136.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5137.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5138.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5139.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5140.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5141.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5142.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5143.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5144.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5145.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5146.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5147.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5148.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5149.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5150.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5151.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5152.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5153.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5154.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5155.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5156.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5157.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5158.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/5159.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/1544/via_region_data (45).json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0003.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0004.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0005.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0006.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0009.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0010.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0011.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0012.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0013.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0014.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0015.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0016.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0017.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0018.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0019.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0020.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0021.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0022.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0023.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0024.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0025.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0026.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0027.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0028.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0029.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0030.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0031.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0032.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0033.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0034.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0035.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0036.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0037.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0038.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0039.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0040.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0041.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0042.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0043.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0044.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0045.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0046.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0047.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0048.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0049.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0050.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0051.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0052.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0053.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0054.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0055.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0056.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0057.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0058.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0059.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0060.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0061.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0062.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0063.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0064.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0065.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0066.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0067.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0068.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0069.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0070.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0071.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0072.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0073.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0074.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0075.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0076.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0077.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0078.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0079.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0080.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0081.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0082.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0083.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0084.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0085.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0086.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0087.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0088.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0089.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0090.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0091.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0092.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0093.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0094.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0095.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0096.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0097.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0098.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0099.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0100.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0101.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0102.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0103.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0104.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0105.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0106.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0107.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0108.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0109.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0110.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0111.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0112.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0113.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0114.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0115.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0116.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0117.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0118.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0119.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0120.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0121.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0122.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0123.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0124.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0125.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0126.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0127.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0128.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0129.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0130.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0131.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0132.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0133.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0134.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0135.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0136.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0137.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0138.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0139.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0140.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0141.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0142.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0143.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0144.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0145.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0146.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0147.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0148.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0149.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0150.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0151.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0152.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0153.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0154.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0155.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0156.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0157.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0158.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0159.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0160.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0161.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0162.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0163.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0164.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0165.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0166.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0167.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0168.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0169.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0170.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0171.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0172.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0173.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0174.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0175.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0176.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0177.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0178.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0179.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0180.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0181.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0182.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0183.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0184.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0185.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0186.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0187.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0188.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0189.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0190.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0191.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0192.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0193.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0194.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0195.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0196.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0197.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0198.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0199.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0200.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0201.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0202.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0203.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0204.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0205.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0206.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0207.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0208.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0209.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0210.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0211.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0212.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0213.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0214.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0215.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0216.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0218.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0219.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0220.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0221.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0222.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0223.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0224.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0225.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0226.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0227.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0228.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0229.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0230.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0231.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0232.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0233.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0234.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0235.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0236.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0237.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0238.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0239.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0240.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0241.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0242.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0243.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0244.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0245.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0246.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0247.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0248.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0249.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0250.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0251.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0252.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0253.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0254.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0255.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0256.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0257.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0258.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0259.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0260.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0261.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0262.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0263.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0264.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0265.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0266.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0267.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0268.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0269.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0270.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0271.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0272.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0273.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0274.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0275.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0276.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0277.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0278.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0279.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0280.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0281.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0282.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0283.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0284.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0285.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0286.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0287.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0288.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0289.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0290.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0291.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0292.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0293.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0294.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0295.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0296.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0297.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0298.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0299.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0300.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0301.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0302.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0303.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0304.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0305.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0306.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0307.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0308.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0309.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0310.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0311.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0312.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0313.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0314.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0315.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0316.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0317.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0318.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0319.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0320.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0321.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0322.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0323.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0324.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0325.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0326.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0327.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0328.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0329.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0330.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0331.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0332.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0333.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0334.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0335.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0336.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0337.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0338.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0339.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0340.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0341.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0342.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0343.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0344.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0346.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0347.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0348.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0349.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0350.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0351.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0352.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0353.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0354.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0355.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0356.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0357.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0358.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0359.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0360.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0361.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0362.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0363.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0364.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0365.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0366.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0367.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0368.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0369.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0370.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0371.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0372.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0373.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0374.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0375.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/datasets/surfer/0376.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/demo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/examples/surfer.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/mosse.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/opencvMosse.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mosse-object-tracking-master/utils.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,74 +658,81 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="27" column="10" lean-forward="true" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+            <state>
+              <caret line="202" column="23" selection-start-line="202" selection-start-column="23" selection-end-line="202" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="175" column="21" selection-start-line="175" selection-start-column="21" selection-end-line="175" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lucas_Kanade_Tracker/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="691">
-              <caret line="91" column="78" selection-start-line="91" selection-start-column="78" selection-end-line="91" selection-end-column="78" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Mosse_Tracker/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="768">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Mosse_Tracker/common.py">
+        <entry file="file://$PROJECT_DIR$/VIF/vif.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Mosse_Tracker/backup.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VIF/TrainSet_VIF.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VIF/SVM_Train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1425">
+            <state>
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/car-crash/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/car-crash/train_SVM.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/customed/tracker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-304">
-              <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+            <state relative-caret-position="209">
+              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VIF/HornSchunck.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VIF/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -157,10 +790,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="952" />
-    <option name="y" value="-8" />
-    <option name="width" value="976" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="446" />
+    <option name="y" value="493" />
+    <option name="width" value="1936" />
     <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -182,7 +815,32 @@
             <path>
               <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
               <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
+              <item name="car-crash" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
+              <item name="Corner_Detection_Module" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
+              <item name="customed" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
+              <item name="Lucas_Kanade_Tracker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
               <item name="Mosse_Tracker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
+              <item name="VIF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -390,23 +1048,23 @@
       <workItem from="1587682105700" duration="972000" />
       <workItem from="1587683163935" duration="3032000" />
       <workItem from="1587842002085" duration="1113000" />
-      <workItem from="1588012172098" duration="1670000" />
+      <workItem from="1588012172098" duration="779000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92316000" />
+    <option name="totallyTimeSpent" value="91425000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="952" y="-8" width="976" height="1066" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25330397" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15256959" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.34245077" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.34297964" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39875388" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -508,7 +1166,7 @@
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$test.coverage" NAME="test Coverage Results" MODIFIED="1583700112830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/car-crash" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$Corner_Demo.coverage" NAME="Corner_Demo Coverage Results" MODIFIED="1584100088447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Corner Detection Module" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$Corner_Demo__1_.coverage" NAME="Corner_Demo (1) Coverage Results" MODIFIED="1584476282267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Corner_Detection_Module" />
-    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$Tracker.coverage" NAME="Tracker Coverage Results" MODIFIED="1588013723184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mosse_Tracker" />
+    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$Tracker.coverage" NAME="Tracker Coverage Results" MODIFIED="1587685255504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mosse_Tracker" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$SVM_Train__1_.coverage" NAME="SVM_Train (1) Coverage Results" MODIFIED="1583703301816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VIF" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$main.coverage" NAME="main Coverage Results" MODIFIED="1584133390727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lucas_Kanade_v1" />
   </component>
@@ -561,6 +1219,16 @@
         <state relative-caret-position="-660" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Lucas_Kanade_Tracker/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="91" column="78" selection-start-line="91" selection-start-column="78" selection-end-line="91" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Lucas_Kanade_Tracker/getFeatures.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -591,6 +1259,7 @@
     <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1993870068/cv2/cv2/VideoWriter.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/matplotlib/backend_bases.py" />
     <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1993870068/numpy/core/_multiarray_umath.py" />
+    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/common.py" />
     <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1993870068/cv2/cv2/__init__.py" />
     <entry file="file://$PROJECT_DIR$/DFT.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -601,6 +1270,24 @@
     </entry>
     <entry file="file://D:/Computer/Downloads/Lab1-Part2-Python-networking.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="46" column="90" selection-start-line="46" selection-start-column="90" selection-end-line="46" selection-end-column="90" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#58#1286#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/car-crash/car-detection.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -632,6 +1319,13 @@
           <folding>
             <element signature="e#93#115#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="202" column="23" selection-start-line="202" selection-start-column="23" selection-end-line="202" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -678,61 +1372,12 @@
     <entry file="file://$PROJECT_DIR$/VIF/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/customed/tracker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-304">
-          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        <state relative-caret-position="209">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/common.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="27" column="10" lean-forward="true" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="175" column="21" selection-start-line="175" selection-start-column="21" selection-end-line="175" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lucas_Kanade_Tracker/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
-          <caret line="91" column="78" selection-start-line="91" selection-start-column="78" selection-end-line="91" selection-end-column="78" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/backup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1425">
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
