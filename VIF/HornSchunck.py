@@ -31,7 +31,7 @@ windowT = np.ones((2, 2)) * .25
 class HornSchunck:
 
 
-    def process(self,frame1, frame2, alpha=0.011, NumOfIter=8):
+    def process(self,frame1, frame2, alpha=0.001, NumOfIter=8):
         """
         frame1: frame at t=0
         frame2: frame at t=1

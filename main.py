@@ -1,3 +1,5 @@
+from threading import Thread
+
 import cv2
 import numpy as np
 from Mosse_Tracker.TrackerManager import Tracker
@@ -7,6 +9,7 @@ from PIL import Image
 from yoloFiles import loadFile
 import pickle
 from VIF.vif import VIF
+
 
 # clf = pickle.load(open('VIF/model-svm1.sav', 'rb'))
 total_frames = []
@@ -78,6 +81,12 @@ data = []
 #             cv2.imshow("win", frame)
 #             cv2.waitKey(0)
 
+vif = VIF()
+
+
+def predict(last_30_frames,trackers):
+    vif.predict(last_30_frames, trackers)
+
 
 class MainFlow:
     def __init__(self, yolo, fromFile=True, select=False):
@@ -86,11 +95,13 @@ class MainFlow:
         self.readFile = fromFile
         # if select == False then use TF else use PYTORCH
         self.selectYOLO = select
-
+        self.trackerId = 0
 
     def run(self, path):
         global total_frames
+        last_30_frames = []
         fileBoxes = []
+        new_frame = None
         if self.readFile:
             fileBoxes = loadFile(path)
 
@@ -106,6 +117,7 @@ class MainFlow:
             # read new frame
             ret, frame = cap.read()
             if ret:
+                #frame = cv2.GaussianBlur(frame, (-1, -1), 1.0)  # 2.0
                 new_frame = frame.copy()
                 total_frames.append(new_frame)
             # failed to get new frame
@@ -113,9 +125,12 @@ class MainFlow:
                 break
 
             # run ViF
-            # if self.frameCount > 0 and (self.frameCount % fps == 0 or self.frameCount == fps - 1):
-            #     print("FRAME " + str(self.frameCount) + " VIF")
-            #     vif(trackers, frame_width, frame_height, frame)
+            if self.frameCount > 0 and (self.frameCount % fps == 0 or self.frameCount == fps - 1):
+                 print("FRAME " + str(self.frameCount) + " VIF")
+                 thread = Thread(target=predict(last_30_frames,trackers))
+                 thread.start()
+                 print("error")
+                 #vif(trackers, frame_width, frame_height, frame)
 
             # Call YOLO
             if self.frameCount % fps == 0 or self.frameCount == 0:
@@ -123,6 +138,7 @@ class MainFlow:
                 # clear earlier trackers
                 trackers = []
                 bboxes = []
+                last_30_frames = []
                 img = Image.fromarray(frame)
 
                 # detect vehicles
@@ -150,19 +166,19 @@ class MainFlow:
                     # can limit this part to cars and trucks only later
                     # cv2.rectangle(frame, (xmin, ymin), (xmax, ymax), (0, 0, 255))
                     frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
+                    self.trackerId +=1
                     # no need for frame_width and frame_height
                     if xmax < frame_width and ymax < frame_height:
-                        tr = Tracker(frame_gray, (xmin, ymin, xmax, ymax), frame_width, frame_height)
+                        tr = Tracker(frame_gray, (xmin, ymin, xmax, ymax), frame_width, frame_height,self.trackerId)
                         trackers.append(tr)
                     elif xmax < frame_width and ymax >= frame_height:
-                        tr = Tracker(frame_gray, (xmin, ymin, xmax, frame_height - 1), frame_width, frame_height)
+                        tr = Tracker(frame_gray, (xmin, ymin, xmax, frame_height - 1), frame_width, frame_height,self.trackerId)
                         trackers.append(tr)
                     elif xmax >= frame_width and ymax < frame_height:
-                        tr = Tracker(frame_gray, (xmin, ymin, frame_width - 1, ymax), frame_width, frame_height)
+                        tr = Tracker(frame_gray, (xmin, ymin, frame_width - 1, ymax), frame_width, frame_height,self.trackerId)
                         trackers.append(tr)
                     else:
-                        tr = Tracker(frame_gray, (xmin, ymin, frame_width - 1, frame_height - 1), frame_width, frame_height)
+                        tr = Tracker(frame_gray, (xmin, ymin, frame_width - 1, frame_height - 1), frame_width, frame_height,self.trackerId)
                         trackers.append(tr)
             else:
                 print("updating trackers, frame no. " + str(self.frameCount) + "...")
@@ -178,11 +194,12 @@ class MainFlow:
             cv2.namedWindow("result", cv2.WINDOW_NORMAL)
             cv2.imshow("result", frame)
             ch = cv2.waitKey(10)
-
+            last_30_frames.append(new_frame)
             # increment number of frames
             self.frameCount += 1
+        print(self.trackerId)
 
 
 if __name__ == '__main__':
     m = MainFlow(None, select=False)
-    m.run('videos/Easy.mp4')
+    m.run('videos/crash1.mp4')

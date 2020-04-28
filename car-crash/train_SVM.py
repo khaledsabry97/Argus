@@ -33,7 +33,7 @@ print (X.shape, y.shape)
 #print(no_choques)
 #print(choques)
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1,random_state = 40)
 clf = SVC(kernel='linear', probability=True, tol=1e-3)  # , verbose = True) #Set the classifier as a support vector machines with
 
 clf.fit(X_train, y_train)
