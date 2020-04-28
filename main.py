@@ -117,6 +117,7 @@ class MainFlow:
             # read new frame
             ret, frame = cap.read()
             if ret:
+                #frame = cv2.GaussianBlur(frame, (-1, -1), 1.0)  # 2.0
                 new_frame = frame.copy()
                 total_frames.append(new_frame)
             # failed to get new frame
@@ -201,4 +202,4 @@ class MainFlow:
 
 if __name__ == '__main__':
     m = MainFlow(None, select=False)
-    m.run('videos/Easy.mp4')
+    m.run('videos/crash1.mp4')
