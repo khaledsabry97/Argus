@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9fcbda44-9a28-4130-864e-4301a6e05752" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/boxes/crash1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videos/crash1.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VIF/HornSchunck.py" beforeDir="false" afterPath="$PROJECT_DIR$/VIF/HornSchunck.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VIF/model-svm1.sav" beforeDir="false" afterPath="$PROJECT_DIR$/VIF/model-svm1.sav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/car-crash/train_SVM.py" beforeDir="false" afterPath="$PROJECT_DIR$/car-crash/train_SVM.py" afterDir="false" />
@@ -40,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="119" column="17" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
+            <state relative-caret-position="517">
+              <caret line="194" column="39" selection-start-line="194" selection-start-column="39" selection-end-line="194" selection-end-column="39" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -52,9 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/boxes/crash1.txt">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1311" />
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -177,7 +181,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -253,11 +257,11 @@
       <recent name="E:\Projects\GP_Crash_Saviour\VIF" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projects\GP_Crash_Saviour\videos" />
       <recent name="E:\Projects\GP_Crash_Saviour\boxes" />
       <recent name="E:\Projects\GP_Crash_Saviour\Mosse_Tracker" />
       <recent name="E:\Projects\GP_Crash_Saviour\mosse-object-tracking-master" />
       <recent name="E:\Projects\GP_Crash_Saviour\Corner Detection Module" />
-      <recent name="E:\Projects\GP_Crash_Saviour\VIF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -431,22 +435,22 @@
       <workItem from="1584649898501" duration="935000" />
       <workItem from="1586176921001" duration="6428000" />
       <workItem from="1586254732904" duration="1808000" />
-      <workItem from="1588014624637" duration="14824000" />
+      <workItem from="1588014624637" duration="15085000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100149000" />
+    <option name="totallyTimeSpent" value="100410000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14614561" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14614561" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49785867" visible="true" weight="0.34245077" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49785867" weight="0.34245077" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.498394" weight="0.39824945" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -867,18 +871,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/boxes/crash1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1311" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="119" column="17" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
+        <state relative-caret-position="517">
+          <caret line="194" column="39" selection-start-line="194" selection-start-column="39" selection-end-line="194" selection-end-column="39" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/boxes/crash1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
