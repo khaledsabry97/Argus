@@ -12,7 +12,8 @@ no_crash = 0
 clf = pickle.load(open('models/model-svm1.sav', 'rb'))
 
 for i in range(1,100):
-    dir = '../dataset/BD_no_choques/subvideos/'+str(i)+'.avi'
+    #"E:\Projects\GP_Crash_Saviour\dataset\BD_no_choques\subvideos\*.avi"
+    dir = '..\dataset\BD_no_choques\subvideos\\best\\'+str(i)+'.avi'
     cap = cv2.VideoCapture(dir)
     frames = []
 
@@ -25,7 +26,7 @@ for i in range(1,100):
 
         else:
             break
-
+    print(len(frames))
     t = time()
     obj = VIF()
     feature_vec = obj.process(frames)

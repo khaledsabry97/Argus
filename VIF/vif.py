@@ -95,16 +95,24 @@ class VIF:
         print(len(frames_RGB))
         self.no_crash = 0
         self.crash = 0
+
         for tracker in trackers:
-            tracker_frames,width,height = tracker.getFramesOfTracking(gray_frames)
+            tracker_frames,width,height,xmin,xmax,ymin,ymax = tracker.getFramesOfTracking(gray_frames)
+
             if tracker_frames == None:
                 continue
+            if xmax - xmin < 100:
+                continue
+            if ymax - ymin < 50:
+                continue
+
             feature_vec = self.process(tracker_frames)
             result = self.clf.predict(feature_vec.reshape(1, 304))
             if result[0] == 0.0:
                 self.no_crash += 1
             else:
                 self.crash += 1
+                tracker.saveTracking(frames_RGB)
         print(self.crash, self.no_crash)
 
 

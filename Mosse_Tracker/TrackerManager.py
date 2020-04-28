@@ -90,9 +90,8 @@ class Tracker:
     def clearHistory(self):
         self.history = []
 
-    def saveTracking(self):
-        global frames
-        new_frames,width,height = self.getFramesOfTracking(frames)
+    def saveTracking(self,frames):
+        new_frames,width,height,_,_,_,_ = self.getFramesOfTracking(frames)
         if new_frames == None:
             return
         out = cv2.VideoWriter('./track_videos/' + str(self.tracker_id) + ") " + str(self.index) + '.avi', cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), 30, (width, height))
@@ -108,7 +107,7 @@ class Tracker:
     #get frames of box to enter it to vif descriptor or save it
     def getFramesOfTracking(self,frames,last_no_of_frames = 30):
         if len(self.history) < last_no_of_frames:
-            return None,-1,-1
+            return None,-1,-1,-1,-1,-1,-1
         xmin, ymin, xmax, ymax = self.getTrackedFramesBoxed(last_no_of_frames)
 
         width, height = xmax - xmin, ymax - ymin
@@ -117,7 +116,7 @@ class Tracker:
         size = len(frames)
         for i in range(size - last_no_of_frames, size, 1):
             new_frames.append(frames[i][ymin:ymax, xmin:xmax])
-        return new_frames,width,height
+        return new_frames,width,height,xmin,xmax,ymin,ymax
 
 
 
@@ -146,7 +145,7 @@ class TrackerManager:
 
     def saveTrackers(self,trackers):
         for tracker in self.trackers:
-            tracker.saveTracking()
+            tracker.saveTracking(frames)
     def run(self):
         f = 1
         cum = 0
