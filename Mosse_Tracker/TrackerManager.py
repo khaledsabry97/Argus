@@ -1,5 +1,6 @@
 from threading import Thread
 from time import time
+import math
 
 import cv2
 
@@ -86,6 +87,10 @@ class Tracker:
         draw_str(frame, (xmin, ymax + 16), 'Id: %i' % self.tracker_id)
         draw_str(frame, (xmin, ymax + 32), 'PSR: %.2f' % self.tracker.getPsr())
         draw_str(frame, (xmin, ymax + 48), 'L_R: %.2f' % self.tracker.getLearningRate())
+        draw_str(frame, (xmin, ymax + 64), 'Max Speed: %.2f' % self.getMaxSpeed())
+        draw_str(frame, (xmin, ymax + 80), 'Avg Speed: %.2f' % self.getAvgSpeed())
+        draw_str(frame, (xmin, ymax + 96), 'Area Size: %.2f' % self.getCarSizeCoefficient())
+        draw_str(frame, (xmin, ymax + 112), 'Moving Angle: %.2f' % self.getCarAngle())
 
     def clearHistory(self):
         self.history = []
@@ -102,6 +107,58 @@ class Tracker:
         print("tracker_id " + str(self.tracker_id) + " saved!")
         self.index+=1
         out.release()
+
+
+
+    def getMaxSpeed(self):
+        x = max(self.tracker.dx)
+        y = max(self.tracker.dy)
+        r = pow(pow(x,2)+pow(y,2),0.5)
+        r_coefficient = r * self.getCarSizeCoefficient()
+        return r_coefficient
+    def getAvgSpeed(self):
+        x = sum(self.tracker.dx)/len(self.tracker.dx)
+        y = sum(self.tracker.dy)/len(self.tracker.dy)
+        r = pow(pow(x, 2) + pow(y, 2), 0.5)
+        r_coefficient = r * self.getCarSizeCoefficient()
+        return r_coefficient
+
+    def getCarSizeCoefficient(self):
+        area = 0.5 * self.tracker.width * self.tracker.height
+        coefficient = 50000/area
+        return coefficient
+
+    def getCarAngle(self):
+        max_index_to_measure = min(1000,len(self.tracker.dx))
+        dx = sum(self.tracker.dx[:max_index_to_measure])
+        dy = sum(self.tracker.dy[:max_index_to_measure])
+        is_dx_sign_pos = True
+        if dx < 0:
+            is_dx_sign_pos = False
+
+        is_dy_sign_pos = True
+        if dy < 0:
+            is_dy_sign_pos = False
+        if dx == 0:
+            if dy > 0:
+                return 270
+            elif dy < 0:
+                return 90
+            else:
+                return -1
+
+        degree = math.degrees(math.atan(abs(dy/dx)))
+        #remember the y coordinate min at the left up corner so flip the graph
+        if dx < 0 and dy >=0:
+            return 180 + degree
+        elif dx <0 and dy <= 0:
+            return 180 - degree
+        elif dx > 0 and dy <= 0:
+            return  degree
+        else:
+            return 360 - degree
+
+
 
 
     #get frames of box to enter it to vif descriptor or save it
