@@ -9,6 +9,7 @@ from Mosse_Tracker.utils import draw_str
 from Mosse_Tracker.utils import RectSelector
 
 import sys, getopt
+pi=22/7
 
 global id
 id = 0
@@ -168,6 +169,19 @@ class Tracker:
             return 360 - degree
 
 
+    def futureFramePosition(self, ):
+        if len(self.tracker.dx) <10:
+            return self.tracker.getCutFramePosition()
+        x,y = self.tracker.center
+        dx = sum(self.tracker.dx[-10:]) / len(self.tracker.dx[-10:])
+        dy = sum(self.tracker.dy[-10:]) / len(self.tracker.dy[-10:])
+        r = pow(pow(dx, 2) + pow(dy, 2), 0.5) *10
+        radian = self.getCarAngle() * pi/180
+        x = x + r * math.cos(radian)
+        y = y + r * math.sin(radian)
+        return self.tracker.getCutFramePosition((x,y))
+
+
 
 
     #get frames of box to enter it to vif descriptor or save it
@@ -183,6 +197,11 @@ class Tracker:
         for i in range(size - last_no_of_frames, size, 1):
             new_frames.append(frames[i][ymin:ymax, xmin:xmax])
         return new_frames,width,height,xmin,xmax,ymin,ymax
+
+    def isAboveSpeedLimit(self):
+        if self.getAvgSpeed() > 70:
+            return True
+        return False
 
 
 
