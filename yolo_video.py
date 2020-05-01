@@ -22,11 +22,11 @@ FLAGS = None
 
 if __name__ == '__main__':
     y = YOLO()
-
-    onlyfiles = ['videos/'+f for f in listdir('videos/') if isfile(join('videos/', f))]
-    print(onlyfiles)
-    for i in range(len(onlyfiles)):
-        detect_video(y, onlyfiles[i], "")
+    detect_video(y, 'videos/Easy_resized.mp4', "")
+    # onlyfiles = ['videos/'+f for f in listdir('videos/') if isfile(join('videos/', f))]
+    # print(onlyfiles)
+    # for i in range(len(onlyfiles)):
+    #     detect_video(y, onlyfiles[i], "")
 
 
 
