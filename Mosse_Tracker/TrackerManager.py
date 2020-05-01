@@ -84,14 +84,13 @@ class Tracker:
         else:
             cv2.line(frame, (xmin, ymin), (xmax, ymax), (0, 0, 255))
             cv2.line(frame, (xmax, ymin), (xmin, ymax), (0, 0, 255))
-
-        draw_str(frame, (xmin, ymax + 16), 'Id: %i' % self.tracker_id)
-        draw_str(frame, (xmin, ymax + 32), 'PSR: %.2f' % self.tracker.getPsr())
-        draw_str(frame, (xmin, ymax + 48), 'L_R: %.2f' % self.tracker.getLearningRate())
+        #draw_str(frame, (xmin, ymax + 16), 'Id: %i' % self.tracker_id)
+        #draw_str(frame, (xmin, ymax + 32), 'PSR: %.2f' % self.tracker.getPsr())
         draw_str(frame, (xmin, ymax + 64), 'Max Speed: %.2f' % self.getMaxSpeed())
         draw_str(frame, (xmin, ymax + 80), 'Avg Speed: %.2f' % self.getAvgSpeed())
-        draw_str(frame, (xmin, ymax + 96), 'Area Size: %.2f' % self.getCarSizeCoefficient())
-        draw_str(frame, (xmin, ymax + 112), 'Moving Angle: %.2f' % self.getCarAngle())
+        draw_str(frame, (xmin, ymax + 96), 'Cur Speed: %.2f' % self.getCurrentSpeed())
+        draw_str(frame, (xmin, ymax + 112), 'Area Size: %.2f' % self.getCarSizeCoefficient())
+        draw_str(frame, (xmin, ymax + 128), 'Moving Angle: %.2f' % self.getCarAngle())
 
     def clearHistory(self):
         self.history = []
@@ -124,10 +123,19 @@ class Tracker:
         r_coefficient = r * self.getCarSizeCoefficient()
         return r_coefficient
 
+    def getCurrentSpeed(self):
+        no_of_last_frames = min(len(self.tracker.dx),3)
+        x = sum(self.tracker.dx[-no_of_last_frames:]) / no_of_last_frames
+        y = sum(self.tracker.dy[-no_of_last_frames:]) / no_of_last_frames
+        r = pow(pow(x, 2) + pow(y, 2), 0.5)
+        r_coefficient = r * self.getCarSizeCoefficient()
+        return r_coefficient
+
     def getCarSizeCoefficient(self):
         area = 0.5 * self.tracker.width * self.tracker.height
-        coefficient = 50000/area
+        coefficient = 40000/area
         return coefficient
+
 
     def getCarAngle(self):
         max_index_to_measure = min(1000,len(self.tracker.dx))
@@ -229,7 +237,8 @@ class TrackerManager:
             for tracker in self.trackers:
                 tracker.showFrame(vis)
             if len(self.trackers) > 0:
-                cv2.imshow('tracker state', self.trackers[-1].tracker.state_vis)
+                #cv2.imshow('tracker state', self.trackers[-1].tracker.state_vis)
+                pass
             self.rect_sel.draw(vis)
 
             cv2.imshow('frame', vis)
