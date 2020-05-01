@@ -212,6 +212,8 @@ class TrackerManager:
                 ret, self.frame = self.cap.read()
                 if not ret:
                     break
+                dim = (480, 360)
+                self.frame = cv2.resize(self.frame, dim, interpolation=cv2.INTER_AREA)
                 frames.append(self.frame.copy())
                 frame_gray = cv2.cvtColor(self.frame, cv2.COLOR_BGR2GRAY)
                 t = time()

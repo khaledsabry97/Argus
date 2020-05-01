@@ -106,9 +106,10 @@ class MainFlow:
             fileBoxes = loadFile(path)
 
         cap = cv2.VideoCapture(path)
-        frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-        frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-
+        #frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+        #frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+        frame_width = 480
+        frame_height = 360
         trackers = []
 
         # run yolo every fps frames
@@ -117,6 +118,8 @@ class MainFlow:
             # read new frame
             ret, frame = cap.read()
             if ret:
+                dim = (480, 360)
+                frame = cv2.resize(frame, dim, interpolation=cv2.INTER_AREA)
                 #frame = cv2.GaussianBlur(frame, (-1, -1), 1.0)  # 2.0
                 new_frame = frame.copy()
                 total_frames.append(new_frame)
@@ -202,4 +205,4 @@ class MainFlow:
 
 if __name__ == '__main__':
     m = MainFlow(None, select=False)
-    m.run('videos/crash1.mp4')
+    m.run('videos/Easy.mp4')
