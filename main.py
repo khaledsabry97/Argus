@@ -1,16 +1,18 @@
 from threading import Thread
 
 import cv2
+import math
 import numpy as np
 from Mosse_Tracker.TrackerManager import Tracker
 from PIL import Image
 #from Car_Detection_TF.yolo import YOLO
 #from Car_Detection.detect import Yolo_image
+from Mosse_Tracker.utils import draw_str
 from yoloFiles import loadFile
 import pickle
 from VIF.vif import VIF
 
-
+pi=22/7
 # clf = pickle.load(open('VIF/model-svm1.sav', 'rb'))
 total_frames = []
 counter_sub_video = 1
@@ -130,9 +132,9 @@ class MainFlow:
             # run ViF
             if self.frameCount > 0 and (self.frameCount % fps == 0 or self.frameCount == fps - 1):
                  print("FRAME " + str(self.frameCount) + " VIF")
-                 thread = Thread(target=predict(last_30_frames,trackers))
-                 thread.start()
-                 print("error")
+                 #thread = Thread(target=predict(last_30_frames,trackers))
+                 #thread.start()
+                 #print("error")
                  #vif(trackers, frame_width, frame_height, frame)
 
             # Call YOLO
@@ -191,10 +193,35 @@ class MainFlow:
                 # updating trackers
                 for i, tracker in enumerate(trackers):
                     left, top, right, bottom = tracker.update(frame_gray)
+                    radian = tracker.getCarAngle() * (pi / 180)
+                    radian = 0
+
+                    #left = left * math.cos(radian) - top * math.sin(radian)
+                    #right = right * math.cos(radian) - bottom * math.sin(radian)
+                    #top = left * math.sin(radian) + top * math.cos(radian)
+                    #bottom = right * math.sin(radian) + bottom * math.cos(radian)
+
+                    left_future, top_future, right_future, bottom_future = tracker.futureFramePosition()
+
                     if left > 0 and top > 0 and right < frame_width and bottom < frame_height:
-                        cv2.rectangle(frame, (int(left), int(top)),
-                                      (int(right), int(bottom)), (0, 0, 255))
-            cv2.namedWindow("result", cv2.WINDOW_NORMAL)
+                        if tracker.isAboveSpeedLimit():
+                            cv2.rectangle(frame, (int(left), int(top)),(int(right), int(bottom)), (0, 0, 255))
+                        else:
+                            cv2.rectangle(frame, (int(left), int(top)),(int(right), int(bottom)), (255, 0, 0))
+
+
+
+
+                        #draw_str(frame, (left, bottom + 64), 'Max Speed: %.2f' % tracker.getMaxSpeed())
+                        draw_str(frame, (left, bottom + 16), 'Avg Speed: %.2f' % tracker.getAvgSpeed())
+                        #draw_str(frame, (left, bottom + 96), 'Cur Speed: %.2f' % tracker.getCurrentSpeed())
+                        #draw_str(frame, (left, bottom + 112), 'Area Size: %.2f' % tracker.getCarSizeCoefficient())
+                        draw_str(frame, (left, bottom + 32), 'Moving Angle: %.2f' % tracker.getCarAngle())
+
+                    if left_future > 0 and top_future > 0 and right_future < frame_width and bottom_future < frame_height:
+                        cv2.rectangle(frame, (int(left_future), int(top_future)), (int(right_future), int(bottom_future)), (0, 255, 0))
+
+            #cv2.namedWindow("result", cv2.WINDOW_NORMAL)
             cv2.imshow("result", frame)
             ch = cv2.waitKey(10)
             last_30_frames.append(new_frame)
@@ -205,4 +232,4 @@ class MainFlow:
 
 if __name__ == '__main__':
     m = MainFlow(None, select=False)
-    m.run('videos/Easy.mp4')
+    m.run('videos/Easy_resized.mp4')

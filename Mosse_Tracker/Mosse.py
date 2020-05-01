@@ -184,9 +184,11 @@ class MOSSE:
         h_filter = (Num_real + 1j * Num_imaginary) / (Den_real + 1j * Den_imaginary)
         h_filter = np.dstack([np.real(h_filter), np.imag(h_filter)]).copy()
         return h_filter
-    def getCutFramePosition(self):
-        x = self.center[0]
-        y = self.center[1]
+    def getCutFramePosition(self,center = -1):
+        if center == -1:
+            center = self.center
+        x = center[0]
+        y = center[1]
         xmin = int(x - 0.5*(self.width-1))
         ymin = int(y - 0.5*(self.height-1))
         xmax = int(self.width+xmin)
