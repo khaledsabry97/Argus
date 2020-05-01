@@ -46,14 +46,15 @@ class Tracker:
         return self.history[-1]
 
     #get dimensions of the history to be able to make video clip later
-    def getTrackedFramesBoxed(self,last_no_of_frame = 0):
-        xmin = self.history[-1][0]
-        ymin = self.history[-1][1]
-        xmax = self.history[-1][2]
-        ymax = self.history[-1][3]
+    def getTrackedFramesBoxed(self,last_no_of_frame = 0,after_no_of_frames = 1):
+        xmin = self.history[-after_no_of_frames][0]
+        ymin = self.history[-after_no_of_frames][1]
+        xmax = self.history[-after_no_of_frames][2]
+        ymax = self.history[-after_no_of_frames][3]
         num_of_frames = len(self.history)
         if last_no_of_frame != 0:
             num_of_frames = last_no_of_frame
+
         size = len(self.history)
         for i in range(size-2,size-num_of_frames-1,-1):
             position = self.history[i]
