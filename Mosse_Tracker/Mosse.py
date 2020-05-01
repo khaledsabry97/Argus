@@ -10,7 +10,8 @@ class MOSSE:
     def __init__(self, frame, cut_size,num_of_traning_imgs = 10,learning_rate = 0.225,psrGoodness = 10):
         #get the xmin,ymin, xmax ,ymax for all the corners in the cut_Size
         xmin, ymin, xmax, ymax = cut_size
-
+        self.dx =[]
+        self.dy = []
         self.learning_rate = learning_rate
         self.num_of_traning_imgs = num_of_traning_imgs
         self.psr_goodness = psrGoodness
@@ -67,6 +68,12 @@ class MOSSE:
         self.psr, self.last_resp, (dx, dy) = self.correlateNewImg(img)
         self.good = self.psr > self.psr_goodness
         if not self.good:
+            if len(self.dx) == 0:
+                self.dx.append(0)
+                self.dy.append(0)
+            else:
+                self.dx.append(self.dx[-1])
+                self.dy.append(self.dy[-1])
             return
             # self.prepareInitialTracking(frame,self.last_img)
             # return
@@ -74,7 +81,8 @@ class MOSSE:
         else:
             # self.learning_rate = max(min(abs(100-self.good)/100)  -0.8 , 0.125)
 
-
+            self.dx.append(dx)
+            self.dy.append(dy)
             #this is the new center
             self.center = x + dx, y + dy
             #cut same width and height for the new img
