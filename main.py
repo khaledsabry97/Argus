@@ -1,8 +1,11 @@
 from threading import Thread
+from time import sleep
 
 import cv2
 import math
 import numpy as np
+
+from CrashingEstimation import process
 from Mosse_Tracker.TrackerManager import Tracker
 from PIL import Image
 #from Car_Detection_TF.yolo import YOLO
@@ -116,120 +119,135 @@ class MainFlow:
 
         # run yolo every fps frames
         fps = 30
+        no_of_frames = 0
+        paused = False
         while True:
-            # read new frame
-            ret, frame = cap.read()
-            if ret:
-                dim = (480, 360)
-                frame = cv2.resize(frame, dim, interpolation=cv2.INTER_AREA)
-                #frame = cv2.GaussianBlur(frame, (-1, -1), 1.0)  # 2.0
-                new_frame = frame.copy()
-                total_frames.append(new_frame)
-            # failed to get new frame
-            else:
-                break
+            if not paused:
 
-            # run ViF
-            if self.frameCount > 0 and (self.frameCount % fps == 0 or self.frameCount == fps - 1):
-                 print("FRAME " + str(self.frameCount) + " VIF")
-                 #thread = Thread(target=predict(last_30_frames,trackers))
-                 #thread.start()
-                 #print("error")
-                 #vif(trackers, frame_width, frame_height, frame)
-
-            # Call YOLO
-            if self.frameCount % fps == 0 or self.frameCount == 0:
-                print("YOLO CALLED in frame no. " + str(self.frameCount))
-                # clear earlier trackers
-                trackers = []
-                bboxes = []
-                last_30_frames = []
-                img = Image.fromarray(frame)
-
-                # detect vehicles
-                if self.readFile:
-                    # From files
-                    bboxes = fileBoxes[self.frameCount]
-
-                elif not self.selectYOLO:
-                    # Khaled
-                    img, bboxes = self.yolo.detect_image(img)
+                # read new frame
+                ret, frame = cap.read()
+                # if ret and no_of_frames <120:
+                #     no_of_frames+=1
+                #     continue
+                if ret:
+                    dim = (480, 360)
+                    frame = cv2.resize(frame, dim, interpolation=cv2.INTER_AREA)
+                    #frame = cv2.GaussianBlur(frame, (-1, -1), 1.0)  # 2.0
+                    new_frame = frame.copy()
+                    total_frames.append(new_frame)
+                # failed to get new frame
                 else:
-                    # Roba
-                    bboxes = Yolo_image(np.float32(img))
+                    break
 
+                # run ViF
+                if self.frameCount > 0 and (self.frameCount % fps == 0 or self.frameCount == fps - 1):
+                     #print("FRAME " + str(self.frameCount) + " VIF")
+                     #thread = Thread(target=predict(last_30_frames,trackers))
+                     #thread.start()
+                     #print("error")
+                     #vif(trackers, frame_width, frame_height, frame)
+                    process(trackers,last_30_frames)
 
-                for i, bbox in enumerate(bboxes):
-                    label = bbox[0]
-                    # accuracy = bbox[5]
+                # Call YOLO
+                if self.frameCount % fps == 0 or self.frameCount == 0:
+                    #print("YOLO CALLED in frame no. " + str(self.frameCount))
+                    # clear earlier trackers
+                    trackers = []
+                    bboxes = []
+                    last_30_frames = []
+                    img = Image.fromarray(frame)
 
-                    xmin = int(bbox[1])
-                    xmax = int(bbox[2])
-                    ymin = int(bbox[3])
-                    ymax = int(bbox[4])
+                    # detect vehicles
+                    if self.readFile:
+                        # From files
+                        bboxes = fileBoxes[self.frameCount]
 
-                    # can limit this part to cars and trucks only later
-                    # cv2.rectangle(frame, (xmin, ymin), (xmax, ymax), (0, 0, 255))
-                    frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-                    self.trackerId +=1
-                    # no need for frame_width and frame_height
-                    if xmax < frame_width and ymax < frame_height:
-                        tr = Tracker(frame_gray, (xmin, ymin, xmax, ymax), frame_width, frame_height,self.trackerId)
-                        trackers.append(tr)
-                    elif xmax < frame_width and ymax >= frame_height:
-                        tr = Tracker(frame_gray, (xmin, ymin, xmax, frame_height - 1), frame_width, frame_height,self.trackerId)
-                        trackers.append(tr)
-                    elif xmax >= frame_width and ymax < frame_height:
-                        tr = Tracker(frame_gray, (xmin, ymin, frame_width - 1, ymax), frame_width, frame_height,self.trackerId)
-                        trackers.append(tr)
+                    elif not self.selectYOLO:
+                        # Khaled
+                        img, bboxes = self.yolo.detect_image(img)
                     else:
-                        tr = Tracker(frame_gray, (xmin, ymin, frame_width - 1, frame_height - 1), frame_width, frame_height,self.trackerId)
-                        trackers.append(tr)
-            else:
-                print("updating trackers, frame no. " + str(self.frameCount) + "...")
-                frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+                        # Roba
+                        bboxes = Yolo_image(np.float32(img))
 
-                print(len(trackers))
-                # updating trackers
-                for i, tracker in enumerate(trackers):
-                    left, top, right, bottom = tracker.update(frame_gray)
-                    radian = tracker.getCarAngle() * (pi / 180)
-                    radian = 0
 
-                    #left = left * math.cos(radian) - top * math.sin(radian)
-                    #right = right * math.cos(radian) - bottom * math.sin(radian)
-                    #top = left * math.sin(radian) + top * math.cos(radian)
-                    #bottom = right * math.sin(radian) + bottom * math.cos(radian)
+                    for i, bbox in enumerate(bboxes):
+                        label = bbox[0]
+                        # accuracy = bbox[5]
 
-                    left_future, top_future, right_future, bottom_future = tracker.futureFramePosition()
+                        xmin = int(bbox[1])
+                        xmax = int(bbox[2])
+                        ymin = int(bbox[3])
+                        ymax = int(bbox[4])
 
-                    if left > 0 and top > 0 and right < frame_width and bottom < frame_height:
-                        if tracker.isAboveSpeedLimit():
-                            cv2.rectangle(frame, (int(left), int(top)),(int(right), int(bottom)), (0, 0, 255))
+                        # can limit this part to cars and trucks only later
+                        # cv2.rectangle(frame, (xmin, ymin), (xmax, ymax), (0, 0, 255))
+                        frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+                        self.trackerId +=1
+                        # no need for frame_width and frame_height
+                        if xmax < frame_width and ymax < frame_height:
+                            tr = Tracker(frame_gray, (xmin, ymin, xmax, ymax), frame_width, frame_height,self.trackerId)
+                            trackers.append(tr)
+                        elif xmax < frame_width and ymax >= frame_height:
+                            tr = Tracker(frame_gray, (xmin, ymin, xmax, frame_height - 1), frame_width, frame_height,self.trackerId)
+                            trackers.append(tr)
+                        elif xmax >= frame_width and ymax < frame_height:
+                            tr = Tracker(frame_gray, (xmin, ymin, frame_width - 1, ymax), frame_width, frame_height,self.trackerId)
+                            trackers.append(tr)
                         else:
-                            cv2.rectangle(frame, (int(left), int(top)),(int(right), int(bottom)), (255, 0, 0))
+                            tr = Tracker(frame_gray, (xmin, ymin, frame_width - 1, frame_height - 1), frame_width, frame_height,self.trackerId)
+                            trackers.append(tr)
+                else:
+                    #print("updating trackers, frame no. " + str(self.frameCount) + "...")
+                    frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+                    #print(len(trackers))
+                    # updating trackers
+                    for i, tracker in enumerate(trackers):
+                        left, top, right, bottom = tracker.update(frame_gray)
+                        radian = tracker.getCarAngle() * (pi / 180)
+                        radian = 0
+
+                        #left = left * math.cos(radian) - top * math.sin(radian)
+                        #right = right * math.cos(radian) - bottom * math.sin(radian)
+                        #top = left * math.sin(radian) + top * math.cos(radian)
+                        #bottom = right * math.sin(radian) + bottom * math.cos(radian)
+
+                        left_future, top_future, right_future, bottom_future = tracker.futureFramePosition()
+
+                        if left > 0 and top > 0 and right < frame_width and bottom < frame_height:
+                            if tracker.isAboveSpeedLimit():
+                                cv2.rectangle(frame, (int(left), int(top)),(int(right), int(bottom)), (0, 0, 255)) #B G R
+                            else:
+                                cv2.rectangle(frame, (int(left), int(top)),(int(right), int(bottom)), (255, 0, 0))
 
 
 
 
-                        #draw_str(frame, (left, bottom + 64), 'Max Speed: %.2f' % tracker.getMaxSpeed())
-                        draw_str(frame, (left, bottom + 16), 'Avg Speed: %.2f' % tracker.getAvgSpeed())
-                        #draw_str(frame, (left, bottom + 96), 'Cur Speed: %.2f' % tracker.getCurrentSpeed())
-                        #draw_str(frame, (left, bottom + 112), 'Area Size: %.2f' % tracker.getCarSizeCoefficient())
-                        draw_str(frame, (left, bottom + 32), 'Moving Angle: %.2f' % tracker.getCarAngle())
+                            #draw_str(frame, (left, bottom + 64), 'Max Speed: %.2f' % tracker.getMaxSpeed())
+                            draw_str(frame, (left, bottom + 16), 'Avg Speed: %.2f' % tracker.getAvgSpeed())
+                            #draw_str(frame, (left, bottom + 96), 'Cur Speed: %.2f' % tracker.getCurrentSpeed())
+                            #draw_str(frame, (left, bottom + 112), 'Area Size: %.2f' % tracker.getCarSizeCoefficient())
+                            draw_str(frame, (left, bottom + 32), 'Moving Angle: %.2f' % tracker.getCarAngle())
 
-                    if left_future > 0 and top_future > 0 and right_future < frame_width and bottom_future < frame_height:
-                        cv2.rectangle(frame, (int(left_future), int(top_future)), (int(right_future), int(bottom_future)), (0, 255, 0))
-
-            #cv2.namedWindow("result", cv2.WINDOW_NORMAL)
-            cv2.imshow("result", frame)
+                        if left_future > 0 and top_future > 0 and right_future < frame_width and bottom_future < frame_height:
+                            cv2.rectangle(frame, (int(left_future), int(top_future)), (int(right_future), int(bottom_future)), (0, 255, 0))
+                #sleep(0.02)
+                #cv2.namedWindow("result", cv2.WINDOW_NORMAL)
+                cv2.imshow("result", frame)
+                last_30_frames.append(new_frame)
+                # increment number of frames
+                self.frameCount += 1
             ch = cv2.waitKey(10)
-            last_30_frames.append(new_frame)
-            # increment number of frames
-            self.frameCount += 1
-        print(self.trackerId)
+            if ch == ord(' '):
+                paused = not paused
+        #print(self.trackerId)
+
+
 
 
 if __name__ == '__main__':
     m = MainFlow(None, select=False)
     m.run('videos/Easy_resized.mp4')
+
+
+

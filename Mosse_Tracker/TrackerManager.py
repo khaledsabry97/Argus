@@ -3,6 +3,7 @@ from time import time
 import math
 
 import cv2
+from copy import deepcopy
 
 from Mosse_Tracker.Mosse import MOSSE
 from Mosse_Tracker.utils import draw_str
@@ -25,6 +26,7 @@ class Tracker:
         self.frame_height= frame_height
         self.tracker_id =tracker_id
         self.index = 0
+        self.estimationFutureCenter = [-1]*30
 
     #add current cut frame in history for later use
     #only append the dimensins : [xmin,ymin,xmax,ymax]
@@ -134,7 +136,7 @@ class Tracker:
 
     def getCarSizeCoefficient(self):
         area = 0.5 * self.tracker.width * self.tracker.height
-        coefficient = 40000/area
+        coefficient = 25000/area
         return coefficient
 
 
@@ -170,16 +172,18 @@ class Tracker:
 
 
     def futureFramePosition(self, ):
-        if len(self.tracker.dx) <10:
-            return self.tracker.getCutFramePosition()
+        if len(self.tracker.dx) <5 or len(self.tracker.dx) > 18 :
+            self.estimationFutureCenter.append(self.tracker.center)
+            return -1,-1,-1,-1
+        measure = min(len(self.tracker.dx),10)
+        expectedPositionNo = len(self.tracker.dx)+10
         x,y = self.tracker.center
-        dx = sum(self.tracker.dx[-10:]) / len(self.tracker.dx[-10:])
-        dy = sum(self.tracker.dy[-10:]) / len(self.tracker.dy[-10:])
-        r = pow(pow(dx, 2) + pow(dy, 2), 0.5) *10
-        radian = self.getCarAngle() * pi/180
-        x = x + r * math.cos(radian)
-        y = y + r * math.sin(radian)
-        return self.tracker.getCutFramePosition((x,y))
+        dx = sum(self.tracker.dx[-measure:]) / len(self.tracker.dx[-measure:])
+        dy = sum(self.tracker.dy[-measure:]) / len(self.tracker.dy[-measure:])
+        x_new = x + dx*measure
+        y_new = y + dy*measure
+        self.estimationFutureCenter[expectedPositionNo] = (x_new,y_new)
+        return self.tracker.getCutFramePosition((x_new,y_new))
 
 
 
