@@ -10,8 +10,13 @@ def convert_frames_to_video(pathIn, pathOut, fps):
     files = [f for f in os.listdir(pathIn) if isfile(join(pathIn, f))]
     if len(files) == 0:
         return
-    ext = files[0].split('.')[1]
-    files = [int(f.split('.')[0]) for f in files]
+    #ext = files[0].split('.')[1]
+    ext = "jpg"
+    newfiles = []
+    for f in files:
+        if f.split('.')[1] == "jpg":
+            newfiles.append(int(f.split('.')[0]))
+    files = newfiles
     files.sort()
     # print(files)
     # for sorting the file names properly
