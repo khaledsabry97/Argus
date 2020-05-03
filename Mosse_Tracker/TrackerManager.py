@@ -209,7 +209,7 @@ class Tracker:
         return new_frames,width,height,xmin,xmax,ymin,ymax
 
     def isAboveSpeedLimit(self,from_frame_no = -1,to_frame_no = -1):
-        if self.getAvgSpeed(from_frame_no,to_frame_no) > 100:
+        if self.getAvgSpeed(from_frame_no,to_frame_no) > 50:
             return True
         return False
 

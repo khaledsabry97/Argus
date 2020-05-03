@@ -46,11 +46,10 @@ def checkDistance(frames,tracker_A,tracker_B,frame_no):
     difference_trackerB_actual_to_estimate = pow(pow(xb_actual - xb, 2) + pow(yb_actual - yb, 2), 0.5)
     max_difference = max(difference_trackerA_actual_to_estimate,difference_trackerB_actual_to_estimate)
     #print(r,difference_trackerA_actual_to_estimate,difference_trackerB_actual_to_estimate,max_difference/r)
-    if max_difference/r > 0.5:
-        print("possible accident")
-        print(r,difference_trackerA_actual_to_estimate,difference_trackerB_actual_to_estimate,max_difference/r)
+    if r == 0:
+        return True
 
-    if r < 40:
+    if r < 40 and max_difference/r > 0.5:
         print(r,difference_trackerA_actual_to_estimate,difference_trackerB_actual_to_estimate,max_difference/r)
         return True
     return False
