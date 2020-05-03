@@ -101,9 +101,12 @@ class VIF:
 
             if tracker_frames == None:
                 continue
-            if xmax - xmin < 100:
+            if xmax - xmin < 50:
+                 continue
+            if ymax - ymin <= 35:
                 continue
-            if ymax - ymin < 50:
+
+            if (ymax- ymin) / (xmax - xmin) <0.35:
                 continue
 
             feature_vec = self.process(tracker_frames)

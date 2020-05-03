@@ -12,6 +12,7 @@ class MOSSE:
         xmin, ymin, xmax, ymax = cut_size
         self.dx =[]
         self.dy = []
+        self.centers = []
         self.learning_rate = learning_rate
         self.num_of_traning_imgs = num_of_traning_imgs
         self.psr_goodness = psrGoodness
@@ -74,7 +75,6 @@ class MOSSE:
             else:
                 self.dx.append(self.dx[-1])
                 self.dy.append(self.dy[-1])
-            return
             # self.prepareInitialTracking(frame,self.last_img)
             # return
 
@@ -83,8 +83,10 @@ class MOSSE:
 
             self.dx.append(dx)
             self.dy.append(dy)
+
             #this is the new center
             self.center = x + dx, y + dy
+
             #cut same width and height for the new img
             self.last_img = img = cv2.getRectSubPix(frame, (w, h), self.center)
             #calcultate num and denumentator for the new image
@@ -94,6 +96,8 @@ class MOSSE:
             self.H2 = self.H2 * (1.0-self.learning_rate) + H2 * self.learning_rate
             #update the kernal
             self.updateFilter()
+        x_new, y_new = self.center
+        self.centers.append((x_new, y_new))
 
     @property
     def state_vis(self):
