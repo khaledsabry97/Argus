@@ -63,8 +63,10 @@ def predict(frames_RGB,trackers):
             no_crash += 1
         else:
             crash += 1
+            # trackers[0].saveTracking(frames_RGB)
+            # trackers[1].saveTracking(frames_RGB)
             tracker.saveTracking(frames_RGB)
-    print(crash, no_crash)
+            print(crash, no_crash)
 
 def checkDistance(frames,tracker_A,tracker_B,frame_no):
     if not tracker_A.isAboveSpeedLimit(frame_no-10,frame_no) and not tracker_B.isAboveSpeedLimit(frame_no-10,frame_no) :
@@ -109,7 +111,8 @@ def process(trackers,frames):
             tracker_A = trackers[i]
             tracker_B = trackers[j]
 
-            if checkDistance(frames,tracker_A,tracker_B,15) or checkDistance(frames,tracker_A,tracker_B,25):
+            if checkDistance(frames,tracker_A,tracker_B,16)or checkDistance(frames,tracker_A,tracker_B,19)or checkDistance(frames,tracker_A,tracker_B,22) or checkDistance(frames,tracker_A,tracker_B,25) or checkDistance(frames,tracker_A,tracker_B,28):
+                # tracker_A.saveTracking(frames)
                 #print("accident has occured!")
                 predict(frames, [tracker_B,tracker_A])
 
