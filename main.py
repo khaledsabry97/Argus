@@ -219,10 +219,10 @@ class MainFlow:
 
 
                             #draw_str(frame, (left, bottom + 64), 'Max Speed: %.2f' % tracker.getMaxSpeed())
-                            draw_str(frame, (left, bottom + 16), 'Avg Speed: %.2f' % tracker.getAvgSpeed())
+                            draw_str(frame, (left, bottom + 16), 'Avg Speed: %.2f' % tracker.tracker_id)
                             #draw_str(frame, (left, bottom + 96), 'Cur Speed: %.2f' % tracker.getCurrentSpeed())
                             #draw_str(frame, (left, bottom + 112), 'Area Size: %.2f' % tracker.getCarSizeCoefficient())
-                            draw_str(frame, (left, bottom + 32), 'Moving Angle: %.2f' % tracker.getCarAngle())
+                            #draw_str(frame, (left, bottom + 32), 'Moving Angle: %.2f' % tracker.getCarAngle())
 
                         if left_future > 0 and top_future > 0 and right_future < frame_width and bottom_future < frame_height:
                             cv2.rectangle(frame, (int(left_future), int(top_future)), (int(right_future), int(bottom_future)), (0, 255, 0))
@@ -241,16 +241,28 @@ class MainFlow:
 
 
 if __name__ == '__main__':
+    # m = MainFlow(None, select=False)
+    # m.run('videos/1533.mp4')
+    # m = MainFlow(None, select=False)
+    # m.run('videos/1517.mp4')
     m = MainFlow(None, select=False)
-    m.run('videos/1521.mp4')
-    m = MainFlow(None, select=False)
-    m.run('videos/1528.mp4')
-    m = MainFlow(None, select=False)
-    m.run('videos/1529.mp4')
-    m = MainFlow(None, select=False)
-    m.run('videos/1541.mp4')
-    m = MainFlow(None, select=False)
-    m.run('videos/Easy.mp4')
+    m.run('videos/1537.mp4')
+    # m = MainFlow(None, select=False)
+    # m.run('videos/1516.mp4')
+    # m = MainFlow(None, select=False)
+    # m.run('videos/1534.mp4')
+    # m = MainFlow(None, select=False)
+    # m.run('videos/1508.mp4')
+    # m = MainFlow(None, select=False)
+    # m.run('videos/1521.mp4')
+    # m = MainFlow(None, select=False)
+    # m.run('videos/1528.mp4')
+    # m = MainFlow(None, select=False)
+    # m.run('videos/1529.mp4')
+    # m = MainFlow(None, select=False)
+    # m.run('videos/1541.mp4')
+    # m = MainFlow(None, select=False)
+    # m.run('videos/Easy.mp4')
 
 
 
