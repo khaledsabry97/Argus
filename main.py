@@ -86,11 +86,6 @@ data = []
 #             cv2.imshow("win", frame)
 #             cv2.waitKey(0)
 
-vif = VIF()
-
-
-def predict(last_30_frames,trackers):
-    vif.predict(last_30_frames, trackers)
 
 
 class MainFlow:
@@ -231,7 +226,7 @@ class MainFlow:
 
                         if left_future > 0 and top_future > 0 and right_future < frame_width and bottom_future < frame_height:
                             cv2.rectangle(frame, (int(left_future), int(top_future)), (int(right_future), int(bottom_future)), (0, 255, 0))
-                #sleep(0.02)
+                # sleep(0.02)
                 #cv2.namedWindow("result", cv2.WINDOW_NORMAL)
                 cv2.imshow("result", frame)
                 last_30_frames.append(new_frame)
@@ -246,14 +241,14 @@ class MainFlow:
 
 
 if __name__ == '__main__':
-    # m = MainFlow(None, select=False)
-    # m.run('videos/1521.mp4')
-    # m = MainFlow(None, select=False)
-    # m.run('videos/1528.mp4')
-    # m = MainFlow(None, select=False)
-    # m.run('videos/1529.mp4')
-    # m = MainFlow(None, select=False)
-    # m.run('videos/1541.mp4')
+    m = MainFlow(None, select=False)
+    m.run('videos/1521.mp4')
+    m = MainFlow(None, select=False)
+    m.run('videos/1528.mp4')
+    m = MainFlow(None, select=False)
+    m.run('videos/1529.mp4')
+    m = MainFlow(None, select=False)
+    m.run('videos/1541.mp4')
     m = MainFlow(None, select=False)
     m.run('videos/Easy.mp4')
 

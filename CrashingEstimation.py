@@ -1,3 +1,5 @@
+import cv2
+
 from VIF.vif import VIF
 
 vif = VIF()
@@ -27,6 +29,43 @@ def intersectionOverUnion(boxA, boxB):
     # return the intersection over union value
     return iou
 
+
+
+
+def predict(frames_RGB,trackers):
+    gray_frames = []
+    for frame in frames_RGB:
+        gray_frames.append(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY))
+    print(len(frames_RGB))
+    no_crash = 0
+    crash = 0
+
+    for tracker in trackers:
+        tracker_frames,width,height,xmin,xmax,ymin,ymax = tracker.getFramesOfTracking(gray_frames)
+
+        if tracker_frames == None:
+            continue
+
+        # if xmax - xmin < 100:
+        #     continue
+
+        if xmax - xmin < 50:
+             continue
+        if ymax - ymin <= 35:
+            continue
+
+        if (ymax- ymin) / (xmax - xmin) <0.35:
+            continue
+
+        feature_vec = vif.process(tracker_frames)
+        result = vif.clf.predict(feature_vec.reshape(1, 304))
+        if result[0] == 0.0:
+            no_crash += 1
+        else:
+            crash += 1
+            tracker.saveTracking(frames_RGB)
+    print(crash, no_crash)
+
 def checkDistance(frames,tracker_A,tracker_B,frame_no):
     if not tracker_A.isAboveSpeedLimit(frame_no-10,frame_no) and not tracker_B.isAboveSpeedLimit(frame_no-10,frame_no) :
         return False
@@ -55,7 +94,10 @@ def checkDistance(frames,tracker_A,tracker_B,frame_no):
     return False
 
 
+
 def process(trackers,frames):
+    # predict(frames, trackers)
+
     new_trackers = trackers
     # for tracker in trackers:
     #     if tracker.isAboveSpeedLimit():
@@ -69,6 +111,6 @@ def process(trackers,frames):
 
             if checkDistance(frames,tracker_A,tracker_B,15) or checkDistance(frames,tracker_A,tracker_B,25):
                 #print("accident has occured!")
-                vif.predict(frames, [tracker_B,tracker_A])
+                predict(frames, [tracker_B,tracker_A])
 
 
