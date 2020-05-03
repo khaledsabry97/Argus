@@ -119,9 +119,15 @@ class Tracker:
         r = pow(pow(x,2)+pow(y,2),0.5)
         r_coefficient = r * self.getCarSizeCoefficient()
         return r_coefficient
-    def getAvgSpeed(self):
-        x = sum(self.tracker.dx)/len(self.tracker.dx)
-        y = sum(self.tracker.dy)/len(self.tracker.dy)
+    def getAvgSpeed(self,from_frame_no = -1,to_frame_no = -1):
+        if from_frame_no == -1 or to_frame_no == -1:
+            dx_change = self.tracker.dx
+            dy_change = self.tracker.dy
+        else:
+            dx_change = self.tracker.dx[from_frame_no:to_frame_no]
+            dy_change = self.tracker.dy[from_frame_no:to_frame_no]
+        x = sum(dx_change)/len(dx_change)
+        y = sum(dy_change)/len(dy_change)
         r = pow(pow(x, 2) + pow(y, 2), 0.5)
         r_coefficient = r * self.getCarSizeCoefficient()
         return r_coefficient
@@ -202,8 +208,8 @@ class Tracker:
             new_frames.append(frames[i][ymin:ymax, xmin:xmax])
         return new_frames,width,height,xmin,xmax,ymin,ymax
 
-    def isAboveSpeedLimit(self):
-        if self.getAvgSpeed() > 70:
+    def isAboveSpeedLimit(self,from_frame_no = -1,to_frame_no = -1):
+        if self.getAvgSpeed(from_frame_no,to_frame_no) > 100:
             return True
         return False
 

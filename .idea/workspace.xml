@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fcbda44-9a28-4130-864e-4301a6e05752" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CrashingEstimation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrashingEstimation.py" beforeDir="false" afterPath="$PROJECT_DIR$/CrashingEstimation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/Mosse.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/Mosse.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VIF/vif.py" beforeDir="false" afterPath="$PROJECT_DIR$/VIF/vif.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,10 +16,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-209">
+              <caret line="76" column="43" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="43" />
+              <folding>
+                <element signature="e#2#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="226" column="43" selection-start-line="226" selection-start-column="43" selection-end-line="226" selection-end-column="43" />
+            <state relative-caret-position="183">
+              <caret line="239" column="32" lean-forward="true" selection-start-line="239" selection-start-column="32" selection-end-line="239" selection-end-column="32" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -28,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CrashingEstimation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+            <state relative-caret-position="203">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
             </state>
           </provider>
         </entry>
@@ -40,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="204" column="25" selection-start-line="204" selection-start-column="8" selection-end-line="204" selection-end-column="25" />
+            <state relative-caret-position="50">
+              <caret line="22" column="27" selection-start-line="191" selection-start-column="20" selection-end-line="191" selection-end-column="62" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -111,20 +122,20 @@
         <option value="$PROJECT_DIR$/car-crash/test.py" />
         <option value="$PROJECT_DIR$/VIF/HornSchunck.py" />
         <option value="$PROJECT_DIR$/car-crash/train_SVM.py" />
-        <option value="$PROJECT_DIR$/Mosse_Tracker/Mosse.py" />
         <option value="$PROJECT_DIR$/Joiner/joiner.py" />
-        <option value="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" />
         <option value="$PROJECT_DIR$/VIF/vif.py" />
-        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" />
+        <option value="$PROJECT_DIR$/Mosse_Tracker/Mosse.py" />
         <option value="$PROJECT_DIR$/CrashingEstimation.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="776" />
-    <option name="y" value="519" />
+    <option name="x" value="-83" />
+    <option name="y" value="207" />
     <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="height" value="940" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -145,6 +156,11 @@
               <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
               <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
               <item name="boxes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
+              <item name="videos" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -353,16 +369,15 @@
       <workItem from="1588284510469" duration="13006000" />
       <workItem from="1588337536906" duration="7827000" />
       <workItem from="1588382270228" duration="1278000" />
-      <workItem from="1588425102211" duration="9624000" />
+      <workItem from="1588425102211" duration="16189000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132145000" />
+    <option name="totallyTimeSpent" value="138710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13169165" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -443,7 +458,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py</url>
-          <line>209</line>
+          <line>215</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -466,18 +481,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>239</line>
-          <option name="timeStamp" value="48" />
+          <line>126</line>
+          <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/CrashingEstimation.py</url>
-          <line>27</line>
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>126</line>
-          <option name="timeStamp" value="56" />
+          <line>42</line>
+          <option name="timeStamp" value="58" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -506,7 +516,7 @@
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$Tracker.coverage" NAME="Tracker Coverage Results" MODIFIED="1588027255568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mosse_Tracker" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$joiner.coverage" NAME="joiner Coverage Results" MODIFIED="1588426047384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Joiner" />
     <SUITE FILE_PATH="coverage/GP_Crash_Saviour$SVM_Train__1_.coverage" NAME="SVM_Train (1) Coverage Results" MODIFIED="1583703301816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VIF" />
-    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$main.coverage" NAME="main Coverage Results" MODIFIED="1588454232872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GP_Crash_Saviour$main.coverage" NAME="main Coverage Results" MODIFIED="1588467291602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
@@ -736,16 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#2#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-948967897/math.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1406">
@@ -832,16 +832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="226" column="43" selection-start-line="226" selection-start-column="43" selection-end-line="226" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/VIF/vif.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
@@ -852,10 +842,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-209">
+          <caret line="76" column="43" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="43" />
+          <folding>
+            <element signature="e#2#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="204" column="25" selection-start-line="204" selection-start-column="8" selection-end-line="204" selection-end-column="25" />
+        <state relative-caret-position="50">
+          <caret line="22" column="27" selection-start-line="191" selection-start-column="20" selection-end-line="191" selection-end-column="62" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -864,8 +864,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CrashingEstimation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        <state relative-caret-position="203">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="239" column="32" lean-forward="true" selection-start-line="239" selection-start-column="32" selection-end-line="239" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

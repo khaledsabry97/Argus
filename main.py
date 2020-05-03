@@ -247,7 +247,7 @@ class MainFlow:
 
 if __name__ == '__main__':
     m = MainFlow(None, select=False)
-    m.run('videos/Easy_resized.mp4')
+    m.run('videos/1529_resized.mp4')
 
 
 
