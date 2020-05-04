@@ -21,71 +21,6 @@ total_frames = []
 counter_sub_video = 1
 data = []
 
-#process ViF for each tracker
-# def vif(trackers,  frame_width, frame_height, frame):
-#     global sub_sampling
-#     print ("processing ViF on each tracker")
-#     global counter_sub_video
-#     for i, tracker in enumerate(trackers):
-#         print("processing ViF on tracker " + str(tracker.name), tracker.get_position().right() - tracker.get_position().left(), tracker.get_position().bottom() - tracker.get_position().top())
-#
-#         box = tracker.get_box_from_history(frame_width, frame_height)
-#         #for each tracker, we extract the subframes
-#
-#         if box[2] - box[0] < 100:
-#             print("dimensions of the tracker are so small, is ignored")
-#             continue
-#
-#
-#
-#         print("tracker frame_index:", tracker.frame_index, "len history:", len(tracker.history))
-#         if len(tracker.history) < sub_sampling:
-#             print("tracker with few frames in there history, is ignored")
-#         else:
-#             print("the video will be saved", str(counter_sub_video), (box[2] - box[0], box[3] - box[1]))
-#
-#             counter_sub_video += 1
-#             tracker_frames = []
-#
-#
-#             for j in range(tracker.frame_index, tracker.frame_index + len(tracker.history)):
-#
-#                 img = total_frames[j]
-#                 sub_image = img[box[1]:box[3], box[0]:box[2]]
-#                 gray_image = cv2.cvtColor(sub_image, cv2.COLOR_BGR2GRAY)
-#                 tracker_frames.append(gray_image)
-#
-#                 cv2.imshow("sub_image", sub_image)
-#                 cv2.waitKey(0)
-#
-#
-#             print ("the tracker has " + str(len(tracker_frames)) + " frames")
-#             # procesing vif
-#             obj = VIF()
-#             feature_vec = obj.process(tracker_frames)
-#             data.append(feature_vec)
-#
-#             # to evaluate vif on an already trained model
-#             feature_vec = feature_vec.reshape(1, 304)
-#             print(feature_vec.shape)
-#             result = clf.predict(feature_vec)
-#             print("SVM RESULT", result)
-#             font = cv2.FONT_HERSHEY_SIMPLEX
-#             print("RESULT ", result[0])
-#             if result[0] == 0.0:
-#                 print(0)
-#                 title = "normal"
-#             else:
-#                 print(1)
-#                 title = "car-crash"
-#                 overlay = frame.copy()
-#                 cv2.rectangle(overlay, (box[0], box[1]), (box[2], box[3]), (0, 0, 255), -1)
-#                 opacity = 0.4
-#                 cv2.addWeighted(overlay, opacity, frame, 1 - opacity, 0, frame)
-#
-#             cv2.imshow("win", frame)
-#             cv2.waitKey(0)
-
 
 
 class MainFlow:
@@ -219,7 +154,7 @@ class MainFlow:
 
 
                             #draw_str(frame, (left, bottom + 64), 'Max Speed: %.2f' % tracker.getMaxSpeed())
-                            draw_str(frame, (left, bottom + 16), 'Avg Speed: %.2f' % tracker.tracker_id)
+                            draw_str(frame, (left, bottom + 16), 'Avg Speed: %.2f' % tracker.getAvgSpeed())
                             #draw_str(frame, (left, bottom + 96), 'Cur Speed: %.2f' % tracker.getCurrentSpeed())
                             #draw_str(frame, (left, bottom + 112), 'Area Size: %.2f' % tracker.getCarSizeCoefficient())
                             #draw_str(frame, (left, bottom + 32), 'Moving Angle: %.2f' % tracker.getCarAngle())
@@ -241,12 +176,15 @@ class MainFlow:
 
 
 if __name__ == '__main__':
+
+    # m = MainFlow(None, select=False)
+    # m.run('videos/1544.mp4')
     # m = MainFlow(None, select=False)
     # m.run('videos/1533.mp4')
     # m = MainFlow(None, select=False)
     # m.run('videos/1517.mp4')
-    m = MainFlow(None, select=False)
-    m.run('videos/1537.mp4')
+    # m = MainFlow(None, select=False)
+    # m.run('videos/1537.mp4')
     # m = MainFlow(None, select=False)
     # m.run('videos/1516.mp4')
     # m = MainFlow(None, select=False)
@@ -259,10 +197,10 @@ if __name__ == '__main__':
     # m.run('videos/1528.mp4')
     # m = MainFlow(None, select=False)
     # m.run('videos/1529.mp4')
-    # m = MainFlow(None, select=False)
-    # m.run('videos/1541.mp4')
-    # m = MainFlow(None, select=False)
-    # m.run('videos/Easy.mp4')
+    m = MainFlow(None, select=False)
+    m.run('videos/1541.mp4')
+    m = MainFlow(None, select=False)
+    m.run('videos/Easy.mp4')
 
 
 

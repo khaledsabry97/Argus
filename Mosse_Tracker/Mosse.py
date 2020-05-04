@@ -166,7 +166,6 @@ class MOSSE:
         transformation = np.zeros((2, 3))
 
         perentage = 0.2
-
         # get angle rotation from 0 to 1
         ang = (np.random.rand() - 0.5) * perentage
 
