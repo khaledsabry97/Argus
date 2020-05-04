@@ -178,7 +178,7 @@ class Tracker:
 
 
     def futureFramePosition(self, ):
-        if len(self.tracker.dx) <5 or len(self.tracker.dx) > 18 :
+        if len(self.tracker.dx) <5 or len(self.tracker.dx) > 20 :
             self.estimationFutureCenter.append(self.tracker.center)
             return -1,-1,-1,-1
         measure = min(len(self.tracker.dx),10)
