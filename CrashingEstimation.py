@@ -48,13 +48,20 @@ def predict(frames_RGB,trackers):
 
         # if xmax - xmin < 100:
         #     continue
+        #
+        # print("ymax"+str(ymax - ymin))
+        #
+        # print("xmax"+str(xmax - xmin))
+        #
+        # print("ymax/x"+str((ymax- ymin) / (xmax - xmin)))
 
         if xmax - xmin < 50:
-             continue
+            continue
         if ymax - ymin <= 35:
             continue
 
-        if (ymax- ymin) / (xmax - xmin) <0.35:
+        if (ymax- ymin) / (xmax - xmin) <0.38: #0.35
+
             continue
 
         feature_vec = vif.process(tracker_frames)
@@ -66,7 +73,7 @@ def predict(frames_RGB,trackers):
             # trackers[0].saveTracking(frames_RGB)
             # trackers[1].saveTracking(frames_RGB)
             tracker.saveTracking(frames_RGB)
-            print(crash, no_crash)
+    print(crash, no_crash)
 
 def checkDistance(frames,tracker_A,tracker_B,frame_no):
     if not tracker_A.isAboveSpeedLimit(frame_no-10,frame_no) and not tracker_B.isAboveSpeedLimit(frame_no-10,frame_no) :
@@ -77,16 +84,16 @@ def checkDistance(frames,tracker_A,tracker_B,frame_no):
     r = pow(pow(xa - xb, 2) + pow(ya - yb, 2), 0.5)
     tracker_A_area = 0.5 * tracker_A.tracker.width * tracker_A.tracker.height
     tracler_B_area = 0.5 * tracker_B.tracker.width * tracker_B.tracker.height
-    iou = intersectionOverUnion(tracker_A.tracker.getCutFramePosition((xa,ya)),tracker_B.tracker.getCutFramePosition((xb,yb)))
-    iou2 = intersectionOverUnion(tracker_B.tracker.getCutFramePosition((xa, ya)),
-                                tracker_A.tracker.getCutFramePosition(tracker_A.tracker.center))
+    # iou = intersectionOverUnion(tracker_A.tracker.getCutFramePosition((xa,ya)),tracker_B.tracker.getCutFramePosition((xb,yb)))
+    # iou2 = intersectionOverUnion(tracker_B.tracker.getCutFramePosition((xa, ya)),
+    #                             tracker_A.tracker.getCutFramePosition(tracker_A.tracker.center))
 
     xa_actual,ya_actual = tracker_A.tracker.centers[frame_no]
     xb_actual,yb_actual = tracker_B.tracker.centers[frame_no]
     difference_trackerA_actual_to_estimate = pow(pow(xa_actual - xa, 2) + pow(ya_actual - ya, 2), 0.5)
     difference_trackerB_actual_to_estimate = pow(pow(xb_actual - xb, 2) + pow(yb_actual - yb, 2), 0.5)
     max_difference = max(difference_trackerA_actual_to_estimate,difference_trackerB_actual_to_estimate)
-    #print(r,difference_trackerA_actual_to_estimate,difference_trackerB_actual_to_estimate,max_difference/r)
+    # print(r,difference_trackerA_actual_to_estimate,difference_trackerB_actual_to_estimate,max_difference/r)
     if r == 0:
         return True
 
@@ -111,7 +118,7 @@ def process(trackers,frames):
             tracker_A = trackers[i]
             tracker_B = trackers[j]
 
-            if checkDistance(frames,tracker_A,tracker_B,16)or checkDistance(frames,tracker_A,tracker_B,19)or checkDistance(frames,tracker_A,tracker_B,22) or checkDistance(frames,tracker_A,tracker_B,25) or checkDistance(frames,tracker_A,tracker_B,28):
+            if  checkDistance(frames,tracker_A,tracker_B,16) or checkDistance(frames,tracker_A,tracker_B,19) or checkDistance(frames,tracker_A,tracker_B,22) or checkDistance(frames,tracker_A,tracker_B,25) or checkDistance(frames,tracker_A,tracker_B,28):
                 # tracker_A.saveTracking(frames)
                 #print("accident has occured!")
                 predict(frames, [tracker_B,tracker_A])

@@ -10,6 +10,10 @@ class MOSSE:
     def __init__(self, frame, cut_size,num_of_traning_imgs = 10,learning_rate = 0.225,psrGoodness = 10):
         #get the xmin,ymin, xmax ,ymax for all the corners in the cut_Size
         xmin, ymin, xmax, ymax = cut_size
+        xmin -= 1
+        ymin -= 1
+        xmax += 1
+        ymax += 1
         self.dx =[]
         self.dy = []
         self.centers = []
@@ -166,7 +170,6 @@ class MOSSE:
         transformation = np.zeros((2, 3))
 
         perentage = 0.2
-
         # get angle rotation from 0 to 1
         ang = (np.random.rand() - 0.5) * perentage
 
