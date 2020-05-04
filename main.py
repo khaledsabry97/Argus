@@ -177,22 +177,22 @@ class MainFlow:
 
 if __name__ == '__main__':
 
-    # m = MainFlow(None, select=False)
-    # m.run('videos/1508.mp4')
-    # m = MainFlow(None, select=False)
-    # m.run('videos/1516.mp4')
-    # m = MainFlow(None, select=False)
-    # m.run('videos/1521.mp4')
-    # m = MainFlow(None, select=False)
-    # m.run('videos/1528.mp4')
-    # m = MainFlow(None, select=False)
-    # m.run('videos/1529.mp4')
-    # m = MainFlow(None, select=False)
-    # m.run('videos/1533.mp4')
-    # m = MainFlow(None, select=False)
-    # m.run('videos/1534.mp4')
-    # m = MainFlow(None, select=False)
-    # m.run('videos/Easy.mp4')
+    m = MainFlow(None, select=False)
+    m.run('videos/1508.mp4')
+    m = MainFlow(None, select=False)
+    m.run('videos/1516.mp4')
+    m = MainFlow(None, select=False)
+    m.run('videos/1521.mp4')
+    m = MainFlow(None, select=False)
+    m.run('videos/1528.mp4')
+    m = MainFlow(None, select=False)
+    m.run('videos/1529.mp4')
+    m = MainFlow(None, select=False)
+    m.run('videos/1533.mp4')
+    m = MainFlow(None, select=False)
+    m.run('videos/1534.mp4')
+    m = MainFlow(None, select=False)
+    m.run('videos/Easy.mp4')
 
 
 
@@ -200,10 +200,12 @@ if __name__ == '__main__':
     # m.run('videos/1503.mp4')
     # m = MainFlow(None, select=False)
     # m.run('videos/1517.mp4')
-    m = MainFlow(None, select=False)
-    m.run('videos/1537.mp4')
+    # m = MainFlow(None, select=False)
+    # m.run('videos/1537.mp4')
     # m = MainFlow(None, select=False)
     # m.run('videos/1541.mp4')
+    m = MainFlow(None, select=False)
+    m.run('videos/Easy.mp4')
 
 
 

@@ -9,6 +9,7 @@
 Easy
 
 #could cause accident or not
+1503 30% working tracking problem
 1541 100% working but few times save another frame close to the accident with the actual accident (tracking problem)
 1537 60% tracking problem
 1544 0% vif problem + tracking
