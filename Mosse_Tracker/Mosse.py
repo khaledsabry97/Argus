@@ -10,10 +10,10 @@ class MOSSE:
     def __init__(self, frame, cut_size,num_of_traning_imgs = 10,learning_rate = 0.225,psrGoodness = 10):
         #get the xmin,ymin, xmax ,ymax for all the corners in the cut_Size
         xmin, ymin, xmax, ymax = cut_size
-        xmin -= 1
-        ymin -= 1
-        xmax += 1
-        ymax += 1
+        xmin -= 0
+        ymin -= 0
+        xmax += 0
+        ymax += 0
         self.dx =[]
         self.dy = []
         self.centers = []

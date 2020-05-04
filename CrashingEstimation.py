@@ -60,7 +60,7 @@ def predict(frames_RGB,trackers):
         if ymax - ymin <= 35:
             continue
 
-        if (ymax- ymin) / (xmax - xmin) <0.38: #0.35
+        if (ymax- ymin) / (xmax - xmin) <0.35: #0.35
 
             continue
 
@@ -73,7 +73,7 @@ def predict(frames_RGB,trackers):
             # trackers[0].saveTracking(frames_RGB)
             # trackers[1].saveTracking(frames_RGB)
             tracker.saveTracking(frames_RGB)
-    print(crash, no_crash)
+        print(crash, no_crash)
 
 def checkDistance(frames,tracker_A,tracker_B,frame_no):
     if not tracker_A.isAboveSpeedLimit(frame_no-10,frame_no) and not tracker_B.isAboveSpeedLimit(frame_no-10,frame_no) :
