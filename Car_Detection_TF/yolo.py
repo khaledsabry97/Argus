@@ -2,7 +2,7 @@
 """
 Class definition of YOLO_v3 style detection model on image and video
 """
-
+import time
 import colorsys
 import os
 from timeit import default_timer as timer
@@ -99,6 +99,64 @@ class YOLO(object):
                 score_threshold=self.score, iou_threshold=self.iou)
         return boxes, scores, classes
 
+    def intersection_over_union(self, boxA, boxB, threshold=0.5):
+        if boxA[0] >= boxB[0] and boxA[1] >= boxB[1] and boxA[2] <= boxB[2] and boxA[3] <= boxB[3]:
+            # print('dfdgh', boxA, boxB)
+            # time.sleep(555)
+            return True
+        if boxB[0] >= boxA[0] and boxB[1] >= boxA[1] and boxB[2] <= boxA[2] and boxB[3] <= boxA[3]:
+            # print('1fdgh', boxA, boxB)
+            # time.sleep(555)
+            return True
+
+
+        xA = max(boxA[1], boxB[1])
+        yA = max(boxA[0], boxB[0])
+        xB = min(boxA[3], boxB[3])
+        yB = min(boxA[2], boxB[2])
+
+        print(xA, xB, yA, yB)
+        # print(abs(xB-xA))
+        # compute the area of intersection rectangle
+        interArea = max(xB - xA, 0) * max((yB - yA), 0)
+        # interArea = abs(max((xA - xB, 0)) * max((yA - yB), 0))
+        if interArea == 0:
+            return False
+        # compute the area of both the prediction and ground-truth
+        # rectangles
+        boxAArea = (boxA[3] - boxA[1]) * (boxA[2] - boxA[0])
+        boxBArea = (boxB[3] - boxB[1]) * (boxB[2] - boxB[0])
+
+        # compute the intersection over union by taking the intersection
+        # area and dividing it by the sum of prediction + ground-truth
+        # areas - the interesection area
+        iou = interArea / float(boxAArea + boxBArea - interArea)
+        print('****************************', iou)
+        if iou >= threshold:
+            return True
+        # return the intersection over union value
+        return False
+
+    def filterBoxes(self, t, c, out_boxes, out_classes, out_scores, same=False):
+        index = []
+        # print('-----------------------', t, c)
+        for i, Truck in enumerate(t):
+            for j, Car in enumerate(c):
+                if same and i == j:
+                    continue
+                if self.intersection_over_union(Truck[0], Car[0]):
+                    if Truck[1] > Car[1]:
+                        index.append(Car[2])
+
+                    else:
+                        index.append(Truck[2])
+                    break
+
+        out_classes = np.delete(out_classes, index, 0)
+        out_boxes = np.delete(out_boxes, index, 0)
+        out_scores = np.delete(out_scores, index, 0)
+        return out_boxes, out_classes, out_scores
+
     def detect_image(self, image):
         start = timer()
 
@@ -130,10 +188,41 @@ class YOLO(object):
                     size=np.floor(3e-2 * image.size[1] + 0.5).astype('int32'))
         thickness = (image.size[0] + image.size[1]) // 300
         ret = []
+        cc = []
+        t = []
+        b = []
+        ind = []
         for i, c in reversed(list(enumerate(out_classes))):
+            if (out_boxes[i][2]-out_boxes[i][0])*(out_boxes[i][3]-out_boxes[i][1]) > 0.75*480*360:
+                ind.append(i)
+
+            if self.class_names[c] == 'car':
+                cc.append([out_boxes[i], out_scores[i], i])
+            elif self.class_names[c] == 'truck':
+                t.append([out_boxes[i], out_scores[i], i])
+            elif self.class_names[c] == 'bus':
+                b.append([out_boxes[i], out_scores[i], i])
+
+        out_classes = np.delete(out_classes, ind, 0)
+        out_boxes = np.delete(out_boxes, ind, 0)
+        out_scores = np.delete(out_scores, ind, 0)
+
+        out_boxes, out_classes, out_scores = self.filterBoxes(t, cc, out_boxes, out_classes, out_scores)
+        out_boxes, out_classes, out_scores = self.filterBoxes(t, b, out_boxes, out_classes, out_scores)
+        out_boxes, out_classes, out_scores =self.filterBoxes(b, cc, out_boxes, out_classes, out_scores)
+        out_boxes, out_classes, out_scores =self.filterBoxes(cc, cc, out_boxes, out_classes, out_scores, same=True)
+        print(out_boxes)
+
+        for i, c in reversed(list(enumerate(out_classes))):
+            # if i != len(list(out_classes)) - 1 and self.intersection_over_union(out_boxes[i], out_boxes[i+1]):
+            #     continue
+
             predicted_class = self.class_names[c]
             box = out_boxes[i]
             score = out_scores[i]
+
+            if predicted_class != 'car'and predicted_class != 'truck' and predicted_class != 'bus':
+                continue
 
             label = '{} {:.2f}'.format(predicted_class, score)
             draw = ImageDraw.Draw(image)
@@ -194,12 +283,15 @@ def detect_video(yolo, video_path, output_path=""):
     count = 1
     while True:
         return_value, frame = vid.read()
+        if not return_value:
+            return
         image = Image.fromarray(frame)
         image, ret = yolo.detect_image(image)
 
         f = open("boxes/" + video_path + ".txt", "a")
         f.write("--" + '\n')
         count = count + 1
+        print('lllllllllllllllllllllllllllllllllllllllllllll')
         for k in range(len(ret)):
             # print('aaaaaaaaaaaaaaaaaaaaaaaaa',type(ret[k][0]))
             f.write(str(ret[k][0])+' '+str(ret[k][1])+' '+str(ret[k][2])+' '+str(ret[k][3])+' '+str(ret[k][4])+' '+str(ret[k][5])+'\n')
