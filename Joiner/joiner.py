@@ -42,7 +42,7 @@ def main():
     # os.walk('./ data/')
     directories = [x[0] for x in os.walk('data/')]
     print(directories)
-    for X in range(1, len(directories)):
+    for X in range(1, 2):
         pathIn = directories[X] + '/'
         pathOut = 'vids/' + directories[X].split('data/')[1] + '.mp4'
         fps = 30
