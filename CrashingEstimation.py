@@ -36,7 +36,6 @@ def predict(frames_RGB,trackers):
     gray_frames = []
     for frame in frames_RGB:
         gray_frames.append(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY))
-    print(len(frames_RGB))
     no_crash = 0
     crash = 0
 
@@ -55,13 +54,12 @@ def predict(frames_RGB,trackers):
         #
         # print("ymax/x"+str((ymax- ymin) / (xmax - xmin)))
 
-        if xmax - xmin < 50:
+        if xmax - xmin < 50: #50
             continue
-        if ymax - ymin <= 35:
+        if ymax - ymin <= 28: #35
             continue
 
         if (ymax- ymin) / (xmax - xmin) <0.35: #0.35
-
             continue
 
         feature_vec = vif.process(tracker_frames)
@@ -73,7 +71,7 @@ def predict(frames_RGB,trackers):
             # trackers[0].saveTracking(frames_RGB)
             # trackers[1].saveTracking(frames_RGB)
             tracker.saveTracking(frames_RGB)
-        print(crash, no_crash)
+        # print(crash, no_crash)
 
 def checkDistance(frames,tracker_A,tracker_B,frame_no):
     if not tracker_A.isAboveSpeedLimit(frame_no-10,frame_no) and not tracker_B.isAboveSpeedLimit(frame_no-10,frame_no) :
@@ -98,7 +96,7 @@ def checkDistance(frames,tracker_A,tracker_B,frame_no):
         return True
 
     if r < 40 and max_difference/r > 0.5:
-        print(r,difference_trackerA_actual_to_estimate,difference_trackerB_actual_to_estimate,max_difference/r)
+        # print(r,difference_trackerA_actual_to_estimate,difference_trackerB_actual_to_estimate,max_difference/r)
         return True
     return False
 
