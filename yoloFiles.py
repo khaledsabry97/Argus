@@ -25,7 +25,8 @@ def loadFile(videoName):
             x.pop(1)
 
         temp.append([x[0], float(x[1]), float(x[2]), float(x[3]), float(x[4]), float(x[5])])
-
+    if temp != []:
+        res.append(temp)
     return res
 
 # loadFile('videos/Easy.mp4')
