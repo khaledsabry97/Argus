@@ -1,5 +1,5 @@
 from threading import Thread
-from time import sleep
+from time import sleep, time
 
 import cv2
 import math
@@ -54,9 +54,10 @@ class MainFlow:
         hfps = 15
         no_of_frames = 0
         paused = False
+        cum_time = 0
         while True:
             if not paused:
-
+                t = time()
                 # read new frame
                 ret, frame = cap.read()
                 # if ret and no_of_frames <120:
@@ -260,16 +261,18 @@ class MainFlow:
                             cv2.rectangle(frame, (int(left_future), int(top_future)), (int(right_future), int(bottom_future)), (0, 255, 0))
                 # sleep(0.02)
                 #cv2.namedWindow("result", cv2.WINDOW_NORMAL)
+                cum_time += time() - t
                 cv2.imshow("result", frame)
                 last_30_frames.append(new_frame)
                 last_delayed_30_frames.append(new_frame)
+                if self.frameCount %fps == 0:
+                    print(self.frameCount/cum_time)
                 # increment number of frames
                 self.frameCount += 1
-                print(self.frameCount)
             ch = cv2.waitKey(10)
             if ch == ord(' '):
                 paused = not paused
-        #print(self.trackerId)
+        print(self.trackerId)
 
 
 
@@ -292,8 +295,8 @@ if __name__ == '__main__':
     # m.run('videos/1534.mp4')
     # m = MainFlow(None, select=False)
     # m.run('videos/Easy.mp4')
-    # m = MainFlow(None, select=False)
-    # m.run('videos/1559.mp4')
+    m = MainFlow(None, select=False)
+    m.run('videos/1559.mp4')
     # m = MainFlow(None, select=False)
     # m.run('videos/1563.mp4')
     # m = MainFlow(None, select=False)
@@ -333,7 +336,8 @@ if __name__ == '__main__':
     # m.run('videos/1564.mp4')
     # m = MainFlow(None, select=False)
     # m.run('videos/1565.mp4')
-
+    # m = MainFlow(None, select=False)
+    # m.run('videos/normal1.mp4')
 
     # for i in range(1543,1545):
     #     print("F")
