@@ -1,13 +1,9 @@
 import cv2
 
-from VIF.vif import VIF
-
-
 class Crashing:
 
-    def __init__(self):
-        self.vif = VIF()
-        pass
+    def __init__(self,vif):
+        self.vif = vif
 
     def crash(self,frames,trackers):
         # self.predict(frames, trackers)
