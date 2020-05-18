@@ -42,22 +42,29 @@ class CameraNode:
                 break
             frame = cv2.resize(frame, (self.frame_width,self.frame_height), interpolation=cv2.INTER_AREA)
             frames.append(frame)
-            if self.read_file and len(boxes) == 0:
-                bboxes = fileBoxes[self.no_of_frames]
-                boxes.append(bboxes)
+            # if self.read_file and len(boxes) == 0:
+            #     boxes.append(bboxes)
 
             self.no_of_frames +=1
             if len(frames) == 30:
                 new_frames_list = []
                 new_frames_list =copy.deepcopy(frames)
+                # frames = frames[15:]
                 frames = []
-                new_boxes = copy.deepcopy(boxes[0])
-                boxes = []
+                new_boxes = fileBoxes[self.no_of_frames - 30]
+
                 self.makeJson(new_frames_list,new_boxes)
+                # current_time = time() - t
+                # sleep(max(1-current_time,0))
+                # sleep(0.5)
+                print(int(self.no_of_frames/30))
+                # sleep(20)
+                # t = time()
+            if self.no_of_frames %30 == 0:
                 current_time = time() - t
                 sleep(max(1-current_time,0))
-                # sleep(20)
                 t = time()
+
 
 
 
@@ -76,7 +83,7 @@ class CameraNode:
 
     def send(self,ip,port,json):
         thread = SenderController(ip,port,json)
-        thread.start()
+        thread.run()
     #
     # def im2json(self,im):
     #     _, imdata = cv2.imencode('.JPG', im)

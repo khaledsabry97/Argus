@@ -23,13 +23,14 @@ class SenderController(threading.Thread):
             socket = context.socket(zmq.REQ)
             link = "tcp://"+self.ip+":"+str(self.port)
             socket.connect(link)
-            socket.RCVTIMEO =100000 #so it suspends if the receiver didn't send a message in the past  10 sec
+            socket.RCVTIMEO =200000 #so it suspends if the receiver didn't send a message in the past  10 sec
             socket.send_pyobj(self.msg)
-            # jsons = socket.recv_json()
+            jsons = socket.recv_pyobj()
             # from Controller.JsonDecoder import JsonDecoder
             # thread = JsonDecoder(jsons)
             # thread.start()
         except:
+            print("sender error")
             pass
 
 

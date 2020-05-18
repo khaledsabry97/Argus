@@ -12,14 +12,15 @@ from VIF.vif import VIF
 
 class JsonDecoder(threading.Thread):
 
-    def __init__(self,message):
+    def __init__(self):
         threading.Thread.__init__(self)
-        self.msg = message
+        self.msg = None
         self.sender_encode = JsonEncoder()
         self.vif = None
 
-    def run(self):
-            self.decode()
+    def run(self,message):
+        self.msg = message
+        self.decode()
 
 
     def decode(self):
