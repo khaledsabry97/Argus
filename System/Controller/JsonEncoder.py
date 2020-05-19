@@ -16,6 +16,20 @@ class JsonEncoder:
         thread = SenderController(ip,port,json)
         thread.start()
 
+
+    def detect(self,camera_id,starting_frame_id,frames,frame_width,frame_height,read_file,boxes_file):
+        func = DETECT
+        sendingMsg = {FUNCTION:func,
+                      CAMERA_ID:camera_id,
+                      STARTING_FRAME_ID:starting_frame_id,
+                      FRAMES:frames,
+                      FRAME_WIDTH:frame_width,
+                      FRAME_HEIGHT:frame_height,
+                      READ_FILE:read_file,
+                      BOXES:boxes_file}
+
+        self.send(DETECTIP, DETECTPORT, sendingMsg)
+
     def track(self,camera_id, starting_frame_id, frames, boxes,frame_width,frame_height,start_detect_time):
         func = TRACK
         sendingMsg = {FUNCTION: func,
@@ -47,7 +61,7 @@ class JsonEncoder:
 
 
     def result(self,camera_id,starting_frame_id,crash_dimentions,start_detect_time,end_detect_time,start_track_time,end_track_time,start_crash_time):
-        func = PROCESSED
+        func = RESULT
         end_crash_time = time()
         sendingMsg = {FUNCTION: func,
                       CAMERA_ID: camera_id,
@@ -63,7 +77,7 @@ class JsonEncoder:
         print("Detection time:"+str(end_detect_time - start_detect_time))
         print("Tracking time: "+str(end_track_time - start_track_time))
         print("Crashing time: " + str(end_crash_time - start_crash_time))
-        # self.send(MASTERIP, MASTERPORT, sendingMsg)
+        self.send(MASTERIP, MASTERPORT, sendingMsg)
 
 
 

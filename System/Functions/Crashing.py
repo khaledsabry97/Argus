@@ -7,7 +7,7 @@ class Crashing:
 
     def crash(self,frames,trackers):
         # self.predict(frames, trackers)
-
+        crash_dimentions = []
         for i in range(len(trackers)):
             for j in range(i + 1, len(trackers)):
                 if i == j:
@@ -20,7 +20,9 @@ class Crashing:
                 self.checkDistance(tracker_A,tracker_B,22) or\
                 self.checkDistance( tracker_A, tracker_B, 25) or\
                 self.checkDistance( tracker_A, tracker_B, 28):
-                    self.predict(frames, [tracker_B, tracker_A])
+
+                    crash_dimentions.extend(self.predict(frames, [tracker_B, tracker_A]))
+        return crash_dimentions
 
     def checkDistance(self, tracker_A, tracker_B, frame_no):
         if not tracker_A.isAboveSpeedLimit(frame_no - 10, frame_no) and not tracker_B.isAboveSpeedLimit(frame_no - 10,frame_no):

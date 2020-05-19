@@ -70,7 +70,8 @@ class CameraNode:
 
 
     def makeJson(self,frames,boxes):
-        sendingMsg = {FUNCTION:DETECT,
+
+        sendingMsg = {FUNCTION:FEED,
                       CAMERA_ID:self.camera_id,
                       STARTING_FRAME_ID:self.no_of_frames -29,
                       FRAMES:frames,
@@ -79,7 +80,7 @@ class CameraNode:
                       READ_FILE:self.read_file,
                       BOXES:boxes}
 
-        self.send(DETECTIP,DETECTPORT,sendingMsg)
+        self.send(MASTERIP,MASTERPORT,sendingMsg)
 
     def send(self,ip,port,json):
         thread = SenderController(ip,port,json)
