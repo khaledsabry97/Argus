@@ -8,5 +8,6 @@ class ProgramMain:
         # Node(NodeType.Detetion,DETECTPORT).start()
         # Node(NodeType.Tracking,TRACKPORT).start()
         Node(NodeType.Crashing,CRASHPORT).start()
-        CameraNode(1,'videos/1559.mp4').startStreaming()
+        video_id = 1528
+        CameraNode(video_id,'videos/'+str(video_id)+'.mp4').startStreaming()
 

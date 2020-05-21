@@ -38,7 +38,7 @@ class ReceiverController(threading.Thread):
                 # socket.close()
                 # socket.send_json({"func":"success"})
             except:
-                print("hello")
+                print("reciever error")
                 # sleep(2)
                 pass
 

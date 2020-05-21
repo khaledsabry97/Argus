@@ -3,6 +3,7 @@ import enum
 
 # Using enum class create enumerations
 from System.Connections.ReceiverController import ReceiverController
+from System.Database.DatabaseThread import DatabaseThread
 from VIF.vif import VIF
 
 
@@ -20,6 +21,7 @@ class Node(threading.Thread):
 
     def run(self):
         if self.node_type == NodeType.Master:
+            DatabaseThread().start()
             ReceiverController(self.port).run()
             pass
         elif self.node_type == NodeType.Detetion:

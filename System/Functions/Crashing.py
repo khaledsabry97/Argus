@@ -6,8 +6,9 @@ class Crashing:
         self.vif = vif
 
     def crash(self,frames,trackers):
-        # self.predict(frames, trackers)
         crash_dimentions = []
+
+        # crash_dimentions.extend(self.predict(frames, trackers))
         for i in range(len(trackers)):
             for j in range(i + 1, len(trackers)):
                 if i == j:
@@ -22,6 +23,21 @@ class Crashing:
                 self.checkDistance( tracker_A, tracker_B, 28):
 
                     crash_dimentions.extend(self.predict(frames, [tracker_B, tracker_A]))
+        if len(crash_dimentions) > 0:
+            xmin = 1000
+            ymin = 1000
+            xmax = 0
+            ymax = 0
+            for crash_dimension in crash_dimentions:
+                xmin = min(xmin, crash_dimension[0])
+                ymin = min(ymin, crash_dimension[1])
+                xmax = max(xmax, crash_dimension[2])
+                ymax = max(ymax, crash_dimension[3])
+            crash_dimentions = [xmin,ymin,xmax,ymax]
+        else:
+            crash_dimentions = []
+
+
         return crash_dimentions
 
     def checkDistance(self, tracker_A, tracker_B, frame_no):
@@ -76,7 +92,12 @@ class Crashing:
             else:
                 crash += 1
                 tracker.saveTracking(frames_RGB)
-                crash_dimentions.append([xmin,xmax,ymin,ymax])
+
+
+            crash_dimentions.append([xmin,ymin,xmax,ymax])
+
+        if crash == 0:
+            crash_dimentions = []
         # print(crash, no_crash)
         return crash_dimentions
 

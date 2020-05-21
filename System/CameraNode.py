@@ -49,8 +49,8 @@ class CameraNode:
             if len(frames) == 30:
                 new_frames_list = []
                 new_frames_list =copy.deepcopy(frames)
-                # frames = frames[15:]
-                frames = []
+                frames = frames[15:]
+                # frames = []
                 new_boxes = fileBoxes[self.no_of_frames - 30]
 
                 self.makeJson(new_frames_list,new_boxes)

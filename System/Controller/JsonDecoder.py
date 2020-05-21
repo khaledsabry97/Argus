@@ -18,7 +18,6 @@ class JsonDecoder(threading.Thread):
         self.msg = None
         self.sender_encode = JsonEncoder()
         self.vif = None
-        self.crash_history = {}
 
     def run(self,message):
         self.msg = message
@@ -85,7 +84,7 @@ class JsonDecoder(threading.Thread):
             read_file = msg[READ_FILE]
             boxes_file = msg[BOXES]
             master = Master()
-            master.save(camera_id,starting_frame_id,frames,frame_width,frame_height,self.crash_history)
+            master.saveFrames(camera_id,starting_frame_id,frames,frame_width,frame_height)
 
             self.sender_encode.detect(camera_id,starting_frame_id,frames,frame_width,frame_height,read_file,boxes_file)
         elif func == RESULT:
@@ -93,7 +92,7 @@ class JsonDecoder(threading.Thread):
             starting_frame_id = msg[STARTING_FRAME_ID]
             crash_dimentions = msg[CRASH_DIMENTIONS]
             master = Master()
-            master.checkResult(camera_id,starting_frame_id,crash_dimentions,self.crash_history)
+            master.checkResult(camera_id,starting_frame_id,crash_dimentions)
 
 
 
