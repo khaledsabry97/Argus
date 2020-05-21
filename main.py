@@ -1,3 +1,4 @@
+import threading
 from threading import Thread
 from time import sleep, time
 
@@ -80,7 +81,12 @@ class MainFlow:
                      #thread.start()
                      #print("error")
                      #vif(trackers, frame_width, frame_height, frame)
-                    process(trackers,last_30_frames)
+                     t = time()
+                     # thread = Thread(target=process(trackers,last_30_frames))
+                     # thread.start()
+
+                     process(trackers,last_30_frames)
+                     print(time() - t)
 
                 if self.frameCount > 16 and self.frameCount % hfps == 0 and self.frameCount % fps != 0:
                      # print("FRAME " + str(self.frameCount) + " VIF")
@@ -88,7 +94,12 @@ class MainFlow:
                      # thread.start()
                      # print("error")
                      # vif(trackers, frame_width, frame_height, frame)
+                     t = time()
+                     # thread = Thread(target=process(delayed_trackers, last_delayed_30_frames))
+                     # thread.start()
+                     #
                      process(delayed_trackers, last_delayed_30_frames)
+                     print(time() - t)
 
                 if self.frameCount > 0 and self.frameCount % hfps == 0 and self.frameCount % fps != 0:
                     # print("YOLO CALLED in frame no. " + str(self.frameCount))
@@ -269,7 +280,7 @@ class MainFlow:
                     print(self.frameCount/cum_time)
                 # increment number of frames
                 self.frameCount += 1
-            ch = cv2.waitKey(10)
+            ch = cv2.waitKey(1)
             if ch == ord(' '):
                 paused = not paused
         print(self.trackerId)
@@ -295,8 +306,8 @@ if __name__ == '__main__':
     # m.run('videos/1534.mp4')
     # m = MainFlow(None, select=False)
     # m.run('videos/Easy.mp4')
-    m = MainFlow(None, select=False)
-    m.run('videos/1559.mp4')
+    # m = MainFlow(None, select=False)
+    # m.run('videos/1559.mp4')
     # m = MainFlow(None, select=False)
     # m.run('videos/1563.mp4')
     # m = MainFlow(None, select=False)
@@ -336,8 +347,8 @@ if __name__ == '__main__':
     # m.run('videos/1564.mp4')
     # m = MainFlow(None, select=False)
     # m.run('videos/1565.mp4')
-    # m = MainFlow(None, select=False)
-    # m.run('videos/normal1.mp4')
+    m = MainFlow(None, select=False)
+    m.run('videos/normal1.mp4')
 
     # for i in range(1543,1545):
     #     print("F")
