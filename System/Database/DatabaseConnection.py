@@ -26,12 +26,18 @@ class DatabaseConnection:
 
 
     def insertCrashFramesVid(self,camera_id,starting_frame_id,from_no):
+        if from_no > 5:
+            print("helllo")
         query = "INSERT INTO CrashFrames (camera_id,frame_id,from_no) VALUES("+str(camera_id)+", "+str(starting_frame_id)+","+str(from_no)+")"
+        print(query)
         self.execute(query)
 
 
     def updateCrashFramesVid(self,camera_id,starting_frame_id,from_no):
+        if from_no > 5:
+            print("helllo")
         query = "Update CrashFrames set from_no = "+str(from_no)+" Where camera_id = "+str(camera_id)+" and frame_id = "+str(starting_frame_id)
+        print(query)
         self.execute(query)
 
     def deleteCrashFramesVid(self):

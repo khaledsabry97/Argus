@@ -73,6 +73,7 @@ class Crashing:
         crash_dimentions = []
         for tracker in trackers:
             tracker_frames, width, height, xmin, xmax, ymin, ymax = tracker.getFramesOfTracking(gray_frames)
+            crash_dimentions.append([xmin,ymin,xmax,ymax])
 
             if tracker_frames == None:
                 continue
@@ -94,7 +95,6 @@ class Crashing:
                 tracker.saveTracking(frames_RGB)
 
 
-            crash_dimentions.append([xmin,ymin,xmax,ymax])
 
         if crash == 0:
             crash_dimentions = []
