@@ -292,8 +292,8 @@ if __name__ == '__main__':
 
     # m = MainFlow(None, select=False)
     # m.run('videos/1508.mp4')
-    # m = MainFlow(None, select=False)
-    # m.run('videos/1516.mp4')
+    m = MainFlow(None, select=False)
+    m.run('videos/1516.mp4')
     # m = MainFlow(None, select=False)
     # m.run('videos/1521.mp4')
     # m = MainFlow(None, select=False)
@@ -347,8 +347,8 @@ if __name__ == '__main__':
     # m.run('videos/1564.mp4')
     # m = MainFlow(None, select=False)
     # m.run('videos/1565.mp4')
-    m = MainFlow(None, select=False)
-    m.run('videos/normal1.mp4')
+    # m = MainFlow(None, select=False)
+    # m.run('videos/normal1.mp4')
 
     # for i in range(1543,1545):
     #     print("F")
