@@ -3,7 +3,6 @@ from PIL import Image
 
 #from Car_Detection_TF.yolo import YOLO
 from Mosse_Tracker.TrackerManager import Tracker
-from System.Functions.FrameEncodeDecode import imgDecode
 
 
 class Detection:

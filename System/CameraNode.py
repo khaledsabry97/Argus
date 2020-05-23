@@ -13,7 +13,6 @@ from System.Connections.SenderController import SenderController
 from System.Data.CONSTANTS import *
 from yoloFiles import loadFile
 
-from System.Functions.FrameEncodeDecode import *
 
 class CameraNode:
 
@@ -85,18 +84,4 @@ class CameraNode:
     def send(self,ip,port,json):
         thread = SenderController(ip,port,json)
         thread.run()
-    #
-    # def im2json(self,im):
-    #     _, imdata = cv2.imencode('.JPG', im)
-    #     jstr = json.dumps({"image": base64.b64encode(imdata).decode('ascii')})
-    #     return jstr
-    #
-    # def json2im(self,jstr):
-    #     load = json.loads(jstr)
-    #     imdata = base64.b64decode(load['image'])
-    #     im = Image.open(BytesIO(imdata))
-    #     return im
-
-
-
 

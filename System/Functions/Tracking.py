@@ -3,7 +3,6 @@ from time import time
 import cv2
 
 from Mosse_Tracker.TrackerManager import Tracker
-from System.Functions.FrameEncodeDecode import imgDecode
 
 
 class Tracking:

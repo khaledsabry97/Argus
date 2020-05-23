@@ -31,7 +31,7 @@ class Master:
         size = len(frames)
         for i in range(size):
             out.write(frames[i])
-        print("camera_id_"+str(camera_id)+"_" + str(starting_frame_id) + folder+" saved!")
+        print("camera_id_"+str(camera_id)+"_" + str(starting_frame_id) + folder+" saved!" + str(size))
         out.release()
 
     def getVideoFrames(self,camera_id,frame_id,is_crash = False):
@@ -51,37 +51,13 @@ class Master:
             frames.append(frame)
         return frames
 
-    # def appendSavedCrash(self,camera_id,starting_frame_id,new_frame_id):
-    #
-    #     file_path = './saved_crash_vid/' +"(" + str(camera_id) + ") " + str(starting_frame_id) + '.avi'
-    #     cap = cv2.VideoCapture(file_path)
-    #
-    #     new_frames = []
-    #
-    #     while True:
-    #         ret, frame = cap.read()
-    #         if not ret:
-    #             break
-    #         new_frames.append(frame)
-    #
-    #     file_path = './saved_frames_vid/' + "(" + str(camera_id) + ") " + str(starting_frame_id) + '.avi'
-    #     cap = cv2.VideoCapture(file_path)
-    #     frame_width = int(cap.get(3))
-    #     frame_height = int(cap.get(4))
-    #
-    #     while True:
-    #         ret, frame = cap.read()
-    #         if not ret:
-    #             break
-    #         new_frames.append(frame)
-    #
-    #     self.write(camera_id,new_frames,new_frames_id,frame_width,frame_height,True)
 
 
     def recordCrash(self,camera_id,starting_frame_id,crash_dimensions):
 
         new_frames = []
         from_no_of_times = PRE_FRAMES_NO
+
         while from_no_of_times >= 0:
             last_frames = from_no_of_times * 30
             new_frames_id = starting_frame_id - last_frames
@@ -96,22 +72,38 @@ class Master:
         ymin = crash_dimensions[1]
         xmax = crash_dimensions[2]
         ymax = crash_dimensions[3]
+        #
+        # if len(new_frames) >= 90:
+        #     for i in range(len(new_frames) - 90, len(new_frames) - 60, 8):
+        #         fill = -1
+        #         cv2.rectangle(new_frames[i], (xmin, ymin), (xmax, ymax), (0, 0, 255), fill)
+        #         cv2.putText(new_frames[i], "Crash!", (12, 40), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 0, 255), 4)
+        if len(new_frames) > 60:
+            no_of_frames = 3
+        elif len(new_frames) > 30:
+            no_of_frames = 2
+        else:
+            no_of_frames =1
 
-        for i in range(len(new_frames)-30,len(new_frames)):
-            if i%2 == 0:
+        if len(new_frames) >= 60:
+            for i in range(len(new_frames)-60, len(new_frames)-30,6):
                 fill = -1
-            else:
-                fill = 0
+                cv2.rectangle(new_frames[i], (xmin, ymin), (xmax, ymax), (0, 0, 255), fill)
+                cv2.putText(new_frames[i], "Crash!", (12, 40), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 0, 255), 4)
+            no_of_frames = 3
+        for i in range(len(new_frames)-30,len(new_frames),2):
+            fill = -1
             cv2.rectangle(new_frames[i], (xmin,ymin), (xmax,ymax), (0,0,255),fill)
             cv2.putText(new_frames[i], "Crash!", (12,  40), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0,0,255), 4)
 
         self.write(camera_id, new_frames, starting_frame_id, frame_width, frame_height, True)
+        return no_of_frames
 
     def checkResult(self,camera_id,starting_frame_id,crash_dimentions):
         if len(crash_dimentions) == 0:
             return
 
-        self.recordCrash(camera_id,starting_frame_id,crash_dimentions)
+        no_of_from_no = self.recordCrash(camera_id,starting_frame_id,crash_dimentions)
         self.database.insertCrashFramesVid(camera_id,starting_frame_id,PRE_FRAMES_NO+1)
 
 

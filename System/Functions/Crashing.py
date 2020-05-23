@@ -48,16 +48,19 @@ class Crashing:
         xb, yb = tracker_B.estimationFutureCenter[frame_no]
         r = pow(pow(xa - xb, 2) + pow(ya - yb, 2), 0.5)
 
+        if r == 0:
+            return True
+        elif r > 40:
+            return False
+
         xa_actual, ya_actual = tracker_A.tracker.centers[frame_no]
         xb_actual, yb_actual = tracker_B.tracker.centers[frame_no]
         difference_trackerA_actual_to_estimate = pow(pow(xa_actual - xa, 2) + pow(ya_actual - ya, 2), 0.5)
         difference_trackerB_actual_to_estimate = pow(pow(xb_actual - xb, 2) + pow(yb_actual - yb, 2), 0.5)
         max_difference = max(difference_trackerA_actual_to_estimate, difference_trackerB_actual_to_estimate)
 
-        if r == 0:
-            return True
 
-        if r < 40 and max_difference / r > 0.5:
+        if max_difference / r > 0.5:
             # print(r,difference_trackerA_actual_to_estimate,difference_trackerB_actual_to_estimate,max_difference/r)
             return True
         return False
@@ -73,6 +76,7 @@ class Crashing:
         crash_dimentions = []
         for tracker in trackers:
             tracker_frames, width, height, xmin, xmax, ymin, ymax = tracker.getFramesOfTracking(gray_frames)
+            crash_dimentions.append([xmin,ymin,xmax,ymax])
 
             if tracker_frames == None:
                 continue
@@ -94,7 +98,6 @@ class Crashing:
                 tracker.saveTracking(frames_RGB)
 
 
-            crash_dimentions.append([xmin,ymin,xmax,ymax])
 
         if crash == 0:
             crash_dimentions = []
