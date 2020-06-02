@@ -6,11 +6,22 @@
 1529
 1533
 1534
+
+1559
+1563
+1566
+1568
 Easy
+
+1506
+1513
+1518
+1537
+1544
+1543
 
 #could cause accident or not
 1503 30% working tracking problem
 1541 100% working but few times save another frame close to the accident with the actual accident (tracking problem)
 1537 60% tracking problem
-1544 0% vif problem + tracking
 1517 0% vif problem
