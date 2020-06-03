@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fcbda44-9a28-4130-864e-4301a6e05752" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/System/Functions/Crashing.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/Functions/Crashing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/Crash Estimation.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/Crash Estimation.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/Crash Estimation.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/Crash Estimation.pdf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/System/Functions/Crashing.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-285">
-              <caret line="56" column="45" lean-forward="true" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
+              <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -212,8 +213,8 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1057" />
   </component>
@@ -475,12 +476,12 @@
       <workItem from="1589407870813" duration="14150000" />
       <workItem from="1589744524011" duration="22788000" />
       <workItem from="1589814150969" duration="27757000" />
-      <workItem from="1590024488391" duration="11009000" />
+      <workItem from="1590024488391" duration="11648000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268685000" />
+    <option name="totallyTimeSpent" value="269324000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -492,15 +493,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1057" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24944812" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12098501" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32822758" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.62913907" visible="true" weight="0.39005524" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.62955034" weight="0.38621444" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.69379014" weight="0.39606127" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -508,7 +508,7 @@
       <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49889624" weight="0.32928178" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.37086093" side_tool="true" visible="true" weight="0.39005524" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.3704497" side_tool="true" visible="true" weight="0.3894967" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32917964" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" sideWeight="0.49889868" weight="0.32932165" />
@@ -1107,7 +1107,7 @@
     <entry file="file://$PROJECT_DIR$/System/Functions/Crashing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-285">
-          <caret line="56" column="45" lean-forward="true" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
+          <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
         </state>
       </provider>
     </entry>
