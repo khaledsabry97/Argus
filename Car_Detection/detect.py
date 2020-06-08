@@ -9,16 +9,13 @@ from torch.autograd import Variable
 import numpy as np
 
 
-def Yolo_image(Frame, CUDA=False):  ##set to true to enable GPU
+def Yolo_image(Frame, model, CUDA=False):  ##set to true to enable GPU
     img_shape = Frame.shape
-    img = cv2.resize(Frame, (608, 608))  # Resize to the input dimension
-    img_ = img[:, :, ::-1].transpose((2, 0, 1))  # BGR -> RGB | H X W C -> C X H X W
-    img_ = img_[np.newaxis, :, :, :] / 255.0  # Add a channel at 0 (for batch) | Normalise
+    img_ = cv2.dnn.blobFromImage(Frame, 1 / 255.0, (608, 608),
+                                 swapRB=True, crop=False)
     img_ = torch.from_numpy(img_).float()  # Convert to float
     img_ = Variable(img_)  # Convert to Variable
 
-    model = Darknet("Car_Detection/config/yolov3.cfg", CUDA=CUDA)
-    model.load_weight("Car_Detection/config/yolov3.weights")
     if CUDA:
         model = model.cuda()
         img_ = img_.cuda()
@@ -43,6 +40,8 @@ def Yolo_image(Frame, CUDA=False):  ##set to true to enable GPU
 if __name__ == "__main__":
     image_file = sys.argv[1]
     Frame = cv2.imread(image_file)
+    model = Darknet("./config/yolov3.cfg", CUDA=False)
+    model.load_weight("./config/yolov3.weights")
     obj_list = Yolo_image(Frame, CUDA=False)
     visualize_result(image_file)
 

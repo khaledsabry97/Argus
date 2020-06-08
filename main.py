@@ -41,7 +41,12 @@ class MainFlow:
         new_frame = None
         if self.readFile:
             fileBoxes = loadFile(path)
-
+		
+		model = ''
+        if self.selectYOLO:
+            model = Darknet("Car_Detection/config/yolov3.cfg", CUDA=False)
+            model.load_weight("Car_Detection/config/yolov3.weights")
+			
         cap = cv2.VideoCapture(path)
         #frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
         #frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -119,7 +124,7 @@ class MainFlow:
                         img, bboxes = self.yolo.detect_image(img)
                     else:
                         # Roba
-                        bboxes = Yolo_image(np.float32(img))
+                        bboxes = Yolo_image(np.float32(img), model)
 
                     for i, bbox in enumerate(bboxes):
                         label = bbox[0]
@@ -206,7 +211,7 @@ class MainFlow:
                         img, bboxes = self.yolo.detect_image(img)
                     else:
                         # Roba
-                        bboxes = Yolo_image(np.float32(img))
+                        bboxes = Yolo_image(np.float32(img), model)
 
 
                     for i, bbox in enumerate(bboxes):
