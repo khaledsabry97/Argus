@@ -103,21 +103,6 @@ class MOSSE:
         x_new, y_new = self.center
         self.centers.append((x_new, y_new))
 
-    @property
-    def state_vis(self):
-        f = cv2.idft(self.H, flags=cv2.DFT_SCALE | cv2.DFT_REAL_OUTPUT)
-        h, w = f.shape
-        f = np.roll(f, -h//2, 0)
-        f = np.roll(f, -w//2, 1)
-        kernel = np.uint8( (f-f.min()) / f.ptp()*255 )
-        resp = self.last_resp
-        resp = np.uint8(np.clip(resp/resp.max(), 0, 1)*255)
-        vis = np.hstack([self.last_img, kernel, resp])
-        return vis
-
-
-
-
 
     def preprocess(self, img):
         #to get good results with low contrast imgs
