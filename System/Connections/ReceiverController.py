@@ -1,29 +1,23 @@
-import json
 import threading
-from time import time, sleep
-
 import zmq
-
 from System.Controller.JsonDecoder import JsonDecoder
 
 
-#responsible for receiving all the messages from servers and data nodes
+#responsible for receiving all the messages
 class ReceiverController(threading.Thread):
-
+    '''
+    port: the port number that the thread will open on it
+    '''
     def __init__(self,port):
         threading.Thread.__init__(self)
         self.port = port
 
+
     def run(self):
-        self.receive()
-
-
-    def receive(self):
         context = zmq.Context()
-
         socket = context.socket(zmq.REP)
-
         socket.bind("tcp://*:%s" % self.port)
+
         jsonDecoder = JsonDecoder()  # start the processing decoding method
 
         while True:
