@@ -118,7 +118,7 @@ def process(trackers,frames):
 
             if  checkDistance(frames,tracker_A,tracker_B,16) or checkDistance(frames,tracker_A,tracker_B,19) or checkDistance(frames,tracker_A,tracker_B,22) or checkDistance(frames,tracker_A,tracker_B,25) or checkDistance(frames,tracker_A,tracker_B,28):
                 # tracker_A.saveTracking(frames)
-                #print("accident has occured!")
+                print("Maybe an accident has occured!")
                 predict(frames, [tracker_B,tracker_A])
 
 

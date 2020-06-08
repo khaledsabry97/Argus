@@ -42,10 +42,10 @@ class MainFlow:
         if self.readFile:
             fileBoxes = loadFile(path)
 		
-		model = ''
-        if self.selectYOLO:
-            model = Darknet("Car_Detection/config/yolov3.cfg", CUDA=False)
-            model.load_weight("Car_Detection/config/yolov3.weights")
+		# model = ''
+        # if self.selectYOLO:
+        #     model = Darknet("Car_Detection/config/yolov3.cfg", CUDA=False)
+        #     model.load_weight("Car_Detection/config/yolov3.weights")
 			
         cap = cv2.VideoCapture(path)
         #frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
@@ -285,7 +285,7 @@ class MainFlow:
                     print(self.frameCount/cum_time)
                 # increment number of frames
                 self.frameCount += 1
-            ch = cv2.waitKey(1)
+            ch = cv2.waitKey(10)
             if ch == ord(' '):
                 paused = not paused
         print(self.trackerId)
@@ -295,10 +295,13 @@ class MainFlow:
 
 if __name__ == '__main__':
 
+
     # m = MainFlow(None, select=False)
-    # m.run('videos/1508.mp4')
+    # m.run('videos/1500.mp4')
     m = MainFlow(None, select=False)
-    m.run('videos/1516.mp4')
+    m.run('videos/1508.mp4')
+    # m = MainFlow(None, select=False)
+    # m.run('videos/1516.mp4')
     # m = MainFlow(None, select=False)
     # m.run('videos/1521.mp4')
     # m = MainFlow(None, select=False)

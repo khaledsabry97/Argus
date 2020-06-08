@@ -6,8 +6,9 @@ from Mosse_Tracker.TrackerManager import Tracker
 
 
 class Detection:
-    def __init__(self):
-        pass
+    def __init__(self,yolo):
+        self.yolo = yolo
+
 
 
     def detect(self,frames,frame_width,frame_height,read_file = None,boxes_file = None):
@@ -16,8 +17,7 @@ class Detection:
             # From files
             boxes = boxes_file
         else:
-            yolo = YOLO()
             img = Image.fromarray(frames[0])
-            _, boxes = yolo.detect_image(img)
+            _, boxes = self.yolo.detect_image(img)
 
         return boxes

@@ -61,9 +61,10 @@ class Master:
         while from_no_of_times >= 0:
             last_frames = from_no_of_times * 30
             new_frames_id = starting_frame_id - last_frames
-            new_frames.extend(self.getVideoFrames(camera_id,new_frames_id,False))
-            frame_width = len(new_frames[0][0])
-            frame_height = len(new_frames[0])
+            if new_frames_id > 0:
+                new_frames.extend(self.getVideoFrames(camera_id,new_frames_id,False))
+                frame_width = len(new_frames[0][0])
+                frame_height = len(new_frames[0])
 
             from_no_of_times -=1
 
@@ -89,11 +90,15 @@ class Master:
             for i in range(len(new_frames)-60, len(new_frames)-30,6):
                 fill = -1
                 cv2.rectangle(new_frames[i], (xmin, ymin), (xmax, ymax), (0, 0, 255), fill)
+                # cv2.rectangle(new_frames[i], (xmin, ymin), (xmax, ymax), (0, 0, 255), 1)
+
                 cv2.putText(new_frames[i], "Crash!", (12, 40), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 0, 255), 4)
             no_of_frames = 3
         for i in range(len(new_frames)-30,len(new_frames),2):
             fill = -1
             cv2.rectangle(new_frames[i], (xmin,ymin), (xmax,ymax), (0,0,255),fill)
+            # cv2.rectangle(new_frames[i], (xmin,ymin), (xmax,ymax), (0,0,255),1)
+
             cv2.putText(new_frames[i], "Crash!", (12,  40), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0,0,255), 4)
 
         self.write(camera_id, new_frames, starting_frame_id, frame_width, frame_height, True)

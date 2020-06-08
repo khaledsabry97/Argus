@@ -2,6 +2,7 @@ import json
 import threading
 from time import time
 
+# from Car_Detection_TF.yolo import YOLO
 from System.Controller.JsonEncoder import JsonEncoder
 from System.Data.CONSTANTS import *
 from System.Functions.Crashing import Crashing
@@ -16,6 +17,7 @@ class JsonDecoder(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
         self.sender_encode = JsonEncoder()
+        self.yolo = None
         self.vif = None
 
     def run(self,message):
@@ -89,7 +91,10 @@ class JsonDecoder(threading.Thread):
 
     def detect(self,camera_id,starting_frame_id,frames,frame_width,frame_height,read_file,boxes_file):
         start_detect_time = time()
-        detection = Detection()
+        if not read_file and self.yolo == None:
+            self.yolo = YOLO()
+        detection = Detection(self.yolo)
+
         boxes = detection.detect(frames, frame_width, frame_height, read_file, boxes_file)
         self.sender_encode.track(camera_id, starting_frame_id, frames, boxes, frame_width, frame_height,start_detect_time)
 
