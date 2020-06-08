@@ -15,17 +15,14 @@ class JsonDecoder(threading.Thread):
 
     def __init__(self):
         threading.Thread.__init__(self)
-        self.msg = None #msg recieved from another module
         self.sender_encode = JsonEncoder()
         self.vif = None
 
     def run(self,message):
-        self.msg = message
-        self.decode()
+        self.decode(message)
 
 
-    def decode(self):
-        msg = self.msg
+    def decode(self,msg):
         func = msg[FUNCTION]
 
         if func == FEED:    #1st step: recieve feed from cctv camera
@@ -75,7 +72,7 @@ class JsonDecoder(threading.Thread):
 
             self.crash(camera_id,starting_frame_id,frames,trackers,start_detect_time,end_detect_time,start_track_time,end_track_time)
 
-        elif func == RESULT:    #5th step: send the result to the master to send notification and save accident or send and save none if not accident
+        elif func == RESULT:    #5th step: send the result to the master to send notification and save accident or send and save none if not an accident
             camera_id = msg[CAMERA_ID]
             starting_frame_id = msg[STARTING_FRAME_ID]
             crash_dimentions = msg[CRASH_DIMENTIONS]

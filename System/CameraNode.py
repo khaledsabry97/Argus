@@ -17,18 +17,18 @@ from yoloFiles import loadFile
 class CameraNode:
 
     def __init__(self,camera_id,file_path = None,files = True):
-        self.camera_id = camera_id
-        self.read_file = files
-        self.file_path= file_path
-        self.no_of_frames = 0
-        self.frame_width = 480
-        self.frame_height = 360
+        self.camera_id = camera_id  #speical id for every camera
+        self.read_file = files  #do you want to read detected cars from file ?
+        self.file_path= file_path   #file path if you want to detect cars from file
+        self.no_of_frames = 0   #current no of frames processed by the camera
+        self.frame_width = 480  #camera resolution from frame width
+        self.frame_height = 360 #camera resolution from frame height
 
 
     def startStreaming(self):
 
         if self.read_file:
-            fileBoxes = loadFile(self.file_path)
+            fileBoxes = loadFile(self.file_path) #return boxes of cars in the frames
 
         cap = cv2.VideoCapture(self.file_path)
         frames = []
