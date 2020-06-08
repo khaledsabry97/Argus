@@ -1,9 +1,13 @@
 from __future__ import division
 
-import torch 
+import torch
 import torch.nn as nn
-import torch.nn.functional as F 
+import torch.nn.functional as F
 import numpy as np
+import sys
+
+# sys.path.remove('/opt/ros/kinetic/lib/python2.7/dist-packages')
+import cv2
 
 
 class EmptyLayer(nn.Module):
@@ -91,7 +95,7 @@ def create_layers(blocks):
         # We use Bilinear2dUpsampling
         elif (x["layer_name"] == "upsample"):
             stride = int(x["stride"])
-            upsample = nn.Upsample(scale_factor=2, mode="bilinear")
+            upsample = nn.Upsample(scale_factor=2, mode='bilinear', align_corners=True)
             module.add_module("upsample_{}".format(index), upsample)
         elif (x["layer_name"] == 'route'):
             layers = x["layers"]
@@ -186,22 +190,7 @@ def predict_transform(prediction, inp_dim, anchors, num_classes, CUDA=False):
     return prediction, scaled_anchors
 
 
-def compact_predictions(pred_exp):
-    grid_size = pred_exp[0].shape[1]
-    anchors = pred_exp[0].shape[3]
-    attr = pred_exp[0].shape[-1]
-
-    pred_exp[0] = pred_exp[0].view(1, grid_size * grid_size * anchors, -1)
-    preds = pred_exp[0]
-    for p in pred_exp[1:]:
-        grid_size = p.shape[1]
-        anchors = p.shape[3]
-        p = p.view(1, grid_size * grid_size * anchors, -1)
-        preds = torch.cat((preds, p), axis=1)
-    return preds
-
-
-def filter_yolo_boxes(obj_conf, boxes, boxes_classes_probs, threshold=0.5):
+def filter_yolo_boxes(obj_conf, boxes, boxes_classes_probs, threshold=0.25):
     box_scores = obj_conf * boxes_classes_probs
     box_classes = torch.argmax(box_scores, -1)
     box_class_scores = torch.max(box_scores, -1)[0]
@@ -211,6 +200,7 @@ def filter_yolo_boxes(obj_conf, boxes, boxes_classes_probs, threshold=0.5):
     boxes = boxes[filtering_mask]
 
     return scores, boxes, classes
+    # return box_scores, boxes, box_classes
 
 
 def box2corner(box_xy, box_wh):
@@ -236,7 +226,7 @@ def scale_boxes(boxes, image_shape, CUDA=False):
     return boxes
 
 
-def get_filtered_boxes(image_shape, predictions, score_threshold=.5, iou_threshold=.5, CUDA=False):
+def get_filtered_boxes(image_shape, predictions, score_threshold=.25, iou_threshold=0.8, CUDA=False):
     box_confidence = predictions[:, :, 4]
     box_confidence = box_confidence.view(box_confidence.shape[0], box_confidence.shape[1], 1)
     box_xy = (predictions[:, :, 0], predictions[:, :, 1])
@@ -247,7 +237,7 @@ def get_filtered_boxes(image_shape, predictions, score_threshold=.5, iou_thresho
         boxes = boxes.cuda()
     boxes = scale_boxes(boxes, image_shape, CUDA)
     scores, boxes, classes = filter_yolo_boxes(box_confidence, boxes, box_class_probs, threshold=score_threshold)
-    scores, boxes, classes = NMS(scores, boxes, classes, iou_threshold, CUDA)
+    scores, boxes, classes = NMS(scores, boxes, classes, score_threshold, iou_threshold, CUDA)
     return scores, boxes, classes
 
 
@@ -276,35 +266,44 @@ def iou(box1, box2):
     return iou
 
 
-def NMS(scores, boxes, classes, iou_threshold, CUDA=False):
+# def NMS(scores, boxes, classes,iou_threshold,CUDA=False):
+# if len(boxes) == 0:
+#       return boxes
+
+# Create an empty list to hold the best bounding boxes after
+# Non-Maximal Suppression (NMS) is performed
+# if CUDA:
+#     best_boxes=best_boxes.cuda()
+#     best_classes=best_classes.cuda()
+# _,sortIds = torch.sort(scores, descending = True)
+# for i in range(0,len(boxes)):
+#   current_box=boxes[sortIds[i]]
+#   current_class=classes[sortIds[i]]
+#   if scores[sortIds[i]]>0:
+#     best_boxes=torch.cat([best_boxes,current_box.view(1,-1)],axis=0)
+#     best_classes=torch.cat([best_classes,current_class.view(1,-1)],axis=0)
+#     for j in range(i+1,len(boxes)):
+#         box_j = boxes[sortIds[j]]
+#         if iou(current_box, box_j) > iou_threshold:
+#           scores[sortIds[j]]=0
+# best_scores=scores[scores.nonzero()]
+
+# return  best_scores,best_boxes,best_classes
+
+
+def NMS(scores, boxes, classes, score_threshold, iou_threshold, CUDA=False):
     if len(boxes) == 0:
         return boxes
-
-    # Create an empty list to hold the best bounding boxes after
-    # Non-Maximal Suppression (NMS) is performed
-    best_boxes = torch.zeros((0, 4))
-    best_classes = torch.zeros((0, 1)).long()
-    if CUDA:
-        best_boxes = best_boxes.cuda()
-        best_classes = best_classes.cuda()
-    _, sortIds = torch.sort(scores, descending=True)
-    for i in range(0, len(boxes)):
-        current_box = boxes[sortIds[i]]
-        current_class = classes[sortIds[i]]
-        if scores[sortIds[i]] > 0:
-            best_boxes = torch.cat([best_boxes, current_box.view(1, -1)], axis=0)
-            best_classes = torch.cat([best_classes, current_class.view(1, -1)], axis=0)
-            for j in range(i + 1, len(boxes)):
-                box_j = boxes[sortIds[j]]
-                if iou(current_box, box_j) > iou_threshold:
-                    scores[sortIds[j]] = 0
-    best_scores = scores[scores.nonzero()]
-    return best_scores, best_boxes, best_classes
-
-
-   
-   
+    idx = cv2.dnn.NMSBoxes(boxes.tolist(), scores.tolist(), score_threshold, iou_threshold)
+    idx = idx.flatten()
+    return scores[idx], boxes[idx], classes[idx]
 
 
 
-                          
+
+
+
+
+
+
+

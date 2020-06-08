@@ -59,13 +59,13 @@ class Darknet(nn.Module):
                 num_classes = int(block["classes"])
                 # Transform
                 x = x.data
-                x_exp, scaled_anchors = util.predict_transform(x, inp_dim, anchors, num_classes, self.CUDA)
+                x, scaled_anchors = util.predict_transform(x, inp_dim, anchors, num_classes, self.CUDA)
                 if empty:  # if no collector has been intialised.
                     empty = 0
-                    detections = x_exp
+                    detections = x
 
                 else:
-                    detections = torch.cat([detections, x_exp], axis=1)
+                    detections = torch.cat([detections, x], axis=1)
 
             outputs[i] = x
         return detections, scaled_anchors
