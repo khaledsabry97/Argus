@@ -10,11 +10,10 @@ import cv2
 class SearchForm(QWidget):
     def __init__(self):
         super().__init__()
+
         self.setWindowTitle('Argus')
         self.setGeometry(330, 150, 731, 438)
         # self.setGeometry(300, 300, 1200, 1200)
-
-        # layout = QGridLayout()
 
         self.make_lable('Date', 60, 0, 61, 41, True, 12)
         self.make_lable('From', 10, 40, 41, 21, True, 10)
@@ -58,13 +57,19 @@ class SearchForm(QWidget):
         self.results.move(20, 120)
         self.results.resize(691, 301)
 
-        # results.addItem(QListWidgetItem('item1'))
-        # results.addItem(QListWidgetItem('item2'))
-        # results.itemDoubleClicked.connect(self.listwidgetclicked)
+        self.results.itemDoubleClicked.connect(self.listwidgetclicked)
 
+        self.appendToList()
+        self.appendToList()
+
+    def listwidgetclicked(self, item):
+        print(1)
+
+    def appendToList(self, Image=[], Date='', Time='', City='', location=''):
         itemN = QListWidgetItem()
         # Create widget
         widget = QWidget()
+
         widgetText = QLabel()
         img = cv2.imread('Untitled.png')
         img = cv2.resize(img, (91, 41), interpolation=cv2.INTER_AREA)
@@ -74,10 +79,13 @@ class SearchForm(QWidget):
         pixmap = QPixmap(qImg)
         widgetText.setPixmap(pixmap)
         widgetText.resize(15, 15)
-        widgetButton = QPushButton("Push Me")
+
+        info = QLabel()
+        info.setText('')
+
         widgetLayout = QHBoxLayout()
         widgetLayout.addWidget(widgetText)
-        widgetLayout.addWidget(widgetButton)
+        widgetLayout.addWidget(info)
         widgetLayout.addStretch()
 
         widgetLayout.setSizeConstraint(QLayout.SetFixedSize)
@@ -87,12 +95,9 @@ class SearchForm(QWidget):
         self.results.addItem(itemN)
         self.results.setItemWidget(itemN, widget)
 
-    def listwidgetclicked(self, item):
-        print(item.text())
-
-    def make_lable(self, name, x, y, width, height, bold=False, font=12):
+    def make_lable(self, text, x, y, width, height, bold=False, font=12):
         label = QLabel(self)
-        label.setText(name)
+        label.setText(text)
         label.move(x, y)
         label.resize(width, height)
         font = QFont('SansSerif', font)

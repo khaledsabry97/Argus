@@ -9,10 +9,16 @@ import zmq
 from threading import Thread
 import System.Data.CONSTANTS as portsFile
 from System.CameraNode import CameraNode
+import time
+import random
 
 vidpath = ''
+cities = ['Cairo', 'Alexandria', 'Gizah', 'Shubra El-Kheima', 'Port Said', 'Suez', 'Luxor', 'Al-Mansura',
+          'El-Mahalla El-Kubra', 'Tanta', 'Asyut', 'Ismailia', 'Fayyum', 'Zagazig', 'Aswan', 'Damietta',
+          'Damanhur', 'Al-Minya', 'Beni Suef', 'Qena', 'Sohag', 'Hurghada', '6th of October City', 'Shibin El Kom',
+          'Banha', 'Kafr el-Sheikh', 'Arish', 'Mallawi', '10th of Ramadan City', 'Bilbais', 'Marsa Matruh',
+          'Idfu, Mit Ghamr', 'Al-Hamidiyya', 'Desouk', 'Qalyub', 'Abu Kabir', 'Kafr el-Dawwar', 'Girga', 'Akhmim', 'Matareya']
 
-import time
 
 class WorkerThread(QObject):
     temp = pyqtSignal()
@@ -108,7 +114,7 @@ class SearchForm(QWidget):
         self.results = []
 
     def sendToBk(self):
-        global vidpath
+        global vidpath, cities
         self.processing_lable.setVisible(True)
         # self.temp()
         # self.showLoading = True
@@ -120,8 +126,7 @@ class SearchForm(QWidget):
         video_id = video_id.split('/')
         video_id = int(video_id[-1])
 
-        CameraNode(video_id, 'videos/' + str(video_id) + '.mp4').start()
-
+        CameraNode(video_id, 'videos/' + str(video_id) + '.mp4', random.choice(cities), 'District ' + str(random.randint(1, 30))).start()
         self.playVideo()
 
         # thread = Thread(target=self.temp)
@@ -241,9 +246,9 @@ class SearchForm(QWidget):
     def listwidgetclicked(self, item):
         print(item.text())
 
-    def make_lable(self, name, x, y, width, height, bold=False, font=12):
+    def make_lable(self, text, x, y, width, height, bold=False, font=12):
         label = QLabel(self)
-        label.setText(name)
+        label.setText(text)
         label.move(x, y)
         label.resize(width, height)
         font = QFont('SansSerif', font)
