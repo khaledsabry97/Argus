@@ -7,6 +7,8 @@ import numpy as np
 import json
 import zmq
 from threading import Thread
+import System.Data.CONSTANTS as portsFile
+from System.CameraNode import CameraNode
 
 vidpath = ''
 
@@ -24,7 +26,7 @@ class WorkerThread(QObject):
             # Long running task ...
             time.sleep(1)
             self.temp.emit()
-            print('hit it')
+            # print('hit it')
 
 
 class Button(QPushButton):
@@ -50,7 +52,7 @@ class Button(QPushButton):
 
 
 class SearchForm(QWidget):
-    def __init__(self, port="5556"):
+    def __init__(self, port=portsFile.MASTERPORT):
         super().__init__()
 
         self.worker = WorkerThread()
@@ -67,7 +69,7 @@ class SearchForm(QWidget):
 
         self.processing_lable = self.make_lable('Processing....', 290, 305, 151, 41, True, 12)
         self.processing_lable.setVisible(False)
-        self.gif = QMovie('loading.gif')
+        self.gif = QMovie('UI/loading.gif')
         self.gif.setScaledSize(QSize().scaled(60, 60, Qt.KeepAspectRatio))
         self.processing_lable.setMovie(self.gif)
         self.gif.start()
@@ -112,8 +114,16 @@ class SearchForm(QWidget):
         # self.showLoading = True
         import time
         # time.sleep(1)
-        path = json.dumps(vidpath)
-        self.socket.send_json(path)
+        # path = json.dumps(vidpath)
+        # self.socket.send_json(path)
+        video_id = vidpath.split('.')[0]
+        video_id = video_id.split('/')
+        video_id = int(video_id[-1])
+
+        CameraNode(video_id, 'videos/' + str(video_id) + '.mp4').start()
+
+        self.playVideo()
+
         # thread = Thread(target=self.temp)
         # thread.start()
         # resultsJson = thread.join()
@@ -125,7 +135,8 @@ class SearchForm(QWidget):
     def temp(self):
         try:
             resultsJson = self.socket.recv(flags=zmq.NOBLOCK)
-            print(resultsJson, '--------------')
+            # print(resultsJson, '--------------')
+
             # self.decodeJson(resultsJson)
         except:
             return
@@ -144,19 +155,19 @@ class SearchForm(QWidget):
         pass
 
     def playVideo(self):
-        print('called')
         global vidpath
+        print(vidpath)
         cap = cv2.VideoCapture(vidpath)
 
         if (cap.isOpened() == False):
             print("Error opening video  file")
 
         while (cap.isOpened()):
-
+            # time.sleep(1)
             ret, frame = cap.read()
             if ret == True:
                 cv2.imshow('Frame', frame)
-                if cv2.waitKey(25) & 0xFF == ord('q'):
+                if cv2.waitKey(31) & 0xFF == ord('q'):
                     break
             else:
                 break
@@ -189,7 +200,7 @@ class SearchForm(QWidget):
         # img_lable.setPixmap(pixmap)
         # img_lable.setVisible(True)
 
-        button = cv2.imread('Play-Button-PNG-Picture.png')
+        button = cv2.imread('UI/Play-Button-PNG-Picture.png')
         button = cv2.resize(button, (111, 111), interpolation=cv2.INTER_AREA)
         print(button.shape)
         print(img.shape)
@@ -205,14 +216,14 @@ class SearchForm(QWidget):
         border = cv2.copyMakeBorder(button, top=top, bottom=bottom, left=left, right=right, borderType=cv2.BORDER_CONSTANT, value=0)
         border = np.where(border < 150, img, border)
         # img = new
-        cv2.imwrite('tempToLoad.png', border)
+        cv2.imwrite('UI/tempToLoad.png', border)
         print('reached')
         # self.select_vid.setVisible(False)
         # play_vid = QPushButton(self)
         self.play_vid.setText('')
         self.play_vid.move(140, 20)
         self.play_vid.resize(351, 241)
-        self.play_vid.setStyleSheet("background-image : url(tempToLoad.png);")
+        self.play_vid.setStyleSheet("background-image : url(UI/tempToLoad.png);")
         self.play_vid.clicked.connect(self.playVideo)
         self.play_vid.setVisible(True)
 
