@@ -29,7 +29,6 @@ class DatabaseConnection:
         if from_no > 5:
             print("helllo")
         query = "INSERT INTO CrashFrames (camera_id,frame_id,from_no) VALUES("+str(camera_id)+", "+str(starting_frame_id)+","+str(from_no)+")"
-        print(query)
         self.execute(query)
 
 

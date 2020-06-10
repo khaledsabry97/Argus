@@ -107,7 +107,7 @@ class Master:
     def checkResult(self,camera_id,starting_frame_id,crash_dimentions):
         if len(crash_dimentions) == 0:
             return
-
+        print("Sending Crash Has occured...")
         no_of_from_no = self.recordCrash(camera_id,starting_frame_id,crash_dimentions)
         self.database.insertCrashFramesVid(camera_id,starting_frame_id,PRE_FRAMES_NO+1)
 

@@ -69,9 +69,6 @@ class HornSchunck:
 
         M = pow(pow(H, 2) + pow(V, 2), 0.5)
 
-        #for i in range(U.shape[0]):
-        #    for j in range(U.shape[1]):
-         #       M[i, j] = pow(pow(U[i, j], 2) + pow(V[i, j], 2), 0.5)
 
         return H,V, M
 
