@@ -12,10 +12,27 @@ class JsonEncoder:
        pass
 
 
-    def send(self,ip,port,json):
+    def send(self,ip,port,json,use_treading = True):
         thread = SenderController(ip,port,json)
-        thread.start()
+        if use_treading:
+            thread.start()
+        else:
+            thread.run()
 
+    def feed(self,camera_id,starting_frame_id,frames,frame_width,frame_height,read_file,boxes,city,district_no):
+        func = FEED
+        sendingMsg = {FUNCTION:func,
+                      CAMERA_ID:camera_id,
+                      STARTING_FRAME_ID:starting_frame_id,
+                      FRAMES:frames,
+                      FRAME_WIDTH:frame_width,
+                      FRAME_HEIGHT:frame_height,
+                      READ_FILE:read_file,
+                      BOXES:boxes,
+                      CITY:city,
+                      DISTRICT_NO:district_no}
+
+        self.send(MASTERIP,MASTERPORT,sendingMsg,False)
 
     def detect(self,camera_id,starting_frame_id,frames,frame_width,frame_height,read_file,boxes_file,city,district_no):
         func = DETECT
