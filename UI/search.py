@@ -71,9 +71,11 @@ class SearchForm(QWidget):
         self.endDate.setDate(QDate.fromString('01/01/2015', "dd/MM/yyyy"))
 
         self.startTime = QTimeEdit(self)
+        self.startTime.setDisplayFormat('hh:mm')
         self.startTime.move(230, 40)
         self.startTime.resize(110, 22)
         self.endTime = QTimeEdit(self)
+        self.endTime.setDisplayFormat('hh:mm')
         self.endTime.move(230, 70)
         self.endTime.resize(110, 22)
 
@@ -122,27 +124,29 @@ class SearchForm(QWidget):
 
 
     def searchClicked(self):
-        startDate = None
-        endtDate = None
-        startTime = None
-        endtTime = None
+        # startDate = None
+        # endtDate = None
+        # startTime = None
+        # endtTime = None
         city = None
         district = None
 
-        if self.startDate.text() != '1/1/2015':
-            startDate = self.startDate.text()
-        if self.endDate.text() != '1/1/2015':
-            endDate = self.endDate.text()
-        if self.startTime.text() != '12:00 AM':
-            startTime = self.startTime.text()
-        if self.endTime.text() != '12:00 AM':
-            endTime = self.endTime.text()
+        # if self.startDate.text() != '1/1/2015':
+        #     startDate = self.startDate.text()
+        # if self.endDate.text() != '1/1/2015':
+        #     endDate = self.endDate.text()
+        # if self.startTime.text() != '12:00 AM':
+        #     startTime = self.startTime.text()
+        # if self.endTime.text() != '12:00 AM':
+        #     endTime = self.endTime.text()
         if self.city.text() != '':
             city = self.city.text()
         if self.loc.text() != '':
             district = self.loc.text()
 
-        self.encoder.requestData(startDate, endtDate, startTime, endtTime, city, district)
+        # self.encoder.requestData(startDate, endDate, startTime, endTime, city, district)
+        self.encoder.requestData(self.startDate.text(), self.endDate.text(), self.startTime.text(), self.endTime.text(),
+                                 city, district)
 
     def resetClicked(self):
         self.results.clear()
