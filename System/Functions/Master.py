@@ -104,12 +104,13 @@ class Master:
         self.write(camera_id, new_frames, starting_frame_id, frame_width, frame_height, True)
         return no_of_frames
 
-    def checkResult(self,camera_id,starting_frame_id,crash_dimentions):
+    def checkResult(self,camera_id,starting_frame_id,crash_dimentions,city,district_no):
+        #print(city,district_no)
         if len(crash_dimentions) == 0:
             return
         print("Sending Crash Has occured...")
         no_of_from_no = self.recordCrash(camera_id,starting_frame_id,crash_dimentions)
-        self.database.insertCrashFramesVid(camera_id,starting_frame_id,PRE_FRAMES_NO+1)
+        self.database.insertCrashFramesVid(camera_id,starting_frame_id,PRE_FRAMES_NO+1,city,district_no)
 
 
 

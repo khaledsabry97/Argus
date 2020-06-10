@@ -35,8 +35,10 @@ class JsonDecoder(threading.Thread):
             frame_height = msg[FRAME_HEIGHT]
             read_file = msg[READ_FILE]
             boxes_file = msg[BOXES]
+            city =msg[CITY]
+            district_no = msg[DISTRICT_NO]
 
-            self.feed(camera_id, starting_frame_id, frames, frame_width, frame_height, read_file, boxes_file)
+            self.feed(camera_id, starting_frame_id, frames, frame_width, frame_height, read_file, boxes_file,city,district_no)
 
         elif func == DETECT:    #2nd step: detect cars in the first frame
             camera_id = msg[CAMERA_ID]
@@ -46,8 +48,10 @@ class JsonDecoder(threading.Thread):
             frame_height = msg[FRAME_HEIGHT]
             read_file = msg[READ_FILE]
             boxes_file = msg[BOXES]
+            city =msg[CITY]
+            district_no = msg[DISTRICT_NO]
 
-            self.detect(camera_id,starting_frame_id,frames,frame_width,frame_height,read_file,boxes_file)
+            self.detect(camera_id,starting_frame_id,frames,frame_width,frame_height,read_file,boxes_file,city,district_no)
 
 
         elif(func == TRACK):    #3rd step: track given cars in the first frame over the next 29 frames
@@ -57,64 +61,71 @@ class JsonDecoder(threading.Thread):
             frame_width = msg[FRAME_WIDTH]
             frame_height = msg[FRAME_HEIGHT]
             boxes = msg[BOXES]
+            city =msg[CITY]
+            district_no = msg[DISTRICT_NO]
             start_detect_time = msg[START_DETECT_TIME]
             end_detect_time = msg[END_DETECT_TIME]
 
-            self.track(camera_id,starting_frame_id,frames,frame_width,frame_height,boxes,start_detect_time,end_detect_time)
+
+            self.track(camera_id,starting_frame_id,frames,frame_width,frame_height,boxes,start_detect_time,end_detect_time,city,district_no)
 
         elif func == CRASH: #4th step: check if any car did a crash or not
             camera_id = msg[CAMERA_ID]
             starting_frame_id = msg[STARTING_FRAME_ID]
             frames = msg[FRAMES]
             trackers = msg[TRACKERS]
+            city =msg[CITY]
+            district_no = msg[DISTRICT_NO]
             start_detect_time = msg[START_DETECT_TIME]
             end_detect_time = msg[END_DETECT_TIME]
             start_track_time = msg[START_TRACK_TIME]
             end_track_time = msg[END_TRACK_TIME]
 
-            self.crash(camera_id,starting_frame_id,frames,trackers,start_detect_time,end_detect_time,start_track_time,end_track_time)
+            self.crash(camera_id,starting_frame_id,frames,trackers,start_detect_time,end_detect_time,start_track_time,end_track_time,city,district_no)
 
         elif func == RESULT:    #5th step: send the result to the master to send notification and save accident or send and save none if not an accident
             camera_id = msg[CAMERA_ID]
             starting_frame_id = msg[STARTING_FRAME_ID]
             crash_dimentions = msg[CRASH_DIMENTIONS]
+            city =msg[CITY]
+            district_no = msg[DISTRICT_NO]
 
-            self.result(camera_id,starting_frame_id,crash_dimentions)
+            self.result(camera_id,starting_frame_id,crash_dimentions,city,district_no)
 
 
-    def feed(self,camera_id,starting_frame_id,frames,frame_width,frame_height,read_file,boxes_file):
+    def feed(self,camera_id,starting_frame_id,frames,frame_width,frame_height,read_file,boxes_file,city,district_no):
         master = Master()
 
         master.saveFrames(camera_id, starting_frame_id, frames, frame_width, frame_height)
         self.sender_encode.detect(camera_id, starting_frame_id, frames, frame_width, frame_height, read_file,
-                                  boxes_file)
+                                  boxes_file,city,district_no)
 
-    def detect(self,camera_id,starting_frame_id,frames,frame_width,frame_height,read_file,boxes_file):
+    def detect(self,camera_id,starting_frame_id,frames,frame_width,frame_height,read_file,boxes_file,city,district_no):
         start_detect_time = time()
         if not read_file and self.yolo == None:
             self.yolo = YOLO()
         detection = Detection(self.yolo)
 
         boxes = detection.detect(frames, frame_width, frame_height, read_file, boxes_file)
-        self.sender_encode.track(camera_id, starting_frame_id, frames, boxes, frame_width, frame_height,start_detect_time)
+        self.sender_encode.track(camera_id, starting_frame_id, frames, boxes, frame_width, frame_height,start_detect_time,city,district_no)
 
 
-    def track(self,camera_id,starting_frame_id,frames,frame_width,frame_height,boxes,start_detect_time,end_detect_time):
+    def track(self,camera_id,starting_frame_id,frames,frame_width,frame_height,boxes,start_detect_time,end_detect_time,city,district_no):
         start_track_time = time()
         track = Tracking()
         trackers = track.track(frames, boxes, frame_width, frame_height)
-        self.sender_encode.crash(camera_id, starting_frame_id, frames, trackers, start_detect_time, end_detect_time,start_track_time)
+        self.sender_encode.crash(camera_id, starting_frame_id, frames, trackers, start_detect_time, end_detect_time,start_track_time,city,district_no)
 
 
-    def crash(self,camera_id,starting_frame_id,frames,trackers,start_detect_time,end_detect_time,start_track_time,end_track_time):
+    def crash(self,camera_id,starting_frame_id,frames,trackers,start_detect_time,end_detect_time,start_track_time,end_track_time,city,district_no):
         if self.vif == None:
             self.vif = VIF()
 
         start_crash_time = time()
         crashing = Crashing(self.vif)
         crash_dimentions = crashing.crash(frames, trackers)
-        self.sender_encode.result(camera_id, starting_frame_id, crash_dimentions, start_detect_time, end_detect_time,start_track_time, end_track_time, start_crash_time)
+        self.sender_encode.result(camera_id, starting_frame_id, crash_dimentions, start_detect_time, end_detect_time,start_track_time, end_track_time, start_crash_time,city,district_no)
 
-    def result(self, camera_id, starting_frame_id, crash_dimentions):
+    def result(self, camera_id, starting_frame_id, crash_dimentions,city,district_no):
         master = Master()
-        master.checkResult(camera_id, starting_frame_id, crash_dimentions)
+        master.checkResult(camera_id, starting_frame_id, crash_dimentions,city,district_no)

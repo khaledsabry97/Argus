@@ -21,14 +21,14 @@ class DatabaseConnection:
         self.conn.commit()
         self.close()
     def insertSavedFramesVid(self,camera_id,starting_frame_id):
-        query = "INSERT INTO SavedFrames (camera_id,frame_id) VALUES("+str(camera_id)+", "+str(starting_frame_id)+")"
+        query = "INSERT INTO SavedFrames (camera_id,frame_id) VALUES("+str(camera_id)+","+str(starting_frame_id)+")"
         self.execute(query)
 
 
-    def insertCrashFramesVid(self,camera_id,starting_frame_id,from_no):
+    def insertCrashFramesVid(self,camera_id,starting_frame_id,from_no,city,district_no):
         if from_no > 5:
             print("helllo")
-        query = "INSERT INTO CrashFrames (camera_id,frame_id,from_no) VALUES("+str(camera_id)+", "+str(starting_frame_id)+","+str(from_no)+")"
+        query = "INSERT INTO CrashFrames (camera_id,frame_id,from_no,city,district) VALUES("+str(camera_id)+", "+str(starting_frame_id)+","+str(from_no)+",\""+city+"\",\""+district_no+"\")"
         self.execute(query)
 
 

@@ -125,8 +125,8 @@ class SearchForm(QWidget):
         video_id = vidpath.split('.')[0]
         video_id = video_id.split('/')
         video_id = int(video_id[-1])
-
-        CameraNode(video_id, 'videos/' + str(video_id) + '.mp4', random.choice(cities), 'District ' + str(random.randint(1, 30))).start()
+        print("hello")
+        CameraNode(video_id, 'videos/' + str(video_id) + '.mp4',files=True, city= random.choice(cities), district_no= 'District ' + str(random.randint(1, 30))).start()
         self.playVideo()
 
         # thread = Thread(target=self.temp)
