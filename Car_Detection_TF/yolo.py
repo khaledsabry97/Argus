@@ -2,9 +2,7 @@
 """
 Class definition of YOLO_v3 style detection model on image and video
 """
-import time
 import colorsys
-import os
 from timeit import default_timer as timer
 
 import numpy as np

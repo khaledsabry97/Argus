@@ -1,9 +1,6 @@
-import sys
-import argparse
 from Car_Detection_TF.yolo import YOLO, detect_video
 from PIL import Image
-from os import listdir
-from os.path import isfile, join
+
 
 def detect_img(yolo):
     while True:

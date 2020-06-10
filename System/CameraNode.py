@@ -10,13 +10,14 @@ import cv2
 from PIL import Image
 import threading
 from System.Connections.SenderController import SenderController
+from System.Controller.JsonEncoder import JsonEncoder
 from System.Data.CONSTANTS import *
 from yoloFiles import loadFile
 
 
 class CameraNode(threading.Thread):
 
-    def __init__(self,camera_id,file_path = None,files = True):
+    def __init__(self,camera_id,file_path = None,files = True,city = "None",district_no = "None"):
         threading.Thread.__init__(self)
         self.camera_id = camera_id  #speical id for every camera
         self.read_file = files  #do you want to read detected cars from file ?
@@ -24,6 +25,9 @@ class CameraNode(threading.Thread):
         self.no_of_frames = 0   #current no of frames processed by the camera
         self.frame_width = 480  #camera resolution from frame width
         self.frame_height = 360 #camera resolution from frame height
+        self.city = city
+        self.district_no = district_no
+        self.json_encoder = JsonEncoder()
 
     def run(self):
         self.startStreaming()
@@ -55,7 +59,7 @@ class CameraNode(threading.Thread):
                 # frames = []
                 new_boxes = fileBoxes[self.no_of_frames - 30]
 
-                self.makeJson(new_frames_list,new_boxes)
+                self.json_encoder.feed(self.camera_id,self.no_of_frames -29,new_frames_list,self.frame_width,self.frame_height,self.read_file,new_boxes,self.city,self.district_no)
                 # current_time = time() - t
                 # sleep(max(1-current_time,0))
                 # sleep(0.5)
@@ -71,20 +75,4 @@ class CameraNode(threading.Thread):
 
 
 
-    def makeJson(self,frames,boxes):
-
-        sendingMsg = {FUNCTION:FEED,
-                      CAMERA_ID:self.camera_id,
-                      STARTING_FRAME_ID:self.no_of_frames -29,
-                      FRAMES:frames,
-                      FRAME_WIDTH:self.frame_width,
-                      FRAME_HEIGHT:self.frame_height,
-                      READ_FILE:self.read_file,
-                      BOXES:boxes}
-
-        self.send(MASTERIP,MASTERPORT,sendingMsg)
-
-    def send(self,ip,port,json):
-        thread = SenderController(ip,port,json)
-        thread.run()
 

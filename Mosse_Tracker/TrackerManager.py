@@ -265,9 +265,6 @@ class TrackerManager:
             vis = self.frame.copy()
             for tracker in self.trackers:
                 tracker.showFrame(vis)
-            if len(self.trackers) > 0:
-                #cv2.imshow('tracker state', self.trackers[-1].tracker.state_vis)
-                pass
             self.rect_sel.draw(vis)
 
             cv2.imshow('frame', vis)
