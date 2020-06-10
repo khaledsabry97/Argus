@@ -7,7 +7,7 @@ import numpy as np
 import json
 import zmq
 from threading import Thread
-import System.Data.CONSTANTS as portsFile
+from System.Data.CONSTANTS import *
 from System.CameraNode import CameraNode
 import time
 import random
@@ -58,7 +58,7 @@ class Button(QPushButton):
 
 
 class SearchForm(QWidget):
-    def __init__(self, port=portsFile.MASTERPORT):
+    def __init__(self, port=MASTERPORT, ip=MASTERIP):
         super().__init__()
 
         self.worker = WorkerThread()
@@ -108,7 +108,7 @@ class SearchForm(QWidget):
         context = zmq.Context()
         print("Connecting to server...")
         self.socket = context.socket(zmq.REQ)
-        self.socket.connect("tcp://localhost:%s" % port)
+        self.socket.connect("tcp://"+ip+":"+str(port))
 
         # Initialize results container
         self.results = []
