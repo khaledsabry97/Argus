@@ -2,6 +2,7 @@ import os
 
 import cv2
 
+from System.Controller.JsonEncoder import JsonEncoder
 from System.Data.CONSTANTS import *
 from System.Database.DatabaseConnection import DatabaseConnection
 
@@ -111,6 +112,63 @@ class Master:
         print("Sending Crash Has occured...")
         no_of_from_no = self.recordCrash(camera_id,starting_frame_id,crash_dimentions)
         self.database.insertCrashFramesVid(camera_id,starting_frame_id,PRE_FRAMES_NO+1,city,district_no)
+
+    def executeQuery(self, start_date, end_date, start_time, end_time, city, district):
+        dic_of_query = {}
+        dic_of_query[START_DATE] = start_date
+        dic_of_query[END_DATE] = end_date
+        dic_of_query[START_TIME] = start_time
+        dic_of_query[END_TIME] = end_time
+
+        if city != None :
+            dic_of_query[CITY] = city
+        if district != None:
+            dic_of_query[DISTRICT] = district
+
+        results = self.database.selectCrashFramesList(dic_of_query)
+        list = []
+        duplicates = {}
+        for crash in results:
+
+            camera_id = crash[0]
+            frame_id = crash[1]
+            city = crash[2]
+            district = crash[3]
+            crash_time = crash[4]
+
+            if camera_id in duplicates:
+                continue
+
+            crash_pic = self.getCrashPhoto(int(camera_id),int(frame_id))
+            sending_msg = {
+                CAMERA_ID: camera_id,
+                STARTING_FRAME_ID:frame_id,
+                CITY:city,
+                DISTRICT:district,
+                CRASH_TIME:crash_time,
+                CRASH_PIC:crash_pic
+            }
+            list.append(sending_msg)
+        jsonEncoder = JsonEncoder()
+        jsonEncoder.replyQuery(list)
+
+
+
+    def getCrashPhoto(self,camera_id,starting_frame_id):
+        folder = "saved_crash_vid"
+
+        file_path = './'+folder+'/' + "(" + str(camera_id) + ") " + str(frame_id) + '.avi'
+        cap = cv2.VideoCapture(file_path)
+        if cap == None:
+            return None
+
+        total_frames = cap.get(7) # 7 = CV_CAP_PROP_FRAME_COUNT
+        frame_no = 90
+        if total_frames <90:
+            frame_no = total_frames
+        cap.set(1, frame_no) # 1 = CV_CAP_PROP_POS_FRAMES
+        ret, photo = cap.read()
+        return photo
 
 
 

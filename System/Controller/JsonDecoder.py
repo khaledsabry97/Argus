@@ -36,7 +36,7 @@ class JsonDecoder(threading.Thread):
             read_file = msg[READ_FILE]
             boxes_file = msg[BOXES]
             city =msg[CITY]
-            district_no = msg[DISTRICT_NO]
+            district_no = msg[DISTRICT]
 
             self.feed(camera_id, starting_frame_id, frames, frame_width, frame_height, read_file, boxes_file,city,district_no)
 
@@ -49,7 +49,7 @@ class JsonDecoder(threading.Thread):
             read_file = msg[READ_FILE]
             boxes_file = msg[BOXES]
             city =msg[CITY]
-            district_no = msg[DISTRICT_NO]
+            district_no = msg[DISTRICT]
 
             self.detect(camera_id,starting_frame_id,frames,frame_width,frame_height,read_file,boxes_file,city,district_no)
 
@@ -62,7 +62,7 @@ class JsonDecoder(threading.Thread):
             frame_height = msg[FRAME_HEIGHT]
             boxes = msg[BOXES]
             city =msg[CITY]
-            district_no = msg[DISTRICT_NO]
+            district_no = msg[DISTRICT]
             start_detect_time = msg[START_DETECT_TIME]
             end_detect_time = msg[END_DETECT_TIME]
 
@@ -75,7 +75,7 @@ class JsonDecoder(threading.Thread):
             frames = msg[FRAMES]
             trackers = msg[TRACKERS]
             city =msg[CITY]
-            district_no = msg[DISTRICT_NO]
+            district_no = msg[DISTRICT]
             start_detect_time = msg[START_DETECT_TIME]
             end_detect_time = msg[END_DETECT_TIME]
             start_track_time = msg[START_TRACK_TIME]
@@ -88,9 +88,18 @@ class JsonDecoder(threading.Thread):
             starting_frame_id = msg[STARTING_FRAME_ID]
             crash_dimentions = msg[CRASH_DIMENTIONS]
             city =msg[CITY]
-            district_no = msg[DISTRICT_NO]
+            district_no = msg[DISTRICT]
 
             self.result(camera_id,starting_frame_id,crash_dimentions,city,district_no)
+
+        elif func == SEARCH:
+            start_date = msg[START_DATE]
+            end_date = msg[END_DATE]
+            start_time = msg[START_TIME]
+            end_time = msg[END_TIME]
+            city =msg[CITY]
+            district = msg[DISTRICT]
+
 
 
     def feed(self,camera_id,starting_frame_id,frames,frame_width,frame_height,read_file,boxes_file,city,district_no):
@@ -129,3 +138,8 @@ class JsonDecoder(threading.Thread):
     def result(self, camera_id, starting_frame_id, crash_dimentions,city,district_no):
         master = Master()
         master.checkResult(camera_id, starting_frame_id, crash_dimentions,city,district_no)
+
+
+    def query(self,start_date,end_date,start_time,end_time,city,district):
+         master = Master()
+         master.executeQuery(start_date,end_date,start_time,end_time,city,district)

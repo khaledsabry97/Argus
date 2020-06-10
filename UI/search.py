@@ -123,9 +123,9 @@ class SearchForm(QWidget):
 
     def searchClicked(self):
         startDate = None
-        endtDate = None
+        endDate = None
         startTime = None
-        endtTime = None
+        endTime = None
         city = None
         district = None
 
@@ -142,7 +142,7 @@ class SearchForm(QWidget):
         if self.loc.text() != '':
             district = self.loc.text()
 
-        self.encoder.requestData(startDate, endtDate, startTime, endtTime, city, district)
+        self.encoder.requestData(startDate, endDate, startTime, endTime, city, district)
 
     def resetClicked(self):
         self.results.clear()

@@ -1,6 +1,8 @@
 import os
 import sqlite3
 
+from System.Data.CONSTANTS import *
+
 
 class DatabaseConnection:
     def __init__(self):
@@ -60,6 +62,22 @@ class DatabaseConnection:
         self.connect()
 
         query = "SELECT frame_id from SavedFrames Where camera_id = "+str(camera_id)+" and frame_id > "+str(starting_frame_id) +" ORDER BY frame_id ASC"
+        result = self.cursor.execute(query).fetchall()
+        self.conn.close()
+        return result
+
+    def selectCrashFramesList(self,dic):
+        self.connect()
+        array = []
+        if CITY in dic:
+            array.append("city = \""+dic[CITY]+"\"")
+        if DISTRICT in dic:
+            array.append("district = \""+dic[DISTRICT]+"\"")
+        if START_DATE in dic:
+            array.append("crash_time BETWEEN \""+dic[START_DATE]+" "+dic[START_TIME]+"\" AND \""+dic[END_DATE]+" "+dic[END_TIME]+"\"")
+        where = ' AND '.join(array)
+
+        query = "SELECT camera_id,frame_id,city,district,crash_time from CrashFrames Where "+where+" ORDER BY crash_time DESC"
         result = self.cursor.execute(query).fetchall()
         self.conn.close()
         return result
