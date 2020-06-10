@@ -28,7 +28,7 @@ class DatabaseConnection:
     def insertCrashFramesVid(self,camera_id,starting_frame_id,from_no,city,district_no):
         if from_no > 5:
             print("helllo")
-        query = "INSERT INTO CrashFrames (camera_id,frame_id,from_no,city,district) VALUES("+str(camera_id)+", "+str(starting_frame_id)+","+str(from_no)+",\""+city+"\",\""+district_no+"\")"
+        query = "INSERT INTO CrashFrames (camera_id,frame_id,from_no,city,district,crash_time) VALUES("+str(camera_id)+", "+str(starting_frame_id)+","+str(from_no)+",\""+city+"\",\""+district_no+"\",datetime('now'))"
         self.execute(query)
 
 
