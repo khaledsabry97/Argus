@@ -9,7 +9,7 @@ from torch.autograd import Variable
 import numpy as np
 
 
-def Yolo_image(Frame, model, CUDA=False):  ##set to true to enable GPU
+def detect_image(Frame, model, CUDA=False):  ##set to true to enable GPU
     img_shape = Frame.shape
     img_ = cv2.dnn.blobFromImage(Frame, 1 / 255.0, (608, 608),
                                  swapRB=True, crop=False)
@@ -42,6 +42,6 @@ if __name__ == "__main__":
     Frame = cv2.imread(image_file)
     model = Darknet("./config/yolov3.cfg", CUDA=False)
     model.load_weight("./config/yolov3.weights")
-    obj_list = Yolo_image(Frame, CUDA=False)
+    obj_list = detect_image(Frame, CUDA=False)
     visualize_result(image_file)
 
