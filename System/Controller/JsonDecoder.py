@@ -99,6 +99,7 @@ class JsonDecoder(threading.Thread):
             end_time = msg[END_TIME]
             city =msg[CITY]
             district = msg[DISTRICT]
+            self.query(start_date,end_date,start_time,end_time,city,district)
 
 
 

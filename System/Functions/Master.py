@@ -115,6 +115,37 @@ class Master:
 
     def executeQuery(self, start_date, end_date, start_time, end_time, city, district):
         dic_of_query = {}
+        start_date_array = start_date.split("/")
+
+        if len(start_date_array[0]) < 2:
+            start_date_array[0] = "0"+start_date_array[0]
+        if len(start_date_array[1]) < 2:
+            start_date_array[1] = "0" + start_date_array[1]
+
+        start_date = start_date_array[2] +"-"+start_date_array[1]+"-"+start_date_array[0]
+
+        end_date_array = end_date.split("/")
+
+        if len(end_date_array[0]) < 2:
+            end_date_array[0] = "0"+end_date_array[0]
+        if len(end_date_array[1]) < 2:
+            end_date_array[1] = "0" + end_date_array[1]
+
+        end_date = end_date_array[2] + "-" + end_date_array[1] + "-" + end_date_array[0]
+
+        start_time_array = start_time.split(":")
+        if len(start_time_array[0]) < 2:
+            start_time_array[0] = "0"+start_time_array[0]
+        if len(start_time_array[1]) < 2:
+            start_time_array[1] = "0" + start_time_array[1]
+
+        end_time_array = end_time.split(":")
+        if len(end_time_array[0]) < 2:
+            end_time_array[0] = "0"+end_time_array[0]
+        if len(end_time_array[1]) < 2:
+            end_time_array[1] = "0" + end_time_array[1]
+        start_time +=":00"
+        end_time += ":00"
         dic_of_query[START_DATE] = start_date
         dic_of_query[END_DATE] = end_date
         dic_of_query[START_TIME] = start_time
@@ -139,7 +170,7 @@ class Master:
             if camera_id in duplicates:
                 continue
 
-            crash_pic = self.getCrashPhoto(int(camera_id),int(frame_id))
+            crash_pic = self.getCrashPhoto(camera_id,frame_id)
             sending_msg = {
                 CAMERA_ID: camera_id,
                 STARTING_FRAME_ID:frame_id,
@@ -149,6 +180,7 @@ class Master:
                 CRASH_PIC:crash_pic
             }
             list.append(sending_msg)
+
         jsonEncoder = JsonEncoder()
         jsonEncoder.replyQuery(list)
 
@@ -157,7 +189,7 @@ class Master:
     def getCrashPhoto(self,camera_id,starting_frame_id):
         folder = "saved_crash_vid"
 
-        file_path = './'+folder+'/' + "(" + str(camera_id) + ") " + str(frame_id) + '.avi'
+        file_path = './'+folder+'/' + "(" + str(camera_id) + ") " + str(starting_frame_id) + '.avi'
         cap = cv2.VideoCapture(file_path)
         if cap == None:
             return None

@@ -24,7 +24,7 @@ class WorkerThread(QObject):
 
 
 class SearchForm(QWidget):
-    def __init__(self, port=MASTERPORT, ip=MASTERIP):
+    def __init__(self, port=GUIPORT, ip=GUIIP):
         super().__init__()
 
         self.encoder = JsonEncoder()
@@ -215,10 +215,10 @@ class SearchForm(QWidget):
                 break
 
     def receive(self):
-
             #  Wait for next request from client
         try:
             message = self.socket.recv_pyobj(flags=zmq.NOBLOCK)  # receive a message json
+            # message = self.socket.recv_pyobj()  # receive a message json
             self.socket.send_pyobj("")
             self.decode(message)
 
@@ -241,7 +241,7 @@ class SearchForm(QWidget):
         if func == QUERY:
             self.resetClicked()
             for item in msg:
-                self.appendToList(ID=item[CAMERA_ID], Image=item[FRAME], Date=item[DATE], Time=item[TIME],
+                self.appendToList(ID=item[CAMERA_ID], Image=item[CRASH_PIC], Date=item[CRASH_TIME], Time=item[CRASH_TIME],
                                   City=item[CITY], location=item[DISTRICT], startFrame=item[STARTING_FRAME_ID], list=True)
             return
 

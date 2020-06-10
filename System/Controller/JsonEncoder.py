@@ -137,7 +137,7 @@ class JsonEncoder:
         sendingMsg = {FUNCTION: func,
                       LIST_OF_CRASHES: list_of_crashes}
 
-        self.send(MASTERIP, MASTERPORT, sendingMsg) #change the address later
+        self.send(GUIIP, GUIPORT, sendingMsg) #change the address later
     def requestVideo(self, camera_id, starting_frame_id):
         func = VIDEO
         sendingMsg = {FUNCTION: func,
