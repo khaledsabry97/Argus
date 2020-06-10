@@ -1,6 +1,7 @@
 import os
 
 import cv2
+from datetime import datetime
 
 from System.Controller.JsonEncoder import JsonEncoder
 from System.Data.CONSTANTS import *
@@ -112,6 +113,11 @@ class Master:
         print("Sending Crash Has occured...")
         no_of_from_no = self.recordCrash(camera_id,starting_frame_id,crash_dimentions)
         self.database.insertCrashFramesVid(camera_id,starting_frame_id,PRE_FRAMES_NO+1,city,district_no)
+        self.sendNotification(camera_id,starting_frame_id,city,district_no)
+
+    def sendNotification(self,camera_id,starting_frame_id,city,district_no):
+        jsonEncoder = JsonEncoder()
+        jsonEncoder.sendNotification(camera_id,starting_frame_id,city,district_no,datetime('now'), self.getCrashPhoto(camera_id,starting_frame_id))
 
     def executeQuery(self, start_date, end_date, start_time, end_time, city, district):
         dic_of_query = {}
@@ -157,6 +163,9 @@ class Master:
             dic_of_query[DISTRICT] = district
 
         results = self.database.selectCrashFramesList(dic_of_query)
+        self.replyQuery(results)
+
+    def replyQuery(self,results):
         list = []
         duplicates = {}
         for crash in results:
@@ -170,21 +179,19 @@ class Master:
             if camera_id in duplicates:
                 continue
 
-            crash_pic = self.getCrashPhoto(camera_id,frame_id)
+            crash_pic = self.getCrashPhoto(camera_id, frame_id)
             sending_msg = {
                 CAMERA_ID: camera_id,
-                STARTING_FRAME_ID:frame_id,
-                CITY:city,
-                DISTRICT:district,
-                CRASH_TIME:crash_time,
-                CRASH_PIC:crash_pic
+                STARTING_FRAME_ID: frame_id,
+                CITY: city,
+                DISTRICT: district,
+                CRASH_TIME: crash_time,
+                CRASH_PIC: crash_pic
             }
             list.append(sending_msg)
 
         jsonEncoder = JsonEncoder()
         jsonEncoder.replyQuery(list)
-
-
 
     def getCrashPhoto(self,camera_id,starting_frame_id):
         folder = "saved_crash_vid"
@@ -202,6 +209,14 @@ class Master:
         ret, photo = cap.read()
         return photo
 
+    def sendVideoToGUI(self,camera_id,starting_frame_id):
+        video_frames = self.getVideoFrames(camera_id,starting_frame_id,True)
+        jsonEncoder = JsonEncoder()
+        jsonEncoder.replyVideo(video_frames)
+
+    def sendRecentCrashesToGUI(self):
+        results = self.database.selectCrashFramesLast10()
+        self.replyQuery(results)
 
 
 

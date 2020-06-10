@@ -133,13 +133,13 @@ class JsonEncoder:
         self.send(MASTERIP, MASTERPORT, sendingMsg)
 
     def replyQuery(self,list_of_crashes):
-        func = REPLY_QUERY
+        func = REP_QUERY
         sendingMsg = {FUNCTION: func,
                       LIST_OF_CRASHES: list_of_crashes}
 
         self.send(GUIIP, GUIPORT, sendingMsg) #change the address later
     def requestVideo(self, camera_id, starting_frame_id):
-        func = VIDEO
+        func = REQ_VIDEO
         sendingMsg = {FUNCTION: func,
                       CAMERA_ID: camera_id,
                       STARTING_FRAME_ID: starting_frame_id}
@@ -148,8 +148,22 @@ class JsonEncoder:
 
 
     def replyVideo(self,frames):
-        func = REPLY_VIDEO
+        func = REP_VIDEO
         sendingMsg = {FUNCTION:func,
                       FRAMES:frames}
 
-        self.send(MASTERIP,MASTERPORT,sendingMsg,False)
+        self.send(GUIIP,GUIPORT,sendingMsg)
+
+
+    def sendNotification(self,camera_id,frame_id,city,district,crash_time,crash_pic):
+        func = NOTIFICATION
+        sendingMsg = {FUNCTION:func,
+            CAMERA_ID: camera_id,
+            STARTING_FRAME_ID: frame_id,
+            CITY: city,
+            DISTRICT: district,
+            CRASH_TIME: crash_time,
+            CRASH_PIC: crash_pic
+        }
+        self.send(GUIIP, GUIPORT, sendingMsg) #change the address later
+
