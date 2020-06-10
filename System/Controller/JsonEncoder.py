@@ -107,5 +107,35 @@ class JsonEncoder:
         self.send(MASTERIP, MASTERPORT, sendingMsg)
 
 
+    def feed(self,camera_id,starting_frame_id,frames,frame_width,frame_height,read_file,boxes_file):
+        func = DETECT
+        sendingMsg = {FUNCTION:func,
+                      CAMERA_ID:camera_id,
+                      STARTING_FRAME_ID:starting_frame_id,
+                      FRAMES:frames,
+                      FRAME_WIDTH:frame_width,
+                      FRAME_HEIGHT:frame_height,
+                      READ_FILE:read_file,
+                      BOXES:boxes_file}
 
+        self.send(MASTERIP, MASTERPORT, sendingMsg)
 
+    def requestData(self, start_date, end_date, start_time, end_time, city, district):
+        func = SEARCH
+        sendingMsg = {FUNCTION: func,
+                      START_DATE: start_date,
+                      END_DATE: end_date,
+                      START_TIME: start_time,
+                      END_TIME: end_time,
+                      CITY: city,
+                      DISTRICT: district}
+
+        self.send(MASTERIP, MASTERPORT, sendingMsg)
+
+    def requestVideo(self, camera_id, starting_frame_id):
+        func = VIDEO
+        sendingMsg = {FUNCTION: func,
+                      CAMERA_ID: camera_id,
+                      STARTING_FRAME_ID: starting_frame_id}
+
+        self.send(MASTERIP, MASTERPORT, sendingMsg)
