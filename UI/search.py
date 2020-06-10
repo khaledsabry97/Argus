@@ -217,13 +217,14 @@ class SearchForm(QWidget):
     def receive(self):
             #  Wait for next request from client
         try:
-            message = self.socket.recv_pyobj(flags=zmq.NOBLOCK)  # receive a message json
-            # message = self.socket.recv_pyobj()  # receive a message json
+            # message = self.socket.recv_pyobj(flags=zmq.NOBLOCK)  # receive a message json
+            message = self.socket.recv_pyobj()  # receive a message json
             self.socket.send_pyobj("")
+            print("recieved")
             self.decode(message)
 
         except:
-            # print("reciever error")
+            print("reciever error")
             pass
 
         # try:
@@ -238,7 +239,7 @@ class SearchForm(QWidget):
     def decode(self, msg):
         func = msg[FUNCTION]
 
-        if func == QUERY:
+        if func == REP_QUERY:
             self.resetClicked()
             for item in msg:
                 self.appendToList(ID=item[CAMERA_ID], Image=item[CRASH_PIC], Date=item[CRASH_TIME], Time=item[CRASH_TIME],
@@ -250,8 +251,8 @@ class SearchForm(QWidget):
                               City=msg[CITY], location=msg[DISTRICT], startFrame=msg[STARTING_FRAME_ID], list=False)
             return
 
-        if func == VIDEO:
-            self.playVideo(msg[VIDEO])
+        if func == REP_VIDEO:
+            self.playVideo(msg[FRAMES])
             return
 
 if __name__ == "__main__":

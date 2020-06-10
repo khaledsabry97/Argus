@@ -100,7 +100,13 @@ class JsonDecoder(threading.Thread):
             city =msg[CITY]
             district = msg[DISTRICT]
             self.query(start_date,end_date,start_time,end_time,city,district)
+        elif func == REQ_VIDEO:
+            camera_id = msg[CAMERA_ID]
+            starting_frame_id = msg[STARTING_FRAME_ID]
+            self.reqVideo(camera_id,starting_frame_id)
 
+        elif func == RECENT_CRASHES:
+            self.sendRecentCrashes()
 
 
     def feed(self,camera_id,starting_frame_id,frames,frame_width,frame_height,read_file,boxes_file,city,district_no):
@@ -144,3 +150,11 @@ class JsonDecoder(threading.Thread):
     def query(self,start_date,end_date,start_time,end_time,city,district):
          master = Master()
          master.executeQuery(start_date,end_date,start_time,end_time,city,district)
+
+    def reqVideo(self, camera_id, starting_frame_id):
+        master = Master()
+        master.sendVideoToGUI(camera_id,starting_frame_id)
+
+    def sendRecentCrashes(self):
+        master = Master()
+        master.sendRecentCrashesToGUI()
