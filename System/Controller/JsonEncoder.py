@@ -167,3 +167,9 @@ class JsonEncoder:
         }
         self.send(GUIIP, GUIPORT, sendingMsg) #change the address later
 
+
+    def getRecentCrashes(self,):
+        func = RECENT_CRASHES
+        sendingMsg = {FUNCTION: func}
+
+        self.send(MASTERIP, MASTERPORT, sendingMsg)
