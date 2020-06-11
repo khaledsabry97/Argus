@@ -117,7 +117,11 @@ class Master:
 
     def sendNotification(self,camera_id,starting_frame_id,city,district_no):
         jsonEncoder = JsonEncoder()
-        jsonEncoder.sendNotification(camera_id,starting_frame_id,city,district_no,datetime('now'), self.getCrashPhoto(camera_id,starting_frame_id))
+        time =  str(datetime.utcnow().time()).split(".")[0]
+        date = str(datetime.utcnow().date())
+        date = date+ " "+ time
+        crash_pic = self.getCrashPhoto(camera_id,starting_frame_id)
+        jsonEncoder.sendNotification(camera_id,starting_frame_id,city,district_no,date, crash_pic)
 
     def executeQuery(self, start_date, end_date, start_time, end_time, city, district):
         dic_of_query = {}
@@ -202,7 +206,7 @@ class Master:
             return None
 
         total_frames = cap.get(7) # 7 = CV_CAP_PROP_FRAME_COUNT
-        frame_no = 90
+        frame_no = 89
         if total_frames <90:
             frame_no = total_frames
         cap.set(1, frame_no) # 1 = CV_CAP_PROP_POS_FRAMES

@@ -77,7 +77,7 @@ class DatabaseConnection:
             array.append("crash_time BETWEEN \""+dic[START_DATE]+" "+dic[START_TIME]+"\" AND \""+dic[END_DATE]+" "+dic[END_TIME]+"\"")
         where = ' AND '.join(array)
 
-        query = "SELECT camera_id,frame_id,city,district,crash_time from CrashFrames Where "+where+" ORDER BY crash_time DESC LIMIT 10"
+        query = "SELECT camera_id,frame_id,city,district,crash_time from CrashFrames Where "+where+" ORDER BY crash_time DESC "
         result = self.cursor.execute(query).fetchall()
         self.conn.close()
         return result
@@ -85,7 +85,7 @@ class DatabaseConnection:
     def selectCrashFramesLast10(self):
         self.connect()
 
-        query = "SELECT camera_id,frame_id,city,district,crash_time from CrashFrame ORDER BY crash_time DESC"
+        query = "SELECT camera_id,frame_id,city,district,crash_time from CrashFrames ORDER BY crash_time DESC LIMIT 10"
         result = self.cursor.execute(query).fetchall()
         self.conn.close()
         return result

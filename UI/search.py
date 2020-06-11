@@ -5,22 +5,26 @@ from PyQt5.QtCore import *
 import cv2
 import time
 import zmq
+from numpy.core.multiarray import ndarray
 
 from System.Data.CONSTANTS import *
 from System.Controller.JsonEncoder import JsonEncoder
 
 class WorkerThread(QObject):
-    receive = pyqtSignal()
+    receive = pyqtSignal(dict)
 
     def __init__(self):
         super().__init__()
+        context = zmq.Context()
+        self.socket = context.socket(zmq.REP)
+        self.socket.bind("tcp://"+GUIIP+":"+str(GUIPORT))
 
     @pyqtSlot()
     def run(self):
         while True:
-            time.sleep(1)
-            self.receive.emit()
-            # print('hit it')
+            message = self.socket.recv_pyobj()  # receive a message json
+            self.socket.send_pyobj("")
+            self.receive.emit(message)
 
 
 class SearchForm(QWidget):
@@ -30,11 +34,12 @@ class SearchForm(QWidget):
         self.encoder = JsonEncoder()
 
         self.setWindowIcon(QIcon('icon.png'))
-        self.setStyleSheet("background-color: #F2F3F4;")
+        self.setStyleSheet("background-color: #A9A9A9;")
         self.setWindowTitle('Argus')
         # self.setStyleSheet(open('style.css').read())
 
-        self.setGeometry(330, 150, 731, 438)    # self.setGeometry(300, 300, 1200, 1200)
+        # self.setGeometry(330, 150, 731, 438)
+        self.setGeometry(600, 50, 750, 900)
         # self.setWindowFlags(Qt.FramelessWindowHint)
 
         oImage = QImage("Untitled.png")
@@ -46,10 +51,9 @@ class SearchForm(QWidget):
         self.worker = WorkerThread()
         self.workerThread = QThread()
         self.workerThread.started.connect(self.worker.run)  # Init worker run() at startup (optional)
-        self.worker.receive.connect(self.receive)           # Connect your signals/slots
+        self.worker.receive.connect(self.decode)           # Connect your signals/slots
         self.worker.moveToThread(self.workerThread)         # Move the Worker object to the Thread object
         self.workerThread.start()
-
         self.make_lable('Date', 60, 0, 61, 41, True, 12)
         self.make_lable('From', 10, 40, 41, 21, True, 10)
         self.make_lable('To', 10, 70, 41, 21, True, 10)
@@ -87,6 +91,7 @@ class SearchForm(QWidget):
         self.loc.move(500, 40)
         self.loc.resize(110, 22)
 
+
         search = QPushButton(self)
         search.setText('Search')
         search.move(640, 20)
@@ -103,15 +108,16 @@ class SearchForm(QWidget):
         self.results.move(20, 120)
         self.results.resize(691, 301)
         self.results.itemDoubleClicked.connect(self.listwidgetClicked)
+        self.encoder.getRecentCrashes()
         # self.results.setStyleSheet(open('style.css').read())
 
-        self.appendToList(list=True)
-        self.appendToList(list=False)
+        # self.appendToList(list=True)
+        # self.appendToList(list=False)
 
         # Initialize connection
-        context = zmq.Context()
-        self.socket = context.socket(zmq.REP)
-        self.socket.connect("tcp://"+ip+":"+str(port))
+        # context = zmq.Context()
+        # self.socket = context.socket(zmq.REP)
+        # self.socket.connect("tcp://"+ip+":"+str(port))
 
 
     def listwidgetClicked(self, item):
@@ -119,7 +125,7 @@ class SearchForm(QWidget):
         info = item.children()[-1]
         startFrameID, cameraID = info.text().split(',')
         print(startFrameID, cameraID)
-        self.encoder.requestVideo(camera_id=int(CAMERA_ID), starting_frame_id=int(startFrameID))
+        self.encoder.requestVideo(camera_id=int(cameraID), starting_frame_id=int(startFrameID))
         return
 
 
@@ -152,19 +158,22 @@ class SearchForm(QWidget):
         self.results.clear()
         pass
 
-    def appendToList(self, ID=3, Image=[], Date='a', Time='d', City='f', Location='g', startFrame=1, list=True):
+    def appendToList(self, ID=3, Image=None, Date='a', Time='d', City='f', Location='g', startFrame=1, list=True):
         itemN = QListWidgetItem()
         widget = QWidget()
 
         widgetText = QLabel()
-        img = cv2.imread('Untitled.png')
-        img = cv2.resize(img, (91, 41), interpolation=cv2.INTER_AREA)
+        if not isinstance(Image,ndarray) :
+            img = cv2.imread('Untitled.png')
+        else:
+            img = Image
+        img = cv2.resize(img, (120, 100), interpolation=cv2.INTER_AREA)
         height, width, channel = img.shape
         bytesPerLine = 3 * width
         qImg = QImage(img.data, width, height, bytesPerLine, QImage.Format_BGR888)
         pixmap = QPixmap(qImg)
         widgetText.setPixmap(pixmap)
-        widgetText.resize(15, 15)
+        widgetText.resize(20, 20)
 
         startFrameID = QLabel()
         startFrameID.setText(str(startFrame)+','+str(ID))
@@ -182,7 +191,6 @@ class SearchForm(QWidget):
         widgetLayout.addStretch()
         widgetLayout.setSizeConstraint(QLayout.SetFixedSize)
         widget.setLayout(widgetLayout)
-
         itemN.setSizeHint(widget.sizeHint())
         if list:
             self.results.addItem(itemN)
@@ -214,25 +222,6 @@ class SearchForm(QWidget):
             if cv2.waitKey(31) & 0xFF == ord('q'):
                 break
 
-    def receive(self):
-            #  Wait for next request from client
-        try:
-            # message = self.socket.recv_pyobj(flags=zmq.NOBLOCK)  # receive a message json
-            message = self.socket.recv_pyobj()  # receive a message json
-            self.socket.send_pyobj("")
-            print("recieved")
-            self.decode(message)
-
-        except:
-            print("reciever error")
-            pass
-
-        # try:
-        #     resultsJson = self.socket.recv(flags=zmq.NOBLOCK)
-        #
-        # except:
-        #     return
-        # return
 
 
 
@@ -241,14 +230,15 @@ class SearchForm(QWidget):
 
         if func == REP_QUERY:
             self.resetClicked()
-            for item in msg:
+            list = msg[LIST_OF_CRASHES]
+            for item in list:
                 self.appendToList(ID=item[CAMERA_ID], Image=item[CRASH_PIC], Date=item[CRASH_TIME], Time=item[CRASH_TIME],
-                                  City=item[CITY], location=item[DISTRICT], startFrame=item[STARTING_FRAME_ID], list=True)
+                                  City=item[CITY], Location=item[DISTRICT], startFrame=item[STARTING_FRAME_ID], list=True)
             return
 
         if func == NOTIFICATION:
-            self.appendToList(ID=msg[CAMERA_ID], Image=msg[FRAME], Date=msg[DATE], Time=msg[TIME],
-                              City=msg[CITY], location=msg[DISTRICT], startFrame=msg[STARTING_FRAME_ID], list=False)
+            self.appendToList(ID=msg[CAMERA_ID], Image=msg[CRASH_PIC], Date=msg[CRASH_TIME], Time=msg[CRASH_TIME],
+                              City=msg[CITY], Location=msg[DISTRICT], startFrame=msg[STARTING_FRAME_ID], list=False)
             return
 
         if func == REP_VIDEO:
