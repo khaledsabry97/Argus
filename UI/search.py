@@ -34,7 +34,7 @@ class SearchForm(QWidget):
         self.encoder = JsonEncoder()
 
         self.setWindowIcon(QIcon('icon.png'))
-        self.setStyleSheet("background-color: #A9A999;")
+        self.setStyleSheet("background-color: #D3D3D3;")
         self.setWindowTitle('Argus')
         # self.setStyleSheet(open('style.css').read())
 
@@ -109,7 +109,7 @@ class SearchForm(QWidget):
         self.results.move(20, 175)
         self.results.resize(760, 650)
         self.results.itemDoubleClicked.connect(self.listwidgetClicked)
-        self.results.setStyleSheet("background-color: #FFFFFF;")
+        self.results.setStyleSheet("background-color: #C0C0C0;")
 
         widgetText = QLabel(self)
         widgetText.move(630, 15)
@@ -155,7 +155,7 @@ class SearchForm(QWidget):
 
         widgetText = QLabel()
         if not isinstance(Image,ndarray) :
-            img = cv2.imread('Untitled.png')
+            img = cv2.imread('notfound.png')
         else:
             img = Image
         img = cv2.resize(img, (120, 100), interpolation=cv2.INTER_AREA)
