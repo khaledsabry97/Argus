@@ -63,8 +63,9 @@ class SearchForm(QWidget):
         self.make_lable('From', 190, 40, 41, 21, True, 10)
         self.make_lable('To', 190, 70, 41, 21, True, 10)
 
-        self.make_lable('City', 400, 0, 61, 41, True, 12)
-        self.make_lable('Location', 520, 0, 81, 41, True, 12)
+        self.make_lable('Location', 420, 0, 71, 41, True, 12)
+        self.make_lable('City', 370, 40, 41, 21, True, 10)
+        self.make_lable('District', 370, 70, 46, 21, True, 10)
 
         self.startDate = QDateEdit(self)
         self.startDate.move(50, 40)
@@ -85,38 +86,37 @@ class SearchForm(QWidget):
         self.endTime.resize(110, 22)
 
         self.city = QLineEdit(self)
-        self.city.move(370, 40)
+        self.city.move(420, 40)
         self.city.resize(110, 22)
 
         self.loc = QLineEdit(self)
-        self.loc.move(500, 40)
+        self.loc.move(420, 70)
         self.loc.resize(110, 22)
-
 
         search = QPushButton(self)
         search.setText('Search')
-        search.move(270, 105)
+        search.move(550, 10)
         search.resize(71, 51)
         search.clicked.connect(self.searchClicked)
 
-        reset = QPushButton(self)
-        reset.setText('Recent')
-        reset.move(370, 105)
-        reset.resize(71, 51)
-        reset.clicked.connect(self.recentlyClicked)
+        recent = QPushButton(self)
+        recent.setText('Recent')
+        recent.move(550, 70)
+        recent.resize(71, 25)
+        recent.clicked.connect(self.recentlyClicked)
 
         self.results = QListWidget(self)
-        self.results.move(20, 175)
+        self.results.move(20, 115)
         self.results.resize(760, 650)
         self.results.itemDoubleClicked.connect(self.listwidgetClicked)
         self.results.setStyleSheet("background-color: #C0C0C0;")
 
         widgetText = QLabel(self)
-        widgetText.move(630, 15)
+        widgetText.move(650, 15)
         img = QImage("logo.png")
         img.convertToFormat(QImage.Format_ARGB32)
         pixmap = QPixmap(img)
-        pixmap = pixmap.scaled(134, 94, Qt.KeepAspectRatio)
+        pixmap = pixmap.scaled(124, 84, Qt.KeepAspectRatio)
         widgetText.setPixmap(pixmap)
 
         # self.appendToList(list=True)
