@@ -107,7 +107,7 @@ class SearchForm(QWidget):
 
         self.results = QListWidget(self)
         self.results.move(20, 175)
-        self.results.resize(707, 491)
+        self.results.resize(760, 650)
         self.results.itemDoubleClicked.connect(self.listwidgetClicked)
         self.results.setStyleSheet("background-color: #FFFFFF;")
 
@@ -172,12 +172,11 @@ class SearchForm(QWidget):
         print(startFrameID.text())
 
         info = QLabel()
-        font = QFont('SansSerif', 11)
+        font = QFont('SansSerif', 10)
         font.setBold(True)
         info.setFont(font)
-        info.setText('          From camera: ' + str(ID) + '        Date: ' + str(Date) + '          City: ' + str(City)
-                     + '         Location: ' + str(Location))
-
+        info.setText('   Camera Id: ' + str(ID) + '  Date: ' + str(Date) + '    City: ' + str(City)
+                     + '   Location: ' + str(Location))
         widgetLayout = QHBoxLayout()
         widgetLayout.addWidget(widgetText)
         widgetLayout.addWidget(info)
