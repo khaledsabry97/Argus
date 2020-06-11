@@ -171,5 +171,5 @@ class JsonEncoder:
     def getRecentCrashes(self,):
         func = RECENT_CRASHES
         sendingMsg = {FUNCTION: func}
-
+        print("send recent crashes")
         self.send(MASTERIP, MASTERPORT, sendingMsg)

@@ -39,7 +39,7 @@ class SearchForm(QWidget):
         # self.setStyleSheet(open('style.css').read())
 
         # self.setGeometry(330, 150, 731, 438)
-        self.setGeometry(350, 50, 750, 850)
+        self.setGeometry(350, 50, 800, 850)
         # self.setWindowFlags(Qt.FramelessWindowHint)
 
         oImage = QImage("Untitled.png")
@@ -107,7 +107,7 @@ class SearchForm(QWidget):
 
         self.results = QListWidget(self)
         self.results.move(20, 175)
-        self.results.resize(707, 491)
+        self.results.resize(760, 650)
         self.results.itemDoubleClicked.connect(self.listwidgetClicked)
         self.results.setStyleSheet("background-color: #FFFFFF;")
 
@@ -121,7 +121,7 @@ class SearchForm(QWidget):
 
         # self.appendToList(list=True)
         # self.appendToList(list=False)
-
+        print("hello")
         self.recentlyClicked()
 
     def listwidgetClicked(self, item):
@@ -147,7 +147,7 @@ class SearchForm(QWidget):
 
     def recentlyClicked(self):
         self.encoder.getRecentCrashes()
-        return
+
 
     def appendToList(self, ID=3, Image=None, Date='a', Time='d', City='f', Location='g', startFrame=1, list=True):
         itemN = QListWidgetItem()
@@ -155,7 +155,7 @@ class SearchForm(QWidget):
 
         widgetText = QLabel()
         if not isinstance(Image,ndarray) :
-            img = cv2.imread('errorloading.png')
+            img = cv2.imread('Untitled.png')
         else:
             img = Image
         img = cv2.resize(img, (120, 100), interpolation=cv2.INTER_AREA)
@@ -172,12 +172,11 @@ class SearchForm(QWidget):
         print(startFrameID.text())
 
         info = QLabel()
-        font = QFont('SansSerif', 11)
+        font = QFont('SansSerif', 10)
         font.setBold(True)
         info.setFont(font)
-        info.setText('          From camera: ' + str(ID) + '        Date: ' + str(Date) + '          City: ' + str(City)
-                     + '         Location: ' + str(Location))
-
+        info.setText('   Camera Id: ' + str(ID) + '  Date: ' + str(Date) + '    City: ' + str(City)
+                     + '   Location: ' + str(Location))
         widgetLayout = QHBoxLayout()
         widgetLayout.addWidget(widgetText)
         widgetLayout.addWidget(info)

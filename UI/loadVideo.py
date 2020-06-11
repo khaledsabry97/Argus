@@ -117,7 +117,7 @@ class Client(QWidget):
             if ret == True:
                 cv2.imshow('Frame', frame)
 
-                if cv2.waitKey(31) & 0xFF == ord('q'):
+                if cv2.waitKey(28) & 0xFF == ord('q'):
                     break
             else:
                 break

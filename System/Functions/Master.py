@@ -96,8 +96,11 @@ class Master:
 
                 cv2.putText(new_frames[i], "Crash!", (12, 40), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 0, 255), 4)
             no_of_frames = 3
-        for i in range(len(new_frames)-30,len(new_frames),2):
-            fill = -1
+        for i in range(len(new_frames)-30,len(new_frames),1):
+            if i %2 == 0:
+                fill = -1
+            else:
+                fill = 2
             cv2.rectangle(new_frames[i], (xmin,ymin), (xmax,ymax), (0,0,255),fill)
             # cv2.rectangle(new_frames[i], (xmin,ymin), (xmax,ymax), (0,0,255),1)
 
