@@ -35,11 +35,11 @@ class SearchForm(QWidget):
 
         self.setWindowIcon(QIcon('icon.png'))
         self.setStyleSheet("background-color: #D3D3D3;")
-        self.setWindowTitle('Argus')
+        self.setWindowTitle('Argus - User Interface')
         # self.setStyleSheet(open('style.css').read())
 
         # self.setGeometry(330, 150, 731, 438)
-        self.setGeometry(350, 50, 800, 850)
+        self.setGeometry(350, 50, 760, 850)
         # self.setWindowFlags(Qt.FramelessWindowHint)
 
         oImage = QImage("Untitled.png")
@@ -63,9 +63,9 @@ class SearchForm(QWidget):
         self.make_lable('From', 190, 40, 41, 21, True, 10)
         self.make_lable('To', 190, 70, 41, 21, True, 10)
 
-        self.make_lable('Location', 420, 0, 71, 41, True, 12)
+        self.make_lable('Location', 430, 0, 71, 41, True, 12)
         self.make_lable('City', 370, 40, 41, 21, True, 10)
-        self.make_lable('District', 370, 70, 46, 21, True, 10)
+        self.make_lable('District', 370, 70, 50, 21, True, 10)
 
         self.startDate = QDateEdit(self)
         self.startDate.move(50, 40)
@@ -86,28 +86,28 @@ class SearchForm(QWidget):
         self.endTime.resize(110, 22)
 
         self.city = QLineEdit(self)
-        self.city.move(420, 40)
+        self.city.move(430, 40)
         self.city.resize(110, 22)
 
         self.loc = QLineEdit(self)
-        self.loc.move(420, 70)
+        self.loc.move(430, 70)
         self.loc.resize(110, 22)
 
         search = QPushButton(self)
         search.setText('Search')
-        search.move(550, 10)
+        search.move(560, 10)
         search.resize(71, 51)
         search.clicked.connect(self.searchClicked)
 
         recent = QPushButton(self)
         recent.setText('Recent')
-        recent.move(550, 70)
+        recent.move(560, 70)
         recent.resize(71, 25)
         recent.clicked.connect(self.recentlyClicked)
 
         self.results = QListWidget(self)
         self.results.move(20, 115)
-        self.results.resize(760, 650)
+        self.results.resize(720, 720)
         self.results.itemDoubleClicked.connect(self.listwidgetClicked)
         self.results.setStyleSheet("background-color: #C0C0C0;")
 

@@ -11,10 +11,10 @@ import random
 
 vidpath = ''
 cities = ['Cairo', 'Alexandria', 'Gizah', 'Shubra El-Kheima', 'Port Said', 'Suez', 'Luxor', 'Al-Mansura',
-          'El-Mahalla El-Kubra', 'Tanta', 'Asyut', 'Ismailia', 'Fayyum', 'Zagazig', 'Aswan', 'Damietta',
-          'Damanhur', 'Al-Minya', 'Beni Suef', 'Qena', 'Sohag', 'Hurghada', '6th of October City', 'Shibin El Kom',
-          'Banha', 'Kafr el-Sheikh', 'Arish', 'Mallawi', '10th of Ramadan City', 'Bilbais', 'Marsa Matruh',
-          'Idfu, Mit Ghamr', 'Al-Hamidiyya', 'Desouk', 'Qalyub', 'Abu Kabir', 'Kafr el-Dawwar', 'Girga', 'Akhmim', 'Matareya']
+         'Tanta', 'Asyut', 'Ismailia', 'Fayyum', 'Zagazig', 'Aswan', 'Damietta',
+          'Damanhur', 'Al-Minya', 'Beni Suef', 'Qena', 'Sohag', 'Hurghada', 'Shibin El Kom',
+          'Banha', 'Arish', 'Mallawi', 'Bilbais', 'Marsa Matruh',
+          'Idfu, Mit Ghamr', 'Al-Hamidiyya', 'Desouk', 'Qalyub', 'Abu Kabir', 'Girga', 'Akhmim', 'Matareya']
 
 
 class Button(QPushButton):
@@ -43,7 +43,7 @@ class Client(QWidget):
     def __init__(self, port=MASTERPORT, ip=MASTERIP):
         super().__init__()
 
-        self.setWindowTitle('Argus')
+        self.setWindowTitle('Argus - Camera Node')
         self.setWindowIcon(QIcon('UI/icon.png'))
         self.setGeometry(350, 90, 629, 597)
         self.setFixedSize(615, 419)
