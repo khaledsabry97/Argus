@@ -227,7 +227,7 @@ class SearchForm(QWidget):
         func = msg[FUNCTION]
 
         if func == REP_QUERY:
-            self.recentlyClicked()
+            self.results.clear()
             list = msg[LIST_OF_CRASHES]
             for item in list:
                 self.appendToList(ID=item[CAMERA_ID], Image=item[CRASH_PIC], Date=item[CRASH_TIME], Time=item[CRASH_TIME],
