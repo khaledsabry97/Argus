@@ -183,7 +183,7 @@ class Master:
             district = crash[3]
             crash_time = crash[4]
 
-            if camera_id in duplicates:
+            if camera_id in duplicates: #not use it
                 continue
 
             crash_pic = self.getCrashPhoto(camera_id, frame_id)
