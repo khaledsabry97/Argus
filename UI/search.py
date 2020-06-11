@@ -34,12 +34,12 @@ class SearchForm(QWidget):
         self.encoder = JsonEncoder()
 
         self.setWindowIcon(QIcon('icon.png'))
-        self.setStyleSheet("background-color: #A9A9A9;")
+        self.setStyleSheet("background-color: #A9A999;")
         self.setWindowTitle('Argus')
         # self.setStyleSheet(open('style.css').read())
 
         # self.setGeometry(330, 150, 731, 438)
-        self.setGeometry(600, 50, 750, 900)
+        self.setGeometry(350, 50, 750, 850)
         # self.setWindowFlags(Qt.FramelessWindowHint)
 
         oImage = QImage("Untitled.png")
@@ -54,6 +54,7 @@ class SearchForm(QWidget):
         self.worker.receive.connect(self.decode)           # Connect your signals/slots
         self.worker.moveToThread(self.workerThread)         # Move the Worker object to the Thread object
         self.workerThread.start()
+
         self.make_lable('Date', 60, 0, 61, 41, True, 12)
         self.make_lable('From', 10, 40, 41, 21, True, 10)
         self.make_lable('To', 10, 70, 41, 21, True, 10)
@@ -94,31 +95,34 @@ class SearchForm(QWidget):
 
         search = QPushButton(self)
         search.setText('Search')
-        search.move(640, 20)
+        search.move(270, 105)
         search.resize(71, 51)
         search.clicked.connect(self.searchClicked)
 
         reset = QPushButton(self)
-        reset.setText('Reset')
-        reset.move(640, 75)
-        reset.resize(71, 22)
-        # reset.clicked.connect(self.resetClicked)
+        reset.setText('Recent')
+        reset.move(370, 105)
+        reset.resize(71, 51)
+        reset.clicked.connect(self.recentlyClicked)
 
         self.results = QListWidget(self)
-        self.results.move(20, 120)
-        self.results.resize(691, 301)
+        self.results.move(20, 175)
+        self.results.resize(707, 491)
         self.results.itemDoubleClicked.connect(self.listwidgetClicked)
-        self.encoder.getRecentCrashes()
-        # self.results.setStyleSheet(open('style.css').read())
+        self.results.setStyleSheet("background-color: #FFFFFF;")
+
+        widgetText = QLabel(self)
+        widgetText.move(630, 15)
+        img = QImage("logo.png")
+        img.convertToFormat(QImage.Format_ARGB32)
+        pixmap = QPixmap(img)
+        pixmap = pixmap.scaled(134, 94, Qt.KeepAspectRatio)
+        widgetText.setPixmap(pixmap)
 
         # self.appendToList(list=True)
         # self.appendToList(list=False)
 
-        # Initialize connection
-        # context = zmq.Context()
-        # self.socket = context.socket(zmq.REP)
-        # self.socket.connect("tcp://"+ip+":"+str(port))
-
+        self.recentlyClicked()
 
     def listwidgetClicked(self, item):
         item = self.results.itemWidget(item)
@@ -130,33 +134,20 @@ class SearchForm(QWidget):
 
 
     def searchClicked(self):
-        startDate = None
-        endDate = None
-        startTime = None
-        endTime = None
         city = None
         district = None
 
-        # if self.startDate.text() != '1/1/2015':
-        #     startDate = self.startDate.text()
-        # if self.endDate.text() != '1/1/2015':
-        #     endDate = self.endDate.text()
-        # if self.startTime.text() != '12:00 AM':
-        #     startTime = self.startTime.text()
-        # if self.endTime.text() != '12:00 AM':
-        #     endTime = self.endTime.text()
         if self.city.text() != '':
             city = self.city.text()
         if self.loc.text() != '':
             district = self.loc.text()
 
-        # self.encoder.requestData(startDate, endDate, startTime, endTime, city, district)
         self.encoder.requestData(self.startDate.text(), self.endDate.text(), self.startTime.text(), self.endTime.text(),
                                  city, district)
 
-    def resetClicked(self):
-        self.results.clear()
-        pass
+    def recentlyClicked(self):
+        self.encoder.getRecentCrashes()
+        return
 
     def appendToList(self, ID=3, Image=None, Date='a', Time='d', City='f', Location='g', startFrame=1, list=True):
         itemN = QListWidgetItem()
@@ -164,7 +155,7 @@ class SearchForm(QWidget):
 
         widgetText = QLabel()
         if not isinstance(Image,ndarray) :
-            img = cv2.imread('Untitled.png')
+            img = cv2.imread('errorloading.png')
         else:
             img = Image
         img = cv2.resize(img, (120, 100), interpolation=cv2.INTER_AREA)
@@ -181,6 +172,9 @@ class SearchForm(QWidget):
         print(startFrameID.text())
 
         info = QLabel()
+        font = QFont('SansSerif', 11)
+        font.setBold(True)
+        info.setFont(font)
         info.setText('          From camera: ' + str(ID) + '        Date: ' + str(Date) + '          City: ' + str(City)
                      + '         Location: ' + str(Location))
 
@@ -191,6 +185,8 @@ class SearchForm(QWidget):
         widgetLayout.addStretch()
         widgetLayout.setSizeConstraint(QLayout.SetFixedSize)
         widget.setLayout(widgetLayout)
+        widget.setStyleSheet("background-color: none;")
+        # widget.paintEvent()
         itemN.setSizeHint(widget.sizeHint())
         if list:
             self.results.addItem(itemN)
@@ -221,6 +217,8 @@ class SearchForm(QWidget):
             cv2.imshow('Frame', video[i])
             if cv2.waitKey(31) & 0xFF == ord('q'):
                 break
+        cv2.destroyAllWindows()
+
 
 
 
@@ -229,7 +227,7 @@ class SearchForm(QWidget):
         func = msg[FUNCTION]
 
         if func == REP_QUERY:
-            self.resetClicked()
+            self.recentlyClicked()
             list = msg[LIST_OF_CRASHES]
             for item in list:
                 self.appendToList(ID=item[CAMERA_ID], Image=item[CRASH_PIC], Date=item[CRASH_TIME], Time=item[CRASH_TIME],
