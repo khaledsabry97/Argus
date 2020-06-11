@@ -68,7 +68,8 @@ class CameraNode(threading.Thread):
                 # t = time()
             if self.no_of_frames %30 == 0:
                 current_time = time() - t
-                sleep(max(1-current_time,0))
+                print(max(1 - current_time, 0))
+                # sleep((max(1-current_time,0))/2)
                 t = time()
 
 
