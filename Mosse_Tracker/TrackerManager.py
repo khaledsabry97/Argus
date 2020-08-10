@@ -26,6 +26,7 @@ class Tracker:
         self.frame_height= frame_height
         self.tracker_id =tracker_id
         self.index = 0
+        self.avg_speed = [None]*30
         self.estimationFutureCenter = [-1]*30
 
     #add current cut frame in history for later use
@@ -209,7 +210,9 @@ class Tracker:
         return new_frames,width,height,xmin,xmax,ymin,ymax
 
     def isAboveSpeedLimit(self,from_frame_no = -1,to_frame_no = -1):
-        if self.getAvgSpeed(from_frame_no,to_frame_no) > 50:
+        if self.avg_speed[to_frame_no] == None:
+            self.avg_speed[to_frame_no] = self.getAvgSpeed(from_frame_no,to_frame_no)
+        if self.avg_speed[to_frame_no] > 50:
             return True
         return False
 
