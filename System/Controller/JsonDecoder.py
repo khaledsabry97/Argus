@@ -9,16 +9,24 @@ from System.Functions.Crashing import Crashing
 from System.Functions.Detection import Detection
 from System.Functions.Master import Master
 from System.Functions.Tracking import Tracking
+from System.NodeType import NodeType
 from VIF.vif import VIF
 
 
 class JsonDecoder(threading.Thread):
 
-    def __init__(self):
+    def __init__(self, type=None, read_file=False, tf=False):
         threading.Thread.__init__(self)
         self.sender_encode = JsonEncoder()
         self.yolo = None
+        if type == NodeType.Detetion and not read_file:
+            if tf:
+                self.yolo = YOLO()
+            else:
+                self.yolo = YOLO()
         self.vif = None
+        if NodeType.Crashing == type:
+            self.vif = VIF()
 
     def run(self,message):
         self.decode(message)
@@ -118,8 +126,8 @@ class JsonDecoder(threading.Thread):
 
     def detect(self,camera_id,starting_frame_id,frames,frame_width,frame_height,read_file,boxes_file,city,district_no):
         start_detect_time = time()
-        if not read_file and self.yolo == None:
-            self.yolo = YOLO()
+        # if not read_file and self.yolo == None:
+        #     self.yolo = YOLO()
         detection = Detection(self.yolo)
 
         boxes = detection.detect(frames, frame_width, frame_height, read_file, boxes_file)
