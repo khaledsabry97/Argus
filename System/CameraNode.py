@@ -17,7 +17,7 @@ from yoloFiles import loadFile
 
 class CameraNode(threading.Thread):
 
-    def __init__(self,camera_id,file_path = None,files = False,city = "None",district_no = "None"):
+    def __init__(self,camera_id,file_path = None,files = True,city = "None",district_no = "None"):
         threading.Thread.__init__(self)
         self.camera_id = camera_id  #speical id for every camera
         self.read_file = files  #do you want to read detected cars from file ?
@@ -71,7 +71,7 @@ class CameraNode(threading.Thread):
             if self.no_of_frames %30 == 0:
                 current_time = time() - t
                 print(max(1 - current_time, 0))
-                # sleep((max(1-current_time, 0))/2)
+                # sleep((max(1-current_time,0))/2)
                 t = time()
 
 
