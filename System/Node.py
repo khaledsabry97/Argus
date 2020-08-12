@@ -1,17 +1,12 @@
 import threading
-import enum
 
 # Using enum class create enumerations
 from System.Connections.ReceiverController import ReceiverController
 from System.Database.DatabaseThread import DatabaseThread
-from VIF.vif import VIF
+from System.NodeType import NodeType
 
 
-class NodeType(enum.Enum):
-   Master = 1
-   Detetion = 2
-   Tracking = 3
-   Crashing = 4
+
 
 class Node(threading.Thread):
     def __init__(self,node_type, port):
@@ -22,16 +17,16 @@ class Node(threading.Thread):
     def run(self):
         if self.node_type == NodeType.Master:
             DatabaseThread().start()
-            ReceiverController(self.port).run()
+            ReceiverController(self.port,type = NodeType.Master).run()
             pass
         elif self.node_type == NodeType.Detetion:
-            ReceiverController(self.port).run()
+            ReceiverController(self.port,type = NodeType.Detetion,read_file= True,tf=False).run()
             pass
         elif self.node_type == NodeType.Tracking:
-            ReceiverController(self.port).run()
+            ReceiverController(self.port,type = NodeType.Tracking).run()
             pass
         elif self.node_type == NodeType.Crashing:
-            ReceiverController(self.port).run()
+            ReceiverController(self.port,type = NodeType.Crashing).run()
             pass
 
 

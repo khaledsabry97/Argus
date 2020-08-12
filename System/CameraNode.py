@@ -57,7 +57,9 @@ class CameraNode(threading.Thread):
                 new_frames_list =copy.deepcopy(frames)
                 frames = frames[15:]
                 # frames = []
-                new_boxes = fileBoxes[self.no_of_frames - 30]
+                new_boxes = []
+                if self.read_file:
+                    new_boxes = fileBoxes[self.no_of_frames - 30]
 
                 self.json_encoder.feed(self.camera_id,self.no_of_frames -29,new_frames_list,self.frame_width,self.frame_height,self.read_file,new_boxes,self.city,self.district_no)
                 # current_time = time() - t
