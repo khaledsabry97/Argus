@@ -97,7 +97,7 @@ class Client(QWidget):
         video_id = video_id.split('/')
         video_id = int(video_id[-1])
         print("hello")
-        CameraNode(video_id, 'videos/' + str(video_id) + '.mp4',files=False, city= random.choice(cities), district_no= 'District ' + str(random.randint(1, 30))).start()
+        CameraNode(video_id, 'videos/' + str(video_id) + '.mp4',files=True, city= random.choice(cities), district_no= 'District ' + str(random.randint(1, 30))).start()
         self.playVideo()
 
 

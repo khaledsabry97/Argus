@@ -13,8 +13,7 @@ class Detection:
 
     def detect(self,frames,frame_width,frame_height,read_file = None,boxes_file = None):
         # detect vehicles
-        # != None
-        if read_file:
+        if read_file != None:
             # From files
             boxes = boxes_file
         else:
