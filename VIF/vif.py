@@ -15,7 +15,10 @@ class VIF:
         self.rows = 100
         self.cols = 134
         self.hs = HornSchunck()
-        self.clf = pickle.load(open("E:\Projects\GP_Crash_Saviour\VIF\model-svm1.sav", 'rb'))
+        # self.clf = pickle.load(open("E:\Projects\GP_Crash_Saviour\VIF\model-svm1.sav", 'rb'))
+        print('a4777777777777777777777777777777o')
+        self.clf = pickle.load(open("M:\Argus\VIF\model-svm1.sav", 'rb'))
+        print('dfhtltrhjlkthlkjtlkhjtrklhjrkhtjrkl')
         self.no_crash = 0
         self.crash = 0
 
@@ -85,14 +88,4 @@ class VIF:
 
 
         return feature_vec
-
-
-
-
-
-
-
-
-
-
 
