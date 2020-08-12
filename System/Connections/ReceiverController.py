@@ -8,9 +8,12 @@ class ReceiverController(threading.Thread):
     '''
     port: the port number that the thread will open on it
     '''
-    def __init__(self,port):
+    def __init__(self,port,type=None,read_file = False,tf=False):
         threading.Thread.__init__(self)
         self.port = port
+        self.type = type
+        self.read_file = read_file
+        self.tf = tf
 
 
     def run(self):
@@ -18,7 +21,7 @@ class ReceiverController(threading.Thread):
         socket = context.socket(zmq.REP)
         socket.bind("tcp://*:%s" % self.port)
 
-        jsonDecoder = JsonDecoder()  # start the processing decoding method
+        jsonDecoder = JsonDecoder(type=self.type,read_file = self.read_file,tf=self.tf)  # start the processing decoding method
 
         while True:
             #  Wait for next request from client
