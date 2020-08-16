@@ -44,13 +44,13 @@ class Client(QWidget):
         super().__init__()
 
         self.setWindowTitle('Argus - Camera Node')
-        self.setWindowIcon(QIcon('UI/icon.png'))
+        self.setWindowIcon(QIcon('icon.png'))
         self.setGeometry(350, 90, 629, 597)
         self.setFixedSize(615, 419)
 
         self.processing_lable = self.make_lable('Processing....', 0, 0, 40, 40, True, 12)
         self.processing_lable.setVisible(False)
-        self.gif = QMovie('UI/loading.gif')
+        self.gif = QMovie('loading.gif')
         self.gif.setScaledSize(QSize().scaled(40, 40, Qt.KeepAspectRatio))
         self.processing_lable.setMovie(self.gif)
         self.gif.start()
@@ -97,7 +97,7 @@ class Client(QWidget):
         video_id = video_id.split('/')
         video_id = int(video_id[-1])
         print("hello")
-        CameraNode(video_id, 'videos/' + str(video_id) + '.mp4',files=False, city= random.choice(cities), district_no= 'District ' + str(random.randint(1, 30))).start()
+        CameraNode(video_id, 'videos/' + str(video_id) + '.mp4',files=True, city= random.choice(cities), district_no= 'District ' + str(random.randint(1, 30))).start()
         self.playVideo()
 
 
@@ -145,7 +145,7 @@ class Client(QWidget):
 
         img = cv2.resize(frame, (351, 241), interpolation=cv2.INTER_AREA)
 
-        button = cv2.imread('UI/Play-Button-PNG-Picture.png')
+        button = cv2.imread('Play-Button-PNG-Picture.png')
         button = cv2.resize(button, (111, 111), interpolation=cv2.INTER_AREA)
         print(button.shape)
         print(img.shape)
@@ -163,15 +163,9 @@ class Client(QWidget):
 
 
         border = cv2.resize(border, (559, 300), interpolation=cv2.INTER_AREA)
-        cv2.imwrite('UI/tempToLoad.png', border)
-        # self.select_vid.setVisible(False)
-        # play_vid = QPushButton(self)
-        # self.play_vid.setText('')
-        # self.play_vid.move(140, 20)
-        # self.play_vid.resize(351, 241)
-        self.play_vid.setStyleSheet("background-image : url(UI/tempToLoad.png);")
-        # self.play_vid.clicked.connect(self.playVideo)
-        # self.play_vid.setVisible(True)
+        cv2.imwrite('tempToLoad.png', border)
+        self.play_vid.setStyleSheet("background-image : url(tempToLoad.png);")
+
 
     def make_lable(self, text, x, y, width, height, bold=False, font=12):
         label = QLabel(self)

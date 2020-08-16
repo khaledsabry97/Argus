@@ -4,16 +4,17 @@
 # import the necessary packages
 import numpy as np
 import sys
-# sys.path.remove('/opt/ros/kinetic/lib/python2.7/dist-packages')
+#sys.path.remove('/opt/ros/kinetic/lib/python2.7/dist-packages')
+import Car_Detection.util
 import imutils
 import time
 import cv2
 import os
-from  Car_Detection.visualize import visualize_video
+from Car_Detection.visualize import visualize_video
 import time
 
 
-vs = cv2.VideoCapture('C:/Users/H S/PycharmProjects/DK/videos/1543.mp4')
+vs = cv2.VideoCapture(sys.argv[1])
 writer = None
 (W, H) = (None, None)
 
@@ -47,13 +48,12 @@ while True:
     start = time.time()
     frame=visualize_video(frame)
     end = time.time()
-    
     # check if the video writer is None
     if writer is None:
         # initialize our video writer
         fourcc = cv2.VideoWriter_fourcc(*"MJPG")
         writer = cv2.VideoWriter('output.avi', fourcc, 30,
-            (frame.size[1], frame.size[0]), True)
+            (frame.size[0], frame.size[1]), True)
 
         # some information on processing single frame
         if total > 0:
@@ -63,7 +63,7 @@ while True:
                 elap * total))
 
     # write the output frame to disk
-    writer.write(np.array(frame))
+    writer.write(np.array(np.uint8(frame)*255))
 
 # release the file pointers
 print("[INFO] cleaning up...")

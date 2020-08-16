@@ -3,8 +3,76 @@
   <component name="ChangeListManager">
     <list default="true" id="9fcbda44-9a28-4130-864e-4301a6e05752" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documents/Crash Estimation.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/Crash Estimation.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documents/Crash Estimation.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/Crash Estimation.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car_Detection/detect.py" beforeDir="false" afterPath="$PROJECT_DIR$/Car_Detection/detect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car_Detection/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/Car_Detection/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car_Detection/visualize.py" beforeDir="false" afterPath="$PROJECT_DIR$/Car_Detection/visualize.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car_Detection/yolo_video.py" beforeDir="false" afterPath="$PROJECT_DIR$/Car_Detection/yolo_video.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/Controller/JsonDecoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/Controller/JsonDecoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/Data/CONSTANTS.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/Data/CONSTANTS.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/Database/Argus_DB.db" beforeDir="false" afterPath="$PROJECT_DIR$/System/Database/Argus_DB.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/Functions/Detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/Functions/Detection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/Node.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/Node.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/loadVideo.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/loadVideo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/tempToLoad.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/tempToLoad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VIF/SVM_Train.py" beforeDir="false" afterPath="$PROJECT_DIR$/VIF/SVM_Train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VIF/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VIF/vif.py" beforeDir="false" afterPath="$PROJECT_DIR$/VIF/vif.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1500.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1501.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1502.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1503.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1504.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1505.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1507.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1509.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1510.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1511.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1515.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1517.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1518.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1519.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1522.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1524.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1525.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1526.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1527.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1529.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1530.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1531.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1532.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1534.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1535.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1536.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1537.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1538.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1539.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1540.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1545.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1546.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1547.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1549.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1550.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1551.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1552.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1553.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1554.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1555.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1556.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1557.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1558.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1560.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1561.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1563.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1564.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1565.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1567.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/1568.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/Crashing video.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/Easy.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/crash1.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/test.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/video2.mp4" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,63 +80,64 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-792328168">
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="671" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="671" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="20" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="20" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RunProgram.py">
+        <entry file="file://$PROJECT_DIR$/System/Node.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="222">
+              <caret line="22" column="81" selection-start-line="22" selection-start-column="81" selection-end-line="22" selection-end-column="81" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/System/CameraNode.py">
+        <entry file="file://$PROJECT_DIR$/System/Data/CONSTANTS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="214">
+              <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PorgramMain.py">
+        <entry file="file://$PROJECT_DIR$/System/Controller/JsonDecoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+            <state relative-caret-position="293">
+              <caret line="157" lean-forward="true" selection-start-line="157" selection-end-line="157" />
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/System/Database/DatabaseConnection.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-88">
-              <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/System/Database/DatabaseThread.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1018">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,52 +146,67 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/System/Functions/Crashing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-285">
-              <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
+            <state>
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="294" selection-start-line="294" selection-end-line="295" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RunMaster.py">
+        <entry file="file://$PROJECT_DIR$/System/Functions/Detection.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="38">
-              <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/System/Node.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
               <folding>
-                <element signature="e#0#16#0" expanded="true" />
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/System/Functions/Master.py">
+        <entry file="file://$PROJECT_DIR$/loadVideo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
+            <state relative-caret-position="293">
+              <caret line="101" selection-start-line="101" selection-end-line="101" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UI/search.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="195" column="14" selection-start-line="195" selection-start-column="14" selection-end-line="195" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Car_Detection/detect.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/System/CameraNode.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="932">
+              <caret line="65" column="23" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,6 +235,13 @@
       <find>frame</find>
       <find>delayed_trackers</find>
       <find>cv</find>
+      <find>Yolo_image</find>
+      <find>Roba</find>
+      <find>model</find>
+      <find>Dark</find>
+      <find>UI</find>
+      <find>sleep</find>
+      <find>predict</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,13 +250,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/VIF/TrainSet_VIF.py" />
-        <option value="$PROJECT_DIR$/VIF/SVM_Train.py" />
-        <option value="$PROJECT_DIR$/Corner Detection Module/ShiTomasi.py" />
-        <option value="$PROJECT_DIR$/Corner Detection Module/Corner_Demo.py" />
-        <option value="$PROJECT_DIR$/Lucas_Kanade_v1/getFeatures.py" />
-        <option value="$PROJECT_DIR$/Lucas_Kanade_v1/main.py" />
-        <option value="$PROJECT_DIR$/Mosse_Tracker/opencvMosse.py" />
         <option value="$PROJECT_DIR$/Lucas_Kanade_Tracker/getFeatures.py" />
         <option value="$PROJECT_DIR$/Lucas_Kanade_Tracker/main.py" />
         <option value="$PROJECT_DIR$/Mosse_Tracker/Tracker.py" />
@@ -181,7 +265,6 @@
         <option value="$PROJECT_DIR$/car-crash/test.py" />
         <option value="$PROJECT_DIR$/VIF/HornSchunck.py" />
         <option value="$PROJECT_DIR$/car-crash/train_SVM.py" />
-        <option value="$PROJECT_DIR$/VIF/vif.py" />
         <option value="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" />
         <option value="$PROJECT_DIR$/Mosse_Tracker/Mosse.py" />
         <option value="$PROJECT_DIR$/Cutter/main.py" />
@@ -190,7 +273,6 @@
         <option value="$PROJECT_DIR$/CrashingEstimation.py" />
         <option value="$PROJECT_DIR$/System/Functions/PorgramMain.py" />
         <option value="$PROJECT_DIR$/System/Functions/FrameEncodeDecode.py" />
-        <option value="$PROJECT_DIR$/System/Functions/Detection.py" />
         <option value="$PROJECT_DIR$/Imports.py" />
         <option value="$PROJECT_DIR$/System/Functions/Tracking.py" />
         <option value="$PROJECT_DIR$/RunProgram.py" />
@@ -199,24 +281,34 @@
         <option value="$PROJECT_DIR$/runTracker.py" />
         <option value="$PROJECT_DIR$/RunDetect.py" />
         <option value="$PROJECT_DIR$/System/Controller/JsonEncoder.py" />
-        <option value="$PROJECT_DIR$/System/Controller/JsonDecoder.py" />
         <option value="$PROJECT_DIR$/RunMaster.py" />
-        <option value="$PROJECT_DIR$/System/Data/CONSTANTS.py" />
         <option value="$PROJECT_DIR$/System/Database/DatabaseThread.py" />
-        <option value="$PROJECT_DIR$/System/Node.py" />
         <option value="$PROJECT_DIR$/System/CameraNode.py" />
         <option value="$PROJECT_DIR$/System/Database/DatabaseConnection.py" />
         <option value="$PROJECT_DIR$/System/Functions/Master.py" />
         <option value="$PROJECT_DIR$/PorgramMain.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/System/Functions/Crashing.py" />
+        <option value="$PROJECT_DIR$/VIF/vif.py" />
+        <option value="$PROJECT_DIR$/System/Controller/JsonDecoder.py" />
+        <option value="$PROJECT_DIR$/System/Functions/Detection.py" />
+        <option value="$PROJECT_DIR$/Car_Detection/annotate.py" />
+        <option value="$PROJECT_DIR$/Car_Detection/yolo_video.py" />
+        <option value="$PROJECT_DIR$/Car_Detection/visualize.py" />
+        <option value="$PROJECT_DIR$/Car_Detection/detect.py" />
+        <option value="$PROJECT_DIR$/UI/search.py" />
+        <option value="$PROJECT_DIR$/UI/loadVideo.py" />
+        <option value="$PROJECT_DIR$/System/Node.py" />
+        <option value="$PROJECT_DIR$/loadVideo.py" />
+        <option value="$PROJECT_DIR$/System/Data/CONSTANTS.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
-    <option name="height" value="1057" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -230,36 +322,30 @@
         <subPane>
           <expand>
             <path>
-              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
+              <item name="Argus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Argus" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
-              <item name="Mosse_Tracker" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
+              <item name="Argus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Argus" type="462c0819:PsiDirectoryNode" />
               <item name="System" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
+              <item name="Argus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Argus" type="462c0819:PsiDirectoryNode" />
               <item name="System" type="462c0819:PsiDirectoryNode" />
-              <item name="Data" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
-              <item name="System" type="462c0819:PsiDirectoryNode" />
-              <item name="Database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GP_Crash_Saviour" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GP_Crash_Saviour" type="462c0819:PsiDirectoryNode" />
+              <item name="Argus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Argus" type="462c0819:PsiDirectoryNode" />
               <item name="System" type="462c0819:PsiDirectoryNode" />
               <item name="Functions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Argus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Argus" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -305,7 +391,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.RunTracker">
+    <configuration name="RunCrash" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="GP_Crash_Saviour" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RunCrash.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="RunDetect" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="GP_Crash_Saviour" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -318,7 +425,6 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RunDetect.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -328,7 +434,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="RunMaster" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="RunTracker" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="GP_Crash_Saviour" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -340,8 +446,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RunMaster.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RunTracker.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -350,7 +455,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="RunProgram" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="loadVideo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="GP_Crash_Saviour" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -362,8 +467,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RunProgram.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/loadVideo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -372,7 +476,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="search" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="GP_Crash_Saviour" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -380,34 +484,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/UI" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="runTracker" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="GP_Crash_Saviour" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runTracker.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/UI/search.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -417,19 +498,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.RunProgram" />
-      <item itemvalue="Python.runTracker" />
+      <item itemvalue="Python.RunCrash" />
+      <item itemvalue="Python.search" />
+      <item itemvalue="Python.RunTracker" />
       <item itemvalue="Python.RunDetect" />
-      <item itemvalue="Python.RunMaster" />
-      <item itemvalue="Python.main" />
+      <item itemvalue="Python.loadVideo" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.RunProgram" />
-        <item itemvalue="Python.RunMaster" />
+        <item itemvalue="Python.RunTracker" />
+        <item itemvalue="Python.RunCrash" />
+        <item itemvalue="Python.search" />
+        <item itemvalue="Python.loadVideo" />
         <item itemvalue="Python.RunDetect" />
-        <item itemvalue="Python.runTracker" />
       </list>
     </recent_temporary>
   </component>
@@ -493,14 +574,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12098501" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15773809" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32822758" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.62955034" weight="0.38621444" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6279762" visible="true" weight="0.3852459" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.69379014" weight="0.39606127" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -508,7 +590,7 @@
       <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49889624" weight="0.32928178" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.3704497" side_tool="true" visible="true" weight="0.3894967" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.37202382" side_tool="true" weight="0.3852459" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32917964" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" sideWeight="0.49889868" weight="0.32932165" />
@@ -518,9 +600,36 @@
       <window_info anchor="right" id="SciView" order="3" weight="0.29925054" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15773809" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32822758" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6279762" visible="true" weight="0.3852459" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.69379014" weight="0.39606127" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49889624" weight="0.32928178" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.37202382" side_tool="true" visible="true" weight="0.3852459" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32917964" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" sideWeight="0.49889868" weight="0.32932165" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.29925054" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -532,7 +641,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/VIF/SVM_Train.py</url>
-          <line>16</line>
+          <line>10</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -674,136 +783,11 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Recycle bin/mosse-object-tracking-master/opencvMosse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-627" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Recycle bin/mosse-object-tracking-master/mosse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1693">
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Car_Detection/detect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cutter/main.py" />
-    <entry file="file://$PROJECT_DIR$/car-crash/vif.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1767">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/car-crash/car-detection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3990">
-          <caret line="220" column="11" selection-start-line="220" selection-start-column="11" selection-end-line="220" selection-end-column="11" />
-          <folding>
-            <element signature="e#87#108#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cutter/cutter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Joiner/joiner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="55" column="10" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/System/Functions/Duplicate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57">
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mosse_Tracker/Mosse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
-          <folding>
-            <element signature="e#2#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CrashingEstimation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="6" lean-forward="true" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/System/Data/Datakeepers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/System/Functions/SubscriberLive.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="30" selection-start-line="30" selection-end-line="31" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/System/Functions/checkNode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/System/Data/Links.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/System/Data/data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/System/Data/Datakeepers.py" />
+    <entry file="file://$PROJECT_DIR$/System/Functions/SubscriberLive.py" />
+    <entry file="file://$PROJECT_DIR$/System/Functions/checkNode.py" />
+    <entry file="file://$PROJECT_DIR$/System/Data/Links.py" />
+    <entry file="file://$PROJECT_DIR$/System/Data/data.py" />
     <entry file="file://$PROJECT_DIR$/Car_Detection_TF/yolo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -818,13 +802,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-948967897/time.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="249" column="4" selection-start-line="249" selection-start-column="4" selection-end-line="249" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-948967897/time.py" />
     <entry file="file://$PROJECT_DIR$/yoloFiles.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -846,26 +824,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/System/Functions/FrameEncodeDecode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/System/Functions/Detection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/System/Functions/FrameEncodeDecode.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/threading.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -873,23 +832,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VIF/vif.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-948967897/cv2/cv2/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="11432" column="4" selection-start-line="11432" selection-start-column="4" selection-end-line="11432" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-948967897/cv2/cv2/__init__.py" />
     <entry file="file://$PROJECT_DIR$/System/Functions/Tracking.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
@@ -900,49 +843,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/zmq/sugar/socket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2185">
-          <caret line="136" column="4" selection-start-line="136" selection-start-column="4" selection-end-line="136" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/zmq/sugar/socket.py" />
     <entry file="file://$PROJECT_DIR$/System/Connections/SenderController.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/zmq/sugar/context.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="197" column="8" selection-start-line="197" selection-start-column="8" selection-end-line="197" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/System/Functions/Upload.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-684">
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/System/Functions/Download.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-445">
-          <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/zmq/sugar/context.py" />
+    <entry file="file://$PROJECT_DIR$/System/Functions/Upload.py" />
+    <entry file="file://$PROJECT_DIR$/System/Functions/Download.py" />
     <entry file="file://$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-121">
@@ -963,56 +874,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/System/Controller/JsonDecoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-710">
-          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/System/Connections/DataBaseController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="19" selection-start-line="2" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/System/Connections/ReceiverController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="28" selection-end-line="46" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/System/Data/CONSTANTS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="36" column="13" selection-start-line="36" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runTracker.py">
+    <entry file="file://$PROJECT_DIR$/System/Connections/DataBaseController.py" />
+    <entry file="file://$PROJECT_DIR$/RunTracker.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="6" column="14" selection-start-line="6" selection-end-line="7" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RunDetect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="3" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1024,43 +892,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/System/Node.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/System/CameraNode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/System/Database/DatabaseConnection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-88">
-          <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/System/Database/DatabaseThread.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1018">
           <caret line="57" selection-start-line="57" selection-end-line="57" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1068,9 +903,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8">
           <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1088,26 +920,188 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/threading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16048">
+          <caret line="951" column="20" selection-start-line="951" selection-start-column="20" selection-end-line="951" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/System/Connections/ReceiverController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RunDetect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RunCrash.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="294" selection-start-line="294" selection-end-line="295" selection-end-column="28" />
+        <state relative-caret-position="187">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VIF/vif.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Car_Detection/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Car_Detection/visualize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Car_Detection/annotate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Car_Detection/detect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/System/NodeType.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Car_Detection/yolo_video.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/System/Database/DatabaseConnection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="195" column="14" selection-start-line="195" selection-start-column="14" selection-end-line="195" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/loadVideo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="99" column="74" selection-start-line="99" selection-start-column="74" selection-end-line="99" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/System/Functions/Detection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/System/CameraNode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="932">
+          <caret line="65" column="23" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loadVideo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/System/Node.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="22" column="81" selection-start-line="22" selection-start-column="81" selection-end-line="22" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/System/Data/CONSTANTS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/System/Controller/JsonDecoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="157" lean-forward="true" selection-start-line="157" selection-end-line="157" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/System/Functions/Crashing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-285">
-          <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
