@@ -36,7 +36,7 @@ class ReceiverController(threading.Thread):
                 # socket.send_json({"func":"success"})
             except Exception as e:
                 print(e.__class__)
-                print("reciever error")
+                print(e)
                 # sleep(2)
                 pass
 

@@ -16,13 +16,26 @@ class Crashing:
                 tracker_A = trackers[i]
                 tracker_B = trackers[j]
 
-                if self.checkDistance(tracker_A, tracker_B, 16) or\
-                self.checkDistance( tracker_A, tracker_B,19) or\
-                self.checkDistance(tracker_A,tracker_B,22) or\
-                self.checkDistance( tracker_A, tracker_B, 25) or\
-                self.checkDistance( tracker_A, tracker_B, 28):
+                #calculate the distance
+                asize = pow(pow(tracker_A.vehicle_height, 2) + pow(tracker_A.vehicle_width, 2), 0.5) * .25
+                bsize = pow(pow(tracker_B.vehicle_height, 2) + pow(tracker_B.vehicle_width, 2), 0.5) * .25
+                dis = asize + bsize
 
-                    crash_dimentions.extend(self.predict(frames, [tracker_B, tracker_A]))
+                # asize = pow(pow(tracker_A.vehicle_height, 2) + pow(tracker_A.vehicle_width, 2), 0.5) * .5
+                # bsize = pow(pow(tracker_B.vehicle_height, 2) + pow(tracker_B.vehicle_width, 2), 0.5) * .5
+                # dis = min(asize,bsize)
+                print(dis)
+                if self.checkDistance(tracker_A, tracker_B, 16,dis) or\
+                self.checkDistance( tracker_A, tracker_B,19,dis) or\
+                self.checkDistance(tracker_A,tracker_B,22,dis) or\
+                self.checkDistance( tracker_A, tracker_B, 25,dis) or\
+                self.checkDistance( tracker_A, tracker_B, 28,dis):
+                    print("#################collision has occured!")
+                    tracker_frames, width, height, xmin, xmax, ymin, ymax = tracker_A.getFramesOfTracking(self.convertToGrayFrames(frames))
+                    crash_dimentions.extend([[xmin, ymin, xmax, ymax]])
+                    tracker_frames, width, height, xmin, xmax, ymin, ymax = tracker_B.getFramesOfTracking(self.convertToGrayFrames(frames))
+                    crash_dimentions.extend([[xmin, ymin, xmax, ymax]])
+                    # crash_dimentions.extend(self.predict(frames, [tracker_B, tracker_A]))
         if len(crash_dimentions) > 0:
             xmin = 1000
             ymin = 1000
@@ -40,7 +53,7 @@ class Crashing:
 
         return crash_dimentions
 
-    def checkDistance(self, tracker_A, tracker_B, frame_no):
+    def checkDistance(self, tracker_A, tracker_B, frame_no,dis):
         if not tracker_A.isAboveSpeedLimit(frame_no - 10, frame_no) and not tracker_B.isAboveSpeedLimit(frame_no - 10,frame_no):
             return False
 
@@ -48,9 +61,11 @@ class Crashing:
         xb, yb = tracker_B.estimationFutureCenter[frame_no]
         r = pow(pow(xa - xb, 2) + pow(ya - yb, 2), 0.5)
 
+
         if r == 0:
             return True
-        elif r > 40:
+        elif r > dis: #40
+            # print("distance false")
             return False
 
         xa_actual, ya_actual = tracker_A.tracker.centers[frame_no]
@@ -66,9 +81,7 @@ class Crashing:
         return False
 
     def predict(self,frames_RGB, trackers):
-        gray_frames = []
-        for frame in frames_RGB:
-            gray_frames.append(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY))
+        gray_frames = self.convertToGrayFrames(frames_RGB)
         no_crash = 0
         crash = 0
 
@@ -104,3 +117,11 @@ class Crashing:
         # print(crash, no_crash)
         return crash_dimentions
 
+
+
+
+    def convertToGrayFrames(self,frames_RGB):
+        gray_frames = []
+        for frame in frames_RGB:
+            gray_frames.append(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY))
+        return gray_frames

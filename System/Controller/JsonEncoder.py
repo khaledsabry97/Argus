@@ -99,10 +99,10 @@ class JsonEncoder:
                       START_CRASH_TIME:start_crash_time,
                       END_CRASH_TIME:end_crash_time}
 
-        print("Detection time:"+str(end_detect_time - start_detect_time))
-        print("Tracking time: "+str(end_track_time - start_track_time))
-        print("Crashing time: " + str(end_crash_time - start_crash_time))
-        print("Total Processing time: "+ str(end_detect_time - start_detect_time + end_track_time - start_track_time + end_crash_time - start_crash_time))
+        # print("Detection time:"+str(end_detect_time - start_detect_time))
+        # print("Tracking time: "+str(end_track_time - start_track_time))
+        # print("Crashing time: " + str(end_crash_time - start_crash_time))
+        # print("Total Processing time: "+ str(end_detect_time - start_detect_time + end_track_time - start_track_time + end_crash_time - start_crash_time))
 
         self.send(MASTERIP, MASTERPORT, sendingMsg)
 

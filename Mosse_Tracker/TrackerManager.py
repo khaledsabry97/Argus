@@ -1,7 +1,7 @@
 from threading import Thread
 from time import time
 import math
-
+# import dlib
 import cv2
 from copy import deepcopy
 
@@ -18,10 +18,16 @@ global frames
 frames = []
 
 class Tracker:
-    def __init__(self, frame, cut_size, frame_width, frame_height, tracker_id =0):
+    def __init__(self, frame, cut_size, frame_width, frame_height, tracker_id =0,tracker_type = "Mosse"):
         self.history = []
-        self.tracker = MOSSE(frame, cut_size,learning_rate=0.225,psrGoodness=5)
-        self.addHistory(self.tracker.getCutFramePosition())
+        if tracker_type == "Mosse":
+
+            self.tracker = MOSSE(frame, cut_size,learning_rate=0.225,psrGoodness=5)
+            self.addHistory(self.tracker.getCutFramePosition())
+        else:
+            self.tracker = dlib
+        xmin, ymin, xmax, ymax = cut_size
+        self.vehicle_width, self.vehicle_height = map(cv2.getOptimalDFTSize, [xmax - xmin, ymax - ymin])
         self.frame_width =frame_width
         self.frame_height= frame_height
         self.tracker_id =tracker_id
