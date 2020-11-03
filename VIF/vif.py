@@ -15,7 +15,7 @@ class VIF:
         self.rows = 100
         self.cols = 134
         self.hs = HornSchunck()
-        self.clf = pickle.load(open("E:\Projects\GP_Crash_Saviour\VIF\model-svm1.sav", 'rb'))
+        self.clf = pickle.load(open(os.path.dirname(os.path.realpath(__file__))+"\model-svm1.sav", 'rb'))
         self.no_crash = 0
         self.crash = 0
 
