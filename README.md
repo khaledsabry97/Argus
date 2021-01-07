@@ -7,7 +7,7 @@
   <h1 align="center">ARGUS</h1>
 
   <p align="center">
-An autonomous system based on computer vision techniques that detects road accidents from CCTV cameras and reports them in real-time as well as allowing the monitoring of accidents using a client server architecture and an interactive GUI.    <br />
+An autonomous system based on computer vision techniques that detects road accidents and reports them in real-time as well as allowing the monitoring of accidents using a client server architecture and an interactive GUI.    <br />
     <a href="https://github.com/khaledsabry97/Argus/blob/master/Documents/GP_document.pdf"><strong>Explore Full Documentation »</strong></a>
     <br />
     <br />
@@ -28,10 +28,10 @@ An autonomous system based on computer vision techniques that detects road accid
 <img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1518.gif?raw=true" width="200" height="200" />
 <img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1519.gif?raw=true" width="200" height="200" />
 <img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1529.gif?raw=true" width="200" height="200" />
-<img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1566.gif?raw=true" width="210" height="200" />
-<img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1522.gif?raw=true" width="210" height="200" />
-<img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1528.gif?raw=true" width="210" height="200" />
-<img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1568.gif?raw=true" width="210" height="200" />
+<img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1566.gif?raw=true" width="200" height="200" />
+<img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1522.gif?raw=true" width="200" height="200" />
+<img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1528.gif?raw=true" width="200" height="200" />
+<img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1568.gif?raw=true" width="200" height="200" />
  </p>
 
 
