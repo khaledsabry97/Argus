@@ -6,6 +6,7 @@ import cv2
 import time
 import zmq
 from numpy.core.multiarray import ndarray
+from pygame import mixer
 
 from System.Data.CONSTANTS import *
 from System.Controller.JsonEncoder import JsonEncoder
@@ -192,6 +193,10 @@ class SearchForm(QWidget):
             self.results.setItemWidget(itemN, widget)
 
         else:
+            mixer.init()
+            mixer.music.load('siren.mp3')
+            mixer.music.play()
+
             itemN.setBackground(QColor('#7fc97f'))
             self.results.insertItem(0, itemN)
             self.results.setItemWidget(itemN, widget)

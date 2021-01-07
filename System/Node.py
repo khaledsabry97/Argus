@@ -20,7 +20,7 @@ class Node(threading.Thread):
             ReceiverController(self.port,type = NodeType.Master).run()
             pass
         elif self.node_type == NodeType.Detetion:
-            ReceiverController(self.port,type = NodeType.Detetion,read_file= True,tf=False).run()
+            ReceiverController(self.port,type = NodeType.Detetion, read_file=True, tf=True).run()
             pass
         elif self.node_type == NodeType.Tracking:
             ReceiverController(self.port,type = NodeType.Tracking).run()
