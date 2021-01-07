@@ -1,26 +1,120 @@
-import threading
-from threading import Thread
-from time import sleep, time
+from time import time
 
 import cv2
-import math
 import numpy as np
 
-from CrashingEstimation import process
 from Mosse_Tracker.TrackerManager import Tracker
 from PIL import Image
 #from Car_Detection_TF.yolo import YOLO
 #from Car_Detection.detect import Yolo_image
 from Mosse_Tracker.utils import draw_str
-from yoloFiles import loadFile
-import pickle
-from VIF.vif import VIF
+from boxes.yoloFiles import loadFile
 
 pi=22/7
 # clf = pickle.load(open('VIF/model-svm1.sav', 'rb'))
 total_frames = []
 counter_sub_video = 1
 data = []
+
+from VIF.vif import VIF
+
+vif = VIF()
+
+def predict(frames_RGB,trackers):
+    gray_frames = []
+    for frame in frames_RGB:
+        gray_frames.append(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY))
+    no_crash = 0
+    crash = 0
+
+    for tracker in trackers:
+        tracker_frames,width,height,xmin,xmax,ymin,ymax = tracker.getFramesOfTracking(gray_frames)
+
+        if tracker_frames == None:
+            continue
+
+        # if xmax - xmin < 100:
+        #     continue
+        #
+        # print("ymax"+str(ymax - ymin))
+        #
+        # print("xmax"+str(xmax - xmin))
+        #
+        # print("ymax/x"+str((ymax- ymin) / (xmax - xmin)))
+
+        if xmax - xmin < 50: #50
+            continue
+        if ymax - ymin <= 28: #35
+            continue
+
+        if (ymax- ymin) / (xmax - xmin) <0.35: #0.35
+            continue
+
+        feature_vec = vif.process(tracker_frames)
+        result = vif.clf.predict(feature_vec.reshape(1, 304))
+        if result[0] == 0.0:
+            no_crash += 1
+        else:
+            crash += 1
+            # trackers[0].saveTracking(frames_RGB)
+            # trackers[1].saveTracking(frames_RGB)
+            tracker.saveTracking(frames_RGB)
+        # print(crash, no_crash)
+
+def checkDistance(frames,tracker_A,tracker_B,frame_no):
+    if not tracker_A.isAboveSpeedLimit(frame_no-10,frame_no) and not tracker_B.isAboveSpeedLimit(frame_no-10,frame_no) :
+        return False
+
+    xa, ya = tracker_A.estimationFutureCenter[frame_no]
+    xb, yb = tracker_B.estimationFutureCenter[frame_no]
+    r = pow(pow(xa - xb, 2) + pow(ya - yb, 2), 0.5)
+    tracker_A_area = 0.5 * tracker_A.tracker.width * tracker_A.tracker.height
+    tracler_B_area = 0.5 * tracker_B.tracker.width * tracker_B.tracker.height
+    # iou = intersectionOverUnion(tracker_A.tracker.getCutFramePosition((xa,ya)),tracker_B.tracker.getCutFramePosition((xb,yb)))
+    # iou2 = intersectionOverUnion(tracker_B.tracker.getCutFramePosition((xa, ya)),
+    #                             tracker_A.tracker.getCutFramePosition(tracker_A.tracker.center))
+
+    xa_actual,ya_actual = tracker_A.tracker.centers[frame_no]
+    xb_actual,yb_actual = tracker_B.tracker.centers[frame_no]
+    difference_trackerA_actual_to_estimate = pow(pow(xa_actual - xa, 2) + pow(ya_actual - ya, 2), 0.5)
+    difference_trackerB_actual_to_estimate = pow(pow(xb_actual - xb, 2) + pow(yb_actual - yb, 2), 0.5)
+    max_difference = max(difference_trackerA_actual_to_estimate,difference_trackerB_actual_to_estimate)
+    # print(r,difference_trackerA_actual_to_estimate,difference_trackerB_actual_to_estimate,max_difference/r)
+    if r == 0:
+        return True
+
+    if r < 40 and max_difference/r > 0.5:
+        # print(r,difference_trackerA_actual_to_estimate,difference_trackerB_actual_to_estimate,max_difference/r)
+        return True
+    return False
+
+
+
+def process(trackers,frames):
+    # predict(frames, trackers)
+
+    new_trackers = trackers
+    # for tracker in trackers:
+    #     if tracker.isAboveSpeedLimit():
+    #         new_trackers.append(tracker)
+    for i in range(len(new_trackers)):
+        for j in range(i+1,len(trackers)):
+            if i == j:
+                continue
+            tracker_A = trackers[i]
+            tracker_B = trackers[j]
+
+            if  checkDistance(frames,tracker_A,tracker_B,16) or checkDistance(frames,tracker_A,tracker_B,19) or checkDistance(frames,tracker_A,tracker_B,22) or checkDistance(frames,tracker_A,tracker_B,25) or checkDistance(frames,tracker_A,tracker_B,28):
+                # tracker_A.saveTracking(frames)
+                # print("Maybe an accident has occured!")
+                predict(frames, [tracker_B,tracker_A])
+
+
+
+
+
+
+
 
 
 
@@ -306,8 +400,8 @@ if __name__ == '__main__':
     # m.run('videos/1521.mp4')
     # m = MainFlow(None, select=False)
     # m.run('videos/1528.mp4')
-    m = MainFlow(None, select=False)
-    m.run('videos/1529.mp4')
+    # m = MainFlow(None, select=False)
+    # m.run('videos/1529.mp4')
     # m = MainFlow(None, select=False)
     # m.run('videos/1533.mp4')
     # m = MainFlow(None, select=False)
@@ -343,8 +437,8 @@ if __name__ == '__main__':
     # m = MainFlow(None, select=False)
     # m.run('videos/1517.mp4')
     #
-    # m = MainFlow(None, select=False)
-    # m.run('videos/1541.mp4')
+    m = MainFlow(None, select=False)
+    m.run('videos/1601.mp4')
 
 
     # m = MainFlow(None, select=False)

@@ -2,7 +2,7 @@ import json
 import threading
 from time import time
 
-from Car_Detection_TF.yolo import YOLO
+# from Car_Detection_TF.yolo import YOLO
 from System.Controller.JsonEncoder import JsonEncoder
 from System.Data.CONSTANTS import *
 from System.Functions.Crashing import Crashing

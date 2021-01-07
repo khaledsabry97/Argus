@@ -34,7 +34,7 @@ class SearchForm(QWidget):
 
         self.encoder = JsonEncoder()
 
-        self.setWindowIcon(QIcon('icon.png'))
+        self.setWindowIcon(QIcon('UI\\icon.png'))
         self.setStyleSheet("background-color: #D3D3D3;")
         self.setWindowTitle('Argus - User Interface')
         # self.setStyleSheet(open('style.css').read())
@@ -43,7 +43,7 @@ class SearchForm(QWidget):
         self.setGeometry(350, 50, 760, 850)
         # self.setWindowFlags(Qt.FramelessWindowHint)
 
-        oImage = QImage("Untitled.png")
+        oImage = QImage("UI\\Untitled.png")
         sImage = oImage.scaled(QSize(300, 200))  # resize Image to widgets size
         palette = QPalette()
         palette.setBrush(QPalette.Window, QBrush(sImage))
@@ -114,7 +114,7 @@ class SearchForm(QWidget):
 
         widgetText = QLabel(self)
         widgetText.move(650, 15)
-        img = QImage("logo.png")
+        img = QImage("UI\\logo.png")
         img.convertToFormat(QImage.Format_ARGB32)
         pixmap = QPixmap(img)
         pixmap = pixmap.scaled(124, 84, Qt.KeepAspectRatio)
@@ -156,7 +156,7 @@ class SearchForm(QWidget):
 
         widgetText = QLabel()
         if not isinstance(Image,ndarray) :
-            img = cv2.imread('notfound.png')
+            img = cv2.imread('UI\\notfound.png')
         else:
             img = Image
         img = cv2.resize(img, (120, 100), interpolation=cv2.INTER_AREA)
@@ -194,7 +194,7 @@ class SearchForm(QWidget):
 
         else:
             mixer.init()
-            mixer.music.load('siren.mp3')
+            mixer.music.load('UI\\siren.mp3')
             mixer.music.play()
 
             itemN.setBackground(QColor('#7fc97f'))

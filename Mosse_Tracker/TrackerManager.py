@@ -148,8 +148,10 @@ class Tracker:
         return r_coefficient
 
     def getCarSizeCoefficient(self):
-        area = 0.5 * self.tracker.width * self.tracker.height
-        coefficient = 25000/area
+        # area = 0.5 * self.tracker.width * self.tracker.height
+        area = self.tracker.width * self.tracker.height
+
+        coefficient = 43200/area
         return coefficient
 
 

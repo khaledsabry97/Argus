@@ -31,11 +31,11 @@ class Crashing:
                 self.checkDistance( tracker_A, tracker_B, 25,dis) or\
                 self.checkDistance( tracker_A, tracker_B, 28,dis):
                     print("#################collision has occured!")
-                    tracker_frames, width, height, xmin, xmax, ymin, ymax = tracker_A.getFramesOfTracking(self.convertToGrayFrames(frames))
-                    crash_dimentions.extend([[xmin, ymin, xmax, ymax]])
-                    tracker_frames, width, height, xmin, xmax, ymin, ymax = tracker_B.getFramesOfTracking(self.convertToGrayFrames(frames))
-                    crash_dimentions.extend([[xmin, ymin, xmax, ymax]])
-                    # crash_dimentions.extend(self.predict(frames, [tracker_B, tracker_A]))
+                    # tracker_frames, width, height, xmin, xmax, ymin, ymax = tracker_A.getFramesOfTracking(self.convertToGrayFrames(frames))
+                    # crash_dimentions.extend([[xmin, ymin, xmax, ymax]])
+                    # tracker_frames, width, height, xmin, xmax, ymin, ymax = tracker_B.getFramesOfTracking(self.convertToGrayFrames(frames))
+                    # crash_dimentions.extend([[xmin, ymin, xmax, ymax]])
+                    crash_dimentions.extend(self.predict(frames, [tracker_B, tracker_A]))
         if len(crash_dimentions) > 0:
             xmin = 1000
             ymin = 1000
