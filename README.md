@@ -8,21 +8,26 @@
 
   <p align="center">
 An autonomous system based on computer vision techniques that detects road accidents and reports them in real-time as well as allowing the monitoring of accidents using a client server architecture and an interactive GUI.    <br />
-    <a href="#Demo"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/khaledsabry97/Argus/blob/master/Documents/GP_document.pdf"><strong>Explore Full Documentation »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="#Demo">View Demo</a>
+    .
+    <a href="https://github.com/khaledsabry97/Argus/blob/master/Documents/Argus.pptx">View Presentation</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/khaledsabry97/Argus/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/khaledsabry97/Argus/issues">Request Feature</a>
   </p>
 
+<p align="center">
+ 
+<img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="220" height="200" />
+<img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="220" height="200" />
+<img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="220" height="200" />
+<img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="220" height="200" />
+ </p>
 
-
-
-
-[see above](#login-optional-fields)
 
 ## Trailers
 #### Trailer 1
