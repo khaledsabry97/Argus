@@ -27,6 +27,7 @@ class Tracking:
 
             trackers.append(Tracker(frame_gray, (xmin, ymin, xmax, ymax), frame_width, frame_height, trackerId))
         t = time()
+        tot = 0
         for i in range(1,len(frames)):
             frame = frames[i]
             frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -34,6 +35,8 @@ class Tracking:
             # updating trackers
             for i, tracker in enumerate(trackers):
                 tracker.update(frame_gray)
+                t1 = time()
                 tracker.futureFramePosition()
-        t = time() - t
+
         return trackers
+ 

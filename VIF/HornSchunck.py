@@ -1,8 +1,8 @@
 from time import sleep, time
-
+import cv2
 from scipy.ndimage.filters import convolve as filter2, gaussian_filter
 import numpy as np
-import cv2
+
 #
 windowAvg =np.array([[1 / 12, 1 / 6, 1 / 12],
                      [1/6,    0, 1/6],
@@ -54,8 +54,6 @@ class HornSchunck:
         # Iteration to reduce error
         for i in range(NumOfIter):
             # avrageing the flow vectors
-            # hAvg = filter2(H, windowAvg)
-            # vAvg = filter2(V, windowAvg)
             hAvg = cv2.filter2D(H, -1, windowAvg)
             vAvg = cv2.filter2D(V, -1, windowAvg)
             # common part of update step
@@ -76,12 +74,9 @@ class HornSchunck:
     def derivatives(self,frame1, frame2):
         t = time()
         fx = filter2(frame1, windowX) + filter2(frame2, windowX)
-        # fx = cv2.filter2D(frame1, -1, windowX) + cv2.filter2D(frame2, -1, windowX)
         fy = filter2(frame1, windowY) + filter2(frame2, windowY)
-        # fy = cv2.filter2D(frame1, -1, windowY) + cv2.filter2D(frame2, -1, windowY)
        # ft = im2 - im1
         ft = filter2(frame1, windowT) + filter2(frame2, -windowT)
-        # ft = cv2.filter2D(frame1, -1, windowT) - cv2.filter2D(frame2, -1, windowT)
         # print(time() - t)
         return fx,fy,ft
 
@@ -103,10 +98,7 @@ class HornSchunck:
             for j in range(0, cols, step):
                 x = int(U[i, j]*2)
                 y = int(V[i, j] *2)
-                # if pow(x**2+y**2,0.5) > 20 or pow(x**2+y**2,0.5) < 10:
-                #     continue
                 cv2.arrowedLine(im2, (j, i), (j + x, i + y), (255, 0, 0))
-                # cv2.circle(im2, (j, i), 1, (0, 0, 255), -1)
         return im2
 
 
