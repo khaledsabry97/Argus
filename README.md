@@ -24,10 +24,10 @@ An autonomous system based on computer vision techniques that detects road accid
 
 <p align="center">
  
-<img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1517.gif?raw=true" width="210" height="200" />
-<img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1518.gif?raw=true" width="210" height="200" />
-<img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1519.gif?raw=true" width="210" height="200" />
-<img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1529.gif?raw=true" width="210" height="200" />
+<img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1517.gif?raw=true" width="200" height="200" />
+<img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1518.gif?raw=true" width="200" height="200" />
+<img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1519.gif?raw=true" width="200" height="200" />
+<img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1529.gif?raw=true" width="200" height="200" />
 <img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1566.gif?raw=true" width="210" height="200" />
 <img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1522.gif?raw=true" width="210" height="200" />
 <img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1528.gif?raw=true" width="210" height="200" />
