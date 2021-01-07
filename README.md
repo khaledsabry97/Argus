@@ -4,16 +4,18 @@
   <img src="Images\logo.png">
 </p>
 
-  <h1 align="center">Argus</h1>
+  <h1 align="center">ARGUS</h1>
 
   <p align="center">
-An autonomous system based on computer vision techniques that detects road accidents and reports them in real-time as well as allowing the monitoring of accidents using a client server architecture and an interactive GUI.    <br />
+An autonomous system based on computer vision techniques that detects road accidents from CCTV cameras and reports them in real-time as well as allowing the monitoring of accidents using a client server architecture and an interactive GUI.    <br />
     <a href="https://github.com/khaledsabry97/Argus/blob/master/Documents/GP_document.pdf"><strong>Explore Full Documentation »</strong></a>
     <br />
     <br />
     <a href="#Demo">View Demo</a>
     .
     <a href="https://github.com/khaledsabry97/Argus/blob/master/Documents/Argus.pptx">View Presentation</a>
+    ·
+    <a href="#System-Architecture">System Architecture</a>
     ·
     <a href="https://github.com/khaledsabry97/Argus/issues">Report Bug</a>
     ·
@@ -31,6 +33,20 @@ An autonomous system based on computer vision techniques that detects road accid
 <img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1528.gif?raw=true" width="220" height="200" />
 <img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1568.gif?raw=true" width="220" height="200" />
  </p>
+
+
+  <h2 id="System-Architecture">
+System Architecture
+</h2>
+
+
+<p align="center">
+<img src="https://github.com/khaledsabry97/Argus/blob/master/Images/BlockDiagram.png" width="80%">
+      </a>
+  </p>
+ 
+
+
 
 
 ## Trailers
