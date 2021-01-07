@@ -1,4 +1,4 @@
-from yoloFiles import loadFile
+from boxes.yoloFiles import loadFile
 
 """
     Unit test for yoloFiles.

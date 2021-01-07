@@ -20,19 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fcbda44-9a28-4130-864e-4301a6e05752" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/GP_Crash_Saviour.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GP_Crash_Saviour.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Controller/JsonDecoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/Controller/JsonDecoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrashingEstimation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DFT.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PorgramMain.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RunCamera.py" beforeDir="false" afterPath="$PROJECT_DIR$/RunCamera.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RunProgram.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RunVideo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/CameraNode.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/CameraNode.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/System/Database/Argus_DB.db" beforeDir="false" afterPath="$PROJECT_DIR$/System/Database/Argus_DB.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Functions/Crashing.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/Functions/Crashing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Functions/Detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/Functions/Detection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/RunGui.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/tempToLoad.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/tempToLoad.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loadVideo.py" beforeDir="false" afterPath="$PROJECT_DIR$/RunVideo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unit test/test_yoloFiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/Unit test/test_yoloFiles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Debug.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resizing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/boxes/setup.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/w.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yoloFiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/boxes/yoloFiles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yolo_video.py" beforeDir="false" afterPath="$PROJECT_DIR$/boxes/yolo_video.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,11 +90,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="K:\Projects\Argus\boxes" />
       <recent name="K:\Projects\Argus" />
       <recent name="E:\Projects\GP_Crash_Saviour" />
       <recent name="E:\Projects\GP_Crash_Saviour\Recycle bin" />
       <recent name="E:\Projects\GP_Crash_Saviour\Lucas_Kanade_Tracker" />
-      <recent name="E:\Projects\GP_Crash_Saviour\Mosse_Tracker" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Projects\GP_Crash_Saviour\System" />
@@ -99,7 +104,28 @@
       <recent name="E:\Projects\GP_Crash_Saviour\mosse-object-tracking-master" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.RunVideo (1)">
+  <component name="RunManager" selected="Python.RunCamera">
+    <configuration name="RunCamera" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GP_Crash_Saviour" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RunCamera.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="RunCrash" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GP_Crash_Saviour" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -129,11 +155,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/UI" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="K:\Projects\Argus\RunGui.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RunGui.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -142,7 +168,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="RunGui" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="RunMaster" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GP_Crash_Saviour" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -154,7 +180,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="K:\Projects\Argus\RunGui.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RunMaster.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -163,7 +189,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="RunVideo (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="RunTracker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GP_Crash_Saviour" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -175,7 +201,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RunVideo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RunTracker.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -197,27 +223,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="K:\Projects\Argus\RunVideo.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="GP_Crash_Saviour" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -248,19 +253,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.RunTracker" />
+      <item itemvalue="Python.RunMaster" />
       <item itemvalue="Python.RunCrash" />
-      <item itemvalue="Python.main" />
       <item itemvalue="Python.RunGui" />
-      <item itemvalue="Python.RunVideo" />
-      <item itemvalue="Python.RunVideo (1)" />
+      <item itemvalue="Python.RunCamera" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.RunVideo (1)" />
+        <item itemvalue="Python.RunCamera" />
         <item itemvalue="Python.RunGui" />
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.RunCrash" />
-        <item itemvalue="Python.RunGui" />
+        <item itemvalue="Python.RunMaster" />
+        <item itemvalue="Python.RunTracker" />
       </list>
     </recent_temporary>
   </component>
@@ -342,22 +347,26 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1899" height="337" key="GridCell.Tab.0.bottom" timestamp="1610014961692">
+    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610015316535">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="337" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1610014961692" />
-    <state width="1899" height="337" key="GridCell.Tab.0.center" timestamp="1610014961692">
+    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1610015316535" />
+    <state width="1899" height="337" key="GridCell.Tab.0.bottom" timestamp="1610015658875">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="337" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1610014961692" />
-    <state width="1899" height="337" key="GridCell.Tab.0.left" timestamp="1610014961691">
+    <state width="1899" height="337" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1610015658875" />
+    <state width="1899" height="337" key="GridCell.Tab.0.center" timestamp="1610015658875">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="337" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1610014961691" />
-    <state width="1899" height="337" key="GridCell.Tab.0.right" timestamp="1610014961692">
+    <state width="1899" height="337" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1610015658875" />
+    <state width="1899" height="337" key="GridCell.Tab.0.left" timestamp="1610015658874">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="337" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1610014961692" />
+    <state width="1899" height="337" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1610015658874" />
+    <state width="1899" height="337" key="GridCell.Tab.0.right" timestamp="1610015658875">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="337" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1610015658875" />
     <state x="461" y="170" key="SettingsEditor" timestamp="1610013198216">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -396,22 +405,18 @@
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DFT.py</url>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/car-crash/test.py</url>
           <line>16</line>
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>61</line>
+          <url>file://$PROJECT_DIR$/Debug.py</url>
+          <line>155</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>201</line>
+          <url>file://$PROJECT_DIR$/Debug.py</url>
+          <line>295</line>
           <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -425,22 +430,17 @@
           <option name="timeStamp" value="127" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/RunProgram.py</url>
-          <line>25</line>
-          <option name="timeStamp" value="132" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/CameraNode.py</url>
-          <line>47</line>
+          <line>39</line>
           <option name="timeStamp" value="135" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/CameraNode.py</url>
-          <line>20</line>
+          <line>12</line>
           <option name="timeStamp" value="136" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/RunVideo.py</url>
+          <url>file://$PROJECT_DIR$/RunCamera.py</url>
           <line>136</line>
           <option name="timeStamp" value="137" />
         </line-breakpoint>

@@ -1,18 +1,10 @@
-import base64
 import copy
-import json
-import pickle
-from io import BytesIO
-from time import time, sleep
+from time import time
 
-import numpy as np
 import cv2
-from PIL import Image
 import threading
-from System.Connections.SenderController import SenderController
 from System.Controller.JsonEncoder import JsonEncoder
-from System.Data.CONSTANTS import *
-from yoloFiles import loadFile
+from boxes.yoloFiles import loadFile
 
 
 class CameraNode(threading.Thread):
