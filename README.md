@@ -20,10 +20,17 @@ An autonomous system based on computer vision techniques that detects road accid
 
 
 
-## Demo
+
+
+[see above](#login-optional-fields)
+
+## Trailers
 #### Trailer 1
+The trailer gives a light on the problem so the audience can start thinking about it.
+The trailer captures the audience's mind and the audience will ask themselves....
+What is ARGUS?
+How will it help to save people's lives?
 <p align="center">
-  
    <a href="https://www.youtube.com/watch?v=8GmcOIeVAp4">
 <img src="https://img.youtube.com/vi/8GmcOIeVAp4/maxresdefault.jpg" width="50%">
       </a>
@@ -31,13 +38,38 @@ An autonomous system based on computer vision techniques that detects road accid
   
 
 #### Trailer 2 (Main Trailer)
+The trailer discusses the problem of road crashes and how argus will help to solve this problem
 <p align="center">
   
    <a href="https://www.youtube.com/watch?v=nHsk8bgKjX0">
 <img src="https://img.youtube.com/vi/nHsk8bgKjX0/maxresdefault.jpg" width="50%">
       </a>
   </p>
+
+
+## Demo
+#### Explaination
+Explaining in Arabic how to test a video in Argus
+<p align="center">
+   <a href="https://www.youtube.com/watch?v=92DqypG8TKY">
+<img src="https://img.youtube.com/vi/92DqypG8TKY/maxresdefault.jpg" width="50%">
+      </a>
+  </p>
   
+#### Output
+The video shows a compilation of road crashes which is the output of the system
+
+<p align="center">
+   <a href="https://www.youtube.com/watch?v=R74K5aWLSLk">
+<img src="https://img.youtube.com/vi/R74K5aWLSLk/maxresdefault.jpg" width="50%">
+      </a>
+  </p>
+
+
+
+  <h4 id="login-optional-fields">
+Optional Fields
+</h4>
   
 
 
