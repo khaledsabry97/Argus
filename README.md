@@ -24,8 +24,6 @@ An autonomous system based on computer vision techniques that detects road accid
 #### Trailer 1
 <p align="center">
   
-  
-  
    <a href="https://www.youtube.com/watch?v=8GmcOIeVAp4">
 <img src="https://img.youtube.com/vi/8GmcOIeVAp4/maxresdefault.jpg" width="50%">
       </a>
@@ -35,7 +33,9 @@ An autonomous system based on computer vision techniques that detects road accid
 #### Trailer 2 (Main Trailer)
 <p align="center">
   
-[![The 8th Cause Of Death | ARGUS](https://img.youtube.com/vi/nHsk8bgKjX0/maxresdefault.jpg)](https://www.youtube.com/watch?v=nHsk8bgKjX0)
+   <a href="https://www.youtube.com/watch?v=nHsk8bgKjX0">
+<img src="https://img.youtube.com/vi/nHsk8bgKjX0/maxresdefault.jpg" width="50%">
+      </a>
   </p>
   
   
