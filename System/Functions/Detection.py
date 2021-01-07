@@ -11,8 +11,9 @@ class Detection:
     def __init__(self,yolo):
         self.yolo = yolo
 
-        self.model = Darknet("M:/Argus/Car_Detection/config/yolov3.cfg", CUDA=False)
-        self.model.load_weight("M:/Argus/Car_Detection/config/yolov3.weights")
+#uncomment these two lines if you will use yolo
+        # self.model = Darknet("M:/Argus/Car_Detection/config/yolov3.cfg", CUDA=False)
+        # self.model.load_weight("M:/Argus/Car_Detection/config/yolov3.weights")
 
 
     def detect(self,frames,frame_width,frame_height,read_file,boxes_file = None, read_file_self=False, tf=True):
