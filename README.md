@@ -8,7 +8,7 @@
 
   <p align="center">
 An autonomous system based on computer vision techniques that detects road accidents and reports them in real-time as well as allowing the monitoring of accidents using a client server architecture and an interactive GUI.    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="#Demo"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
@@ -47,7 +47,10 @@ The trailer discusses the problem of road crashes and how argus will help to sol
   </p>
 
 
-## Demo
+  <h2 id="Demo">
+Demo
+</h2>
+
 #### Explaination
 Explaining in Arabic how to test a video in Argus
 <p align="center">
@@ -67,9 +70,7 @@ The video shows a compilation of road crashes which is the output of the system
 
 
 
-  <h4 id="login-optional-fields">
-Optional Fields
-</h4>
+
   
 
 
