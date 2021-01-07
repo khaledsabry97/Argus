@@ -4,7 +4,7 @@
   <img src="Images\logo.png">
 </p>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h1 align="center">Argus</h1>
 
   <p align="center">
     An awesome README template to jumpstart your projects!
@@ -21,13 +21,13 @@
 
 
 
-#How to Run Argus
+## How to Run Argus
 1. Install requirements.txt
-2. Run Backend Services
-2.1 RunMaster.py
-2.2 RunDetect.py
-2.2 RunTracker.py
-2.2 RunCrash.py
-3. Run Client Services
-3.1 RunGui.py
-3.2 RunCamera.py
+1. Run Backend Services
+   1. RunMaster.py
+   1. RunDetect.py
+   1. RunTracker.py
+   1. RunCrash.py
+1. Run Client Services
+   1. RunGui.py
+   1. RunCamera.py
