@@ -1,10 +1,10 @@
 <!-- PROJECT LOGO -->
 <br />
+
+  <h1 align="center">ARGUS</h1>
 <p align="center">
   <img src="Images\logo.png">
 </p>
-
-  <h1 align="center">ARGUS</h1>
 
   <p align="center">
 An autonomous system based on computer vision techniques that detects road accidents and reports them in real-time as well as allowing the monitoring of accidents using a client server architecture and an interactive GUI.    <br />
