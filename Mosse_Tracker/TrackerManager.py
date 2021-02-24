@@ -1,7 +1,10 @@
+import enum
+import os
+from pathlib import Path
 from threading import Thread
 from time import time
 import math
-# import dlib
+import dlib
 import cv2
 from copy import deepcopy
 
@@ -17,15 +20,29 @@ id = 0
 global frames
 frames = []
 
+class TrackerType(enum.Enum):
+   MOSSE = 1
+   DLIB = 2
+
 class Tracker:
-    def __init__(self, frame, cut_size, frame_width, frame_height, tracker_id =0,tracker_type = "Mosse"):
+    def __init__(self, frame, cut_size, frame_width, frame_height, tracker_id =0, tracker_type = TrackerType.MOSSE):
         self.history = []
-        if tracker_type == "Mosse":
+        self.tracker_type = tracker_type
+        xmin, ymin, xmax, ymax = cut_size
+        self.width, self.height = map(cv2.getOptimalDFTSize, [xmax - xmin, ymax - ymin])
+
+        if tracker_type == TrackerType.MOSSE:
 
             self.tracker = MOSSE(frame, cut_size,learning_rate=0.225,psrGoodness=5)
             self.addHistory(self.tracker.getCutFramePosition())
         else:
-            self.tracker = dlib
+            xmin, ymin, xmax, ymax = cut_size
+            self.tracker = dlib.correlation_tracker()
+            self.tracker.start_track(frame, dlib.rectangle(int(xmin), int(ymin), int(xmax), int(ymax)))
+            self.addHistory([xmin, ymin, xmax, ymax])
+            self.dx = []
+            self.dy = []
+
         xmin, ymin, xmax, ymax = cut_size
         self.vehicle_width, self.vehicle_height = map(cv2.getOptimalDFTSize, [xmax - xmin, ymax - ymin])
         self.frame_width =frame_width
@@ -47,13 +64,57 @@ class Tracker:
     #update the tracker to current frame
     #also add the updated position to history
     def update(self, frame):
-        self.tracker.updateTracking(frame)
-        self.addHistory(self.tracker.getCutFramePosition())
+        if self.tracker_type == TrackerType.MOSSE:
+            self.tracker.updateTracking(frame)
+            self.addHistory(self.tracker.getCutFramePosition())
+
+        else:
+            self.tracker.update(frame)
+            if len(self.dx) == 0:
+                self.dx.append(0)
+                self.dy.append(0)
+            else:
+                x,y = self.get_position()
+                xold,yold = self.get_position(self.history[-1])
+                dx, dy = x - xold, y - yold
+                self.dx.append(dx)
+                self.dy.append(dy)
+            self.addHistory(self.getCutFramePosition(self.get_position()))
+
+
         return self.history[-1]
 
     #get last tracker position
     def getTrackerPosition(self):
         return self.history[-1]
+
+
+    #only for dlib tracker
+    def getCutFramePosition(self,center):
+        if center == -1:
+            center = self.center
+        x = center[0]
+        y = center[1]
+        xmin = int(x - 0.5*(self.width-1))
+        ymin = int(y - 0.5*(self.height-1))
+        xmax = int(self.width+xmin)
+        ymax = int(self.height+ymin)
+        cut_size = [xmin,ymin,xmax,ymax]
+        return cut_size
+
+    #only for dlib tracker
+    def get_position(self,cut_size = None):
+        if cut_size == None:
+            pos = self.tracker.get_position()
+            xmin = int(pos.left())
+            ymin = int(pos.top())
+            xmax = int(pos.right())
+            ymax = int(pos.bottom())
+        else:
+            xmin,ymin,xmax,ymax = cut_size
+        x = int(xmin + 0.5*self.width)
+        y = int(ymin + 0.5*self.height)
+        return (x,y)
 
     #get dimensions of the history to be able to make video clip later
     def getTrackedFramesBoxed(self,last_no_of_frame = 0,after_no_of_frames = 1):
@@ -85,22 +146,29 @@ class Tracker:
         return xmin,ymin,xmax,ymax
 
     def showFrame(self, frame):
-        (x, y) = self.tracker.getCenterOfTracker()
 
-        xmin, ymin, xmax, ymax = self.tracker.getCutFramePosition()
-        cv2.rectangle(frame, (xmin, ymin), (xmax, ymax), (0, 0, 255))
-        if self.tracker.isGood():
-            cv2.circle(frame, (int(x), int(y)), 2, (0, 0, 255), -1)
+        if self.tracker_type == TrackerType.MOSSE:
+            (x, y) = self.tracker.getCenterOfTracker()
+            xmin, ymin, xmax, ymax = self.tracker.getCutFramePosition()
         else:
-            cv2.line(frame, (xmin, ymin), (xmax, ymax), (0, 0, 255))
-            cv2.line(frame, (xmax, ymin), (xmin, ymax), (0, 0, 255))
+            (x, y) = self.get_position()
+            xmin, ymin, xmax, ymax = self.getCutFramePosition(self.get_position())
+
+        cv2.rectangle(frame, (xmin, ymin), (xmax, ymax), (0, 0, 255))
+
+        if self.tracker_type == TrackerType.MOSSE:
+            if self.tracker.isGood():
+                cv2.circle(frame, (int(x), int(y)), 2, (0, 0, 255), -1)
+            else:
+                cv2.line(frame, (xmin, ymin), (xmax, ymax), (0, 0, 255))
+                cv2.line(frame, (xmax, ymin), (xmin, ymax), (0, 0, 255))
         #draw_str(frame, (xmin, ymax + 16), 'Id: %i' % self.tracker_id)
         #draw_str(frame, (xmin, ymax + 32), 'PSR: %.2f' % self.tracker.getPsr())
-        draw_str(frame, (xmin, ymax + 64), 'Max Speed: %.2f' % self.getMaxSpeed())
-        draw_str(frame, (xmin, ymax + 80), 'Avg Speed: %.2f' % self.getAvgSpeed())
-        draw_str(frame, (xmin, ymax + 96), 'Cur Speed: %.2f' % self.getCurrentSpeed())
-        draw_str(frame, (xmin, ymax + 112), 'Area Size: %.2f' % self.getCarSizeCoefficient())
-        draw_str(frame, (xmin, ymax + 128), 'Moving Angle: %.2f' % self.getCarAngle())
+        # draw_str(frame, (xmin, ymax + 64), 'Max Speed: %.2f' % self.getMaxSpeed())
+        # draw_str(frame, (xmin, ymax + 80), 'Avg Speed: %.2f' % self.getAvgSpeed())
+        # draw_str(frame, (xmin, ymax + 96), 'Cur Speed: %.2f' % self.getCurrentSpeed())
+        # draw_str(frame, (xmin, ymax + 112), 'Area Size: %.2f' % self.getCarSizeCoefficient())
+        # draw_str(frame, (xmin, ymax + 128), 'Moving Angle: %.2f' % self.getCarAngle())
 
     def clearHistory(self):
         self.history = []
@@ -121,18 +189,32 @@ class Tracker:
 
 
     def getMaxSpeed(self):
-        x = max(self.tracker.dx)
-        y = max(self.tracker.dy)
+        if self.tracker_type == MOSSE:
+            x = max(self.tracker.dx)
+            y = max(self.tracker.dy)
+        else:
+            x = max(self.dx)
+            y = max(self.dy)
         r = pow(pow(x,2)+pow(y,2),0.5)
         r_coefficient = r * self.getCarSizeCoefficient()
         return r_coefficient
     def getAvgSpeed(self,from_frame_no = -1,to_frame_no = -1):
-        if from_frame_no == -1 or to_frame_no == -1:
-            dx_change = self.tracker.dx
-            dy_change = self.tracker.dy
+
+        if self.tracker_type == TrackerType.MOSSE:
+            if from_frame_no == -1 or to_frame_no == -1:
+                dx_change = self.tracker.dx
+                dy_change = self.tracker.dy
+            else:
+                dx_change = self.tracker.dx[from_frame_no:to_frame_no]
+                dy_change = self.tracker.dy[from_frame_no:to_frame_no]
         else:
-            dx_change = self.tracker.dx[from_frame_no:to_frame_no]
-            dy_change = self.tracker.dy[from_frame_no:to_frame_no]
+            if from_frame_no == -1 or to_frame_no == -1:
+                dx_change = self.dx
+                dy_change = self.dy
+            else:
+                dx_change = self.dx[from_frame_no:to_frame_no]
+                dy_change = self.dy[from_frame_no:to_frame_no]
+
         x = sum(dx_change)/len(dx_change)
         y = sum(dy_change)/len(dy_change)
         r = pow(pow(x, 2) + pow(y, 2), 0.5)
@@ -140,25 +222,39 @@ class Tracker:
         return r_coefficient
 
     def getCurrentSpeed(self):
-        no_of_last_frames = min(len(self.tracker.dx),3)
-        x = sum(self.tracker.dx[-no_of_last_frames:]) / no_of_last_frames
-        y = sum(self.tracker.dy[-no_of_last_frames:]) / no_of_last_frames
+        if self.tracker_type == MOSSE:
+            no_of_last_frames = min(len(self.tracker.dx),3)
+            x = sum(self.tracker.dx[-no_of_last_frames:]) / no_of_last_frames
+            y = sum(self.tracker.dy[-no_of_last_frames:]) / no_of_last_frames
+        else:
+            no_of_last_frames = min(len(self.dx),3)
+            x = sum(self.dx[-no_of_last_frames:]) / no_of_last_frames
+            y = sum(self.dy[-no_of_last_frames:]) / no_of_last_frames
         r = pow(pow(x, 2) + pow(y, 2), 0.5)
         r_coefficient = r * self.getCarSizeCoefficient()
         return r_coefficient
 
     def getCarSizeCoefficient(self):
         # area = 0.5 * self.tracker.width * self.tracker.height
-        area = self.tracker.width * self.tracker.height
+        if self.tracker_type == MOSSE:
+            area = self.tracker.width * self.tracker.height
+        else:
+            area = self.width * self.height
+
 
         coefficient = 43200/area
         return coefficient
 
 
     def getCarAngle(self):
-        max_index_to_measure = min(1000,len(self.tracker.dx))
-        dx = sum(self.tracker.dx[:max_index_to_measure])
-        dy = sum(self.tracker.dy[:max_index_to_measure])
+        if self.tracker_type == TrackerType.MOSSE:
+            max_index_to_measure = min(1000,len(self.tracker.dx))
+            dx = sum(self.tracker.dx[:max_index_to_measure])
+            dy = sum(self.tracker.dy[:max_index_to_measure])
+        else:
+            max_index_to_measure = min(1000, len(self.dx))
+            dx = sum(self.dx[:max_index_to_measure])
+            dy = sum(self.dy[:max_index_to_measure])
         is_dx_sign_pos = True
         if dx < 0:
             is_dx_sign_pos = False
@@ -187,18 +283,32 @@ class Tracker:
 
 
     def futureFramePosition(self, ):
-        if len(self.tracker.dx) <5 or len(self.tracker.dx) > 20 :
-            self.estimationFutureCenter.append(self.tracker.center)
-            return -1,-1,-1,-1
-        measure = min(len(self.tracker.dx),10)
-        expectedPositionNo = len(self.tracker.dx)+10
-        x,y = self.tracker.center
-        dx = sum(self.tracker.dx[-measure:]) / len(self.tracker.dx[-measure:])
-        dy = sum(self.tracker.dy[-measure:]) / len(self.tracker.dy[-measure:])
-        x_new = x + dx*measure
-        y_new = y + dy*measure
-        self.estimationFutureCenter[expectedPositionNo] = (x_new,y_new)
-        return self.tracker.getCutFramePosition((x_new,y_new))
+        if self.tracker_type == TrackerType.MOSSE:
+            if len(self.tracker.dx) <5 or len(self.tracker.dx) > 20 :
+                self.estimationFutureCenter.append(self.tracker.center)
+                return -1,-1,-1,-1
+            measure = min(len(self.tracker.dx),10)
+            expectedPositionNo = len(self.tracker.dx)+10
+            x,y = self.tracker.center
+            dx = sum(self.tracker.dx[-measure:]) / len(self.tracker.dx[-measure:])
+            dy = sum(self.tracker.dy[-measure:]) / len(self.tracker.dy[-measure:])
+            x_new = x + dx*measure
+            y_new = y + dy*measure
+            self.estimationFutureCenter[expectedPositionNo] = (x_new,y_new)
+            return self.tracker.getCutFramePosition((x_new,y_new))
+        else:
+            if len(self.dx) <5 or len(self.dx) > 20 :
+                self.estimationFutureCenter.append(self.get_position(self.history[-1]))
+                return -1,-1,-1,-1
+            measure = min(len(self.dx),10)
+            expectedPositionNo = len(self.dx)+10
+            x,y = self.get_position(self.history[-1])
+            dx = sum(self.dx[-measure:]) / len(self.dx[-measure:])
+            dy = sum(self.dy[-measure:]) / len(self.dy[-measure:])
+            x_new = x + dx*measure
+            y_new = y + dy*measure
+            self.estimationFutureCenter[expectedPositionNo] = (x_new,y_new)
+            return self.getCutFramePosition((x_new,y_new))
 
 
 
@@ -244,7 +354,7 @@ class TrackerManager:
     def select(self, rect):
         global id
         frame_gray = cv2.cvtColor(self.frame, cv2.COLOR_BGR2GRAY)
-        tracker = Tracker(frame_gray,rect,self.frame_width,self.frame_height,id)
+        tracker = Tracker(frame_gray,rect,self.frame_width,self.frame_height,id,TrackerType.DLIB)
         id+=1
         # tracker = MOSSE(frame_gray, rect)
         self.trackers.append(tracker)
@@ -293,8 +403,8 @@ class TrackerManager:
 
 
 if __name__ == '__main__':
-    opts, args = getopt.getopt(sys.argv[1:], '', ['pause'])
-    opts = dict(opts)
-    src = args[0]
-    tracker_manager =TrackerManager(src, paused ='--pause' in opts)
+    # opts, args = getopt.getopt(sys.argv[1:], '', ['pause'])
+    # opts = dict(opts)
+    # src = args[0]
+    tracker_manager =TrackerManager(str(Path(__file__).parent.parent)+"\\videos\\1528.mp4", paused =True)
     tracker_manager.run()

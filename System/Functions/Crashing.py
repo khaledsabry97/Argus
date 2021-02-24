@@ -1,5 +1,8 @@
 import cv2
 
+from Mosse_Tracker.TrackerManager import TrackerType
+
+
 class Crashing:
 
     def __init__(self,vif):
@@ -68,8 +71,12 @@ class Crashing:
             # print("distance false")
             return False
 
-        xa_actual, ya_actual = tracker_A.tracker.centers[frame_no]
-        xb_actual, yb_actual = tracker_B.tracker.centers[frame_no]
+        if tracker_A.tracker_type == TrackerType.MOSSE:
+            xa_actual, ya_actual = tracker_A.tracker.centers[frame_no]
+            xb_actual, yb_actual = tracker_B.tracker.centers[frame_no]
+        else:
+            xa_actual, ya_actual = tracker_A.get_position(tracker_A.history[frame_no])
+            xb_actual, yb_actual = tracker_B.get_position(tracker_B.history[frame_no])
         difference_trackerA_actual_to_estimate = pow(pow(xa_actual - xa, 2) + pow(ya_actual - ya, 2), 0.5)
         difference_trackerB_actual_to_estimate = pow(pow(xb_actual - xb, 2) + pow(yb_actual - yb, 2), 0.5)
         max_difference = max(difference_trackerA_actual_to_estimate, difference_trackerB_actual_to_estimate)

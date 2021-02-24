@@ -3,7 +3,7 @@ from time import time
 import cv2
 import numpy as np
 
-from Mosse_Tracker.TrackerManager import Tracker
+from Mosse_Tracker.TrackerManager import Tracker, TrackerType
 from PIL import Image
 #from Car_Detection_TF.yolo import YOLO
 #from Car_Detection.detect import Yolo_image
@@ -19,6 +19,8 @@ data = []
 from VIF.vif import VIF
 
 vif = VIF()
+
+tracker_type = TrackerType.MOSSE
 
 def predict(frames_RGB,trackers):
     gray_frames = []
@@ -68,14 +70,18 @@ def checkDistance(frames,tracker_A,tracker_B,frame_no):
     xa, ya = tracker_A.estimationFutureCenter[frame_no]
     xb, yb = tracker_B.estimationFutureCenter[frame_no]
     r = pow(pow(xa - xb, 2) + pow(ya - yb, 2), 0.5)
-    tracker_A_area = 0.5 * tracker_A.tracker.width * tracker_A.tracker.height
-    tracler_B_area = 0.5 * tracker_B.tracker.width * tracker_B.tracker.height
+    tracker_A_area = 0.5 * tracker_A.width * tracker_A.height
+    tracler_B_area = 0.5 * tracker_B.width * tracker_B.height
     # iou = intersectionOverUnion(tracker_A.tracker.getCutFramePosition((xa,ya)),tracker_B.tracker.getCutFramePosition((xb,yb)))
     # iou2 = intersectionOverUnion(tracker_B.tracker.getCutFramePosition((xa, ya)),
     #                             tracker_A.tracker.getCutFramePosition(tracker_A.tracker.center))
 
-    xa_actual,ya_actual = tracker_A.tracker.centers[frame_no]
-    xb_actual,yb_actual = tracker_B.tracker.centers[frame_no]
+    if tracker_type == TrackerType.MOSSE:
+        xa_actual,ya_actual = tracker_A.tracker.centers[frame_no]
+        xb_actual,yb_actual = tracker_B.tracker.centers[frame_no]
+    else:
+        xa_actual,ya_actual = tracker_A.get_position(tracker_A.history[frame_no])
+        xb_actual,yb_actual = tracker_B.get_position(tracker_B.history[frame_no])
     difference_trackerA_actual_to_estimate = pow(pow(xa_actual - xa, 2) + pow(ya_actual - ya, 2), 0.5)
     difference_trackerB_actual_to_estimate = pow(pow(xb_actual - xb, 2) + pow(yb_actual - yb, 2), 0.5)
     max_difference = max(difference_trackerA_actual_to_estimate,difference_trackerB_actual_to_estimate)
@@ -236,19 +242,19 @@ class MainFlow:
                         # no need for frame_width and frame_height
                         if xmax < frame_width and ymax < frame_height:
                             tr = Tracker(frame_gray, (xmin, ymin, xmax, ymax), frame_width, frame_height,
-                                         self.trackerId)
+                                         self.trackerId,tracker_type)
                             delayed_trackers.append(tr)
                         elif xmax < frame_width and ymax >= frame_height:
                             tr = Tracker(frame_gray, (xmin, ymin, xmax, frame_height - 1), frame_width, frame_height,
-                                         self.trackerId)
+                                         self.trackerId,tracker_type)
                             delayed_trackers.append(tr)
                         elif xmax >= frame_width and ymax < frame_height:
                             tr = Tracker(frame_gray, (xmin, ymin, frame_width - 1, ymax), frame_width, frame_height,
-                                         self.trackerId)
+                                         self.trackerId,tracker_type)
                             delayed_trackers.append(tr)
                         else:
                             tr = Tracker(frame_gray, (xmin, ymin, frame_width - 1, frame_height - 1), frame_width,
-                                         frame_height, self.trackerId)
+                                         frame_height, self.trackerId,tracker_type)
                             delayed_trackers.append(tr)
                 else:
                     #print("updating trackers, frame no. " + str(self.frameCount) + "...")
@@ -323,16 +329,16 @@ class MainFlow:
                         self.trackerId +=1
                         # no need for frame_width and frame_height
                         if xmax < frame_width and ymax < frame_height:
-                            tr = Tracker(frame_gray, (xmin, ymin, xmax, ymax), frame_width, frame_height,self.trackerId)
+                            tr = Tracker(frame_gray, (xmin, ymin, xmax, ymax), frame_width, frame_height,self.trackerId,tracker_type)
                             trackers.append(tr)
                         elif xmax < frame_width and ymax >= frame_height:
-                            tr = Tracker(frame_gray, (xmin, ymin, xmax, frame_height - 1), frame_width, frame_height,self.trackerId)
+                            tr = Tracker(frame_gray, (xmin, ymin, xmax, frame_height - 1), frame_width, frame_height,self.trackerId,tracker_type)
                             trackers.append(tr)
                         elif xmax >= frame_width and ymax < frame_height:
-                            tr = Tracker(frame_gray, (xmin, ymin, frame_width - 1, ymax), frame_width, frame_height,self.trackerId)
+                            tr = Tracker(frame_gray, (xmin, ymin, frame_width - 1, ymax), frame_width, frame_height,self.trackerId,tracker_type)
                             trackers.append(tr)
                         else:
-                            tr = Tracker(frame_gray, (xmin, ymin, frame_width - 1, frame_height - 1), frame_width, frame_height,self.trackerId)
+                            tr = Tracker(frame_gray, (xmin, ymin, frame_width - 1, frame_height - 1), frame_width, frame_height,self.trackerId,tracker_type)
                             trackers.append(tr)
                 else:
                     #print("updating trackers, frame no. " + str(self.frameCount) + "...")
@@ -392,7 +398,7 @@ if __name__ == '__main__':
 
     # m = MainFlow(None, select=False)
     # m.run('videos/1500.mp4')
-    # m = MainFlow(None, select=False)
+    m = MainFlow(None, select=False)
     # m.run('videos/1508.mp4')
     # m = MainFlow(None, select=False)
     # m.run('videos/1516.mp4')
@@ -424,7 +430,7 @@ if __name__ == '__main__':
     # m = MainFlow(None, select=False)
     # m.run('videos/1518.mp4')
     # m = MainFlow(None, select=False)
-    # m.run('videos/1544.mp4')
+    m.run('videos/1528.mp4')
     # m = MainFlow(None, select=False)
     # m.run('videos/1543.mp4')
 
@@ -438,7 +444,7 @@ if __name__ == '__main__':
     # m.run('videos/1517.mp4')
     #
     m = MainFlow(None, select=False)
-    m.run('videos/1601.mp4')
+    # m.run('videos/1601.mp4')
 
 
     # m = MainFlow(None, select=False)
