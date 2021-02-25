@@ -1,6 +1,7 @@
 import cv2
 
 from Mosse_Tracker.TrackerManager import TrackerType
+from System.Data.CONSTANTS import Work_Crash_Estimation_Only
 
 
 class Crashing:
@@ -34,14 +35,14 @@ class Crashing:
                 self.checkDistance( tracker_A, tracker_B, 25,dis) or\
                 self.checkDistance( tracker_A, tracker_B, 28,dis):
                     print("#################collision has occured!")
-                    # tracker_frames, width, height, xmin, xmax, ymin, ymax = tracker_A.getFramesOfTracking(self.convertToGrayFrames(frames))
-                    # crash_dimentions.extend([[xmin, ymin, xmax, ymax]])
-                    # tracker_frames, width, height, xmin, xmax, ymin, ymax = tracker_B.getFramesOfTracking(self.convertToGrayFrames(frames))
-                    # crash_dimentions.extend([[xmin, ymin, xmax, ymax]])
-                    crash_dimentions.extend(self.predict(frames, [tracker_B, tracker_A]))
+                    ## uncomment next line to work on crash esitamtion only
+                    if Work_Crash_Estimation_Only:
+                        self.crashEstimation(crash_dimentions,tracker_A,tracker_B,frames)
+                    else:
+                        crash_dimentions.extend(self.predict(frames, [tracker_B, tracker_A]))
         if len(crash_dimentions) > 0:
-            xmin = 1000
-            ymin = 1000
+            xmin = 10000
+            ymin = 10000
             xmax = 0
             ymax = 0
             for crash_dimension in crash_dimentions:
@@ -132,3 +133,19 @@ class Crashing:
         for frame in frames_RGB:
             gray_frames.append(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY))
         return gray_frames
+
+
+    def crashEstimation(self,crash_dimentions,tracker_A,tracker_B,frames):
+        tracker_frames, width, height, xmin, xmax, ymin, ymax = tracker_A.getFramesOfTracking(
+            self.convertToGrayFrames(frames))
+        if xmax - xmin < 50 or ymax - ymin <= 28 or (ymax - ymin) / (xmax - xmin) < 0.35 :  # 50
+           pass
+        else:
+            crash_dimentions.extend([[xmin, ymin, xmax, ymax]])
+        tracker_frames, width, height, xmin, xmax, ymin, ymax = tracker_B.getFramesOfTracking(
+            self.convertToGrayFrames(frames))
+
+        if xmax - xmin < 50 or ymax - ymin <= 28 or (ymax - ymin) / (xmax - xmin) < 0.35:  # 50
+            pass
+        else:
+            crash_dimentions.extend([[xmin, ymin, xmax, ymax]])

@@ -3,6 +3,7 @@ from time import time
 import cv2
 
 from Mosse_Tracker.TrackerManager import Tracker, TrackerType
+from System.Data.CONSTANTS import Work_Tracker_Type_Mosse
 
 
 class Tracking:
@@ -25,7 +26,11 @@ class Tracking:
             xmax = min(xmax, frame_width - 1)
             ymax = min(ymax, frame_height - 1)
 
-            trackers.append(Tracker(frame_gray, (xmin, ymin, xmax, ymax), frame_width, frame_height, trackerId,TrackerType.MOSSE))
+            if Work_Tracker_Type_Mosse:
+                trackers.append(Tracker(frame_gray, (xmin, ymin, xmax, ymax), frame_width, frame_height, trackerId,TrackerType.MOSSE))
+            else:
+                trackers.append(Tracker(frame_gray, (xmin, ymin, xmax, ymax), frame_width, frame_height, trackerId,TrackerType.DLIB))
+
         t = time()
         tot = 0
         for i in range(1,len(frames)):

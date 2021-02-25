@@ -21,13 +21,19 @@
   <component name="ChangeListManager">
     <list default="true" id="9fcbda44-9a28-4130-864e-4301a6e05752" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug.py" beforeDir="false" afterPath="$PROJECT_DIR$/Debug.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Connections/SenderController.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/Connections/SenderController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/Data/CONSTANTS.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/Data/CONSTANTS.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/System/Database/Argus_DB.db" beforeDir="false" afterPath="$PROJECT_DIR$/System/Database/Argus_DB.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/System/Functions/Crashing.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/Functions/Crashing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/System/Functions/Tracking.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/Functions/Tracking.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/tempToLoad.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/tempToLoad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/Extra/1518.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/Extra/1519.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/Extra/1529.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/Extra/1534.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/Extra/1537.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/Extra/1552.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/Extra/1558.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos/Extra/1561.mp4" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,27 +84,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.RunTracker">
-    <configuration name="Debug" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="GP_Crash_Saviour" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Debug.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="RunCamera" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GP_Crash_Saviour" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -120,7 +105,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="RunCrash" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="RunDetect" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GP_Crash_Saviour" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -132,7 +117,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RunCrash.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RunDetect.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RunGui" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GP_Crash_Saviour" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RunGui.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -184,19 +190,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.RunTracker" />
       <item itemvalue="Python.RunMaster" />
       <item itemvalue="Python.RunCamera" />
-      <item itemvalue="Python.Debug" />
-      <item itemvalue="Python.RunCrash" />
+      <item itemvalue="Python.RunDetect" />
+      <item itemvalue="Python.RunGui" />
+      <item itemvalue="Python.RunTracker" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.RunTracker" />
-        <item itemvalue="Python.Debug" />
-        <item itemvalue="Python.RunCrash" />
         <item itemvalue="Python.RunMaster" />
         <item itemvalue="Python.RunCamera" />
+        <item itemvalue="Python.RunDetect" />
+        <item itemvalue="Python.RunGui" />
       </list>
     </recent_temporary>
   </component>
@@ -291,38 +297,38 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1612776578266" />
-    <state width="1184" height="337" key="GridCell.Tab.0.bottom" timestamp="1612827228869">
+    <state width="1182" height="337" key="GridCell.Tab.0.bottom" timestamp="1614213216163">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1184" height="337" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1612827228869" />
-    <state width="1184" height="337" key="GridCell.Tab.0.center" timestamp="1612827228868">
+    <state width="1182" height="337" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1614213216163" />
+    <state width="1182" height="337" key="GridCell.Tab.0.center" timestamp="1614213216163">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1184" height="337" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1612827228868" />
-    <state width="1184" height="337" key="GridCell.Tab.0.left" timestamp="1612827228868">
+    <state width="1182" height="337" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1614213216163" />
+    <state width="1182" height="337" key="GridCell.Tab.0.left" timestamp="1614213216163">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1184" height="337" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1612827228868" />
-    <state width="1184" height="337" key="GridCell.Tab.0.right" timestamp="1612827228868">
+    <state width="1182" height="337" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1614213216163" />
+    <state width="1182" height="337" key="GridCell.Tab.0.right" timestamp="1614213216163">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1184" height="337" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1612827228868" />
-    <state width="1307" height="347" key="GridCell.Tab.1.bottom" timestamp="1612827228826">
+    <state width="1182" height="337" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1614213216163" />
+    <state width="1306" height="347" key="GridCell.Tab.1.bottom" timestamp="1614212459882">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1307" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1612827228826" />
-    <state width="1307" height="347" key="GridCell.Tab.1.center" timestamp="1612827228826">
+    <state width="1306" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1614212459882" />
+    <state width="1306" height="347" key="GridCell.Tab.1.center" timestamp="1614212459882">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1307" height="347" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1612827228826" />
-    <state width="1307" height="347" key="GridCell.Tab.1.left" timestamp="1612827228826">
+    <state width="1306" height="347" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1614212459882" />
+    <state width="1306" height="347" key="GridCell.Tab.1.left" timestamp="1614212459882">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1307" height="347" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1612827228826" />
-    <state width="1307" height="347" key="GridCell.Tab.1.right" timestamp="1612827228826">
+    <state width="1306" height="347" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1614212459882" />
+    <state width="1306" height="347" key="GridCell.Tab.1.right" timestamp="1614212459882">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1307" height="347" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1612827228826" />
+    <state width="1306" height="347" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1614212459882" />
     <state x="461" y="170" key="SettingsEditor" timestamp="1612778843184">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -391,9 +397,19 @@
           <option name="timeStamp" value="137" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/System/Connections/SenderController.py</url>
-          <line>22</line>
-          <option name="timeStamp" value="147" />
+          <url>file://$PROJECT_DIR$/System/Functions/Crashing.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/System/Functions/Crashing.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/System/Functions/Crashing.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="150" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
