@@ -25,8 +25,8 @@ class SenderController(threading.Thread):
             # from Controller.JsonDecoder import JsonDecoder
             # thread = JsonDecoder(jsons)
             # thread.start()
-        except:
-            print("sender error")
+        except Exception as e:
+            print(e)
             pass
 
 
