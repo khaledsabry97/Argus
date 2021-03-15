@@ -113,3 +113,30 @@ The video shows a compilation of road crashes which is the output of the system
    1. RunCamera.py
 1. Select video from videos folder
 1. From RunCamera.py hit Process
+
+## How to Configure used modules in Project
+As the project has different settings there are hyper-parameter you need to configure to use the module you actually want. Go to file called "Constants.py" in "Argus/System/Data/Constants.py"
+
+ <details>
+  <summary><b>In Detection Module</b></summary>
+   <ul>
+    <li> Work_Detect_Files : True if you want to use already saved vehicles detected in the videos provided in project instead of using YOLO architecture</li>
+     </ul>
+         </details>
+         
+ <details>
+  <summary><b>In Tracking Module</b></summary>
+  <ul>
+    <li> Work_Tracker_Type_Mosse : True if you want to use Mosse Tracker instead of Dlib Tracker </li>
+    <li> Work_Tracker_Interpolation : True if you want to use track-compensated frame interpolation (TCFI) instead of normal tracking algorithm
+ </li>
+    </ul>
+         </details>
+         
+         
+ <details>
+  <summary><b>In Crash Module</b></summary>
+   <ul>
+    <li> Work_Crash_Estimation_Only : True if you want to use Crash Estimation Module Only, instead of following the Crash Estimation Module with ViF Descripton</li>
+     </ul>
+         </details>
