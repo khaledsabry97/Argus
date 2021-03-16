@@ -13,6 +13,9 @@ from Mosse_Tracker.utils import draw_str
 from Mosse_Tracker.utils import RectSelector
 
 import sys, getopt
+
+from System.Data.CONSTANTS import Work_Tracker_Interpolation
+
 pi=22/7
 
 global id
@@ -65,7 +68,13 @@ class Tracker:
     #also add the updated position to history
     def update(self, frame):
         if self.tracker_type == TrackerType.MOSSE:
-            self.tracker.updateTracking(frame)
+            is_stopped = False
+            if len(self.tracker.dx) >= 3 and Work_Tracker_Interpolation:
+                if self.getAvgSpeed(len(self.tracker.dx)-3,len(self.tracker.dx)) < 20:
+                    is_stopped = True
+                    # print(self.getAvgSpeed(len(self.tracker.dx)-3,len(self.tracker.dx)))
+
+            self.tracker.updateTracking(frame,is_stopped)
             self.addHistory(self.tracker.getCutFramePosition())
 
         else:
@@ -237,7 +246,7 @@ class Tracker:
     def getCarSizeCoefficient(self):
         # area = 0.5 * self.tracker.width * self.tracker.height
         if self.tracker_type == MOSSE:
-            area = self.tracker.width * self.tracker.height
+            area = self.tracker.area
         else:
             area = self.width * self.height
 
