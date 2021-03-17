@@ -48,7 +48,7 @@ System Architecture
 
 
   <h2 id="Framework-Architecture">
-System Architecture
+Framework Architecture
 </h2>
 
 <p> The framework consists of 4 phases; it starts with a vehicle detection phase using YOLO architecture. The second phase is the vehicle tracking using MOSSE tracker. Then the third phase is a new approach we introduce to detect crash based on crash estimation. Finally, we can consider either what remains after the third phase is a crash or start the fourth phase, crash detection using violent flow descriptor. </p>
