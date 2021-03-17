@@ -9,6 +9,7 @@ class Crashing:
     def __init__(self,vif):
         self.vif = vif
 
+
     def crash(self,frames,trackers):
         crash_dimentions = []
 
@@ -28,7 +29,7 @@ class Crashing:
                 # asize = pow(pow(tracker_A.vehicle_height, 2) + pow(tracker_A.vehicle_width, 2), 0.5) * .5
                 # bsize = pow(pow(tracker_B.vehicle_height, 2) + pow(tracker_B.vehicle_width, 2), 0.5) * .5
                 # dis = min(asize,bsize)
-                print(dis)
+                # print(dis)
                 if self.checkDistance(tracker_A, tracker_B, 16,dis) or\
                 self.checkDistance( tracker_A, tracker_B,19,dis) or\
                 self.checkDistance(tracker_A,tracker_B,22,dis) or\

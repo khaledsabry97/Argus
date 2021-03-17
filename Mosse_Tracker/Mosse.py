@@ -20,13 +20,14 @@ class MOSSE:
         self.learning_rate = learning_rate
         self.num_of_traning_imgs = num_of_traning_imgs
         self.psr_goodness = psrGoodness
+        self.updated_last_time = True
 
         #get width and height of the cut_size
         #cv2.getoptimaldftsize faster the tracker according to the opencv document
         self.width, self.height = map(cv2.getOptimalDFTSize, [xmax - xmin, ymax - ymin])
         # self.width = xmax - xmin
         # self.height = ymax - ymin
-
+        self.area = self.width * self.height
         #calculate the center you of the cut image frame
         self.center = x, y = xmin + 0.5 * (self.width - 1), ymin + 0.5 * (self.height - 1)
         self.size = self.width, self.height
@@ -61,45 +62,59 @@ class MOSSE:
 
 
         self.updateFilter()
-        self.updateTracking(frame)
+        self.updateTracking(frame,False)
 
-    def updateTracking(self, frame):
+    def updateTracking(self, frame,is_stopped):
         (x, y), (w, h) = self.center, self.size
-        self.last_img = img = cv2.getRectSubPix(frame, (w, h), (x, y))
 
-        img= cv2.GaussianBlur(img,(3,3),3)
-        img = self.preprocess(img)
-
-        self.psr, self.last_resp, (dx, dy) = self.correlateNewImg(img)
-        self.good = self.psr > self.psr_goodness
-        if not self.good:
-            if len(self.dx) == 0:
-                self.dx.append(0)
-                self.dy.append(0)
-            else:
-                self.dx.append(self.dx[-1])
-                self.dy.append(self.dy[-1])
-            # self.prepareInitialTracking(frame,self.last_img)
-            # return
-
-        else:
-            # self.learning_rate = max(min(abs(100-self.good)/100)  -0.8 , 0.125)
+        if is_stopped and  self.updated_last_time:
+            dx = sum(self.dx[-3:]) / 3
+            dy = sum(self.dy[-3:]) / 3
+            self.center = x + dx, y + dy
 
             self.dx.append(dx)
             self.dy.append(dy)
+            self.updated_last_time = False
+        else:
 
-            #this is the new center
-            self.center = x + dx, y + dy
+            self.updated_last_time = True
 
-            #cut same width and height for the new img
-            self.last_img = img = cv2.getRectSubPix(frame, (w, h), self.center)
-            #calcultate num and denumentator for the new image
-            H1,H2 = self.computeNumAndDen(img)
-            #update the num and den with learning rate to decay old one
-            self.H1 = self.H1 * (1.0-self.learning_rate) + H1 * self.learning_rate
-            self.H2 = self.H2 * (1.0-self.learning_rate) + H2 * self.learning_rate
-            #update the kernal
-            self.updateFilter()
+            self.last_img = img = cv2.getRectSubPix(frame, (w, h), (x, y))
+
+            img= cv2.GaussianBlur(img,(3,3),3)
+            img = self.preprocess(img)
+
+            self.psr, self.last_resp, (dx, dy) = self.correlateNewImg(img)
+            self.good = self.psr > self.psr_goodness
+            if not self.good:
+                if len(self.dx) == 0:
+                    self.dx.append(0)
+                    self.dy.append(0)
+                else:
+                    self.dx.append(self.dx[-1])
+                    self.dy.append(self.dy[-1])
+                #this is the new center
+                self.center = x + self.dx[-1], y + self.dy[-1]
+
+            else:
+                # self.learning_rate = max(min(abs(100-self.good)/100)  -0.8 , 0.125)
+
+                self.dx.append(dx)
+                self.dy.append(dy)
+
+                #this is the new center
+                self.center = x + dx, y + dy
+
+                #cut same width and height for the new img
+                self.last_img = img = cv2.getRectSubPix(frame, (w, h), self.center)
+                #calcultate num and denumentator for the new image
+                H1,H2 = self.computeNumAndDen(img)
+                #update the num and den with learning rate to decay old one
+                self.H1 = self.H1 * (1.0-self.learning_rate) + H1 * self.learning_rate
+                self.H2 = self.H2 * (1.0-self.learning_rate) + H2 * self.learning_rate
+                #update the kernal
+                self.updateFilter()
+
         x_new, y_new = self.center
         self.centers.append((x_new, y_new))
 

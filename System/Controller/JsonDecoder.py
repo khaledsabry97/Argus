@@ -21,6 +21,7 @@ class JsonDecoder(threading.Thread):
         self.yolo = None
         self.read_file = read_file
         self.tf = tf
+        self.table = {}
         if type == NodeType.Detetion and not read_file:
             if tf:
                 self.yolo = YOLO()
@@ -134,6 +135,8 @@ class JsonDecoder(threading.Thread):
         detection = Detection(self.yolo)
 
         boxes = detection.detect(frames, frame_width, frame_height, read_file, boxes_file, self.read_file, self.tf)
+
+        self.printLog("Detect",camera_id,start_detect_time,starting_frame_id+len(frames))
         self.sender_encode.track(camera_id, starting_frame_id, frames, boxes, frame_width, frame_height,start_detect_time,city,district_no)
 
 
@@ -141,6 +144,8 @@ class JsonDecoder(threading.Thread):
         start_track_time = time()
         track = Tracking()
         trackers = track.track(frames, boxes, frame_width, frame_height)
+        self.printLog("Track",camera_id,start_track_time,starting_frame_id+len(frames))
+
         self.sender_encode.crash(camera_id, starting_frame_id, frames, trackers, start_detect_time, end_detect_time,start_track_time,city,district_no)
 
 
@@ -151,6 +156,8 @@ class JsonDecoder(threading.Thread):
         start_crash_time = time()
         crashing = Crashing(self.vif)
         crash_dimentions = crashing.crash(frames, trackers)
+        self.printLog("Crash",camera_id,start_crash_time,starting_frame_id+len(frames))
+
         self.sender_encode.result(camera_id, starting_frame_id, crash_dimentions, start_detect_time, end_detect_time,start_track_time, end_track_time, start_crash_time,city,district_no)
 
     def result(self, camera_id, starting_frame_id, crash_dimentions,city,district_no):
@@ -169,3 +176,13 @@ class JsonDecoder(threading.Thread):
     def sendRecentCrashes(self):
         master = Master()
         master.sendRecentCrashesToGUI()
+
+
+    def printLog(self,Module,camera_id,starting_time,number_of_frames):
+        if camera_id not in self.table or self.table[camera_id][0] > number_of_frames:
+            self.table[camera_id] = [number_of_frames, 0]
+        self.table[camera_id][0] = number_of_frames
+        self.table[camera_id][1] += time() - starting_time
+        print("AVG "+Module+" Time " + str(camera_id) + " : " + str(
+            self.table[camera_id][1] / (number_of_frames) ))
+        print("Total "+Module+" Time " + str(camera_id) + " : " + str(self.table[camera_id][1]))

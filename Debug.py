@@ -409,7 +409,7 @@ if __name__ == '__main__':
     # m = MainFlow(None, select=False)
     # m.run('videos/1529.mp4')
     # m = MainFlow(None, select=False)
-    # m.run('videos/1533.mp4')
+    m.run('videos/1533.mp4')
     # m = MainFlow(None, select=False)
     # m.run('videos/1534.mp4')
     # m = MainFlow(None, select=False)
@@ -430,7 +430,7 @@ if __name__ == '__main__':
     # m = MainFlow(None, select=False)
     # m.run('videos/1518.mp4')
     # m = MainFlow(None, select=False)
-    m.run('videos/1528.mp4')
+    # m.run('videos/1528.mp4')
     # m = MainFlow(None, select=False)
     # m.run('videos/1543.mp4')
 
