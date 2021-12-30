@@ -21,16 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9fcbda44-9a28-4130-864e-4301a6e05752" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug.py" beforeDir="false" afterPath="$PROJECT_DIR$/Debug.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/Mosse.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/Mosse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mosse_Tracker/TrackerManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RunCamera.py" beforeDir="false" afterPath="$PROJECT_DIR$/RunCamera.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Controller/JsonDecoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/Controller/JsonDecoder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Data/CONSTANTS.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/Data/CONSTANTS.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Database/Argus_DB.db" beforeDir="false" afterPath="$PROJECT_DIR$/System/Database/Argus_DB.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Functions/Crashing.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/Functions/Crashing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/Node.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/Node.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/tempToLoad.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/tempToLoad.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,11 +177,11 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.Debug" />
+      <item itemvalue="Python.RunCrash" />
       <item itemvalue="Python.RunDetect" />
       <item itemvalue="Python.RunGui" />
       <item itemvalue="Python.RunTracker" />
-      <item itemvalue="Python.RunCrash" />
-      <item itemvalue="Python.Debug" />
     </list>
     <recent_temporary>
       <list>
