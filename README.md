@@ -13,7 +13,7 @@ An autonomous system based on computer vision techniques that detects road accid
     <br />
     <a href="#Demo">View Demo</a>
     ·
-    <a href="https://github.com/khaledsabry97/Argus/blob/master/Documents/Argus.pptx">View Presentation</a>
+    <a href="#IEEE-Presentation">IEEE Presentation</a>
     ·
     <a href="#System-Architecture">System Architecture</a>
     ·
@@ -103,6 +103,12 @@ As the project has different settings there are hyper-parameter you need to conf
          </details>
 
 
+## IEEE Conference Presentation Video
+<p align="center" id="IEEE-Presentation">
+   <a href="https://www.youtube.com/watch?v=rm5pcUggZzs">
+<img src="https://img.youtube.com/vi/rm5pcUggZzs/maxresdefault.jpg" width="50%">
+      </a>
+  </p>
 
 ## Trailers
 #### Trailer 1
