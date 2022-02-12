@@ -11,13 +11,13 @@ An autonomous system based on computer vision techniques that detects road accid
     <a href="https://github.com/khaledsabry97/Argus/blob/master/Documents/GP_document.pdf"><strong>Explore Full Documentation »</strong></a>
     <br />
     <br />
-    <a href="#Demo">View Demo</a>
-    ·
+    <a href="IEEE-Research">IEEE Research Paper</a>
+    .
     <a href="#ieee-conference-presentation-video">IEEE Presentation</a>
     ·
-    <a href="#System-Architecture">System Architecture</a>
+    <a href="#Demo">View Demo</a>
     ·
-    <a href="https://github.com/khaledsabry97/Argus/issues">Report Bug</a>
+    <a href="#System-Architecture">System Architecture</a>
     ·
     <a href="https://github.com/khaledsabry97/Argus/issues">Request Feature</a>
   </p>
@@ -34,6 +34,22 @@ An autonomous system based on computer vision techniques that detects road accid
 <img src="https://github.com/khaledsabry97/Argus/blob/master/Gif/1568.gif?raw=true" width="200" height="200" />
  </p>
 
+  <h2 id="IEEE-Research">
+IEEE Research Paper</h2>
+
+
+  <p> 
+    This paper proposes a framework to detect road accidents in real-time using generic CCTV cameras installed on roads. The framework focuses on how to achieve high performance on congested roads by introducing a new technique called track-compensated frame interpolation (TCFI) for tracking the vehicles, focuses on achieving higher accuracy by introducing a new approach for crash detection called crash estimation algorithm and focuses on how the system will deal with the massive number of CCTV cameras by dropping footages that are highly unlikely to contain an accident at an early stage and implemented the modules based on the pipelining technique. The framework is formed up of four stages; first, vehicles are detected using YOLO neural network, then tracked for several frames using MOSSE tracker, followed by a filtration process based on a new approach of crash estimation; finally, for every vehicle, we process its tracked footage through ViF descriptor then use the output as a feature vector for an SVM model that classifies accidents. The system achieves 93% accuracy with processing time beats all previous systems.
+  </p>
+  <h4><a href="https://ieeexplore.ieee.org/document/9698968/">
+Research Paper On IEEE </h4>
+<h5 id="IEEE-Cite">
+Citation</h5>
+
+```
+K. Sabry and M. Emad, "Road Traffic Accidents Detection Based On Crash Estimation," 2021 17th International Computer Engineering Conference (ICENCO), 2021, pp. 63-68, doi: 10.1109/ICENCO49852.2021.9698968.
+  
+```
 
   <h2 id="System-Architecture">
 System Architecture
