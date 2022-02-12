@@ -11,7 +11,7 @@ An autonomous system based on computer vision techniques that detects road accid
     <a href="https://github.com/khaledsabry97/Argus/blob/master/Documents/GP_document.pdf"><strong>Explore Full Documentation »</strong></a>
     <br />
     <br />
-    <a href="IEEE-Research">IEEE Research Paper</a>
+    <a href="#IEEE-Research">IEEE Research Paper</a>
     .
     <a href="#ieee-conference-presentation-video">IEEE Presentation</a>
     ·
