@@ -10,4 +10,4 @@ scipy==1.5.3
 threadpoolctl==2.1.0
 matplotlib==3.3.3
 pygame==2.0.1
-torch==1.7.1
+torch==1.13.1
