@@ -40,7 +40,8 @@ class DatabaseThread(threading.Thread):
                         frames.extend(self.master.getVideoFrames(camera_id, temp, False))
                         new_limit+=1
                     new_from_no = from_no + new_limit
-
+                    if (frames == None or len(frames) == 0):
+                        continue
                     frame_width = len(frames[0][0])
                     frame_height = len(frames[0])
 

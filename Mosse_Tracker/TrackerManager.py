@@ -4,7 +4,7 @@ from pathlib import Path
 from threading import Thread
 from time import time
 import math
-import dlib
+#import dlib
 import cv2
 from copy import deepcopy
 
